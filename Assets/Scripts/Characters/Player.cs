@@ -32,7 +32,6 @@ public class Player : Character {
 		GameEventManager.GameUnpause += GameUnpause;
 		
 		enabled = false;
-		hasShield = false;
 		spawnPos = thisTransform.position;
 		soundMan = GetComponent<SoundSprite>();
 		mdSound = GetComponent<ModulatedSound>();
@@ -42,74 +41,7 @@ public class Player : Character {
 	// Update is called once per frame
 	public void Update () 
 	{
-		// these are false unless one of keys is pressed
-		isLeft = false;
-		isRight = false;
-		isJump = false;
-		isGoDown = false;
-		isPass = false;
-		isCrounch = false;
 		
-		shootingKnife = false;
-		movingDir = moving.None;
-		
-		// keyboard input
-		if(Input.GetKey("left")) 
-		{ 
-			soundMan.OnWalking(getCurrentFrameIndex());
-			isLeft = true;
-			shootLeft = true;
-			facingDir = facing.Left;
-		}
-		if (Input.GetKey("right") && isLeft == false) 
-		{ 
-			soundMan.OnWalking(getCurrentFrameIndex());
-			isRight = true; 
-			facingDir = facing.Right;
-			shootLeft = false;
-		}
-		if (Input.GetKey(KeyCode.DownArrow))
-		{
-			isCrounch = true;
-			facingDir = facing.Down;
-		}
-		if (Input.GetKeyDown("up")) 
-		{ 
-			isJump = true; 
-		}
-		if(Input.GetKeyDown("space"))
-		{
-			isPass = true;
-		}
-		if(Input.GetKeyDown(KeyCode.A))
-		{
-			isShot = true;
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			skill_knife.useSkill(Skills.SkillList.Knife);
-			shootingKnife = true;
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha2))
-		{
-			skill_axe.useSkill(Skills.SkillList.Axe);
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha3))
-		{
-			skill_shield.useSkill(Skills.SkillList.Shield);
-			hasShield = true;
-		}
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (GameEventManager.gamePaused == false)
-			{
-				GameEventManager.TriggerGamePause();
-			}
-			else if (GameEventManager.gamePaused == true)
-			{
-				GameEventManager.TriggerGameUnpause();
-			}
-		}
 		mdSound.PercentSound(this);
 		Debug.Log ("Player_Shield" + hasShield);
 		UpdateMovement();

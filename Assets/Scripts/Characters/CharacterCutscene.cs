@@ -11,7 +11,8 @@ public class CharacterCutscene : MonoBehaviour {
 	
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		framesets[0] = anim.framesets[0];
 	}
 	

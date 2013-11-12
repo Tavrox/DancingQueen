@@ -7,6 +7,11 @@ public class GUIManager : MonoBehaviour {
 	public GUIText HPTxt;
 	
 	private Player _player;
+	private IngameUI drug;
+	private IngameUI notebook;
+	private IngameUI trombi;
+
+	
 	
 	// Use this for initialization
 	void Start () 
@@ -15,8 +20,6 @@ public class GUIManager : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
-		
-		gameOverText.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,22 +32,16 @@ public class GUIManager : MonoBehaviour {
 			GameEventManager.TriggerGameUnpause();
 		}
 		_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-//		HPTxt.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y+2,_player.transform.position.z);
-//		HPTxt.transform.localPosition = new Vector3(_player.transform.position.x, _player.transform.position.y+2,_player.transform.position.z);
-
 	}
 	
-	private void GameStart () {
-		if(FindObjectOfType(typeof(GUIManager)) && this != null) 
-		{
-			gameOverText.enabled = false;
-			instructionsText.enabled = false;
-		}
+	private void GameStart () 
+	{
+		
 	}
 	
 	private void GameOver () 
 	{
-		gameOverText.enabled = true;
+		
 	}
 	
 	private void GamePause()
@@ -55,5 +52,10 @@ public class GUIManager : MonoBehaviour {
 	private void GameUnpause()
 	{
 		
+	}
+	
+	private void OnMouseOver()
+	{
+		print ("MouseOver" + this.name);	
 	}
 }

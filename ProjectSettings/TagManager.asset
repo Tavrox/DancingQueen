@@ -4,13 +4,20 @@
 TagManager:
   tags:
   - 
-  - Enemy
+  - Character
   - Bullets
   - Blocking
   - Platforms
   - Ground
   - Collectible
   - AudioManager
+  - Cursor
+  - Skills
+  - Zombie
+  - boxes
+  - MenuUI
+  - IngameUI
+  - DialogUI
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -23,7 +30,7 @@ TagManager:
   User Layer 8: Ground
   User Layer 9: Platforms
   User Layer 10: Player
-  User Layer 11: Enemies
+  User Layer 11: Character
   User Layer 12: 
   User Layer 13: 
   User Layer 14: 

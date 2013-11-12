@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17, y: 12.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1002 &400001
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
+  _name: doorSprite
   _position: {x: 0, y: 0}
   _size: {x: 1, y: 1}
   _rotation: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   _physics: 2
   _colliderType: 0
   _collisionDepth: 0
-  _collisionSize: 10
+  _collisionSize: 0
   draggable: 0
   dragButton: 0
   init: 0
@@ -100,9 +100,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: bg
-  oSize: {x: 16.6666679, y: 12.5}
-  imageSize: {x: 6.66666698, y: 5.26315832}
+  baseName: doorSprite
+  oSize: {x: 4.16666698, y: 6.25}
+  imageSize: {x: .249999851, y: .5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -115,9 +115,9 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: 01_menu_bg
+  _frameName: 
   _spriteContainer: {fileID: 0}
-  _containerName: menu_back
+  _containerName: level
   _newSprite: 0
 --- !u!1002 &11400001
 EditorExtensionImpl:

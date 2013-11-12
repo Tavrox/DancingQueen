@@ -4,8 +4,15 @@ using System.Collections;
 public class LevelDoor : MonoBehaviour {
 	
 	public enum doorType { BeginLevel, EndLevel }
-	public LevelManager lvlManager;
 	public doorType myDoorType;
+	public enum levelList
+	{
+		Bar,
+		Dancefloor,
+		Toilets,
+		VIP
+	}
+	public levelList goToLevel;
 	
 	// Use this for initialization
 	void Start () {
@@ -17,20 +24,73 @@ public class LevelDoor : MonoBehaviour {
 //	}
 	void OnTriggerEnter(Collider other)
     {
-		if(other.gameObject.CompareTag("Player")) 
-		{	
-			if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
-			else GameEventManager.TriggerNextLevel();
+		if ( GameObject.FindGameObjectWithTag("Player").GetComponent<Player>() != null)
+		{
+			if(other.gameObject.CompareTag("Player")) 
+			{	
+				if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
+				else GameEventManager.TriggerNextLevel();
+			}	
 		}
     }
 	
 	private void NextLevel ()
 	{
-		Application.LoadLevel(lvlManager.nextLvlID);
+		switch (goToLevel)
+			{
+				case (levelList.Bar) :
+					{
+						Application.LoadLevel("Bar");
+						break;
+					}
+				case (levelList.Dancefloor) :
+					{
+						Application.LoadLevel("Dancefloor");
+						break;
+					}
+				case (levelList.Toilets) :
+					{
+						Application.LoadLevel("Toilets");
+						break;
+					}
+				case (levelList.VIP) :
+					{
+						Application.LoadLevel("VIP");
+						break;
+					}
+			}
 	}
 	
-	private void PreviousLevel () {
-		Application.LoadLevel(lvlManager.previousLvlID);
+	private void PreviousLevel () 
+	{
+		switch (goToLevel)
+			{
+				case (levelList.Bar) :
+					{
+						Application.LoadLevel("Bar");
+						break;
+					}
+				case (levelList.Dancefloor) :
+					{
+						Application.LoadLevel("Dancefloor");
+						break;
+					}
+				case (levelList.Toilets) :
+					{
+						Application.LoadLevel("Toilets");
+						break;
+					}
+				case (levelList.VIP) :
+					{
+						Application.LoadLevel("VIP");
+						break;
+					}
+			}
+	}
+	private void OnMouseDown()
+	{
+		if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
+			else GameEventManager.TriggerNextLevel();
 	}
 	
 }
