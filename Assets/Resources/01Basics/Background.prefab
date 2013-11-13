@@ -11,16 +11,28 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1002 &100001
-EditorExtensionImpl:
-  serializedVersion: 6
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -29,12 +41,21 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 3, z: 1}
+  m_LocalScale: {x: 16.7000008, y: 12.5, z: 1}
   m_Children: []
+  m_Father: {fileID: 400002}
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400000}
   m_Father: {fileID: 0}
---- !u!1002 &400001
-EditorExtensionImpl:
-  serializedVersion: 6
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -53,9 +74,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
---- !u!1002 &2300001
-EditorExtensionImpl:
-  serializedVersion: 6
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -63,9 +81,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 0}
---- !u!1002 &3300001
-EditorExtensionImpl:
-  serializedVersion: 6
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -77,19 +92,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: door-1
+  _name: Sprite
   _position: {x: 0, y: 0}
-  _size: {x: 5, y: 3}
+  _size: {x: 16.7000008, y: 12.5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
   _registerInput: 0
   _depth: 0
-  _collidable: 1
-  _physics: 2
+  _collidable: 0
+  _physics: 0
   _colliderType: 0
   _collisionDepth: 0
-  _collisionSize: 0
+  _collisionSize: 10
   draggable: 0
   dragButton: 0
   init: 0
@@ -101,8 +116,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: door
-  oSize: {x: 4.58333349, y: 1.04166675}
-  imageSize: {x: 1.0999999, y: .166666672}
+  oSize: {x: 16.6666679, y: 12.5}
+  imageSize: {x: 16.7000008, y: 12.5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -115,13 +130,10 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: 00backbtn
+  _frameName: back_bar
   _spriteContainer: {fileID: 0}
-  _containerName: ui
+  _containerName: level
   _newSprite: 0
---- !u!1002 &11400001
-EditorExtensionImpl:
-  serializedVersion: 6
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -131,9 +143,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 100000}
+  m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
   m_IsExploded: 1
---- !u!1002 &100100001
-EditorExtensionImpl:
-  serializedVersion: 6

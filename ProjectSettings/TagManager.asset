@@ -9,7 +9,7 @@ TagManager:
   - Blocking
   - Platforms
   - Ground
-  - Collectible
+  - DialogDisplayer
   - AudioManager
   - Cursor
   - Skills

@@ -39,6 +39,8 @@ public class DialogUI : MonoBehaviour {
 			case (ListDialog.CloseDialog) :
 				{
 					destroyDialog();
+					IngameUI.destroyIngameUI();
+					MenuUI.destroyMenu();
 					IngameUI.createIngameUI();
 					break;
 				}
@@ -67,17 +69,23 @@ public class DialogUI : MonoBehaviour {
 	public static void destroyDialog()
 	{
 		GameObject[] target = GameObject.FindGameObjectsWithTag("DialogUI");
-		print ("OM2");
 		for (var i = 0; i < target.Length ; i++)
 		{
-			print ("OMG");
 			Destroy(target[i]);
 			exists = false;
 		}
+		target = GameObject.FindGameObjectsWithTag("DialogDisplayer");
+		for (var i = 0; i < target.Length ; i++)
+		{
+			Destroy(target[i]);
+			exists = false;
+		}
+		GameEventManager.TriggerGameUnpause();
 	}
 	public static void createDialog()
 	{
-		Object prefabSprite = Resources.Load("03UI/DialogOverlay");
+		GameEventManager.TriggerGameDialog();
+		Object prefabSprite = Resources.Load("03UI/Dialog");
 		Instantiate(prefabSprite);
 		exists = true;
 	}

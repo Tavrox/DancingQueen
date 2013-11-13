@@ -1920,7 +1920,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 0}
   player: {fileID: 0}
-  camera: {fileID: 2000000}
   waypoint1: {fileID: 0}
   waypoint2: {fileID: 0}
   ID: 1

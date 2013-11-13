@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerSim : MonoBehaviour {
 	
 	public int numberDrugs = 0;
-	public OTSprite drugImg;
 	
 	// Use this for initialization
 	public void Start () 
