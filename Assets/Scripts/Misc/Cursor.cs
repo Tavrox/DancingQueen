@@ -19,7 +19,7 @@ public class Cursor : MonoBehaviour {
 	void Update () {
 		transform.position = new Vector3(OT.view.mouseWorldPosition.x, OT.view.mouseWorldPosition.y, -1f);
 		
-		checkHover();
+//		checkHover();
 	}
 	
 	

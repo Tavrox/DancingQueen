@@ -20,5 +20,12 @@ public class AnswerButton : MonoBehaviour {
 		{
 			clic = true;
 		}
+		OTSprite spr = gameObject.GetComponent<OTSprite>();
+	
+		if ( spr != null )
+		{
+			spr.frameName = "02backbtn";
+			print (spr);
+		}
 	}
 }

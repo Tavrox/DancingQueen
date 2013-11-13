@@ -34,7 +34,7 @@ public class IngameUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		print (MenuUI.exists);
+		
 	}
 	private void OnMouseOver()
 	{
@@ -45,21 +45,21 @@ public class IngameUI : MonoBehaviour {
 		switch (action)
 		{
 			case (ListAction.DisplayTrombi) :
-				{
-					MenuUI.destroyMenu();
-					prefabSprite = Resources.Load("03UI/Notebook");
-					Instantiate(prefabSprite);
-					GameEventManager.TriggerGamePause();
-					break;
-				}
+			{
+				MenuUI.destroyMenu();
+				prefabSprite = Resources.Load("03UI/Notebook");
+				Instantiate(prefabSprite);
+				GameEventManager.TriggerGamePause();
+				break;
+			}
 			case (ListAction.DisplayNotebook) :
-				{
-					MenuUI.destroyMenu();
-					prefabSprite = Resources.Load("03UI/Trombi");
-					Instantiate(prefabSprite);
-					GameEventManager.TriggerGamePause();
-					break;
-				}
+			{
+				MenuUI.destroyMenu();
+				prefabSprite = Resources.Load("03UI/Trombi");
+				Instantiate(prefabSprite);
+				GameEventManager.TriggerGamePause();
+				break;
+			}
 		}
 	}
 	private void checkExistingMenu()

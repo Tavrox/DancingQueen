@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Answer : MonoBehaviour {
-	
-	public int id;
-	public string choice, answerLine;
-	public Dialog nextDialog;
-	
-	
+public class AnimatedBtn : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,8 +13,11 @@ public class Answer : MonoBehaviour {
 	
 	}
 	
-	void OnMouseOver () 
+	void OnMouseOver()
 	{
+		print ("omg");
+		OTAnimatingSprite anim = GetComponent<OTAnimatingSprite>();
+		anim.Play("over");
 		
 	}
 }

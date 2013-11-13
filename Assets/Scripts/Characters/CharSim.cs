@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharSim : ScriptableObject {
+public class CharSim : MonoBehaviour {
 	
 	private Cursor cursor;
 	private OTSprite full_body;
 	private OTSprite dialog_pic;
+	private DialogDisplayer dial;
 	
 	public int sympathy_score = 0;
 	public bool triggeredUltimate = false;
@@ -60,19 +61,20 @@ public class CharSim : ScriptableObject {
 	}
 	private void GameUnpause()
 	{
-		
+		collider.enabled = true;
 	}
 	
 	private void GameDialog()
 	{
-		
+		collider.enabled = false;
 	}
 	
 	private void OnMouseDown()
 	{
-		Object prefabSprite = Resources.Load("03UI/DialogOverlay");
-		Instantiate(prefabSprite);
-		GameEventManager.TriggerGameDialog();
+		if (DialogUI.exists != true)
+		{
+			DialogUI.createDialog();
+		}
 	}
 	
 }

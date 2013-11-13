@@ -159,6 +159,13 @@
             <filename>notebook_full_ui.png</filename>
             <filename>trombino_full_ui.png</filename>
             <filename>quitdialog_ui.png</filename>
+            <filename>backOtherDialog.png</filename>
+            <filename>backPlayerDialog.png</filename>
+            <filename>other_dialog.png</filename>
+            <filename>player_dialog.png</filename>
+            <filename>00backbtn.png</filename>
+            <filename>01backbtn.png</filename>
+            <filename>02backbtn.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
