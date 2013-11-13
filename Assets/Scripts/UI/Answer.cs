@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Dialog : MonoBehaviour {
+public class Answer : MonoBehaviour {
 	
 	public int id;
-	public string[] dialLines;
-	public Answer[] answers;
+	public string choice, answerLine;
+	public Dialog nextDialog;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class Dialog : MonoBehaviour {
 	
 	}
 	
-	public string getLines () {
-		return(dialLines[0]);
+	void OnMouseOver () {
+		print ("answer hover");	
 	}
 }

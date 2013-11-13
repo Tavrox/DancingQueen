@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharSim : MonoBehaviour {
+public class CharSim : ScriptableObject {
 	
 	private Cursor cursor;
 	private OTSprite full_body;
@@ -70,7 +70,7 @@ public class CharSim : MonoBehaviour {
 	
 	private void OnMouseDown()
 	{
-		Object prefabSprite = Resources.Load("03UI/DialogDisplay");
+		Object prefabSprite = Resources.Load("03UI/DialogOverlay");
 		Instantiate(prefabSprite);
 		GameEventManager.TriggerGameDialog();
 	}
