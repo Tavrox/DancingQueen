@@ -29,7 +29,7 @@ public class SoundSprite : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+
 	}
 	
 	public void OnShooting( MasterAudioGroup onShooting)

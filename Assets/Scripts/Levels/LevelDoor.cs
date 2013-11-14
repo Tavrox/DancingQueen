@@ -89,8 +89,13 @@ public class LevelDoor : MonoBehaviour {
 	}
 	private void OnMouseDown()
 	{
-		if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
+		if (DialogUI.exists != true)
+		{
+			if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
 			else GameEventManager.TriggerNextLevel();
+			
+		}
+		
 	}
 	
 }

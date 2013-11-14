@@ -6,11 +6,13 @@ public class Answer : MonoBehaviour {
 	public int id;
 	public string choice, answerLine;
 	public Dialog nextDialog;
+	private OTSprite spr;
+	public bool triggered;
 	
 	
 	// Use this for initialization
 	void Start () {
-	
+		spr = GetComponentInChildren<OTSprite>();
 	}
 	
 	// Update is called once per frame
@@ -18,8 +20,24 @@ public class Answer : MonoBehaviour {
 	
 	}
 	
-	void OnMouseOver () 
+	void OnMouseOver()
 	{
-		
+		if ( spr != null )
+		{
+			spr.frameName = "02backbtn";
+		}
+	}
+	void OnMouseExit()
+	{
+		if ( spr != null )
+		{
+			spr.frameName = "01backbtn";
+		}
+	}
+	
+	void OnMouseDown()
+	{
+		print (this.name + "triggered");
+		triggered = true;
 	}
 }

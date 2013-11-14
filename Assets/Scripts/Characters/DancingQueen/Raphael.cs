@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Raphael : CharSim 
 {
-	private bool coupleClaire = true;
-	private bool kissedPlayer = false;
+	public bool coupleClaire = true;
+	public bool kissedPlayer = false;
 	public int neededSympathyForKiss = 50;
 	
 	public void GiveBeer()
