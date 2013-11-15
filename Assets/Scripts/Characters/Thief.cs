@@ -148,17 +148,17 @@ public class Thief : Enemy {
 		}
 		if(other.gameObject.CompareTag("Bullets")) 
 		{
-			Bullets bull = other.GetComponent<Bullets>();
-			if (bull.bullType != Bullets.bullTopo.Shield)
-			{
-				HP-= bull.Skill.damages;
-			}
-			if(HP <= 0) 
-			{
-				//Debug.Log("HEADSHOT");
-				chasingPlayer = false;
-				Destroy(gameObject);
-			}
+//			Bullets bull = other.GetComponent<Bullets>();
+//			if (bull.bullType != Bullets.bullTopo.Shield)
+//			{
+//				HP-= bull.Skill.damages;
+//			}
+//			if(HP <= 0) 
+//			{
+//				//Debug.Log("HEADSHOT");
+//				chasingPlayer = false;
+//				Destroy(gameObject);
+//			}
 		}
 	}
 	

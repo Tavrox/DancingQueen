@@ -153,6 +153,8 @@
             <filename>back_vip.png</filename>
             <filename>back_bar.png</filename>
             <filename>door_bar.png</filename>
+            <filename>door_toilets.png</filename>
+            <filename>door_vip.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -4,23 +4,62 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>paul_body.png</key>
+            <key>bastien_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{120,200}}</string>
+                <string>{{0,0},{492,1017}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{120,200}}</string>
+                <string>{{0,0},{492,1017}}</string>
                 <key>sourceSize</key>
-                <string>{120,200}</string>
+                <string>{492,1017}</string>
+            </dict>
+            <key>boris_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{492,0},{194,331}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{194,331}}</string>
+                <key>sourceSize</key>
+                <string>{194,331}</string>
+            </dict>
+            <key>chloe_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{686,0},{226,355}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{226,355}}</string>
+                <key>sourceSize</key>
+                <string>{226,355}</string>
+            </dict>
+            <key>paul_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{912,0},{308,739}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{308,739}}</string>
+                <key>sourceSize</key>
+                <string>{308,739}</string>
             </dict>
             <key>paul_portrait.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,200},{150,150}}</string>
+                <string>{{1220,0},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -30,6 +69,45 @@
                 <key>sourceSize</key>
                 <string>{150,150}</string>
             </dict>
+            <key>poule.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1370,0},{127,216}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{127,216}}</string>
+                <key>sourceSize</key>
+                <string>{127,216}</string>
+            </dict>
+            <key>vanessa_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1497,0},{172,341}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{172,341}}</string>
+                <key>sourceSize</key>
+                <string>{172,341}</string>
+            </dict>
+            <key>yannick_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1669,0},{283,343}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{283,343}}</string>
+                <key>sourceSize</key>
+                <string>{283,343}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -38,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>character.png</string>
             <key>size</key>
-            <string>{256,512}</string>
+            <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5dc61df6a556195af6a54eccd74b132f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:8f03b2ef0c1044b8c888aae8724926eb:1/1$</string>
             <key>textureFileName</key>
             <string>character.png</string>
         </dict>

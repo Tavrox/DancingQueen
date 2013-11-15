@@ -97,17 +97,17 @@ public class Zombie : Enemy {
 		}
 		if(other.gameObject.CompareTag("Bullets")) 
 		{
-			Bullets bull = other.GetComponent<Bullets>();
-			if (bull.bullType != Bullets.bullTopo.Shield)
-			{
-				isShot = true;
-				HP-= bull.Skill.damages;
-			}
-			if(HP <= 0) 
-			{
-				chasingPlayer = false;
-				Destroy(gameObject);
-			}
+//			Bullets bull = other.GetComponent<Bullets>();
+//			if (bull.bullType != Bullets.bullTopo.Shield)
+//			{
+//				isShot = true;
+//				HP-= bull.Skill.damages;
+//			}
+//			if(HP <= 0) 
+//			{
+//				chasingPlayer = false;
+//				Destroy(gameObject);
+//			}
 		}
 	}
 	

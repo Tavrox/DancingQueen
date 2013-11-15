@@ -9,8 +9,6 @@ public class Stephane : CharSim
 	public int neededDrinksForVomit = 5;
 	public int neededDrinksForGoodState = 2;
 	
-	public CharacterPositions Init;
-	
 	void Start()
 	{
 		

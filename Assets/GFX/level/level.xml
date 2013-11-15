@@ -59,15 +59,41 @@
             <key>door_bar.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1600,600},{71,159}}</string>
+                <string>{{1600,600},{79,236}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{71,159}}</string>
+                <string>{{0,0},{79,236}}</string>
                 <key>sourceSize</key>
-                <string>{71,159}</string>
+                <string>{79,236}</string>
+            </dict>
+            <key>door_toilets.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1679,600},{79,234}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{79,234}}</string>
+                <key>sourceSize</key>
+                <string>{79,234}</string>
+            </dict>
+            <key>door_vip.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1758,600},{60,179}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{60,179}}</string>
+                <key>sourceSize</key>
+                <string>{60,179}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -79,7 +105,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:320977fadcbd3e4a13ac9206c9fb6380:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:03f70d3d2e25ca1a55d96b6f7671b264:1/1$</string>
             <key>textureFileName</key>
             <string>level.png</string>
         </dict>

@@ -31,7 +31,7 @@ public class GUIManager : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			GameEventManager.TriggerGameUnpause();
 		}
-		_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+//		_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 	
 	private void GameStart () 

@@ -104,6 +104,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -192,6 +195,7 @@ MonoBehaviour:
   answerLine: Omgbro
   nextDialog: {fileID: 0}
   triggered: 0
+  answer: {fileID: 11400000, guid: 0ea4c739fe729af468f5ce7e5d50cad7, type: 2}
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

@@ -10,7 +10,9 @@ public class DialogDisplayer : MonoBehaviour {
 	public Dialog firstDialog;
 	public Answer answer1, answer2, answer3;
 	public int delayStart = 3;
-	
+
+	private CharSim currentChar;
+	private bool isPlayerSpeaking;
 	private bool talking;	//The dialog is displayed
 	private bool finishedTalking;
 	private bool textIsScrolling;	//The text is currently scrolling
@@ -37,13 +39,15 @@ public class DialogDisplayer : MonoBehaviour {
 //		answer3TextGUI.text = answer3.answerLine;
 		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = false;
 		
-			InvokeRepeating("playWhispers",0, 0.5f);
+		setCharacter(LevelManager.currentCharacterSpeaking);
+		InvokeRepeating("playWhispers", 0 , currentChar.frequencyWhispers);
 		StartCoroutine( Wait(delayStart) );
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		print (currentChar);
 		/*
 				if(null) FindObjectOfType(typeof(Dialog)); 
 				//player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -73,7 +77,6 @@ public class DialogDisplayer : MonoBehaviour {
 				//Dialog interaction button detection
 				if(textIsScrolling)
 				{
-					
 	            }
 				else {
 					if(currentLine < talkLines.Length - 1)
@@ -146,11 +149,6 @@ public class DialogDisplayer : MonoBehaviour {
 			GameObject instance = Instantiate(prefabSprite) as GameObject;
 			answer3 = instance.GetComponent<Answer>();
 		}
-		
-		
-		
-		 
-		
 	}
 	
 	private void DestroyAnswers()
@@ -162,7 +160,8 @@ public class DialogDisplayer : MonoBehaviour {
 	
 	public void launchNextDialog()
 	{
-		answer1.nextDialog = findNextDialog();
+//		print ("Inside Next Dialog");
+//		answer1.nextDialog = findNextDialog();
 		dialToDisplay = answer1.nextDialog;
 		talkLines = dialToDisplay.dialLines;
 		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = false;
@@ -247,13 +246,15 @@ public class DialogDisplayer : MonoBehaviour {
 	IEnumerator PlayAudioDialog()
 	{
 		yield return new WaitForSeconds(10f);
-		print ("Sound play");
 		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_01","010_Bastien_02", 0f);
-		print (psr.SoundPlayed);
 	}
 	
 	private void playWhispers()
 	{
-		MasterAudio.PlaySound("010_Bastien_01", "010_Bastien_" + Random.Range(0,0) + Random.Range(1,9) , Random.Range(0,3));
+		currentChar.playWhispers();
+	}
+	public void setCharacter(CharSim _chosenChar)
+	{
+		currentChar = _chosenChar;
 	}
 }

@@ -8,9 +8,9 @@ public class Player : Character {
 	[HideInInspector] public Dialog dialog;
 	//public Skill skillLaunch;
 	
-	public Skills skill_knife;
-	public Skills skill_axe;
-	public Skills skill_shield;
+//	public Skills skill_knife;
+//	public Skills skill_axe;
+//	public Skills skill_shield;
 	public OTSprite menu;
 	public OTAnimatingSprite currSprite;
 	

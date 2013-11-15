@@ -8,6 +8,7 @@ public class Answer : MonoBehaviour {
 	public Dialog nextDialog;
 	private OTSprite spr;
 	public bool triggered;
+	public Object answer;
 	
 	
 	// Use this for initialization

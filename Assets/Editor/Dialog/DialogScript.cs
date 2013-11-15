@@ -6,6 +6,6 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DialogScript : ScriptableObject {
 	
-	public Character charac;
-	public List<DialogElement> DialogItems;
+//	public Character charac;
+//	public List<DialogElement> DialogItems;
 }

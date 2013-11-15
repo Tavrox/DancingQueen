@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LevelDoor : MonoBehaviour {
 	
-	public enum doorType { BeginLevel, EndLevel }
+	public enum doorType { EndLevel }
 	public doorType myDoorType;
 	public enum levelList
 	{
@@ -13,11 +13,13 @@ public class LevelDoor : MonoBehaviour {
 		VIP
 	}
 	public levelList goToLevel;
+	private LevelManager lvManager;
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		GameEventManager.NextLevel += NextLevel;
-		GameEventManager.PreviousLevel += PreviousLevel;
 	}
 //	void Update () {
 //		if(null) FindObjectOfType(typeof(LevectorMoveDoor));	
@@ -40,60 +42,39 @@ public class LevelDoor : MonoBehaviour {
 			{
 				case (levelList.Bar) :
 					{
-						Application.LoadLevel("Bar");
+						string targetBg = lvManager.getBackground(LevelManager.levelList.Bar);
+						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
+						lvManager.currentLvl = LevelManager.levelList.Bar;
 						break;
 					}
 				case (levelList.Dancefloor) :
 					{
-						Application.LoadLevel("Dancefloor");
+						string targetBg = lvManager.getBackground(LevelManager.levelList.Dancefloor);
+						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						break;
 					}
 				case (levelList.Toilets) :
 					{
-						Application.LoadLevel("Toilets");
+						string targetBg = lvManager.getBackground(LevelManager.levelList.Toilets);
+						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						break;
 					}
 				case (levelList.VIP) :
 					{
-						Application.LoadLevel("VIP");
+						string targetBg = lvManager.getBackground(LevelManager.levelList.VIP);
+						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						break;
 					}
 			}
 	}
-	
-	private void PreviousLevel () 
-	{
-		switch (goToLevel)
-			{
-				case (levelList.Bar) :
-					{
-						Application.LoadLevel("Bar");
-						break;
-					}
-				case (levelList.Dancefloor) :
-					{
-						Application.LoadLevel("Dancefloor");
-						break;
-					}
-				case (levelList.Toilets) :
-					{
-						Application.LoadLevel("Toilets");
-						break;
-					}
-				case (levelList.VIP) :
-					{
-						Application.LoadLevel("VIP");
-						break;
-					}
-			}
-	}
+
 	private void OnMouseDown()
 	{
 		if (DialogUI.exists != true)
 		{
-			if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerPreviousLevel();
+			if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
 			else GameEventManager.TriggerNextLevel();
-			
+			lvManager.changeRoom();
 		}
 		
 	}

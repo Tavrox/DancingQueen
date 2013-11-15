@@ -166,6 +166,7 @@
             <filename>00backbtn.png</filename>
             <filename>01backbtn.png</filename>
             <filename>02backbtn.png</filename>
+            <filename>watch.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

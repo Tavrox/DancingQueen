@@ -8,9 +8,36 @@ public class CharSim : MonoBehaviour {
 	private OTSprite dialog_pic;
 	private DialogDisplayer dial;
 	
+	
+	public enum charList
+	{
+		Vanessa,
+		Bastien,
+		Boris,
+		Bob,
+		Alex,
+		Chloe,
+		Charlie,
+		Didier,
+		Paul,
+		Thomas,
+		Yannick,
+		Stephane,
+		Anais,
+		Claire,
+		Christine,
+		Manon,
+		Raphael
+	}
+	public charList charac;
 	public int sympathy_score = 0;
 	public bool triggeredUltimate = false;
 	public bool voteForPlayer = false;
+	
+	public string whisperSound;
+	public string pathSoundGroup;
+	public string pathSoundVariation;
+	[Range (0,5)] public float frequencyWhispers = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -73,8 +100,19 @@ public class CharSim : MonoBehaviour {
 	{
 		if (DialogUI.exists != true)
 		{
-			DialogUI.createDialog();
+			DialogUI.createDialog(this);
+			MasterAudio.PlaySound(pathSoundGroup, pathSoundVariation);
 		}
 	}
 	
+	public charList getEnumChar()
+	{
+		return charList.Vanessa;
+	}
+		
+	public void playWhispers()
+	{
+		MasterAudio.PlaySound(whisperSound);
+	}
+
 }

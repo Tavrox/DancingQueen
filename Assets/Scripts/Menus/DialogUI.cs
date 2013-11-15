@@ -14,6 +14,7 @@ public class DialogUI : MonoBehaviour {
 	public static bool exists;
 	private Object prefabSprite;
 	
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -82,11 +83,12 @@ public class DialogUI : MonoBehaviour {
 		}
 		GameEventManager.TriggerGameUnpause();
 	}
-	public static void createDialog()
+	public static void createDialog(CharSim _chosenChar)
 	{
 		GameEventManager.TriggerGameDialog();
-		Object prefabSprite = Resources.Load("03UI/Dialog");
+		GameObject prefabSprite = Resources.Load("03UI/Dialog") as GameObject;
 		Instantiate(prefabSprite);
+		LevelManager.currentCharacterSpeaking = _chosenChar;
 		exists = true;
 	}
 }

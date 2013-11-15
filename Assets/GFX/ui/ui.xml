@@ -238,6 +238,19 @@
                 <key>sourceSize</key>
                 <string>{600,450}</string>
             </dict>
+            <key>watch.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{704,1561},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -248,7 +261,7 @@
             <key>size</key>
             <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:82bf8817405d57bea3e6d4613d5c60de:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:4a53efed3f94fd94909bcb59c0c28879:1/1$</string>
             <key>textureFileName</key>
             <string>ui.png</string>
         </dict>

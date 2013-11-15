@@ -150,6 +150,12 @@
         <array>
             <filename>paul_body.png</filename>
             <filename>paul_portrait.png</filename>
+            <filename>poule.png</filename>
+            <filename>vanessa_body.png</filename>
+            <filename>yannick_body.png</filename>
+            <filename>bastien_body.png</filename>
+            <filename>boris_body.png</filename>
+            <filename>chloe_body.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
