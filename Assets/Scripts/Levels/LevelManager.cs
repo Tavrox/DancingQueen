@@ -33,15 +33,36 @@ public class LevelManager : MonoBehaviour {
 	private GameObject _Thomas;
 	private GameObject _Vanessa;
 	private GameObject _Yannick;
+	private GameObject _Player;
 
 	private GameObject[] wpChars;
 	private GameObject[] wpDoors;
 
-	public string[] musicNames;
+	public enum MusicList
+	{
+		ElectroBar,
+		ElectroToilets,
+		ElectroVIP,
+		ElectroDancefloor,
+		GroovyBar,
+		GroovyToilets,
+		GroovyVIP,
+		GroovyDancefloor,
+		SlowBar,
+		SlowToilets,
+		SlowVIP,
+		SlowDancefloor,
+		CountryBar,
+		CountryToilets,
+		CountryVIP,
+		CountryDancefloor
+	}
+	public MusicList musicLvl;
 	private string musicToPlay;
 	private GUIText Timer;
 	private int Hours = 20;
 	private int Minutes = 0;
+	private OTSprite black;
 
 	private string backBarFrame;
 	private string backDancefloorFrame;
@@ -60,20 +81,27 @@ public class LevelManager : MonoBehaviour {
 	void Awake()
 	{
 		InvokeRepeating("updateTimer",0, 1f);
+		setCharPrefab();
 		setBackgrounds();
-		instantiateDoors();
-		setCharacGO();
-		setCharPos();
 		setWaypoints();
+		instantiateDoors();
+		Screen.showCursor = false;
 		setMusic();
-		MasterAudio.TriggerPlaylistClip(musicNames[0]);
+		MasterAudio.TriggerPlaylistClip(musicToPlay);
+		_Player = GameObject.Find("PlayerData");
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
-		DontDestroyOnLoad(this);
+		black = GameObject.Find("Overlay").GetComponent<OTSprite>();
+		_Player = GameObject.Find("PlayerData");
 		Timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<GUIText>();
+
+		hideChar("Chloe");
+		setCharPos();
+
+		DontDestroyOnLoad(this);
 //		print (MasterAudio.TriggerPlaylistClip(musicName));
 //		PlaylistController.PlayNextSong();
 		//		PlaylistController.PlayNextSong();
@@ -94,6 +122,18 @@ public class LevelManager : MonoBehaviour {
 				Destroy(obj);
 
 			}
+		}
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			fadeToWhite();
+		}
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			fadeToBlack();
+		}
+		if (Input.GetKeyDown(KeyCode.D))
+		{
+			hideChar("Yannick");
 		}
 		string MinutesTransfo;
 		if (Minutes <= 10)
@@ -155,31 +195,56 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
-	public void changeRoom ()
+	public void changeRoom ( levelList lv)
 	{
-		print ("ChangeRoom");
+		Debug.Log ("ChangeRoom");
+		setWaypoints();
+		_Player = GameObject.Find("PlayerData");
+		_Player.GetComponent<PlayerSim>().reloadCharacs();
+		currentLvl = lv;
+		setCharacGO();
+		setCharPrefab();
+		setBackgrounds();
+		changeBackground();
 		cleanDoors();
 		instantiateDoors();
+		setCharPos();
 	}
 
 	private void setCharacGO()
 	{
-		_Alex 		= GameObject.Find("Alex");
-		_Anais 		= GameObject.Find("Anais");
-		_Bastien 	= GameObject.Find("Bastien");
-		_Bob 		= GameObject.Find("Bob");
-		_Boris 		= GameObject.Find("Boris");
-		_Charlie	= GameObject.Find("Charlie");
-		_Chloe 		= GameObject.Find("Chloe");
-		_Christine	= GameObject.Find("Christine");
-		_Claire 	= GameObject.Find("Claire");
-		_Manon 		= GameObject.Find("Manon");
-		_Paul 		= GameObject.Find("Paul");
-		_Raphael 	= GameObject.Find("Raphael");
-		_Stephane 	= GameObject.Find("Stephane");
-		_Thomas 	= GameObject.Find("Thomas");
-		_Vanessa 	= GameObject.Find("Vanessa");
-		_Yannick 	= GameObject.Find("Yannick");
+		_Alex 		= GameObject.FindGameObjectWithTag("Alex");
+		_Anais 		= GameObject.FindGameObjectWithTag("Anais");
+		_Bastien 	= GameObject.FindGameObjectWithTag("Bastien");
+		_Bob 		= GameObject.FindGameObjectWithTag("Bob");
+		_Boris 		= GameObject.FindGameObjectWithTag("Boris");
+		_Charlie	= GameObject.FindGameObjectWithTag("Charlie");
+		_Chloe 		= GameObject.FindGameObjectWithTag("Chloe");
+		_Christine	= GameObject.FindGameObjectWithTag("Christine");
+		_Claire 	= GameObject.FindGameObjectWithTag("Claire");
+		_Manon 		= GameObject.FindGameObjectWithTag("Manon");
+		_Paul 		= GameObject.FindGameObjectWithTag("Paul");
+		_Raphael 	= GameObject.FindGameObjectWithTag("Raphael");
+		_Stephane 	= GameObject.FindGameObjectWithTag("Stephane");
+		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas");
+		_Vanessa 	= GameObject.FindGameObjectWithTag("Vanessa");
+		_Yannick 	= GameObject.FindGameObjectWithTag("Yannick");
+	}
+	private void setCharPrefab()
+	{
+		_Yannick 	= Resources.Load("02Characters/Yannick") as GameObject;
+		_Bastien	= Resources.Load("02Characters/Bastien") as GameObject;
+		_Bob 		= Resources.Load("02Characters/Bob") as GameObject;
+		_Chloe 		= Resources.Load("02Characters/Chloe") as GameObject;
+		_Charlie 	= Resources.Load("02Characters/Charlie") as GameObject;
+		_Christine 	= Resources.Load("02Characters/Christine") as GameObject;
+		_Claire 	= Resources.Load("02Characters/Claire") as GameObject;
+		_Manon 		= Resources.Load("02Characters/Manon") as GameObject;
+		_Paul 		= Resources.Load("02Characters/Paul") as GameObject;
+		_Raphael 	= Resources.Load("02Characters/Raphael") as GameObject;
+		_Stephane 	= Resources.Load("02Characters/Stephane") as GameObject;
+		_Thomas 	= Resources.Load("02Characters/Thomas") as GameObject;
+		_Vanessa 	= Resources.Load("02Characters/Vanessa") as GameObject;
 	}
 
 	private bool setBackgrounds()
@@ -191,6 +256,25 @@ public class LevelManager : MonoBehaviour {
 		return true;
 	}
 
+	private void changeBackground()
+	{
+		if (currentLvl == LevelManager.levelList.Bar)
+		{
+			background.frameName = backBarFrame;
+		}
+		if (currentLvl == LevelManager.levelList.Dancefloor)
+		{
+			background.frameName = backDancefloorFrame;
+		}
+		if (currentLvl == LevelManager.levelList.Toilets)
+		{
+			background.frameName = backToiletsFrame;
+		}
+		if (currentLvl == LevelManager.levelList.VIP)
+		{
+			background.frameName = backVIPFrame;
+		}
+	}
 	public string getBackground(levelList lv)
 	{
 		if (lv == LevelManager.levelList.Bar)
@@ -221,19 +305,23 @@ public class LevelManager : MonoBehaviour {
 		if (currentLvl == LevelManager.levelList.Bar)
 		{
 			// Instantiate Each doors
-			GameObject doorPrefab = Resources.Load("06Levels/Level_Next") as GameObject;
-			print (wpDoors[0]);
-			doorPrefab.transform.position = wpDoors[0].transform.position;
-			doorPrefab.GetComponentInChildren<OTSprite>().frameName = "door_bar";
+			GameObject doorPrefab = Resources.Load("06Levels/DoorBarToDance") as GameObject;
+//			doorPrefab.GetComponentInChildren<OTSprite>().frameName = "door_bar";
 			Instantiate(doorPrefab);
 		}
 		if (currentLvl == LevelManager.levelList.Dancefloor)
 		{
-			// Instantiate Each doors
-
+			GameObject doorPrefab = Resources.Load("06Levels/DoorDanceToVIP") as GameObject;
+			Instantiate(doorPrefab);
+			doorPrefab = Resources.Load("06Levels/DoorDanceToWC") as GameObject;
+			Instantiate(doorPrefab);
+			doorPrefab = Resources.Load("06Levels/DoorDanceToBar") as GameObject;
+			Instantiate(doorPrefab);
 		}
 		if (currentLvl == LevelManager.levelList.Toilets)
 		{
+			GameObject doorPrefab = Resources.Load("06Levels/DoorWCToDance") as GameObject;
+			Instantiate(doorPrefab);
 			// Instantiate Each doors
 		}
 		if (currentLvl == LevelManager.levelList.VIP)
@@ -244,7 +332,13 @@ public class LevelManager : MonoBehaviour {
 
 	private void setWaypoints()
 	{
+		wpChars = new GameObject[15];
+		wpDoors = new GameObject[5];
+
+		// REMEMBER TO FIX ASSIGNEMENT
+
 		// CHARS
+//		wpChars[0] = new GameObject.Find("WP_Char_Default");
 		wpChars[1] = GameObject.Find("WP_Char_Bastien");
 		wpChars[2] = GameObject.Find("WP_Char_Bob");
 		wpChars[3] = GameObject.Find("WP_Char_Boris");
@@ -253,7 +347,6 @@ public class LevelManager : MonoBehaviour {
 		wpChars[6] = GameObject.Find("WP_Char_Manon");
 		wpChars[7] = GameObject.Find("WP_Char_Paul");
 		wpChars[8] = GameObject.Find("WP_Char_Vanessa");
-		wpChars[9] = GameObject.Find("WP_Char_Yannick");
 
 		// CHARS SPECIAL CASES
 		wpChars[10] = GameObject.Find("WP_Char_Raphael_Dancefloor");
@@ -290,10 +383,12 @@ public class LevelManager : MonoBehaviour {
 		{
 			case (levelList.Dancefloor) :
 			{
-				// FIXED CHARACTER
-				// Bastien
-				// Manon
-				if (_Vanessa.GetComponent<Vanessa>().isSad == true)
+			
+				hideItem("Comptoir");
+				hideChar("Yannick");
+				hideChar("Vanessa");
+				hideChar("Chloe");
+			if (_Vanessa.GetComponent<Vanessa>().isSad == true)
 				{
 
 				}
@@ -303,32 +398,26 @@ public class LevelManager : MonoBehaviour {
 				}
 				if (_Raphael.GetComponent<Raphael>().coupleClaire == false)
 				{
-
+					
 				}
 				break;
 			}
 			case (levelList.Bar) :
 			{
+				unhideItem("Comptoir");
+				unhideChar("Yannick");
+				unhideChar("Vanessa");
+				unhideChar("Chloe");
 				if (_Vanessa.GetComponent<Vanessa>().triggeredUltimate == true)
 				{
-
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-
-				}
-				if (_Chloe.GetComponent<Chloe>().isInToilet == false)
-				{
-
 				}
 				break;
 			}
 			case (levelList.Toilets) :
 			{
-				if (_Chloe.GetComponent<Chloe>().isInToilet == true)
-				{
-
-				}
 				if (_Raphael.GetComponent<Raphael>().coupleClaire == true)
 				{
 
@@ -337,6 +426,11 @@ public class LevelManager : MonoBehaviour {
 			}
 			case (levelList.VIP) :
 			{
+				if (_Bob.GetComponent<Bob>().unlocked == true)
+				{
+					// Unhide Bob.
+					
+				}
 				break;
 			}
 		}
@@ -344,33 +438,102 @@ public class LevelManager : MonoBehaviour {
 
 	private void setMusic()
 	{
-		switch (currentLvl)
+		switch (musicLvl)
 		{
-			case (levelList.Dancefloor) :
+			case (MusicList.SlowBar) :
 			{
-				musicToPlay = musicNames[0];
+				musicToPlay = "SlowBar";
 				break;
 			}
-			case (levelList.Bar) :
+			case (MusicList.GroovyBar) :
 			{
-				musicToPlay = musicNames[1];
+				musicToPlay = "GroovyBar";
 				break;
 			}
-			case (levelList.Toilets) :
+			case (MusicList.CountryBar) :
 			{
-				musicToPlay = musicNames[2];
+				musicToPlay = "GBar";
 				break;
 			}
-			case (levelList.VIP) :
+			case (MusicList.ElectroBar) :
 			{
-				musicToPlay = musicNames[3];
+				musicToPlay = "ElectroBar";
 				break;
 			}
 		}
+	}
+	private void chooseMusic()
+	{
+
+	}
+	private void fadeToBlack()
+	{
+		InvokeRepeating("raiseAlpha", 0f, 0.5f);
+		DialogUI.exists = true;
+	}
+
+	private void fadeToWhite()
+	{
+		InvokeRepeating("lowerAlpha", 0f, 0.5f);
+		DialogUI.exists = false;
 	}
 
 	IEnumerator Wait(float WaitTime)
 	{
 		yield return new WaitForSeconds(WaitTime);
+	}
+
+	private void raiseAlpha()
+	{
+		Debug.Log("Fade" + black.alpha);
+		if (black.alpha < 1)
+		{
+			black.alpha += 0.2f;
+		}
+		else
+		{
+			CancelInvoke();
+		}
+	}
+
+	private void lowerAlpha()
+	{
+		Debug.Log("Fade" + black.alpha);
+ 		if (black.alpha > 0)
+		{
+			black.alpha -= 0.2f;
+		}
+		else
+		{
+			CancelInvoke();
+		}
+	}
+	private void hideChar(string gameo)
+	{
+		if (gameo != null)
+		{
+			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = false;
+			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = false;
+			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;
+		}
+	}
+
+	private void unhideChar (string gameo)
+	{
+		if (gameo != null)
+		{
+			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = true;
+			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = true;
+			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
+		}
+
+	}
+	private void hideItem(string gameo)
+	{
+		GameObject.Find(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;
+	}
+	private void unhideItem(string gameo)
+	{
+		GameObject.Find(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
 	}
 }

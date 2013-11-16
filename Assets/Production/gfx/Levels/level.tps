@@ -40,7 +40,7 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>0</uint>
+        <uint>1</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
@@ -50,7 +50,7 @@
         <key>textureFormat</key>
         <enum type="SettingsBase::TextureFormat">png</enum>
         <key>borderPadding</key>
-        <uint>0</uint>
+        <uint>4</uint>
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
@@ -151,10 +151,14 @@
             <filename>back_dancefloor.png</filename>
             <filename>back_toilets.png</filename>
             <filename>back_vip.png</filename>
-            <filename>back_bar.png</filename>
             <filename>door_bar.png</filename>
             <filename>door_toilets.png</filename>
             <filename>door_vip.png</filename>
+            <filename>toilettesDoorInside.png</filename>
+            <filename>vipDoorInside.png</filename>
+            <filename>barDoorInside.png</filename>
+            <filename>comptoir_solo.png</filename>
+            <filename>back_bar.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

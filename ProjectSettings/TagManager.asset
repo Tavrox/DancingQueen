@@ -5,22 +5,39 @@ TagManager:
   tags:
   - 
   - Character
-  - Bullets
-  - Blocking
-  - Platforms
-  - Ground
+  - 
+  - 
+  - 
+  - 
   - DialogDisplayer
   - AudioManager
   - Cursor
-  - Skills
+  - 
   - Doors
-  - boxes
+  - 
   - MenuUI
   - IngameUI
   - DialogUI
   - Door
   - CharaSim
   - Timer
+  - Alex
+  - Anais
+  - Bastien
+  - Bob
+  - Boris
+  - Charlie
+  - Chloe
+  - Christine
+  - Claire
+  - Manon
+  - Paul
+  - Raphael
+  - Thomas
+  - Vanessa
+  - Yannick
+  - Stephane
+  - ItemsBack
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -30,11 +30,11 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Claire
-  m_TagString: CharaSim
+  m_TagString: Claire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 6, z: 1}
+  m_LocalScale: {x: 5, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.2216759, y: -.470510989, z: 0}
+  m_LocalPosition: {x: 5.86594915, y: -3.31525278, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-8
   _position: {x: 0, y: 0}
-  _size: {x: 3, y: 6}
+  _size: {x: 5, y: 6}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -133,8 +133,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: characSprite
-  oSize: {x: 6.41666698, y: 15.395834}
-  imageSize: {x: 3, y: 6}
+  oSize: {x: 8.33333397, y: 12.5}
+  imageSize: {x: 5, y: 6}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
-  _frameName: paul_body
+  _frameIndex: 9
+  _frameName: claire
   _spriteContainer: {fileID: 0}
   _containerName: character
   _newSprite: 0
@@ -162,14 +162,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a684fc8d915ff4fb6cba4907f6ac22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 14
   charac: 13
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 0
+  minRandomDelay: 0
+  maxRandomDelay: 0
   frequencyWhispers: .5
+  sawPlayerOnce: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

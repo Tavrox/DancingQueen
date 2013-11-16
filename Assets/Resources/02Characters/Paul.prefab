@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Paul
-  m_TagString: CharaSim
+  m_TagString: Paul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.5984116, y: -.470510989, z: 0}
+  m_LocalPosition: {x: -6.67373228, y: .638383389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.255897522, z: -.00255897525}
   m_LocalScale: {x: 3, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -109,13 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270229ec016d44f499347c7b3e9b775e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 09
   charac: 8
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 7
+  minRandomDelay: 0
+  maxRandomDelay: 0
   frequencyWhispers: .5
 --- !u!114 &11400002
 MonoBehaviour:
@@ -129,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: characSprite-9
-  _position: {x: 0, y: 0}
+  _position: {x: 0, y: -.255897522}
   _size: {x: 3, y: 6}
   _rotation: 0
   _pivot: 4
@@ -165,7 +168,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
+  _frameIndex: 12
   _frameName: paul_body
   _spriteContainer: {fileID: 0}
   _containerName: character

@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Boris
-  m_TagString: CharaSim
+  m_TagString: Boris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.49999285, y: 6, z: 1}
+  m_LocalScale: {x: 3.49998808, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -53,8 +53,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98551369, y: -.470510989, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.37294006, y: -1.8352952, z: 0}
+  m_LocalScale: {x: 1.27135563, y: 1.27135563, z: 1.27135563}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
@@ -109,14 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372446b6b04bae24f98c36b9946958b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 18
   charac: 2
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
-  frequencyWhispers: .5
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 7
+  minRandomDelay: 15
+  maxRandomDelay: 20
+  frequencyWhispers: 5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite
   _position: {x: 0, y: 0}
-  _size: {x: 3.49999285, y: 6}
+  _size: {x: 3.49998808, y: 6}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -153,7 +156,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 4.04166698, y: 6.89583349}
-  imageSize: {x: 3.49999285, y: 6}
+  imageSize: {x: 3.49998808, y: 6}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -165,7 +168,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
+  _frameIndex: 6
   _frameName: boris_body
   _spriteContainer: {fileID: 0}
   _containerName: character

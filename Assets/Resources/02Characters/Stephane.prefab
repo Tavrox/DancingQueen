@@ -12,11 +12,11 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Stephane
-  m_TagString: CharaSim
+  m_TagString: Stephane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5859394, y: 6.37503576, z: 0}
+  m_LocalPosition: {x: -1.32073402, y: 1.10389853, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -109,17 +109,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b09c6622621c0642bdb73e7182ed7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 15
   charac: 11
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 0
+  minRandomDelay: 0
+  maxRandomDelay: 0
   frequencyWhispers: .5
   neededDrinksForVomit: 5
   neededDrinksForGoodState: 2
-  Init: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +170,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
+  _frameIndex: 12
   _frameName: paul_body
   _spriteContainer: {fileID: 0}
   _containerName: character

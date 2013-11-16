@@ -12,11 +12,11 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Bastien
-  m_TagString: CharaSim
+  m_TagString: Bastien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.04580736, y: -.470510572, z: 0}
+  m_LocalPosition: {x: -6.80101347, y: -2.17058182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 6, z: 1}
+  m_LocalScale: {x: 5, y: 6.99999809, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -109,13 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc757c221dd4b3459d6deaf57f9db71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 10
   charac: 1
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 0
+  minRandomDelay: 0
+  maxRandomDelay: 0
   frequencyWhispers: .5
 --- !u!114 &11400002
 MonoBehaviour:
@@ -130,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-1
   _position: {x: 0, y: 0}
-  _size: {x: 3, y: 6}
+  _size: {x: 5, y: 6.99999809}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -152,8 +155,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: characSprite
-  oSize: {x: 6.41666698, y: 15.395834}
-  imageSize: {x: 3, y: 6}
+  oSize: {x: 2.70833349, y: 4.16666698}
+  imageSize: {x: 5, y: 6.99999809}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -165,8 +168,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
-  _frameName: paul_body
+  _frameIndex: 4
+  _frameName: bastien_body
   _spriteContainer: {fileID: 0}
   _containerName: character
   _newSprite: 0

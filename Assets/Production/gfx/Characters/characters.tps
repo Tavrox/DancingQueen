@@ -40,7 +40,7 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>0</uint>
+        <uint>3</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
@@ -50,7 +50,7 @@
         <key>textureFormat</key>
         <enum type="SettingsBase::TextureFormat">png</enum>
         <key>borderPadding</key>
-        <uint>0</uint>
+        <uint>3</uint>
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
@@ -149,13 +149,22 @@
         <key>fileList</key>
         <array>
             <filename>paul_body.png</filename>
-            <filename>paul_portrait.png</filename>
-            <filename>poule.png</filename>
             <filename>vanessa_body.png</filename>
             <filename>yannick_body.png</filename>
             <filename>bastien_body.png</filename>
             <filename>boris_body.png</filename>
             <filename>chloe_body.png</filename>
+            <filename>alice_body.png</filename>
+            <filename>raphael_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/thomas_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/manon_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/didier_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/bob_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/alex_body.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/claire.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/alice.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/CharlieBody.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/christine.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -30,11 +30,11 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Raphael
-  m_TagString: CharaSim
+  m_TagString: Raphael
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 6, z: 1}
+  m_LocalScale: {x: 5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.5984116, y: -.470510989, z: 0}
+  m_LocalPosition: {x: -2.19309425, y: -2.54375887, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -109,13 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23064af21420892498ef2a3534b97c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterID: 13
   charac: 16
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   whisperSound: 
-  pathSoundGroup: 
-  pathSoundVariation: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 0
+  minRandomDelay: 0
+  maxRandomDelay: 0
   frequencyWhispers: .5
   coupleClaire: 1
   kissedPlayer: 0
@@ -133,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-10
   _position: {x: 0, y: 0}
-  _size: {x: 3, y: 6}
+  _size: {x: 5, y: 8}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -155,8 +158,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: characSprite
-  oSize: {x: 6.41666698, y: 15.395834}
-  imageSize: {x: 3, y: 6}
+  oSize: {x: 4.16666698, y: 6.25}
+  imageSize: {x: 5, y: 8}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -168,8 +171,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
-  _frameName: paul_body
+  _frameIndex: 13
+  _frameName: raphael_body
   _spriteContainer: {fileID: 0}
   _containerName: character
   _newSprite: 0

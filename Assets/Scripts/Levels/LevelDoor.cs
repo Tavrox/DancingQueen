@@ -5,15 +5,11 @@ public class LevelDoor : MonoBehaviour {
 	
 	public enum doorType { EndLevel }
 	public doorType myDoorType;
-	public enum levelList
-	{
-		Bar,
-		Dancefloor,
-		Toilets,
-		VIP
-	}
-	public levelList goToLevel;
+
+	public LevelManager.levelList goToLevel;
 	private LevelManager lvManager;
+
+	public bool locked = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -21,9 +17,7 @@ public class LevelDoor : MonoBehaviour {
 		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		GameEventManager.NextLevel += NextLevel;
 	}
-//	void Update () {
-//		if(null) FindObjectOfType(typeof(LevectorMoveDoor));	
-//	}
+
 	void OnTriggerEnter(Collider other)
     {
 		if ( GameObject.FindGameObjectWithTag("Player").GetComponent<Player>() != null)
@@ -35,31 +29,44 @@ public class LevelDoor : MonoBehaviour {
 			}	
 		}
     }
+
+	private void OnMouseOver()
+	{
+		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+		spr.frameName = "cursor_use";
+
+	}
+
+	private void OnMouseExit()
+	{
+		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+		spr.frameName = "cursor_default";
+	}
 	
 	private void NextLevel ()
 	{
 		switch (goToLevel)
 			{
-				case (levelList.Bar) :
+					case (LevelManager.levelList.Bar) :
 					{
 						string targetBg = lvManager.getBackground(LevelManager.levelList.Bar);
 						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						lvManager.currentLvl = LevelManager.levelList.Bar;
 						break;
 					}
-				case (levelList.Dancefloor) :
+						case (LevelManager.levelList.Dancefloor) :
 					{
 						string targetBg = lvManager.getBackground(LevelManager.levelList.Dancefloor);
 						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						break;
 					}
-				case (levelList.Toilets) :
+						case (LevelManager.levelList.Toilets) :
 					{
 						string targetBg = lvManager.getBackground(LevelManager.levelList.Toilets);
 						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
 						break;
 					}
-				case (levelList.VIP) :
+					case (LevelManager.levelList.VIP) :
 					{
 						string targetBg = lvManager.getBackground(LevelManager.levelList.VIP);
 						GameObject.Find("Background").GetComponentInChildren<OTSprite>().frameName = targetBg;
@@ -70,13 +77,16 @@ public class LevelDoor : MonoBehaviour {
 
 	private void OnMouseDown()
 	{
-		if (DialogUI.exists != true)
+		if (locked != true)
 		{
-			if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
-			else GameEventManager.TriggerNextLevel();
-			lvManager.changeRoom();
+			if (DialogUI.exists != true)
+			{
+				if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
+				else GameEventManager.TriggerNextLevel();
+				MasterAudio.PlaySound("Porte_full", "porte_full",0f);
+				lvManager.changeRoom(this.goToLevel);
+			}
 		}
-		
 	}
 	
 }
