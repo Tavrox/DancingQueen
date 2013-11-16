@@ -161,10 +161,12 @@
             <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/didier_body.png</filename>
             <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/bob_body.png</filename>
             <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/alex_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/claire.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/alice.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/CharlieBody.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/christine.png</filename>
+            <filename>christine_body.png</filename>
+            <filename>charlie_body.png</filename>
+            <filename>claire_body.png</filename>
+            <filename>stephane_body.png</filename>
+            <filename>kara_body.png</filename>
+            <filename>thomas_bar.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

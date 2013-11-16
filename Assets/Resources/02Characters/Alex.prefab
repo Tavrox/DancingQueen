@@ -146,7 +146,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
+  _frameIndex: 0
   _frameName: alex_body
   _spriteContainer: {fileID: 0}
   _containerName: character
@@ -162,17 +162,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9eb1a84a19e584c8efb84b0ab82f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: 07
+  characterID: 11
   charac: 4
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
+  banAnswers: 
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 0
+  maxRandomVarWhispers: 26
   minRandomDelay: 0
   maxRandomDelay: 0
-  frequencyWhispers: .5
+  frequencyWhispers: .25
   casseCouilleS1: 0
   casseCouilleS2: 0
   casseCouilleS3: 0

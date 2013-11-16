@@ -4,23 +4,10 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>CharlieBody.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{3,3},{300,500}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{300,500}}</string>
-                <key>sourceSize</key>
-                <string>{300,500}</string>
-            </dict>
             <key>alex_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{306,3},{400,600}}</string>
+                <string>{{3,3},{400,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -30,23 +17,10 @@
                 <key>sourceSize</key>
                 <string>{400,600}</string>
             </dict>
-            <key>alice.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{709,3},{127,216}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{127,216}}</string>
-                <key>sourceSize</key>
-                <string>{127,216}</string>
-            </dict>
             <key>alice_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{709,3},{127,216}}</string>
+                <string>{{406,3},{127,216}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +33,7 @@
             <key>bastien_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{839,3},{130,200}}</string>
+                <string>{{536,3},{130,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +46,7 @@
             <key>bob_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{972,3},{400,600}}</string>
+                <string>{{669,3},{400,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +59,7 @@
             <key>boris_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1375,3},{194,331}}</string>
+                <string>{{1072,3},{194,331}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -94,6 +68,19 @@
                 <string>{{0,0},{194,331}}</string>
                 <key>sourceSize</key>
                 <string>{194,331}</string>
+            </dict>
+            <key>charlie_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1269,3},{300,500}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,500}}</string>
+                <key>sourceSize</key>
+                <string>{300,500}</string>
             </dict>
             <key>chloe_body.png</key>
             <dict>
@@ -108,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{226,355}</string>
             </dict>
-            <key>christine.png</key>
+            <key>christine_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,606},{300,500}}</string>
@@ -121,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{300,500}</string>
             </dict>
-            <key>claire.png</key>
+            <key>claire_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{306,606},{400,600}}</string>
@@ -147,10 +134,23 @@
                 <key>sourceSize</key>
                 <string>{130,200}</string>
             </dict>
+            <key>kara_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{842,606},{283,552}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{283,552}}</string>
+                <key>sourceSize</key>
+                <string>{283,552}</string>
+            </dict>
             <key>manon_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{842,606},{130,200}}</string>
+                <string>{{1128,606},{130,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>paul_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{975,606},{308,739}}</string>
+                <string>{{1261,606},{308,739}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>raphael_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1286,606},{200,300}}</string>
+                <string>{{1572,606},{200,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -186,10 +186,36 @@
                 <key>sourceSize</key>
                 <string>{200,300}</string>
             </dict>
+            <key>stephane_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,1348},{400,500}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{400,500}}</string>
+                <key>sourceSize</key>
+                <string>{400,500}</string>
+            </dict>
+            <key>thomas_bar.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{406,1348},{300,500}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,500}}</string>
+                <key>sourceSize</key>
+                <string>{300,500}</string>
+            </dict>
             <key>thomas_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1489,606},{170,220}}</string>
+                <string>{{709,1348},{170,220}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +228,7 @@
             <key>vanessa_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1662,606},{172,341}}</string>
+                <string>{{882,1348},{172,341}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>yannick_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,1348},{283,343}}</string>
+                <string>{{1057,1348},{283,343}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -235,7 +261,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:82a92ccad3ff4f2d0c1146d3ef6e8fe7:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:449bd532add0a691b09ecbc1c5f3293d:1/1$</string>
             <key>textureFileName</key>
             <string>character.png</string>
         </dict>

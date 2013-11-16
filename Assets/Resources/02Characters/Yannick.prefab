@@ -114,6 +114,7 @@ MonoBehaviour:
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
+  banAnswers: 
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 0
@@ -168,7 +169,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 16
+  _frameIndex: 17
   _frameName: yannick_body
   _spriteContainer: {fileID: 0}
   _containerName: character

@@ -735,6 +735,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -749,8 +752,10 @@ MonoBehaviour:
   id: 0
   dialLines:
   - 1 er truc a afficher
-  - 2e truc a afficher
   answers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -802,7 +807,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 12
+  _frameIndex: 13
   _frameName: other_dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -855,7 +860,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 14
+  _frameIndex: 15
   _frameName: player_dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -961,7 +966,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 13
+  _frameIndex: 14
   _frameName: overlay-dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -1067,7 +1072,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 15
+  _frameIndex: 16
   _frameName: quitdialog_ui
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -1096,16 +1101,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talkTextGUI: {fileID: 13200000}
-  answer1TextGUI: {fileID: 13200000, guid: 2c60c54bdc407e34e8a3dfe912fe9ef3, type: 2}
-  answer2TextGUI: {fileID: 13200000, guid: 60a62c6ef69a3b1459fede5e89171daa, type: 2}
-  answer3TextGUI: {fileID: 13200000, guid: 0d528fd67eddeda499b42335fbcaf95c, type: 2}
+  answer1TextGUI: {fileID: 0}
+  answer2TextGUI: {fileID: 0}
+  answer3TextGUI: {fileID: 0}
+  answer4TextGUI: {fileID: 0}
+  answer5TextGUI: {fileID: 0}
+  answer6TextGUI: {fileID: 0}
   speaker: {fileID: 13200002}
   talkLines: []
-  textScrollSpeed: 20
+  textScrollSpeed: 100
   firstDialog: {fileID: 11400002}
   answer1: {fileID: 0}
   answer2: {fileID: 0}
   answer3: {fileID: 0}
+  answer4: {fileID: 0}
+  answer5: {fileID: 0}
+  answer6: {fileID: 0}
   delayStart: 1
 --- !u!132 &13200000
 GUIText:
@@ -1142,7 +1153,7 @@ GUIText:
   m_Anchor: 3
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 0
+  m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}

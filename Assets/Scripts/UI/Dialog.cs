@@ -19,8 +19,10 @@ public class Dialog : MonoBehaviour {
 		{
 			answers[0] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer1;
 			answers[1] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer2;
-			answers[2] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer3;
-			
+			answers[2] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer4;
+			answers[3] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer4;
+			answers[4] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer5;
+			answers[5] = transform.parent.transform.parent.GetComponent<DialogDisplayer>().answer6;
 		}
 	
 	}

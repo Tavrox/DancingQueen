@@ -4,7 +4,7 @@ using System.Collections;
 public class Answer : MonoBehaviour {
 	
 	public int id;
-	public string choice, answerLine, ID_nextDialog;
+	public string choice, answerLine, ID_nextDialog, action;
 	public Dialog nextDialog;
 	private OTSprite spr;
 	public bool triggered;
@@ -49,5 +49,8 @@ public class Answer : MonoBehaviour {
 	}
 	public void setAnswerLine(string txt) {
 		answerLine = txt;
+	}
+	public void setAction(string txt) {
+		action = txt;
 	}
 }

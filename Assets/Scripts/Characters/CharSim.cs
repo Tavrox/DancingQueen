@@ -25,13 +25,15 @@ public class CharSim : MonoBehaviour {
 		Claire,		// ID 14
 		Christine,	// ID 17
 		Manon,		// ID 02
-		Raphael		// ID 13
+		Raphael,	// ID 13
+		Kara		// ID 04
 	};
 	public string characterID;
 	public charList charac;
 	public int sympathy_score = 0;
 	public bool triggeredUltimate = false;
 	public bool voteForPlayer = false;
+	public int[] banAnswers = new int[20];
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -100,7 +102,7 @@ public class CharSim : MonoBehaviour {
 		if (DialogUI.exists != true)
 		{
 			DialogUI.createDialog(this);
-//			MasterAudio.PlaySound(pathSoundGroup, pathSoundVariation);
+			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
 		}
 	}
 	
@@ -126,8 +128,8 @@ public class CharSim : MonoBehaviour {
 
 
 //		Debug.Log ("0" + characterID + charac.ToString() + transfRand);
-		Debug.Log(psr.ActingVariation);
-		Debug.Log("Delay" + randDelay);
+//		Debug.Log(psr.ActingVariation);
+//		Debug.Log("Delay" + randDelay);
 	}
 
 	private void OnMouseOver()

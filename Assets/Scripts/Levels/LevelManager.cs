@@ -111,7 +111,6 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		print (wpDoors[0]);
 		if (Input.GetKeyDown(KeyCode.A))
 		{
 			raphaelSingle = true;

@@ -42,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.80101347, y: -2.17058182, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.05557632, y: .574855566, z: 0}
+  m_LocalScale: {x: .580093026, y: .580093026, z: .580093026}
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
@@ -114,12 +114,13 @@ MonoBehaviour:
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
+  banAnswers: 
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 0
+  maxRandomVarWhispers: 33
   minRandomDelay: 0
   maxRandomDelay: 0
-  frequencyWhispers: .5
+  frequencyWhispers: .189999998
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +169,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 4
+  _frameIndex: 2
   _frameName: bastien_body
   _spriteContainer: {fileID: 0}
   _containerName: character

@@ -34,9 +34,22 @@ gens droit dans cette soirée.</fr>
          <en Choice_en="" />
       </answer>
       <answer fullID="180023" ID_Dialog="18002" ID_Answer="3" ID_NextDialog="18005" ID_Character="018" Sympathy_value="" Condition="" Action="">
-         <fr Choice_fr="Agressive">En même temps, tu t’es vu toi, tu juge tout le monde sans les connaitre pas étonnant que t’aime personne… pauvre type.</fr>
+         <fr Choice_fr="Agressive">En même temps, tu t’es vu toi,fdssfs tu juge tout le monde sans les connaitre pas étonnant que t’aime personne… pauvre type.</fr>
          <en Choice_en="" />
       </answer>
+      <answer fullID="180023" ID_Dialog="18002" ID_Answer="4" ID_NextDialog="18005" ID_Character="018" Sympathy_value="" Condition="" Action="">
+         <fr Choice_fr="Agressive">En même temps, tu t’es vu fsdfdsfsdtoi, tu juge tout le monde sans les connaitre pas étonnant que t’aime personne… pauvre type.</fr>
+         <en Choice_en="" />
+      </answer>
+      <answer fullID="180023" ID_Dialog="18002" ID_Answer="5" ID_NextDialog="18005" ID_Character="018" Sympathy_value="" Condition="" Action="">
+         <fr Choice_fr="Agressive">En même temps, tu t’fdsfdsfdsfes vu toi, tu juge tout le monde sans les connaitre pas étonnant que t’aime personne… pauvre type.</fr>
+         <en Choice_en="" />
+      </answer>
+      <answer fullID="180023" ID_Dialog="18002" ID_Answer="6" ID_NextDialog="18005" ID_Character="018" Sympathy_value="" Condition="" Action="">
+         <fr Choice_fr="Agressive">En même temps, tu t’fdsfdsfdses vu toi, tu juge tout le monde sans les connaitre pas étonnant que t’aime personne… pauvre type.</fr>
+         <en Choice_en="" />
+      </answer>
+
    </dialog>
    <dialog fullID="18003" ID_Dialog="18003" ID_Answer="" ID_NextDialog="" ID_Character="018" Sympathy_value="" Condition="" Action="">
       <fr Choice_fr="">Seul ? J’ai un groupe de pote qui doivent m’attendre. Si je suis tout seul au toilette c’est que j’attends un autre copain qui se sent pas bien.</fr>
@@ -75,7 +88,7 @@ Peut être qu’ils sont bien content d’être sans toi !</fr>
       <fr Choice_fr="">Whoo, je savais bien que t’étais une garce, me parle plus ou je me fâche !</fr>
       <en Choice_en="" />
    </dialog>
-   <dialog fullID="18006" ID_Dialog="18006" ID_Answer="" ID_NextDialog="" ID_Character="018" Sympathy_value="" Condition="" Action="closeDialog">
+   <dialog fullID="18006" ID_Dialog="18006" ID_Answer="" ID_NextDialog="0" ID_Character="018" Sympathy_value="" Condition="" Action="closeDialog">
       <fr Choice_fr="">Je te fais pas encore assez confiance pour te présenter au groupe, fais quelque chose de grand et tu feras partie de ma bande.</fr>
       <en Choice_en="" />
    </dialog>

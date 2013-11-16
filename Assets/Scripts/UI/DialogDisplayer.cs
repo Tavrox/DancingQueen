@@ -5,12 +5,12 @@ using System;
 
 public class DialogDisplayer : MonoBehaviour {
 	
-	public GUIText talkTextGUI, answer1TextGUI, answer2TextGUI, answer3TextGUI, speaker;	//Text object
+	public GUIText talkTextGUI, answer1TextGUI, answer2TextGUI, answer3TextGUI,answer4TextGUI,answer5TextGUI,answer6TextGUI, speaker;	//Text object
 	[HideInInspector] public string[] talkLines;	//Array containing all the sentences of the dialog
 	public int textScrollSpeed = 20;
 	
 	public Dialog firstDialog;
-	public Answer answer1, answer2, answer3;
+	public Answer answer1, answer2, answer3, answer4, answer5, answer6;
 	public int delayStart = 3;
 
 	private CharSim currentChar;
@@ -30,7 +30,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private string[] fullDialog = new string[8];
 	private string[,] arrayAnswers = new string[8,10];
 	private bool answersInitiated;
-	private GameObject instance1,instance2,instance3, prefabSprite; 
+	private GameObject instance1,instance2,instance3,instance4,instance5,instance6, prefabSprite; 
 
 	//[HideInInspector] public Player player; //The player to lock
 	
@@ -43,7 +43,7 @@ public class DialogDisplayer : MonoBehaviour {
 		GameEventManager.GameDialog += GameDialog;
 		/**ADD**/
 		//string url = "http://paultondeur.com/files/2010/UnityExternalJSONXML/books.xml";
-		string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";print(url);
+		string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
 		WWW www = new WWW(url);
 		
 		//Load the data and yield (wait) till it's ready before we continue executing the rest of this method.
@@ -52,7 +52,6 @@ public class DialogDisplayer : MonoBehaviour {
 		if (www.error == null)
 		{
 			//Sucessfully loaded the XML
-			Debug.Log("Loaded following XML " + www.text);
 			
 			//Create a new XML document out of the loaded data
 			xmlDoc = new XmlDocument();
@@ -60,30 +59,18 @@ public class DialogDisplayer : MonoBehaviour {
 			
 			//Point to the book nodes and process them
 			dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
-			//ProcessBooks(xmlDoc.SelectNodes("books/book"));
 		}
-		//public string[] fullDialog = new string[8];
-		//string arrayAnswers = new string[10][10];
-		//public string[,] arrayAnswers = new string[8,8];
-		//ArrayList answers = new ArrayList();
-		/**ADD**/
 		CharDialID = "18002";
 		getDialogContent();
 
 		for(int j = 0; j < arrayAnswers.Length - 1; j++) {
 			int k;
-			for(k = 0; k < 7; k++) {
+			for(k = 0; k < 7; k++) 
+			{
 				if(arrayAnswers[j,k]==null) break;
-				print(arrayAnswers[j,k]);
 			}
 			if(arrayAnswers[j,k]==null) break;
-			print("---------");
 		}
-		/*talkLines = dialogNodes*/
-//		answer1TextGUI.text = answer1.answerLine;
-//		answer2TextGUI.text = answer2.answerLine;
-//		answer3TextGUI.text = answer3.answerLine;
-//		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = true;
 		
 		setCharacter(LevelManager.currentCharacterSpeaking);
 		InvokeRepeating("playWhispers", 0 , currentChar.frequencyWhispers);
@@ -91,7 +78,6 @@ public class DialogDisplayer : MonoBehaviour {
 	}
 
 	public void getDialogContent() {
-		print ("GetContent : "+CharDialID);
 		foreach (XmlNode node in dialogNodes)
 		{
 			if(node.Attributes.GetNamedItem("fullID").Value == CharDialID)
@@ -106,7 +92,6 @@ public class DialogDisplayer : MonoBehaviour {
 				fullDialog[4] = node.Attributes.GetNamedItem("Action").Value;
 				fullDialog[5] = node.SelectSingleNode("fr").InnerText;
 				fullDialog[6] = node.SelectSingleNode("en").InnerText;
-				print ("trouvé : "+fullDialog[0] + " -> " +fullDialog[5]);
 				int i=0;
 				foreach (XmlNode answer in node.SelectNodes("answer"))
 				{
@@ -126,7 +111,6 @@ public class DialogDisplayer : MonoBehaviour {
 				dialToDisplay = firstDialog;
 				talkLines = dialToDisplay.dialLines;
 				talkLines[0]=fullDialog[5];
-
 				break;
 			}
 		}
@@ -188,37 +172,54 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		if (finishedTalking == true)
 		{
-			finishedTalking =false;
-			InstantiateAnswers();
-//			answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = true;
-			answersInitiated =true;
+			if(fullDialog[4]!="closeDialog") 
+			{
+				InstantiateAnswers();
+				finishedTalking =false;
+				answersInitiated =true;
+			}
+			else {
+				if(Input.GetMouseButtonDown(0)) {
+					finishedTalking =false;
+					DialogUI.destroyDialog();
+				}
+			}
 		}
 		if(answersInitiated) {
 			answer1TextGUI.text = answer1.choice;
-
-			//print(answer1TextGUI.text+" ?= "+answer1.choice);
 			answer2TextGUI.text = answer2.choice;
 			answer3TextGUI.text = answer3.choice;
+			answer4TextGUI.text = answer4.choice;
+			answer5TextGUI.text = answer5.choice;
+			answer6TextGUI.text = answer6.choice;
 			if (answer1.triggered == true)
 			{
-				//	print ("Answer 1 triggered :" + answer1.name + answer1.triggered);
-				//	print ("launch next dialog1");
 				CharDialID = answer1.ID_nextDialog;
-//				print ("ICLIIIIIC");
 				launchNextDialog();
 			}
 			if (answer2.triggered == true)
 			{
-				//	print ("Answer 1 triggered :" + answer2.name + answer2.triggered);
-				//	print ("launch next dialog2");
 				CharDialID = answer2.ID_nextDialog;
 				launchNextDialog();
 			}
 			if (answer3.triggered == true)
 			{
-				//	print ("Answer 1 triggered :" + answer3.name + answer3.triggered);
-				//	print ("launch next dialog3");
 				CharDialID = answer3.ID_nextDialog;
+				launchNextDialog();
+			}
+			if (answer4.triggered == true)
+			{
+				CharDialID = answer4.ID_nextDialog;
+				launchNextDialog();
+			}
+			if (answer5.triggered == true)
+			{
+				CharDialID = answer5.ID_nextDialog;
+				launchNextDialog();
+			}
+			if (answer6.triggered == true)
+			{
+				CharDialID = answer6.ID_nextDialog;
 				launchNextDialog();
 			}
 		}
@@ -245,7 +246,6 @@ public class DialogDisplayer : MonoBehaviour {
 	
 	private void InstantiateAnswers()
 	{
-		print("--------instance");
 		prefabSprite = Resources.Load("03UI/Answer1") as GameObject;
 		if (answer1 == null)
 		{
@@ -255,6 +255,8 @@ public class DialogDisplayer : MonoBehaviour {
 			answer1.setAnswerLine(arrayAnswers[0,8]);
 			answer1.setChoice(arrayAnswers[0,6]);
 			answer1.setNextDialog(arrayAnswers[0,2]);
+			answer1.setAction(arrayAnswers[0,4]);
+			
 //			print("HAHAHAHAHAH"+answer1.choice);
 		}
 		if (answer2 == null)
@@ -266,6 +268,7 @@ public class DialogDisplayer : MonoBehaviour {
 			answer2.setAnswerLine(arrayAnswers[1,8]);
 			answer2.setChoice(arrayAnswers[1,6]);
 			answer2.setNextDialog(arrayAnswers[1,2]);
+			answer2.setAction(arrayAnswers[2,4]);
 		}
 		if (answer3 == null)
 		{
@@ -276,6 +279,48 @@ public class DialogDisplayer : MonoBehaviour {
 			answer3.setAnswerLine(arrayAnswers[2,8]);
 			answer3.setChoice(arrayAnswers[2,6]);
 			answer3.setNextDialog(arrayAnswers[2,2]);
+			answer3.setAction(arrayAnswers[2,4]);
+		}
+		if (answer4 == null)
+		{
+			prefabSprite = Resources.Load("03UI/Answer4") as GameObject;
+			instance4 = Instantiate(prefabSprite) as GameObject;
+			answer4TextGUI = instance4.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+			answer4 = instance4.GetComponent<Answer>();
+			answer4.setAnswerLine(arrayAnswers[3,8]);
+			answer4.setChoice(arrayAnswers[3,6]);
+			answer4.setNextDialog(arrayAnswers[3,2]);
+			answer4.setAction(arrayAnswers[3,4]);
+			print ("Content Answer 4 : " + answer4.choice);
+			if (answer4.choice == "" || answer4.choice == null )
+			{
+				print ("Destroy Answer4");
+				answer4.GetComponentInChildren<OTSprite>().renderer.enabled = false;
+				answer4.collider.enabled = false;
+				answer4.enabled = false;
+			}
+		}
+		if (answer5 == null)
+		{
+			prefabSprite = Resources.Load("03UI/Answer5") as GameObject;
+			instance5 = Instantiate(prefabSprite) as GameObject;
+			answer5TextGUI = instance5.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+			answer5 = instance5.GetComponent<Answer>();
+			answer5.setAnswerLine(arrayAnswers[4,8]);
+			answer5.setChoice(arrayAnswers[4,6]);
+			answer5.setNextDialog(arrayAnswers[4,2]);
+			answer5.setAction(arrayAnswers[4,4]);
+		}
+		if (answer6 == null)
+		{
+			prefabSprite = Resources.Load("03UI/Answer6") as GameObject;
+			instance6 = Instantiate(prefabSprite) as GameObject;
+			answer6TextGUI = instance6.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+			answer6 = instance6.GetComponent<Answer>();
+			answer6.setAnswerLine(arrayAnswers[5,8]);
+			answer6.setChoice(arrayAnswers[5,6]);
+			answer6.setNextDialog(arrayAnswers[5,2]);
+			answer6.setAction(arrayAnswers[5,4]);
 		}
 	}
 	
@@ -284,23 +329,23 @@ public class DialogDisplayer : MonoBehaviour {
 		Destroy(instance1);
 		Destroy(instance2);
 		Destroy(instance3);
+		Destroy(instance4);
+		Destroy(instance5);
+		Destroy(instance6);
 		Destroy(answer1);
 		Destroy(answer2);
 		Destroy(answer3);
-		Destroy(prefabSprite);
+		Destroy(answer4);
+		Destroy(answer5);
+		Destroy(answer6);
 	}
 	
 	public void launchNextDialog()
 	{
-//		print("-------launchNext");
-//		print ("Inside Next Dialog");
-//		answer1.nextDialog = findNextDialog();
 		getDialogContent();
 		DestroyAnswers();
-		//dialToDisplay = answer1.nextDialog;
-		//talkLines = dialToDisplay.dialLines;
 		answersInitiated = false;
-		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = true;
+		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = true;
 		talking = true;
 		currentLine = 0;
 		StartCoroutine("StartScrolling");
@@ -375,12 +420,6 @@ public class DialogDisplayer : MonoBehaviour {
 			talking = false;
 		}
 		textIsScrolling = false; //Text is not scrolling anymore
-	}
-	
-	IEnumerator PlayAudioDialog()
-	{
-		yield return new WaitForSeconds(10f);
-		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_01","010_Bastien_02", 0f);
 	}
 	
 	private void playWhispers()
