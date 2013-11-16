@@ -193,6 +193,7 @@ MonoBehaviour:
   id: 0
   choice: Acquieser
   answerLine: Omgbro
+  ID_nextDialog: 
   nextDialog: {fileID: 0}
   triggered: 0
   answer: {fileID: 11400000, guid: 0ea4c739fe729af468f5ce7e5d50cad7, type: 2}
@@ -202,9 +203,9 @@ GUIText:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: Omgbro
+  m_Text: Curieuse
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}

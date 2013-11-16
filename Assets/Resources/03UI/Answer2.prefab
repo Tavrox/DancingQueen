@@ -104,6 +104,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -190,17 +193,19 @@ MonoBehaviour:
   id: 0
   choice: Acquieser
   answerLine: OMAGAD
+  ID_nextDialog: 
   nextDialog: {fileID: 0}
   triggered: 0
+  answer: {fileID: 0}
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Text: OMAGAD
+  m_Text: Admirative
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}

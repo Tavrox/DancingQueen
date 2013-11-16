@@ -749,8 +749,7 @@ MonoBehaviour:
   id: 0
   dialLines:
   - 1 er truc a afficher
-  - sfdsdsdfsdsdfsfdssfdfsffsfdsdfsdsfddsffsdfffff f d dffdfdf fdfd
-  - Line3
+  - 2e truc a afficher
   answers:
   - {fileID: 0}
   - {fileID: 0}
@@ -1120,7 +1119,7 @@ GUIText:
   m_Anchor: 3
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 0
+  m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
