@@ -102,9 +102,12 @@ public class MenuUI : MonoBehaviour {
 	
 	public static void destroyMenu()
 	{
-		GameObject target = GameObject.FindGameObjectWithTag("MenuUI");
-		Destroy(target);
-		exists = false;
+		GameObject[] target = GameObject.FindGameObjectsWithTag("MenuUI");
+		for (var i = 0; i < target.Length ; i++)
+		{
+			Destroy(target[i]);
+			exists = false;
+		}
 	}
 	
 	public static void createMenu()

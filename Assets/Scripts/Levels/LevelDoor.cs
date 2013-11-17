@@ -32,9 +32,11 @@ public class LevelDoor : MonoBehaviour {
 
 	private void OnMouseOver()
 	{
-		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-		spr.frameName = "cursor_use";
-
+		if (DialogUI.exists != true && locked != true)
+		{
+			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+			spr.frameName = "cursor_use";
+		}
 	}
 
 	private void OnMouseExit()
@@ -79,7 +81,7 @@ public class LevelDoor : MonoBehaviour {
 	{
 		if (locked != true)
 		{
-			if (DialogUI.exists != true)
+			if (DialogUI.exists != true  && locked != true)
 			{
 				if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
 				else GameEventManager.TriggerNextLevel();

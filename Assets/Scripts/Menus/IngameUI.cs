@@ -2,22 +2,23 @@
 using System.Collections;
 
 public class IngameUI : MonoBehaviour {
-	
-	public OTTextSprite label;
-	public OTAnimatingSprite sprite;
+
 	public enum ListAction
 	{
 		LaunchScene,
 		DisplayTrombi,
 		DisplayNotebook,
 		MuteSound,
+		ChangeLanguage,
 		LowerSound,
 		RaiseSound,
 		FunStuff, // To do funny miscellaneous stuff in menus :)
 	}
 	public ListAction action;
 	private Object prefabSprite;
+	private OTSprite childSpr;
 	public static bool exists;
+	private PlayerSim _Player;
 	// Use this for initialization
 	
 	void Start () 
@@ -27,6 +28,8 @@ public class IngameUI : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.GameDialog += GameDialog;
+		_Player = GameObject.Find("PlayerData").GetComponent<PlayerSim>();
+		childSpr = GetComponentInChildren<OTSprite>();
 		
 		exists = true;
 	}
@@ -47,7 +50,7 @@ public class IngameUI : MonoBehaviour {
 			case (ListAction.DisplayTrombi) :
 			{
 				MenuUI.destroyMenu();
-				prefabSprite = Resources.Load("03UI/Notebook");
+				prefabSprite = Resources.Load("03UI/Trombi");
 				Instantiate(prefabSprite);
 				GameEventManager.TriggerGamePause();
 				break;
@@ -58,6 +61,21 @@ public class IngameUI : MonoBehaviour {
 				prefabSprite = Resources.Load("03UI/Trombi");
 				Instantiate(prefabSprite);
 				GameEventManager.TriggerGamePause();
+				break;
+			}
+			case (ListAction.ChangeLanguage) :
+			{
+				if (_Player.langChosen == PlayerSim.langList.en)
+				{
+					_Player.langChosen = PlayerSim.langList.fr;
+					
+					childSpr.frameName = "fr";
+				}
+				else
+				{
+					_Player.langChosen = PlayerSim.langList.en;
+					childSpr.frameName = "en";
+				}
 				break;
 			}
 		}
@@ -88,9 +106,12 @@ public class IngameUI : MonoBehaviour {
 	}
 	public static void destroyIngameUI()
 	{
-		GameObject target = GameObject.FindGameObjectWithTag("IngameUI");
-		Destroy(target);
-		exists = false;
+		GameObject[] target = GameObject.FindGameObjectsWithTag("IngameUI");
+		for (var i = 0; i < target.Length ; i++)
+		{
+			Destroy(target[i]);
+			exists = false;
+		}
 	}
 	public static void createIngameUI()
 	{

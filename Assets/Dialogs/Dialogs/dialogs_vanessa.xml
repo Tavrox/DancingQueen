@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="7001" ID_Dialog="7001" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Toi aussi tu te fais chier ? Parce que moi, 
+c’est pas l’éclate !</fr>
+      <en Choice_en="">Are you bored out of your mind too ? Cause I sure as hell 
+am...</en>
+      <answer fullID="70011" ID_Dialog="7001" ID_Answer="1" ID_NextDialog="7002" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Seul ?">T'es toute seule ?</fr>
+         <en Choice_en="Alone ?">Are you alone ?</en>
+      </answer>
+      <answer fullID="70012" ID_Dialog="7001" ID_Answer="2" ID_NextDialog="7003" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Problème ?">Un problème ? Pourquoi tu te fais chier ?</fr>
+         <en Choice_en="Problem ?">Is there a problem ? Why are you so bored ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="7002" ID_Dialog="7002" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Non je suis venue avec des copines, elles se 
+font chier en groupe et moi je me fais chier 
+toute seule … Sympa non ?</fr>
+      <en Choice_en="">No, I came with friends, but they are bored as a group, 
+and I am bored by myself... Sweet, huh ?</en>
+      <answer fullID="70021" ID_Dialog="7002" ID_Answer="1" ID_NextDialog="7004" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Blasée">Maintenant on se fait chier à deux, 
+vraiment une soirée de pourrie</fr>
+         <en Choice_en="Jaded">Yeah, and now that's two of us... Really a crappy party !</en>
+      </answer>
+      <answer fullID="70022" ID_Dialog="7002" ID_Answer="2" ID_NextDialog="7005" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Dynamique">Présente les moi, peut être qu’on pourra faire 
+quelque chose contre l’ennui !</fr>
+         <en Choice_en="Dynamic">Introduce me to them, maybe we can all counter boredom 
+together !</en>
+      </answer>
+      <answer fullID="70023" ID_Dialog="7002" ID_Answer="3" ID_NextDialog="7006" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Curieuse">Elle sont où tes amies ?</fr>
+         <en Choice_en="Curious">Where are your friends ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="7003" ID_Dialog="7003" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Aucun problème, c’est juste que c’est une 
+soirée de merde.</fr>
+      <en Choice_en="">No problem, it's just a shitty party, that's all.</en>
+      <answer fullID="70031" ID_Dialog="7003" ID_Answer="1" ID_NextDialog="7007" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Blasée">Oui t’as raison, on se fait chier à mourir ici,
+encore si y'avait de la bonne musique !</fr>
+         <en Choice_en="Jaded">Yeah, you're right ! If only the music was good, at least...</en>
+      </answer>
+      <answer fullID="70032" ID_Dialog="7003" ID_Answer="2" ID_NextDialog="7008" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Dynamique">Hooo allez, fais pas cette tête, viens danser 
+ça va être cool !</fr>
+         <en Choice_en="Dynamic">Oh, come on, don't be so grim, come and dance ! 
+It'll be cool !</en>
+      </answer>
+      <answer fullID="70033" ID_Dialog="7003" ID_Answer="3" ID_NextDialog="7013" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Embrasser">Et ça c’est de la merde ? *Smack*</fr>
+         <en Choice_en="Kiss">Is that boring ? *Kiss*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="7004" ID_Dialog="7004" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Quelle soirée magique ...</fr>
+      <en Choice_en="">What a magic night...</en>
+   </dialog>
+   <dialog fullID="7005" ID_Dialog="7005" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Pas envie de bouger...</fr>
+      <en Choice_en="">Don't feel like moving...</en>
+   </dialog>
+   <dialog fullID="7006" ID_Dialog="7006" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Je sais pas...</fr>
+      <en Choice_en="">I dunno...</en>
+   </dialog>
+   <dialog fullID="7007" ID_Dialog="7007" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Oui, tout le monde est hypocrite, faire semblant
+de s’amuser comme ça ! À qui ils veulent faire 
+croire que c’est cool ?</fr>
+      <en Choice_en="">Yeah. They're all hypocrits, pretending to have fun like that ! 
+Who are they trying to convince it's cool ?</en>
+   </dialog>
+   <dialog fullID="7008" ID_Dialog="7008" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">La musique est naze, non merci ...</fr>
+      <en Choice_en="">No thanks, the music sucks...</en>
+   </dialog>
+   <dialog fullID="7009" ID_Dialog="7009" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut ! Merci d’avoir mis cette musique,
+ça change de ce qu’on a l’habitude 
+d’entendre, j’adore !</fr>
+      <en Choice_en="">Hi ! Thanks for putting that music on, it's a change from what 
+we usually hear. I love it !</en>
+      <answer fullID="70091" ID_Dialog="7009" ID_Answer="1" ID_NextDialog="7010" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Charlie">C’est Charlie qui ma donné la musique 
+pour que tu l’écoute</fr>
+         <en Choice_en="Charlie">Charlie gave me this music for you to listen...</en>
+      </answer>
+      <answer fullID="70092" ID_Dialog="7009" ID_Answer="2" ID_NextDialog="7011" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="La musique">On a les même gouts, j’adore cette musique 
+c’est fou !</fr>
+         <en Choice_en="Music">We've got the same likes, I love this song too ! It's crazy !</en>
+      </answer>
+      <answer fullID="70093" ID_Dialog="7009" ID_Answer="3" ID_NextDialog="7012" ID_Character="007" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Surprise">Comment ? Je vois pas de quoi tu parle, 
+je n’y suis pour rien !</fr>
+         <en Choice_en="Surprise">What ? I don't know what you're talking about, it wasn't me !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="7010" ID_Dialog="7010" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Ah, c’est lui … Bon je vais aller le remercier ! 
+Merci en tout cas, à bientôt !</fr>
+      <en Choice_en="">Oh, it's him... Well, I'm gonna go thank him. Thanks 
+anyway, see you around !</en>
+   </dialog>
+   <dialog fullID="7011" ID_Dialog="7011" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Je suis bien heureuse de rencontrer quelqu’un
+qui a les même gouts que moi !
+Hé ! Ça te dirais de m’accompagner voir 
+mes amies ?</fr>
+      <en Choice_en="">I'm glad to meet someone with the same tastes as mine ! 
+Hey ! Would you like to go see my friends with me ?</en>
+   </dialog>
+   <dialog fullID="7012" ID_Dialog="7012" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Ah… j’ai dû faire erreur. Tant pis bonne 
+soirée !</fr>
+      <en Choice_en="">Oh... I guess I'm mistaken. Anyway, have a good night !</en>
+   </dialog>
+   <dialog fullID="7013" ID_Dialog="7013" ID_Answer="" ID_NextDialog="" ID_Character="007" Sympathy_value="" Condition="" Action="Close dialogue" BanAnswer="">
+      <fr Choice_fr="">Mouéé</fr>
+      <en Choice_en="">Riiight...</en>
+   </dialog>
+</dialogs>

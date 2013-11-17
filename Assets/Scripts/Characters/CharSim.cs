@@ -30,6 +30,7 @@ public class CharSim : MonoBehaviour {
 	};
 	public string characterID;
 	public charList charac;
+	public string dialToTrigger = "";
 	public int sympathy_score = 0;
 	public bool triggeredUltimate = false;
 	public bool voteForPlayer = false;
@@ -37,7 +38,8 @@ public class CharSim : MonoBehaviour {
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
-	public int minRandomDelay, maxRandomDelay;
+	[Range (0,5)] public float randomDelayMin = 0f;
+	[Range (0,5)] public float randomDelayMax = 0.01f;
 	[Range (0,5)] public float frequencyWhispers = 0.5f;
 
 	// Use this for initialization
@@ -89,12 +91,12 @@ public class CharSim : MonoBehaviour {
 	}
 	private void GameUnpause()
 	{
-		collider.enabled = true;
+
 	}
-	
+
 	private void GameDialog()
 	{
-		collider.enabled = false;
+
 	}
 	
 	private void OnMouseDown()
@@ -102,6 +104,7 @@ public class CharSim : MonoBehaviour {
 		if (DialogUI.exists != true)
 		{
 			DialogUI.createDialog(this);
+			IngameUI.destroyIngameUI();
 			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
 		}
 	}
@@ -114,7 +117,6 @@ public class CharSim : MonoBehaviour {
 	public void playWhispers()
 	{
 		int rand = Random.Range(minRandomVarWhispers,maxRandomVarWhispers);
-		int randDelay = Random.Range(minRandomDelay,maxRandomDelay);
 		string transfRand;
 		if (rand < 10)
 		{
@@ -124,25 +126,117 @@ public class CharSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_" + transfRand, randDelay);
-
-
-//		Debug.Log ("0" + characterID + charac.ToString() + transfRand);
-//		Debug.Log(psr.ActingVariation);
-//		Debug.Log("Delay" + randDelay);
+		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_" + transfRand);
 	}
 
 	private void OnMouseOver()
 	{
-		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-		spr.frameName = "cursor_talk";
-		
+		if(DialogUI.exists != true)
+		{
+			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+			spr.frameName = "cursor_talk";
+		}
 	}
 	
 	private void OnMouseExit()
 	{
 		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
 		spr.frameName = "cursor_default";
+	}
+
+	public string getCharFrame(CharSim.charList charac)
+	{
+		string res ="";
+		switch (charac)
+		{
+			case (charList.Vanessa) :
+			{
+				res = "vanessa_body";
+				break;
+			}
+			case (charList.Bastien) :
+			{
+				res = "bastien_body";
+				break;
+			}
+			case (charList.Boris) :
+			{
+				res = "boris_body";
+				break;
+			}
+			case (charList.Bob) :
+			{
+				res = "bob_body";
+				break;
+			}
+			//
+			case (charList.Alex) :
+			{
+				res = "alex_body";
+				break;
+			}
+			case (charList.Chloe) :
+			{
+				res = "chloe_body";
+				break;
+			}
+			case (charList.Charlie) :
+			{
+				res = "charlie_body";
+				break;
+			}
+			case (charList.Didier) :
+			{
+				res = "didier_body";
+				break;
+			}
+			case (charList.Paul) :
+			{
+				res = "paul_body";
+				break;
+			}
+			case (charList.Thomas) :
+			{
+				res = "thomas_body";
+				break;
+			}
+			case (charList.Yannick) :
+			{
+				res = "yannick_body";
+				break;
+			}
+			case (charList.Stephane) :
+			{
+				res = "stephane_body";
+				break;
+			}
+			case (charList.Claire) :
+			{
+				res = "claire_body";
+				break;
+			}
+				
+			case (charList.Christine) :
+			{
+				res = "christine_body";
+				break;
+			}
+				
+			case (charList.Manon) :
+			{
+				res = "manon_body";
+				break;
+			}
+				
+			case (charList.Raphael) :
+			{
+				res = "raphael_body";
+				break;
+			}
+
+		}
+		return res;
+
 	}
 
 }

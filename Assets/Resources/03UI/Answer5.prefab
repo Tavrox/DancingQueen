@@ -30,7 +30,7 @@ GameObject:
   - 23: {fileID: 2300000}
   m_Layer: 0
   m_Name: AnswerBtn3-1
-  m_TagString: DialogUI
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - 132: {fileID: 13200000}
   m_Layer: 0
   m_Name: AnswerTxt3
-  m_TagString: DialogUI
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,10 +191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  choice: Acquieser
-  answerLine: ___MISS__
+  choice_fr: 
+  choice_en: 
+  answerLine_fr: 
+  answerLine_en: 
   ID_nextDialog: 
   action: 
+  condition: 
+  sympathy_value: 0
   nextDialog: {fileID: 0}
   triggered: 0
   answer: {fileID: 0}

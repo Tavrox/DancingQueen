@@ -8,13 +8,13 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Kara
   - DialogDisplayer
   - AudioManager
   - Cursor
   - 
   - Doors
-  - 
+  - Didier
   - MenuUI
   - IngameUI
   - DialogUI
@@ -39,6 +39,7 @@ TagManager:
   - Stephane
   - ItemsBack
   - Thomasaubar
+  - RaphaelToilets
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

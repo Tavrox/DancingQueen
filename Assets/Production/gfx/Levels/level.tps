@@ -159,6 +159,8 @@
             <filename>barDoorInside.png</filename>
             <filename>comptoir_solo.png</filename>
             <filename>back_bar.png</filename>
+            <filename>vip_desk.png</filename>
+            <filename>doorVIPInside.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

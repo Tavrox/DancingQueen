@@ -148,25 +148,27 @@
         </struct>
         <key>fileList</key>
         <array>
+            <filename>alex_body.png</filename>
+            <filename>alice_body.png</filename>
+            <filename>bastien_body.png</filename>
+            <filename>bob_body.png</filename>
+            <filename>boris_body.png</filename>
+            <filename>charlie_body.png</filename>
+            <filename>chloe_body.png</filename>
+            <filename>christine_body.png</filename>
+            <filename>claire_body.png</filename>
+            <filename>didier_body.png</filename>
+            <filename>Dominique_body.png</filename>
+            <filename>kara_body.png</filename>
+            <filename>manon_body.png</filename>
             <filename>paul_body.png</filename>
+            <filename>raphael_body.png</filename>
+            <filename>stephane_body.png</filename>
+            <filename>thomasDanse_body.png</filename>
             <filename>vanessa_body.png</filename>
             <filename>yannick_body.png</filename>
-            <filename>bastien_body.png</filename>
-            <filename>boris_body.png</filename>
-            <filename>chloe_body.png</filename>
-            <filename>alice_body.png</filename>
-            <filename>raphael_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/thomas_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/manon_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/SalleDancing/didier_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/bob_body.png</filename>
-            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/EnProd/DancingQueen/GFX/alex_body.png</filename>
-            <filename>christine_body.png</filename>
-            <filename>charlie_body.png</filename>
-            <filename>claire_body.png</filename>
-            <filename>stephane_body.png</filename>
-            <filename>kara_body.png</filename>
             <filename>thomas_bar.png</filename>
+            <filename>Jeremie_body.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

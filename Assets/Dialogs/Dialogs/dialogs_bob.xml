@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="5001" ID_Dialog="5001" ID_Answer="" ID_NextDialog="" ID_Character="05" Sympathy_value="" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="">Bonsoir Kara. Asseyez-vous. Alex, laisse-nous 
+seul, je dois lui parler. Alors ?</fr>
+   <en Choice_en="">Good evening, Kara. Please, sit down. Alex, 
+leave us, I need to talk to her. So ?</en>
+   <answer fullID="50011" ID_Dialog="5001" ID_Answer="1" ID_NextDialog="5002" ID_Character="05" Sympathy_value="-10" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Etonnée">Alors, quoi ?</fr>
+   <en Choice_en="Suprised">So, what ?</en>
+   </answer><answer fullID="50012" ID_Dialog="5001" ID_Answer="2" ID_NextDialog="5002" ID_Character="05" Sympathy_value="20" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Déterminée">Je suis là pour le business.</fr>
+   <en Choice_en="Determined">I'm here to talk business.</en>
+   </answer><answer fullID="50013" ID_Dialog="5001" ID_Answer="3" ID_NextDialog="5002" ID_Character="05" Sympathy_value="-10" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Interrogative">Qu’est ce que vous me voulez ?</fr>
+   <en Choice_en="Interrogative">What do you want from me ?</en>
+   </answer></dialog><dialog fullID="5002" ID_Dialog="5002" ID_Answer="" ID_NextDialog="" ID_Character="05" Sympathy_value="" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="">Vous voyez, je suis le maire de cette ville. J’ai
+toujours affaire à des gens sérieux,
+professionnels. On ne me ment pas, on ne me 
+manque pas de respect, et tout se passe bien. 
+Qu’est ce que vous pensez de mon fils, Alex ?</fr>
+   <en Choice_en="">You see, I'm the mayor of this town. I always 
+deal with serious, professional people. No one 
+lies to me, no one disrespects me, and 
+everything is fine. What do you think of my 
+son, Alex ?</en>
+   <answer fullID="50021" ID_Dialog="5002" ID_Answer="1" ID_NextDialog="5004" ID_Character="05" Sympathy_value="20" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Clasher Alex">C’est un petit rat. Il n’ira pas loin dans la vie en 
+restant sous votre protection.</fr>
+   <en Choice_en="Bad Alex">He's a little scumbag. He won't go anywhere in life 
+by staying under your protection and thinking is 
+a big shot.</en>
+   </answer><answer fullID="50022" ID_Dialog="5002" ID_Answer="2" ID_NextDialog="5005" ID_Character="05" Sympathy_value="-20" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Valoriser Alex">Il a du caractère et sait ce qu’il veut. C’est une 
+preuve de sa détermination. Il a par ailleurs 
+beaucoup de charme...</fr>
+   <en Choice_en="Good Alex">He's got some spirit, and he knows what he wants. It's proof of his determination. Besides, he's very charming...</en>
+   </answer><answer fullID="50023" ID_Dialog="5002" ID_Answer="3" ID_NextDialog="5006" ID_Character="05" Sympathy_value="" Condition="" Action="" BanAnswer="">
+   <fr Choice_fr="Rester silencieuse">...</fr>
+   <en Choice_en="Remain quiet">...</en>
+   </answer></dialog><dialog fullID="5004" ID_Dialog="5004" ID_Answer="" ID_NextDialog="" ID_Character="05" Sympathy_value="" Condition="" Action="winDestroyBob" BanAnswer="">
+   <fr Choice_fr="">Tu as raison, j’aime ta manière de voir les 
+choses. Ecoute, tu m’as convaincu. Ne t’inquiète 
+pas pour le reste je m’en occupe. A bientôt.</fr>
+   <en Choice_en="">You're right. I like the way you think. Look, you 
+convinced me. Don't worry about the rest, I'm on it. 
+See you soon.</en>
+   </dialog><dialog fullID="5005" ID_Dialog="5005" ID_Answer="" ID_NextDialog="" ID_Character="05" Sympathy_value="" Condition="" Action="looseDestroyBob" BanAnswer="">
+   <fr Choice_fr="">Mon fils est un branleur ! Je ne vois pas 
+comment je pourrais faire affaire avec vous… 
+Mettons fin à cette conversation.</fr>
+   <en Choice_en="">My son is a slacker ! I see no reason to do business 
+with you. Let's end this conversation.</en>
+   </dialog><dialog fullID="5006" ID_Dialog="5006" ID_Answer="" ID_NextDialog="" ID_Character="05" Sympathy_value="" Condition="" Action="looseDestroyBob" BanAnswer="">
+   <fr Choice_fr="">Tu n’as donc pas de volonté ? Je ne vois pas 
+pourquoi on ferait affaire. Au revoir.</fr>
+   <en Choice_en="">Have you no willpower at all ? I can't see why I'd 
+want to do business with you. Goodbye.</en>
+   </dialog>
+</dialogs>

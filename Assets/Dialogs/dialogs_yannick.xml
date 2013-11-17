@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="6001" ID_Dialog="6001" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Hey, salut toi ! Tu te souviens de moi ? C’est moi
+qui t’ai donné l’invitation pour cette soirée.</fr>
+      <en Choice_en="">Hey you ! D'you remember me ? I'm the one who gave you the invitation for this party.</en>
+      <answer fullID="60011" ID_Dialog="6001" ID_Answer="1" ID_NextDialog="6002" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Long rappel">Euh non pas vraiment. Qui es-tu ? Qu’est ce que je
+fais là ?</fr>
+         <en Choice_en="Long reminder">Errr, no, not really... Who are you ? What am I doing here ?</en>
+      </answer>
+      <answer fullID="60012" ID_Dialog="6001" ID_Answer="2" ID_NextDialog="6003" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Court Rappel">Vite fait. Tu peux me faire un récapitulatif ?</fr>
+         <en Choice_en="Short reminder">Sort of. Can you sum it up for me ?</en>
+      </answer>
+      <answer fullID="60013" ID_Dialog="6001" ID_Answer="3" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialogYannickSpoken" BanAnswer="6001">
+         <fr Choice_fr="Pas de rappel">Oui je me souviens, t’inquiète pas. Je te laisse, je 
+vais m’intégrer dans la soirée.</fr>
+         <en Choice_en="No reminder">Yes, I remember, don't worry. I'm gonna try and blend in. Talk to you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6002" ID_Dialog="6002" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Alors, tu m’avais dit être arrivée depuis peu 
+dans cette ville et donc tu ne connais personne. 
+Aujourd’hui, nous célébrons le bi-centenaire du 
+village avec cette petite fête.</fr>
+      <en Choice_en="">So, you told me you just arrived in this town, and you don't know anybody. We are celebrating today the bi-centenial of our village with this little party.</en>
+      <answer fullID="60021" ID_Dialog="6002" ID_Answer="1" ID_NextDialog="6004" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Continuer">Oui c’est bien ça, je t’en prie continue.</fr>
+         <en Choice_en="Go on">Yes, that's right. Please go on.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6003" ID_Dialog="6003" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Pour faire simple, si tu arrives à sympathiser 
+avec les gens de la fête, tu pourras être élue 
+reine du village, pour faciliter ton intégration! 
+Il suffit de leur parler et de leur rendre service.</fr>
+      <en Choice_en="">Simply put, if you manage to sympathize with people at the party, you will get a chance to be elected queen of the village, to make your integration easier. All you got to do is talk to them and help them out.</en>
+      <answer fullID="60031" ID_Dialog="6003" ID_Answer="1" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialogYannickSpoken" BanAnswer="6001">
+         <fr Choice_fr="Terminer">D’accord, je vois. Je vais aller leur parler alors, à
+ plus tard !</fr>
+         <en Choice_en="Finish">Ok, I get it. I'll go talk to them, then. See you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6004" ID_Dialog="6004" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Donc voilà, aujourd’hui c’est la fête et tu vas
+pouvoir rencontrer plein de monde. Qui sait,
+peut-être même qu’avant minuit tu vas pouvoir
+être la reine du village?</fr>
+      <en Choice_en="">So, today is the party, and you'll get to meet a lot of people ! Who knows, maybe before midnight, you'll be queen of the village ?</en>
+      <answer fullID="60041" ID_Dialog="6004" ID_Answer="1" ID_NextDialog="6005" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="60041">
+         <fr Choice_fr="Reine du village">Reine du village ? Pourquoi je voudrais l’être ?</fr>
+         <en Choice_en="Queen of the village">Queen of the village ? Why would I want that ?</en>
+      </answer>
+      <answer fullID="60042" ID_Dialog="6004" ID_Answer="2" ID_NextDialog="6006" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="60042">
+         <fr Choice_fr="Les outils">Parle moi ce carnet et de ce trombinoscope que
+tu m’as donné, qu’est-ce que c’est ?</fr>
+         <en Choice_en="Tools">Tell me about this notebook and this bunch of pictures you just gave me ? What are they for ?</en>
+      </answer>
+      <answer fullID="60043" ID_Dialog="6004" ID_Answer="3" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialogYannickSpoken" BanAnswer="6001">
+         <fr Choice_fr="Quitter">Ça devrait aller pour la suite, merci. A plus tard !</fr>
+         <en Choice_en="Leave">I think I can handle it from here, thanks ! See you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6005" ID_Dialog="6005" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Et bien, disons qu’être reine de la ville ce serait
+une belle preuve d’intégration. Pour cela, il faut
+que tu sympathises avec un maximum de monde 
+et que tu emportes leurs votes. Tu peux leur parler 
+et leur rendre service, ils apprécieront.</fr>
+      <en Choice_en="">Well, let's say that being crowned queen would be quite a sign of integration ! To do that, you need to sympathize with as many people as you can, and get their vote. you can talk to them, help them out if they need it, it's really appreciated.</en>
+      <answer fullID="60051" ID_Dialog="6005" ID_Answer="1" ID_NextDialog="6027" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Les outils">Parle moi ce carnet et de ce trombinoscope que 
+tu m’as donné, qu’est-ce que c’est ?</fr>
+         <en Choice_en="Tools">Tell me about this notebook and this bunch of pictures you just gave me ? What are they for ?</en>
+      </answer>
+      <answer fullID="60052" ID_Dialog="6005" ID_Answer="2" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialogYannickSpoken" BanAnswer="6001">
+         <fr Choice_fr="Quitter">Ca devrait aller pour la suite, merci. A plus tard !</fr>
+         <en Choice_en="Leave">I think I can handle the rest, thanks ! See you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6006" ID_Dialog="6006" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Le carnet te sert à noter un récapitulatif de tes 
+discussions. C’est comme un pense bête ! En ce
+qui concerne le trombinoscope, c’est un résumé 
+des personnes invitées à la soirée ! Pratique pour 
+associer visage et prénom.</fr>
+      <en Choice_en="">In the notebook, you can write a summary of the conversations you've had. Sort of a reminder ! As for the the pictures, they list all the persons invited to the party. Convenient to match names and faces.</en>
+      <answer fullID="60061" ID_Dialog="6006" ID_Answer="1" ID_NextDialog="6026" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Reine du village">Reine du village ? Pourquoi je voudrais l’être ?</fr>
+         <en Choice_en="Queen of the village">Queen of the village ? Why would I want that ?</en>
+      </answer>
+      <answer fullID="60062" ID_Dialog="6006" ID_Answer="2" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialogYannickSpoken" BanAnswer="6001">
+         <fr Choice_fr="Quitter">Ça devrait aller pour la suite, merci. A plus tard !</fr>
+         <en Choice_en="Leave">I think I can handle it from here, thanks ! See you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6007" ID_Dialog="6007" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Alors, comment se passe ta soirée ?</fr>
+      <en Choice_en="">So, how's your night going ?</en>
+      <answer fullID="60071" ID_Dialog="6007" ID_Answer="1" ID_NextDialog="6008" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Parler de :">Je voudrais en savoir plus sur quelqu’un.</fr>
+         <en Choice_en="Talk about">I'd like to know more about someone.</en>
+      </answer>
+      <answer fullID="60072" ID_Dialog="6007" ID_Answer="2" ID_NextDialog="6009" ID_Character="06" Sympathy_value="20" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Barman">Dis m’en plus sur toi. Qu’est ce que ça fait 
+d’être Barman.</fr>
+         <en Choice_en="Bartender">Tell me more about you. What's it like to be a bartender ?</en>
+      </answer>
+      <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Parler de soi">Ce village est plus sympa que mon ancien 
+chez moi.</fr>
+         <en Choice_en="Talk about you">This village is nicer than the town I come from...</en>
+      </answer>
+      <answer fullID="60074" ID_Dialog="6007" ID_Answer="4" ID_NextDialog="6011" ID_Character="06" Sympathy_value="20" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Les gens qui passent">Ta place de barman te permet de parler avec
+beaucoup de monde.</fr>
+         <en Choice_en="People passing by">As a bartender, you talk to a lot with people, right ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6008" ID_Dialog="6008" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">De qui veux-tu parler ?</fr>
+      <en Choice_en="">Who do you want to talk about ?</en>
+      <answer fullID="60081" ID_Dialog="6008" ID_Answer="1" ID_NextDialog="6012" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Vanessa, La Vache">La vache m’intrigue, peux-tu m’en dire plus 
+sur elle ?</fr>
+         <en Choice_en="Vanessa the cow">I'm intrigued by the cow, can you tell me more about her ?</en>
+      </answer>
+      <answer fullID="60082" ID_Dialog="6008" ID_Answer="2" ID_NextDialog="6013" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Chloé, La Souris">La souris Chloé.</fr>
+         <en Choice_en="Chloe the mouse">Chloe, the mouse.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6009" ID_Dialog="6009" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Les horaires sont décalé donc c’est fatiguant. 
+Mais on s’y fait, ça va.</fr>
+      <en Choice_en="">Working hours are shifting, so it can be tiring. But one gets used to it.</en>
+      <answer fullID="60091" ID_Dialog="6009" ID_Answer="1" ID_NextDialog="6014" ID_Character="06" Sympathy_value="10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Les horaires">Tu fais quoi comme horaire du coup ?</fr>
+         <en Choice_en="Working hours">What are your working hours ?</en>
+      </answer>
+      <answer fullID="60092" ID_Dialog="6009" ID_Answer="2" ID_NextDialog="0" ID_Character="06" Sympathy_value="-10" Condition="" Action="closeDialog" BanAnswer="60072">
+         <fr Choice_fr="Changer de sujet">Ouais, ça doit être fatiguant… Je voulais parler
+d’autre chose.</fr>
+         <en Choice_en="Change subject">Yeah, that's gotta be tiring... I'd like to talk about something else.</en>
+      </answer>
+      <answer fullID="60093" ID_Dialog="6009" ID_Answer="3" ID_NextDialog="6015" ID_Character="06" Sympathy_value="-20" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Agressive">Vous travaillez que le soir, ça doit pas être si dur
+que ça.</fr>
+         <en Choice_en="Agressive">You only work nights, how hard can it be !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6010" ID_Dialog="6010" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Ah oui, tu habitais où avant ?</fr>
+      <en Choice_en="">Oh yeah, where did you use to live ?</en>
+      <answer fullID="60101" ID_Dialog="6010" ID_Answer="1" ID_NextDialog="6016" ID_Character="06" Sympathy_value="10" Condition="" Action="" BanAnswer="60073">
+         <fr Choice_fr="Une grande ville">J’habitais à Paris, c’était étouffant ! Beaucoup 
+trop grand pour moi.</fr>
+         <en Choice_en="Big town">Paris. It was really oppressive, way too big for me.</en>
+      </answer>
+      <answer fullID="60102" ID_Dialog="6010" ID_Answer="2" ID_NextDialog="6016" ID_Character="06" Sympathy_value="-10" Condition="" Action="" BanAnswer="60073">
+         <fr Choice_fr="Un petit village">Un petit village de campagne, on s’y ennuyait
+comme des rats morts.</fr>
+         <en Choice_en="Small town">A small country town, I was bored out of my mind.</en>
+      </answer>
+      <answer fullID="60103" ID_Dialog="6010" ID_Answer="3" ID_NextDialog="6016" ID_Character="06" Sympathy_value="0" Condition="" Action="" BanAnswer="60073">
+         <fr Choice_fr="SDF">Je n’ai jamais eu de chez moi. Des services
+sociaux m’ont permis d’avoir un toit et un travail.</fr>
+         <en Choice_en="Hobo">Never really had a home. Social services gave me a place to stay and a job.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6011" ID_Dialog="6011" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Oui, c’est assez pratique pour en savoir plus 
+sur les gens.</fr>
+      <en Choice_en="">Yes, it's pretty convenient to know more about people.</en>
+      <answer fullID="60111" ID_Dialog="6011" ID_Answer="1" ID_NextDialog="6017" ID_Character="06" Sympathy_value="10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Taquine">Super comme ça tu vas pouvoir espionner les
+gens pour moi, héhé.</fr>
+         <en Choice_en="Teasing">Great ! So you can spy on people for me ! Hahaha !</en>
+      </answer>
+      <answer fullID="60112" ID_Dialog="6011" ID_Answer="2" ID_NextDialog="6018" ID_Character="06" Sympathy_value="0" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Curieuse">Tu serais du genre à t’informer avant de dire 
+des trucs personnel, pour être sur de froisser 
+personne ?</fr>
+         <en Choice_en="Curious">Are you the kind who gets informations on people before you speak, in order not to upset anyone ?</en>
+      </answer>
+      <answer fullID="60113" ID_Dialog="6011" ID_Answer="3" ID_NextDialog="6019" ID_Character="06" Sympathy_value="-10" Condition="" Action="" BanAnswer="60074">
+         <fr Choice_fr="Agressive">Laisse ma vie privée en dehors de ta prise 
+d’information.</fr>
+         <en Choice_en="Agressive">Yeah, well keep your nose out of my personal life !</en>
+      </answer>
+      <answer fullID="6012" ID_Dialog="6012" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="">Ah ça c’est Vanessa. Elle passe son temps
+à se plaindre, c’est embêtant... Une vraie 
+blasée de la vie. Elle traîne souvent avec 
+le même groupe de filles.</fr>
+         <en Choice_en="">Oh, that's Vanessa. She spends her time complaining, it's annoying... She's so depressed ! She often hangs out with the same group of girls.</en>
+      </answer>
+      <answer fullID="6013" ID_Dialog="6013" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="">Chloé ? C’est une vrai passionnée, une geekette. 
+Elle aime parler de tout ce qui touche de prêt 
+ou de loin aux jeux vidéo, à la science fiction. 
+Il me semble qu’elle fait aussi partie d’un groupe.</fr>
+         <en Choice_en="">Chloe ? She's a passionate girl, and a bit of a nerd ! She loves everything that's connected to video games, sci-fi, that kind of stuff. She also hangs out with a group.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6014" ID_Dialog="6014" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">De 16h à 2h du matin.</fr>
+      <en Choice_en="">From 4 pm to 2 am.</en>
+      <answer fullID="60141" ID_Dialog="6014" ID_Answer="1" ID_NextDialog="0" ID_Character="06" Sympathy_value="20" Condition="" Action="closeDialog" BanAnswer="60072">
+         <fr Choice_fr="Sympathique">Tu as vraiment du courage, j’y arriverais pas.</fr>
+         <en Choice_en="Sympathetic">You're really brave, I don't think I could do it !</en>
+      </answer>
+      <answer fullID="60142" ID_Dialog="6014" ID_Answer="2" ID_NextDialog="0" ID_Character="06" Sympathy_value="0" Condition="" Action="closeDialog" BanAnswer="60072">
+         <fr Choice_fr="Pragmatique">6h de travail par jour, c’est honnête.</fr>
+         <en Choice_en="Pragmatic">A six hours working day, sounds fair.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6015" ID_Dialog="6015" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60072">
+      <fr Choice_fr="">Si tu le dis...</fr>
+      <en Choice_en="">If you say so...</en>
+   </dialog>
+   <dialog fullID="6016" ID_Dialog="6016" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Ah ! Ca doit faire un sacré changement.</fr>
+      <en Choice_en="">Oh ! That must be quite a change !</en>
+   </dialog>
+   <dialog fullID="6017" ID_Dialog="6017" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Haha, arrête un peu, je fais pas du voyeurisme. 
+Tu blaguais j’espère ! Figures toi que j’étudie
+leurs comportements.</fr>
+      <en Choice_en="">Hey, come on, I don't do stalking ! I hope you were kidding ! FYI, I'm studying their behaviour.</en>
+      <answer fullID="60171" ID_Dialog="6017" ID_Answer="1" ID_NextDialog="6020" ID_Character="06" Sympathy_value="20" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Taquine">Haha, un espion psychologue voilà qui va m’être 
+utile.</fr>
+         <en Choice_en="Teasing">Haha, a psychological spy. That's gonna be handy !</en>
+      </answer>
+      <answer fullID="60172" ID_Dialog="6017" ID_Answer="2" ID_NextDialog="6021" ID_Character="06" Sympathy_value="0" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Gentille">Avec toutes ces informations et ton esprit 
+analytique tu dois en soulager des cœurs.</fr>
+         <en Choice_en="Kind">With all this intel and your analytic mind, you must be able to mend a lot of hearts...</en>
+      </answer>
+      <answer fullID="60173" ID_Dialog="6017" ID_Answer="3" ID_NextDialog="6022" ID_Character="06" Sympathy_value="-10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Agressive">Ça c’est vraiment bizarre. Te sers pas de ce 
+que je te dis pour alimenter tes fantasmes
+bizarres !</fr>
+         <en Choice_en="Agressive">That's really weird. Don't use what I'm telling you to feed your creepy fantasies !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6018" ID_Dialog="6018" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Être calculateur ne marche pas forcément, 
+certaines personnes préfèrent l’honnêteté.
+Surtout que le monde est petit et tout finit 
+par se savoir, en particulier ici. Alors, sois 
+toi-même et ‘’tiens toi au plan’’.</fr>
+      <en Choice_en="">Playing manipulative masterminds doesn't always work... Some people simply prefer honnesty. And this is a small town, everyone always knows everything that's going on. So, just be yourself and, you know, stick to the plan.</en>
+      <answer fullID="60181" ID_Dialog="6018" ID_Answer="1" ID_NextDialog="6023" ID_Character="06" Sympathy_value="0" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Le plan ?">Tiens toi au plan, ça veut dire quoi cette phrase 
+toute faite ?</fr>
+         <en Choice_en="The plan ?">Stick to the plan ? What does that mean ?</en>
+      </answer>
+      <answer fullID="60182" ID_Dialog="6018" ID_Answer="2" ID_NextDialog="6024" ID_Character="06" Sympathy_value="10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Taquine">Si le plan, c’est d’avoir des verres gratos faut que 
+je reste toute la soirée au bar à causer ?</fr>
+         <en Choice_en="Teasing">If the plan is to get free drinks, I gotta stick around all night and talk to you, right ?</en>
+      </answer>
+      <answer fullID="60183" ID_Dialog="6018" ID_Answer="3" ID_NextDialog="6025" ID_Character="06" Sympathy_value="-10" Condition="" Action="" BanAnswer="">
+         <fr Choice_fr="Méchante">Monsieur fait le malin avec ses phrases toutes 
+faites, j’aimerais bien voir quand il s’agit d’agir !</fr>
+         <en Choice_en="Mean">Yeah, right. You got anymore corny catchphrases, or are you all out ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6019" ID_Dialog="6019" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">C’est toi qui décide de ce que tu veux me dire 
+ne t’étonne pas si j’en parle à d’autres personne
+après, tu es prévenue.</fr>
+      <en Choice_en="">You decide what you want to tell me. Don't be surprised if I repeat it to other persons. You've been warned.</en>
+   </dialog>
+   <dialog fullID="6020" ID_Dialog="6020" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">Tu es amusante, je doute pas que tu arrive à 
+atteindre tes objectifs.</fr>
+      <en Choice_en="">You're funny, I have no doubt you'll reach your goals.</en>
+   </dialog>
+   <dialog fullID="6021" ID_Dialog="6021" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">C’est gentil mais c’est pas forcément vrai.</fr>
+      <en Choice_en="">It's nice, but not necessarily true.</en>
+   </dialog>
+   <dialog fullID="6022" ID_Dialog="6022" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">Tu vas loin, tu es peut être plus sensible que 
+je ne l’avais imaginé ...</fr>
+      <en Choice_en="">You're going a bit far, maybe you're more sensitive than I thought...</en>
+   </dialog>
+   <dialog fullID="6023" ID_Dialog="6023" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">Ça sort d’un film que je viens juste de voir. En 
+gros ne change pas de chemin en cours de route.</fr>
+      <en Choice_en="">It's from a movie I just saw. Basically, don't change your path midway.</en>
+   </dialog>
+   <dialog fullID="6024" ID_Dialog="6024" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">Hé ! T’es pas loin du compte.</fr>
+      <en Choice_en="">Hey, that's pretty close to the truth !</en>
+   </dialog>
+   <dialog fullID="6025" ID_Dialog="6025" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="60074">
+      <fr Choice_fr="">Je pensais pas te vexer, désolé.</fr>
+      <en Choice_en="">I didn't mean to offend you. I'm sorry.</en>
+   </dialog>
+   <dialog fullID="6026" ID_Dialog="6026" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Et bien, disons qu’être reine de la ville ce serait 
+une belle preuve d’intégration. Pour cela, il faut 
+que tu sympathises avec un maximum de monde 
+et que tu emportes leurs votes. Tu peux leur parler 
+et leur rendre service, ils apprécieront.</fr>
+      <en Choice_en="">Well, let's say that being crowned queen would be quite a sign of integration ! To do that, you need to sympathize with as many people as you can, and get their vote. you can talk to them, help them out if they need it, it's really appreciated.</en>
+      <answer fullID="60261" ID_Dialog="6026" ID_Answer="1" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="Quitter">Ça devrait aller pour la suite, merci. A plus tard !</fr>
+         <en Choice_en="Leave">I think I can handle it from here, thanks ! See you later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="6027" ID_Dialog="6027" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="" BanAnswer="">
+      <fr Choice_fr="">Le carnet te sert à noter un récapitulatif de tes 
+discussions. C’est comme un pense bête ! En ce 
+qui concerne le trombinoscope, c’est un résumé 
+des personnes invitées à la soirée ! Pratique pour 
+associer visage et prénom.</fr>
+      <en Choice_en="">In the notebook, you can write a summary of the conversations you've had. Sort of a reminder ! As for the pictures, they are of all the persons invited to the party. Convenient to match names and faces.</en>
+      <answer fullID="60271" ID_Dialog="6027" ID_Answer="1" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="Quitter">Ça devrait aller pour la suite, merci. A plus tard !</fr>
+         <en Choice_en="Leave">I think I can handle the rest, thanks ! See you later !</en>
+      </answer>
+   </dialog>
+</dialogs>

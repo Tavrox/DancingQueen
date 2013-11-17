@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour {
 		CountryDancefloor
 	}
 	public MusicList musicLvl;
+	public int stepVotesForWin = 8;
 	private string musicToPlay;
 	private GUIText Timer;
 	private int Hours = 20;
@@ -80,7 +81,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Awake()
 	{
-		InvokeRepeating("updateTimer",0, 1f);
+		InvokeRepeating("updateTimer",0, 0.5f);
 		setCharPrefab();
 		setBackgrounds();
 		setWaypoints();
@@ -98,7 +99,6 @@ public class LevelManager : MonoBehaviour {
 		_Player = GameObject.Find("PlayerData");
 		Timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<GUIText>();
 
-		hideChar("Chloe");
 		setCharPos();
 
 		DontDestroyOnLoad(this);
@@ -132,7 +132,7 @@ public class LevelManager : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.D))
 		{
-			hideChar("Yannick");
+			Debug.Log(_Yannick.GetComponent<Yannick>().sympathy_score);
 		}
 		string MinutesTransfo;
 		if (Minutes <= 10)
@@ -192,6 +192,26 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
+		if (Hours == 24)
+		{
+			setCharacGO("killAll");
+			OTSprite gameo = GameObject.Find("Overlay").GetComponent<OTSprite>();
+			OTSprite gameoLoose = GameObject.Find("Win").GetComponent<OTSprite>();
+			OTSprite gameoWin = GameObject.Find("Loose").GetComponent<OTSprite>();
+			gameo.alpha = 0.5f;
+
+			if (calculateWin() == true)
+			{
+				gameo.frameName = "loose";
+
+			}
+			else
+			{
+				gameo.frameName = "win";
+			}
+
+		}
+
 	}
 
 	public void changeRoom ( levelList lv)
@@ -201,7 +221,7 @@ public class LevelManager : MonoBehaviour {
 		_Player = GameObject.Find("PlayerData");
 		_Player.GetComponent<PlayerSim>().reloadCharacs();
 		currentLvl = lv;
-		setCharacGO();
+		setCharacGO("");
 		setCharPrefab();
 		setBackgrounds();
 		changeBackground();
@@ -210,7 +230,7 @@ public class LevelManager : MonoBehaviour {
 		setCharPos();
 	}
 
-	private void setCharacGO()
+	private void setCharacGO(string str)
 	{
 		_Alex 		= GameObject.FindGameObjectWithTag("Alex");
 		_Anais 		= GameObject.FindGameObjectWithTag("Anais");
@@ -228,6 +248,27 @@ public class LevelManager : MonoBehaviour {
 		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas");
 		_Vanessa 	= GameObject.FindGameObjectWithTag("Vanessa");
 		_Yannick 	= GameObject.FindGameObjectWithTag("Yannick");
+
+		if (str == "killAll")
+		{
+			_Alex.collider.enabled = false;
+			_Anais.collider.enabled = false; 	
+			_Bastien.collider.enabled = false; 
+			_Bob.collider.enabled = false; 	
+			_Boris.collider.enabled = false; 	
+			_Charlie.collider.enabled = false;	
+			_Chloe.collider.enabled = false; 	
+			_Christine.collider.enabled = false;
+			_Claire.collider.enabled = false; 
+			_Manon.collider.enabled = false; 	
+			_Paul.collider.enabled = false; 	
+			_Raphael.collider.enabled = false; 
+			_Stephane.collider.enabled = false; 
+			_Thomas.collider.enabled = false; 
+			_Vanessa.collider.enabled = false; 
+			_Yannick.collider.enabled = false; 
+
+		}
 	}
 	private void setCharPrefab()
 	{
@@ -303,9 +344,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		if (currentLvl == LevelManager.levelList.Bar)
 		{
-			// Instantiate Each doors
 			GameObject doorPrefab = Resources.Load("06Levels/DoorBarToDance") as GameObject;
-//			doorPrefab.GetComponentInChildren<OTSprite>().frameName = "door_bar";
 			Instantiate(doorPrefab);
 		}
 		if (currentLvl == LevelManager.levelList.Dancefloor)
@@ -321,11 +360,11 @@ public class LevelManager : MonoBehaviour {
 		{
 			GameObject doorPrefab = Resources.Load("06Levels/DoorWCToDance") as GameObject;
 			Instantiate(doorPrefab);
-			// Instantiate Each doors
 		}
 		if (currentLvl == LevelManager.levelList.VIP)
 		{
-			// Instantiate Each doors
+			GameObject doorPrefab = Resources.Load("06Levels/DoorVIPToDance") as GameObject;
+			Instantiate(doorPrefab);
 		}
 	}
 
@@ -387,6 +426,17 @@ public class LevelManager : MonoBehaviour {
 				hideChar("Yannick");
 				hideChar("Vanessa");
 				hideChar("Chloe");
+			
+				hideChar("Boris");
+				hideChar("Paul");
+				hideChar("Charlie");
+			
+				unhideChar("Raphael");
+				unhideChar("Bastien");
+				unhideChar("Thomas");
+				unhideChar("Didier");
+				unhideChar("Manon");
+
 			if (_Vanessa.GetComponent<Vanessa>().isSad == true)
 				{
 
@@ -403,6 +453,13 @@ public class LevelManager : MonoBehaviour {
 			}
 			case (levelList.Bar) :
 			{
+				
+				hideChar("Raphael");
+				hideChar("Bastien");
+				hideChar("Thomas");
+				hideChar("Didier");
+				hideChar("Manon");
+
 				unhideItem("Comptoir");
 				unhideChar("Yannick");
 				unhideChar("Vanessa");
@@ -417,7 +474,18 @@ public class LevelManager : MonoBehaviour {
 			}
 			case (levelList.Toilets) :
 			{
-				if (_Raphael.GetComponent<Raphael>().coupleClaire == true)
+			
+				hideChar("Raphael");
+				hideChar("Bastien");
+				hideChar("Thomas");
+				hideChar("Didier");
+				hideChar("Manon");
+
+				unhideChar("Boris");
+				unhideChar("Paul");
+				unhideChar("Charlie");
+			
+			if (_Raphael.GetComponent<Raphael>().coupleClaire == true)
 				{
 
 				}
@@ -425,10 +493,16 @@ public class LevelManager : MonoBehaviour {
 			}
 			case (levelList.VIP) :
 			{
-				if (_Bob.GetComponent<Bob>().unlocked == true)
+			
+				hideChar("Raphael");
+				hideChar("Bastien");
+				hideChar("Thomas");
+				hideChar("Didier");
+				hideChar("Manon");
+			
+			if (_Bob.GetComponent<Bob>().unlocked == true)
 				{
-					// Unhide Bob.
-					
+					unhideChar("Bob");
 				}
 				break;
 			}
@@ -511,7 +585,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		if (gameo != null)
 		{
-			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = false;
+//			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = false;
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = false;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
@@ -521,7 +595,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		if (gameo != null)
 		{
-			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = true;
+//			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = true;
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = true;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
 		}
@@ -534,5 +608,27 @@ public class LevelManager : MonoBehaviour {
 	private void unhideItem(string gameo)
 	{
 		GameObject.Find(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
+	}
+	private bool calculateWin()
+	{
+		setCharacGO("");
+		int numberVotes = 0;
+		bool res = false;
+		if (_Paul.GetComponent<CharSim>().voteForPlayer == true)
+		{
+
+		}
+		numberVotes += _Player.GetComponent<PlayerSim>().votesAdded;
+		if (numberVotes > stepVotesForWin)
+		{
+			Debug.Log("WIN !");
+
+		}
+		else
+		{
+			Debug.Log("Loose");
+		}
+		Debug.Log(numberVotes);
+		return res;
 	}
 }

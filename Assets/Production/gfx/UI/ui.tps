@@ -157,17 +157,19 @@
             <filename>drogue_ui.png</filename>
             <filename>close_ui.png</filename>
             <filename>notebook_full_ui.png</filename>
-            <filename>trombino_full_ui.png</filename>
             <filename>quitdialog_ui.png</filename>
             <filename>backOtherDialog.png</filename>
             <filename>backPlayerDialog.png</filename>
-            <filename>other_dialog.png</filename>
-            <filename>player_dialog.png</filename>
             <filename>00backbtn.png</filename>
             <filename>01backbtn.png</filename>
             <filename>02backbtn.png</filename>
             <filename>watch.png</filename>
             <filename>black.png</filename>
+            <filename>loose.png</filename>
+            <filename>win.png</filename>
+            <filename>en.png</filename>
+            <filename>fr.png</filename>
+            <filename>trombino_full_ui.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

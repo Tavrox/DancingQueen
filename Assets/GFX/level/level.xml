@@ -82,10 +82,23 @@
                 <key>sourceSize</key>
                 <string>{789,372}</string>
             </dict>
+            <key>doorVIPInside.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{794,1206},{110,600}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{110,600}}</string>
+                <key>sourceSize</key>
+                <string>{110,600}</string>
+            </dict>
             <key>door_bar.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{794,1206},{79,236}}</string>
+                <string>{{905,1206},{79,236}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>door_toilets.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{874,1206},{79,234}}</string>
+                <string>{{985,1206},{79,234}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +124,7 @@
             <key>door_vip.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{954,1206},{60,179}}</string>
+                <string>{{1065,1206},{60,179}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +137,7 @@
             <key>toilettesDoorInside.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1015,1206},{124,385}}</string>
+                <string>{{1126,1206},{124,385}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +150,7 @@
             <key>vipDoorInside.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1140,1206},{124,385}}</string>
+                <string>{{1251,1206},{124,385}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -146,6 +159,19 @@
                 <string>{{0,0},{124,385}}</string>
                 <key>sourceSize</key>
                 <string>{124,385}</string>
+            </dict>
+            <key>vip_desk.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1376,1206},{450,278}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{450,278}}</string>
+                <key>sourceSize</key>
+                <string>{450,278}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -157,7 +183,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3fde2b162f68d80d4b75e448ebf6e251:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:bcfb089e702b5868f411d741d265cfd0:1/1$</string>
             <key>textureFileName</key>
             <string>level.png</string>
         </dict>
