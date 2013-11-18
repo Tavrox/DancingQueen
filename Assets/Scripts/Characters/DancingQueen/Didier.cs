@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Didier : CharSim 
 {
-	public void GiveBeer()
-	{
-		
-	}
+	public bool canPutSlow = false;
+	public bool missionDidierDone = false;
+	public bool hasPutSlow = false;
+
 }

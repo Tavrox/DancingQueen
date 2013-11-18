@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 4.99999952, y: 2.5, z: 1}
+  m_LocalScale: {x: 7.5, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!4 &400004
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .532583833, y: -6.47166729, z: 1}
+  m_LocalPosition: {x: .61500001, y: -6.48000002, z: 1}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: AnswerBtn2
   _position: {x: 0, y: 0}
-  _size: {x: 4.99999952, y: 2.5}
+  _size: {x: 7.5, y: 4}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -184,8 +184,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: AnswerBtn2
-  oSize: {x: 4.58333349, y: 1.04166675}
-  imageSize: {x: 4.99999952, y: 2.5}
+  oSize: {x: 8.33333397, y: 2.25}
+  imageSize: {x: 13.636364, y: 8.63999939}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: 00backbtn
+  _frameIndex: 5
+  _frameName: backbtn
   _spriteContainer: {fileID: 0}
   _containerName: ui
   _newSprite: 0
@@ -211,18 +211,18 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Admirative
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 4
+  m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_LineSpacing: 0
+  m_TabSize: 0
+  m_Font: {fileID: 12800000, guid: d3519b37dfbb7f7448570d0ec59c9a69, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
-  m_FontStyle: 1
+  m_FontSize: 21
+  m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4282530048
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1001 &100100000

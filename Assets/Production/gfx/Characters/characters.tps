@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../../GFX/character/character.png</filename>
+        <filename>../../../GFX/character/v2_character.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../../GFX/character/character.xml</filename>
+        <filename>../../../GFX/character/v2_character.xml</filename>
         <key>multiPack</key>
         <false/>
         <key>mainExtension</key>
@@ -167,8 +167,10 @@
             <filename>thomasDanse_body.png</filename>
             <filename>vanessa_body.png</filename>
             <filename>yannick_body.png</filename>
-            <filename>thomas_bar.png</filename>
             <filename>Jeremie_body.png</filename>
+            <filename>GroupeBoris.png</filename>
+            <filename>GroupeVanessaChloé.png</filename>
+            <filename>thomas_body.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

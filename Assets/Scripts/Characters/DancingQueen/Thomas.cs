@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Thomas : CharSim 
 {
-	public bool isBattleDance;
+	public bool isBattleDance = false;
+	public bool hasTalkedThomas = false;
 	
 	public void GiveBeer()
 	{

@@ -37,7 +37,14 @@ public class IngameUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (_Player.numberDrugs > 0)
+		{
+			GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
+		}
+		else
+		{
+			GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = false;
+		}
 	}
 	private void OnMouseOver()
 	{

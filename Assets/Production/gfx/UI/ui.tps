@@ -170,6 +170,8 @@
             <filename>en.png</filename>
             <filename>fr.png</filename>
             <filename>trombino_full_ui.png</filename>
+            <filename>backbtn.png</filename>
+            <filename>backbtn_hover.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

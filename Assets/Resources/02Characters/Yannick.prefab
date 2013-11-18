@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.05628502, y: 3.48260403, z: 4}
+  m_LocalPosition: {x: .508678436, y: 3.41814327, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.91000009, y: 4.07999992, z: 20}
   m_Center: {x: -.920000017, y: .270000011, z: 0}
@@ -109,19 +109,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226ae98fe018ada49b8fe58cce496e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: 06
+  characterID: 
   charac: 10
-  dialToTrigger: 6001
+  dialToTrigger: 
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
-  banAnswers: 
+  banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  color: {r: 0, g: 0, b: 0, a: 0}
+  tutoMode: 0
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 13
-  minRandomDelay: 0
-  maxRandomDelay: 0
-  frequencyWhispers: 1.58000004
+  randomDelayMin: 0
+  randomDelayMax: .00999999978
+  frequencyWhispers: .939999998
   hasSpokenOnceToPlayer: 0
 --- !u!114 &11400002
 MonoBehaviour:

@@ -26,14 +26,14 @@ public class Answer : MonoBehaviour {
 	{
 		if ( spr != null )
 		{
-			spr.frameName = "02backbtn";
+			spr.frameName = "backbtn_hover";
 		}
 	}
 	void OnMouseExit()
 	{
 		if ( spr != null )
 		{
-			spr.frameName = "01backbtn";
+			spr.frameName = "backbtn";
 		}
 	}
 	

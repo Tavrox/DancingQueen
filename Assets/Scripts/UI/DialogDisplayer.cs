@@ -24,7 +24,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private Dialog dialToDisplay;
 
 	/**ADD**/
-	private XmlDocument xmlDoc;
+//	private XmlDocument xmlDoc;
 	private XmlNodeList dialogNodes;
 	private string CharDialID;
 	private string[] fullDialog = new string[8];
@@ -37,7 +37,7 @@ public class DialogDisplayer : MonoBehaviour {
 
 	//[HideInInspector] public Player player; //The player to lock
 	
-	IEnumerator Start() {
+	void Start() {
 	
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -54,24 +54,25 @@ public class DialogDisplayer : MonoBehaviour {
 		/**ADD**/
 		// string url = "http://paultondeur.com/files/2010/UnityExternalJSONXML/books.xml";
 		// string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
-		string url = getCharacXML(currentChar.charac);
-		Debug.Log(url);
-		WWW www = new WWW(url);
-		
+		//string url = getCharacXML(currentChar.charac);
+		//WWW www = new WWW(url);
+		TextAsset textAsset = getCharacXML(currentChar.charac);
+		//Resources.Load("dialogs_Yannick") as TextAsset;
+		print (textAsset);
 		//Load the data and yield (wait) till it's ready before we continue executing the rest of this method.
-		yield return www;
+		//yield return www;
 		
-		if (www.error == null)
-		{
+		//if (www.error == null)
+		//{
 			//Sucessfully loaded the XML
 			
 			//Create a new XML document out of the loaded data
-			xmlDoc = new XmlDocument();
-			xmlDoc.LoadXml(www.text);
+		XmlDocument xmlDoc = new XmlDocument();
+		                                  xmlDoc.LoadXml(textAsset.text);
 			
 			//Point to the book nodes and process them
 			dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
-		}
+		//}
 		getDialogContent();
 
 		InvokeRepeating("playWhispers", UnityEngine.Random.Range(currentChar.randomDelayMin,currentChar.randomDelayMax) , currentChar.frequencyWhispers);
@@ -114,9 +115,13 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		if (finishedTalking == true)
 		{
-			if(fullDialog[4]!="closeDialog" || arrayAnswers[0,8] == "" || arrayAnswers[0,8] == "0") 
+
+			if(fullDialog[4]!="closeDialog" || arrayAnswers[0,8] == "" || arrayAnswers[0,8] == "0" ) 
 			{
-				if(!killAtferDisplay) {
+
+				if(!killAtferDisplay) 
+				{
+
 					if(!playerSpeaking) {
 						InstantiateAnswers();
 						finishedTalking =false;
@@ -141,6 +146,11 @@ public class DialogDisplayer : MonoBehaviour {
 			else {
 				if(Input.GetMouseButtonDown(0)) {
 					finishedTalking =false;
+					if (fullDialog[4] != null)
+					{
+
+						
+					}
 					DialogUI.destroyDialog();
 				}
 			}
@@ -210,6 +220,8 @@ public class DialogDisplayer : MonoBehaviour {
 				dialToDisplay = firstDialog;
 				talkLines = dialToDisplay.dialLines;
 
+
+
 				if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
 				{
 					talkLines[0]=fullDialog[5];
@@ -234,9 +246,12 @@ public class DialogDisplayer : MonoBehaviour {
 			talkLines[0]= arrayAnswers[indexAnswer,9];
 		}
 		CharDialID = displayedAnswer.ID_nextDialog;
+		Debug.Log("Answer Action" + displayedAnswer.action);
 		checkAction(displayedAnswer.action);
 		modifySympathy(fullDialog[1], displayedAnswer.sympathy_value);
 		banDialogID(arrayAnswers[indexAnswer,10]);
+		Debug.Log ("RESULT CHECK =" + checkCondition(displayedAnswer.condition));
+		Debug.Log ("CONDITION =" + displayedAnswer.condition);
 		finishedTalking = false;
 		startDialog();
 		playerSpeaking = true;
@@ -278,12 +293,17 @@ public class DialogDisplayer : MonoBehaviour {
 		answerToSet.setNextDialog(arrayAnswers[indexAnswer,2]);
 		answerToSet.setSympathyValue(Convert.ToInt32(arrayAnswers[indexAnswer,3]));
 		answerToSet.setAction(arrayAnswers[indexAnswer,5]);
+		answerToSet.setCondition(arrayAnswers[indexAnswer,4]);
 
-		print ("FULLID" + arrayAnswers[indexAnswer,0]);
-		print ("IDIALOG" + arrayAnswers[indexAnswer,1]);
-		print ("IDNEXTDIALOG" + arrayAnswers[indexAnswer,2]);
-
-		Debug.Log("Is answer banned : " + _Player.GetComponent<PlayerSim>().findBanAnswers((arrayAnswers[indexAnswer,0])));
+		
+		if ( checkCondition(answerToSet.condition) != true && answerToSet.condition != "basic" )
+		{
+			Debug.Log(answerToSet.condition);
+			answerToSet.GetComponentInChildren<OTSprite>().renderer.enabled = false;
+			answerToSet.collider.enabled = false;
+			answerToSet.enabled = false;
+			answerTextGUI.enabled = false;
+		}
 
 		// SET CHOICES ACCORDING TO LANG
 		if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
@@ -293,7 +313,8 @@ public class DialogDisplayer : MonoBehaviour {
 				answerToSet.setChoiceFR(arrayAnswers[indexAnswer,6]);
 				answerToSet.setAnswerLineFR(arrayAnswers[indexAnswer,8]);
 			}
-		} // DEBUG
+		} 
+		// DEBUG
 		else if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
 		{
 			if (_Player.GetComponent<PlayerSim>().findBanAnswers((arrayAnswers[indexAnswer,0])) == false)
@@ -302,6 +323,7 @@ public class DialogDisplayer : MonoBehaviour {
 				answerToSet.setAnswerLineEN(arrayAnswers[indexAnswer,9]);
 			}
 		}
+
 		else 
 		{
 			Debug.Log("CANT FIND ANSWER MASSIVE ERROR");
@@ -369,50 +391,316 @@ public class DialogDisplayer : MonoBehaviour {
 		
 	}
 
+	private bool checkCondition(string Condition)
+	{
+		GameObject go = GameObject.FindGameObjectWithTag("Bastien");
+		bool res = false;
+		Debug.Log("Check Condition, Condition Entered =" + Condition);
+		switch (Condition)
+		{
+		case ("Sympathy_value_Bastien25") :
+		{
+			Bastien charac = GameObject.FindGameObjectWithTag("Bastien").GetComponent<Bastien>();
+			if (charac.sympathy_score > 25)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("ManonSympathy50") :
+		{
+			Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
+			if (charac.sympathy_score > 50)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("ManonSympathy100") :
+		{
+			Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
+			if (charac.sympathy_score > 100)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("bastienMusic") :
+		{
+			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
+			if ( charac.missionDidierDone == true )
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("Sympathy_value_Chloe50") :
+		{
+			Chloe charac = GameObject.FindGameObjectWithTag("Chloe").GetComponent<Chloe>();
+			if (charac.sympathy_score > 50)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("isBattleDance") :
+		{
+			Thomas charac = GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+			if (charac.isBattleDance == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("RaphaelSympathy50") :
+		{
+			Raphael charac = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+			if (charac.sympathy_score > 50)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("ThomasSympathy50") :
+		{
+			Thomas charac = GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+			if (charac.sympathy_score > 50)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("PaulSympathy50") :
+		{
+			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+			if (charac.sympathy_score > 50)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("BorisSympathy75") :
+		{
+			Boris charac = GameObject.FindGameObjectWithTag("Boris").GetComponent<Boris>();
+			if (charac.sympathy_score > 75)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("NoPlayerDoesntKnowsIsDealer") :
+		{
+			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+			if (charac.PlayerKnowsIsDealer == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("hasTalkedThomas") :
+		{
+			Thomas charac = GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+			if (charac.hasTalkedThomas == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("HasDrug") :
+		{
+			PlayerSim charac = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+			if (charac.numberDrugs > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("MissionManonEnCours") :
+		{
+			Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
+			if (charac.missionEncours == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("RaphaelClaireCouplesympathy50") :
+		{
+			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+			Raphael charac2 = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+			if (charac.sympathy_score > 50 && charac2.coupleClaire == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
+			break;
+		}
+		case ("NoRaphaelClairecoupleSympathy75") :
+		{
+			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+			Raphael charac2 = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+			if (charac.sympathy_score > 75 && charac2.coupleClaire == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
+			break;
+		}
+		case ("kissRaphael") :
+		{
+			Raphael charac2 = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+			if (charac2.kissedPlayer == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+			break;
+		}
+		default :
+		{
+			res = false;
+			break;
+		}
+		}
+			return res;
+	}
 
 	private void checkAction(string Action)
 	{
+		GameObject go;
 		switch (Action)
 		{
-			case ("winDestroyBob") :
-			{
-				break;
-			}
-			case ("patate") :
-			{
-				break;
-			}
 			case ("closeDialog") :
 			{
 				killAtferDisplay = true;
 				break;
 			}
+			case ("kissRaphael") :
+			{
+				go = getCharacGO("Raphael");
+				go.GetComponent<Raphael>().kissedPlayer = true; 
+				break;
+			}
+			case ("closeDialogtalkedClaire") :
+			{
+				go = getCharacGO("Claire");
+				go.GetComponent<Claire>().dialToTrigger = "14005"; 
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialoghasTalkedThomas") :
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().hasTalkedThomas = true;
+			killAtferDisplay = true;
+				break;
+			}
 			case ("closeDialogYannickSpoken") :
 			{
 				killAtferDisplay = true;
-				GameObject go = getCharacGO("Yannick");
+				go = getCharacGO("Yannick");
 				go.GetComponent<Yannick>().hasSpokenOnceToPlayer = true;
 				go.GetComponent<Yannick>().dialToTrigger = "6007";
-			break;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().tutoMode = false;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().tutoMode = false;
+				break;
 			}
 			case ("changeMusicElectro") :
 			{
-				lvManager.musicLvl = LevelManager.MusicList.CountryBar;
+				lvManager.setMusic(LevelManager.MusicList.Electro, LevelManager.levelList.Dancefloor);
+				killAtferDisplay = true;
 				break;
 			}
 			case ("changeMusicCountry") :
 			{
-				
+				lvManager.setMusic(LevelManager.MusicList.Country, LevelManager.levelList.Dancefloor);
+				killAtferDisplay = true;
 				break;
 			}
 			case ("changeMusicSlow") :
 			{
-				
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().hasPutSlow = true;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialToTrigger = "7009";
+				lvManager.setMusic(LevelManager.MusicList.Slow, LevelManager.levelList.Dancefloor);
+				killAtferDisplay = true;
 				break;
 			}
 			case ("changeMusicBase") :
 			{
-				
+				lvManager.setMusic(LevelManager.MusicList.Groovy, LevelManager.levelList.Dancefloor);
+				killAtferDisplay = true;
 				break;
 			}
 			case ("getDrug") :
@@ -420,6 +708,172 @@ public class DialogDisplayer : MonoBehaviour {
 				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
 				break;
 			}
+			case ("looseDrugManon") :
+			{
+				_Player.GetComponent<PlayerSim>().numberDrugs -=1;
+				go = getCharacGO("Manon");
+				go.GetComponent<Manon>().dialToTrigger = "2015";
+				break;
+			}
+			case ("looseDrug") :
+			{
+				_Player.GetComponent<PlayerSim>().numberDrugs -=1;
+				break;
+			}
+			case ("closeDialogunlockThomasBar"):
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().isBattleDance = true;
+				go.GetComponent<Thomas>().dialToTrigger = "8010";
+				killAtferDisplay = true;
+				break;
+			}
+			case ("unlockSlow"):
+			{
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().canPutSlow = true;
+				break;
+			}
+			case ("closeDialogunlockVanessaDance"):
+			{
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().knowsDance = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("PlayerKnowsPaulDealer") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
+				break;
+			}
+			case ("closeDialogPlayerKnowsPaulDealer") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
+				killAtferDisplay = true;
+				break;
+			}
+		case ("missionDidierDone") :
+			{
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().missionDidierDone = true;
+				break;
+			}
+			case ("playerSeeBob") :
+			{
+				go = getCharacGO("Bob");
+				go.GetComponent<Bob>().unlocked = true;
+				break;
+			}
+			case ("playerGoVIP") :
+			{
+				_Player.GetComponent<PlayerSim>().canGoVIP = true;
+				break;
+			}
+			case ("triggerGroupGirls") :
+			{
+				Girls gameoGirls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+				gameoGirls.TriggerDialogChloe();
+				break;
+			}
+			case ("closeDialogTriggerGroupMeuf") :
+			{
+				Girls gameoGirls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+				gameoGirls.TriggerDialogVanessa();
+				killAtferDisplay = true;
+				break;
+			}
+			case ("dialogGroupGuys") :
+			{
+				killAtferDisplay = true;
+				Boys gameoboys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
+				gameoboys.TriggerDialog();
+				break;
+			}
+			
+		case ("looseDestroyBob") :
+		{
+			go = getCharacGO("Bob");
+			go.GetComponent<Bob>().unlocked = false;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("winDestroyBob") :
+		{
+			go = getCharacGO("Bob");
+			go.GetComponent<Bob>().unlocked = true;
+			GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogAndLoose2votes") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded -= 2;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogAndWin2votes") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 2;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogAndWin3votes") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 3;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogandWinStephane") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 1;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogkeepChloe") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 1;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogAndloose3votes") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded -= 3;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogKeepVanessa") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 1;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("closeDialogAndlooseAll") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded -= 4;
+			killAtferDisplay = true;
+			break;
+		}
+		case ("unlockThomasPechoClaire") :
+		{
+			go = getCharacGO("Player");
+			go.GetComponent<PlayerSim>().votesAdded += 1;
+			killAtferDisplay = true;
+			break;
+		}
+			
+			
+			
+			
 		}
 	}
 	
@@ -433,6 +887,7 @@ public class DialogDisplayer : MonoBehaviour {
 	IEnumerator StartScrolling() 
 	{
 		textIsScrolling = true;
+
 		startLine = currentLine;
 		displayText = "";
 		//Display each letter one by one
@@ -445,30 +900,45 @@ public class DialogDisplayer : MonoBehaviour {
 				yield return new WaitForSeconds((float) (1f/ textScrollSpeed)); //Waiting textScrollSpeed between each update
 			}
 		}
-		
 		if (currentLine == talkLines.Length-1) 
 		{
 			//print ("Reached End of Dialog");
+			checkAction(fullDialog[4]);
 			finishedTalking = true;
 			talking = false;
 		}
 		textIsScrolling = false; //Text is not scrolling anymore
+
 	}
 	
 	private void playWhispers()
 	{
-		currentChar.playWhispers();
+		if (finishedTalking != true || answer1 != null)
+		{
+			if (textIsScrolling)
+			{
+				currentChar.playWhispers();
+			}
+		}
+		if (finishedTalking == true)
+		{
+			_Player.GetComponent<PlayerSim>().playWhispers();
+		}
+
 	}
 	public void setCharacter(CharSim _chosenChar)
 	{
 		currentChar = _chosenChar;
 	}
 
-	private string getCharacXML(CharSim.charList currentChar)
+	private TextAsset getCharacXML(CharSim.charList currentChar)
 	{
-		string res = "";
-		res = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs_"+currentChar.ToString() +".xml";
-		return res;
+		//string res = "";
+		return Resources.Load("dialogs_"+currentChar.ToString()) as TextAsset;
+		// string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
+		//res = "file:///" + Application.dataPath+ "/Dialogs/dialogs_"+currentChar.ToString() +".xml";
+//		res = "http://4edges-games.com/images/stories/webExport/DancingQueen/Dialogs/dialogs_"+currentChar.ToString() +".xml";
+		//return res;
 	}
 	private GameObject getCharacGO(String charac)
 	{
@@ -479,7 +949,6 @@ public class DialogDisplayer : MonoBehaviour {
 	private void banDialogID(string id)
 	{
 		_Player.GetComponent<PlayerSim>().addBanAnswers(id);
-		Debug.Log("ID BANNED " + id);
 
 	}
 	private void modifySympathy(string characID, int value)
@@ -487,15 +956,204 @@ public class DialogDisplayer : MonoBehaviour {
 		GameObject go = getCharacGO("Yannick");
 		switch (characID)
 		{
-			case ("06"):
-			{
-				go = getCharacGO("Yannick");
-				go.GetComponent<Yannick>().sympathy_score += value;
-				break;
-			}
 
+		case ("06"):
+		{
+			go = getCharacGO("Yannick");
+			go.GetComponent<Yannick>().sympathy_score += value;
+			break;
+		}
+		case ("07"):
+		{
+			go = getCharacGO("Vanessa");
+			go.GetComponent<Vanessa>().sympathy_score += value;
+			break;
+		}
+		case ("05"):
+		{
+			go = getCharacGO("Boris");
+			go.GetComponent<Boris>().sympathy_score += value;
+			break;
+		}
+		case ("18"):
+		{
+			go = getCharacGO("Bob");
+			go.GetComponent<Bob>().sympathy_score += value;
+			break;
+		}
+		case ("11"):
+		{
+			go = getCharacGO("Alex");
+			go.GetComponent<Alex>().sympathy_score += value;
+			break;
+		}
+		case ("12"):
+		{
+			go = getCharacGO("Chloe");
+			go.GetComponent<Chloe>().sympathy_score += value;
+			break;
+		}
+		case ("19"):
+		{
+//			go = getCharacGO("Jeremie");
+//			go.GetComponent<Jeremie>().sympathy_score += value;
+			break;
+		}
+		case ("09"):
+		{
+			go = getCharacGO("Paul");
+			go.GetComponent<Paul>().sympathy_score += value;
+			break;
+		}
+		case ("08"):
+		{
+			go = getCharacGO("Thomas");
+			go.GetComponent<Thomas>().sympathy_score += value;
+			break;
+		}
+		case ("15"):
+		{
+//			go = getCharacGO("Stephane");
+//			go.GetComponent<Stephane>().sympathy_score += value;
+			break;
+		}
+		case ("17"):
+		{
+//			go = getCharacGO("Alice");
+//			go.GetComponent<Alice>().sympathy_score += value;
+			break;
+		}
+		case ("14"):
+		{
+			go = getCharacGO("Claire");
+			go.GetComponent<Claire>().sympathy_score += value;
+			break;
+		}
+			
+		case ("02"):
+		{
+			go = getCharacGO("Manon");
+			go.GetComponent<Manon>().sympathy_score += value;
+			break;
+		}
+			
+		case ("13"):
+		{
+			go = getCharacGO("Raphael");
+			go.GetComponent<Raphael>().sympathy_score += value;
+			break;
+		}
+			
+		case ("04"):
+		{
+			go = getCharacGO("Kara");
+			go.GetComponent<Kara>().sympathy_score += value;
+			break;
+		}
+		case ("16"):
+		{
+			go = getCharacGO("Kara");
+			go.GetComponent<Kara>().sympathy_score += value;
+			break;
+		}
+		case ("1"):
+		{
+			go = getCharacGO("Kara");
+			go.GetComponent<Kara>().sympathy_score += value;
+			break;
+		}
+		}
+		
+	}
+
+	private CharSim getCharac(string characID)
+	{
+		CharSim gameo = getCharacGO("Yannick").GetComponent<Yannick>();;
+		switch (characID)
+		{
+	
+		case ("06"):
+		{
+			gameo = getCharacGO("Yannick").GetComponent<Yannick>();
+			break;
+		}
+		case ("07"):
+		{
+			gameo = getCharacGO("Vanessa").GetComponent<Vanessa>();
+			break;
+		}
+		case ("05"):
+		{
+			gameo = getCharacGO("Boris").GetComponent<Boris>();
+			break;
+		}
+		case ("18"):
+		{
+			gameo = getCharacGO("Bob").GetComponent<Bob>();
+			break;
+		}
+		case ("11"):
+		{
+			gameo = getCharacGO("Alex").GetComponent<Alex>();
+			break;
+		}
+		case ("12"):
+		{
+			gameo = getCharacGO("Chloe").GetComponent<Chloe>();
+			break;
+		}
+		case ("19"):
+		{
+			gameo = getCharacGO("Jeremie").GetComponent<Jeremie>();
+			break;
+		}
+		case ("09"):
+		{
+			gameo = getCharacGO("Paul").GetComponent<Paul>();
+			break;
+		}
+		case ("08"):
+		{
+			gameo = getCharacGO("Thomas").GetComponent<Thomas>();
+			break;
+		}
+		case ("15"):
+		{
+			gameo = getCharacGO("Stephane").GetComponent<Stephane>();
+			break;
+		}
+		case ("17"):
+		{
+			gameo = getCharacGO("Alice").GetComponent<Alice>();
+			break;
+		}
+		case ("14"):
+		{
+			gameo = getCharacGO("Claire").GetComponent<Claire>();
+			break;
+		}
+			
+		case ("02"):
+		{
+			gameo = getCharacGO("Manon").GetComponent<Manon>();
+			break;
+		}
+			
+		case ("13"):
+		{
+			gameo = getCharacGO("Raphael").GetComponent<Raphael>();
+			break;
+		}
+			
+		case ("04"):
+		{
+			gameo = getCharacGO("Kara").GetComponent<Kara>();
+			break;
 		}
 
+		}
+		return gameo;
+		
 	}
 
 	public void GameDialog()

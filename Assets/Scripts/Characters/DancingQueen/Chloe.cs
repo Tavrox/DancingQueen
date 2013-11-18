@@ -5,8 +5,11 @@ public class Chloe : CharSim
 {
 	public bool isInToilet = false;
 
-	public void GiveBeer()
+	public void Update()
 	{
-		
+		if (this.sympathy_score > 100)
+		{
+
+		}
 	}
 }

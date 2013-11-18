@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="8001" ID_Dialog="8001" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">* Danse *</fr>
+      <en Choice_en="">*Dances*</en>
+      <answer fullID="80011" ID_Dialog="8001" ID_Answer="1" ID_NextDialog="8002" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Danser">* Danser *</fr>
+         <en Choice_en="Dance">*Dance*</en>
+      </answer>
+      <answer fullID="80012" ID_Dialog="8001" ID_Answer="2" ID_NextDialog="8034" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Parler">Hey, salut !</fr>
+         <en Choice_en="Talk">Hi !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8002" ID_Dialog="8002" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">* Danse avec toi *</fr>
+      <en Choice_en="">*Dances with you*</en>
+      <answer fullID="80021" ID_Dialog="8002" ID_Answer="1" ID_NextDialog="8003" ID_Character="08" Sympathy_value="5" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Se rapprocher">* Se rapproche de Thomas *</fr>
+         <en Choice_en="Get closer">*Get closer to Thomas*</en>
+      </answer>
+      <answer fullID="80022" ID_Dialog="8002" ID_Answer="2" ID_NextDialog="8004" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Avec style">* Fais une chorégraphie *</fr>
+         <en Choice_en="With style">*Perform a simple choreography*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8003" ID_Dialog="8003" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">* Thomas à l’air d’apprécier *</fr>
+      <en Choice_en="">*Thomas seems to be enjoying*</en>
+      <answer fullID="80031" ID_Dialog="8003" ID_Answer="1" ID_NextDialog="8006" ID_Character="08" Sympathy_value="5" Condition="basic" Action="closeDialogunlockThomasBar" BanAnswer="">
+         <fr Choice_fr="Embrasser">Smack!</fr>
+         <en Choice_en="Kiss">*Kiss him*</en>
+      </answer>
+      <answer fullID="80032" ID_Dialog="8003" ID_Answer="2" ID_NextDialog="8007" ID_Character="08" Sympathy_value="-5" Condition="basic" Action="closeDialogunlockThomasBar" BanAnswer="">
+         <fr Choice_fr="Garder ses distances">*Danser en calmant les ardeurs de Thomas*</fr>
+         <en Choice_en="Keep your distances">*Keep dancing, but calm Thomas's ardors*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8004" ID_Dialog="8004" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">*Thomas essaie de faire pareil*</fr>
+      <en Choice_en="">*Thomas is trying to imitate*</en>
+      <answer fullID="80041" ID_Dialog="8004" ID_Answer="1" ID_NextDialog="8008" ID_Character="08" Sympathy_value="5" Condition="basic" Action="closeDialogunlockThomasBar" BanAnswer="">
+         <fr Choice_fr="Complexifier la danse">*Faire une chorégraphie encore plus difficile à 
+reproduire*</fr>
+         <en Choice_en="Complexify the dance">*Perform a harder choreography*</en>
+      </answer>
+      <answer fullID="80042" ID_Dialog="8004" ID_Answer="2" ID_NextDialog="8009" ID_Character="08" Sympathy_value="5" Condition="basic" Action="closeDialogunlockThomasBar" BanAnswer="">
+         <fr Choice_fr="Danser en partant">* Faire une chorégraphie en le narguant et en 
+partant*</fr>
+         <en Choice_en="Leave while dancing">*Perform a provoking choreography, then leave*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8005" ID_Dialog="8005" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">* Thomas continue à danser en ignorant Kara *</fr>
+      <en Choice_en="">*Thomas keeps dancing, ignoring Kara*</en>
+   </dialog>
+   <dialog fullID="8006" ID_Dialog="8006" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialoghasTalkedThomas" BanAnswer="">
+      <fr Choice_fr="">* Thomas à tout d’abord l’air surpris puis il 
+apprécie. Il s’éloigne vers le bar tout en faisant
+comprendre au player qu’elle peut le rejoindre
+au bar*</fr>
+      <en Choice_en="">*Thomas first looks surprised, but then seems to enjoy.
+He walks towards the bar, signaling the player to join him*</en>
+   </dialog>
+   <dialog fullID="8007" ID_Dialog="8007" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialoghasTalkedThomas" BanAnswer="">
+      <fr Choice_fr="">*Thomas soupire et rejoint le bar en continuant 
+de danser*</fr>
+      <en Choice_en="">*Thomas sighs, and walks towards the bar, still dancing*</en>
+   </dialog>
+   <dialog fullID="8008" ID_Dialog="8008" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialoghasTalkedThomas" BanAnswer="">
+      <fr Choice_fr="">* Thomas sourit, s’avoue vaincu et s’en va 
+rejoindre le bar *</fr>
+      <en Choice_en="">*Thomas smiles, admits his defeat and walks towards 
+the bar*</en>
+   </dialog>
+   <dialog fullID="8009" ID_Dialog="8009" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialoghasTalkedThomas" BanAnswer="">
+      <fr Choice_fr="">* Thomas rigole et rejoint le bar d’un air 
+satisfait *</fr>
+      <en Choice_en="">*Thomas laughs and goes to the bar, looking pleased 
+with himself*</en>
+   </dialog>
+   <dialog fullID="8010" ID_Dialog="8010" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="isBattleDance" Action="" BanAnswer="">
+      <fr Choice_fr="">Alors la reine de la piste, quoi de neuf ?</fr>
+      <en Choice_en="">So, dancing queen, what's up ?</en>
+      <answer fullID="80101" ID_Dialog="8010" ID_Answer="1" ID_NextDialog="8011" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Amitié">T’as des amis ici ?</fr>
+         <en Choice_en="Friendship">Do you have friends here ?</en>
+      </answer>
+      <answer fullID="80102" ID_Dialog="8010" ID_Answer="2" ID_NextDialog="8012" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="La soirée">C’est assez calme dans le coin, Il y a moyen 
+de s’amuser un peu dans cette soirée ?</fr>
+         <en Choice_en="Party">It's pretty calm around here. Is there anything fun to do 
+at this party ?</en>
+      </answer>
+      <answer fullID="80103" ID_Dialog="8010" ID_Answer="3" ID_NextDialog="8035" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Parler de soi">Vu que je viens d’une grande ville, j’ai un peu 
+de mal à me faire à l’ambiance de ce petit
+patelin.</fr>
+         <en Choice_en="Talk about me">I'm from a big town, it's a little hard for me to get used 
+to the atmosphere of this little village.</en>
+      </answer>
+      <answer fullID="80104" ID_Dialog="8010" ID_Answer="4" ID_NextDialog="8013" ID_Character="08" Sympathy_value="" Condition="ThomasSympathy50" Action="" BanAnswer="">
+         <fr Choice_fr="Amour">T’es jamais tombé amoureux ?</fr>
+         <en Choice_en="Love">Ever fallen in love ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8011" ID_Dialog="8011" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Un vieux pote à moi, Raphaël. On se marre 
+bien ensemble. C’est fou ce mec peut te 
+chauffer une salle à lui tout seul, il est trop 
+marrant.</fr>
+      <en Choice_en="">An old buddy of mine, Raphaël. We have a lot of laughs 
+together. It's crazy, this guy can heat up the room all 
+by himself, he's so funny !</en>
+      <answer fullID="80111" ID_Dialog="8011" ID_Answer="1" ID_NextDialog="8014" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Séductrice">Mhh, et à part l’humour t’aimes quoi chez les
+gens ?</fr>
+         <en Choice_en="Seductive">Hmm, and appart from humour, what do you like 
+in people ?</en>
+      </answer>
+      <answer fullID="80112" ID_Dialog="8011" ID_Answer="2" ID_NextDialog="8014" ID_Character="08" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Polie">Ah ouais ? Dis m’en plus sur toi ?</fr>
+         <en Choice_en="Polite">Yeah ? Tell me more about you.</en>
+      </answer>
+      <answer fullID="80113" ID_Dialog="8011" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="80101">
+         <fr Choice_fr="Changer de sujet">Ah ouais, et sinon ?</fr>
+         <en Choice_en="Change subject">Oh yeah. And what else ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8012" ID_Dialog="8012" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Oh tu sais il y a certains loisirs qu’on pratique 
+partout ! Sex, drugs and Rock’ Roll babe !!</fr>
+      <en Choice_en="">Oh, you know, some leisures are exerced everywhere ! 
+Sex, drugs and Rock'n Roll, baby !</en>
+      <answer fullID="80121" ID_Dialog="8012" ID_Answer="1" ID_NextDialog="8015" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Amusée (sex)">Héhé, c’est sûr qu’avec les bonnes personnes 
+on peut s’amuser n’importe où !</fr>
+         <en Choice_en="Amused (sex)">Sure, with the right person, you can have your fun 
+anywhere !</en>
+      </answer>
+      <answer fullID="80122" ID_Dialog="8012" ID_Answer="2" ID_NextDialog="8016" ID_Character="08" Sympathy_value="" Condition="NoPlayerDoesntKnowsIsDealer" Action="" BanAnswer="">
+         <fr Choice_fr="Drogues">Je vois qu’on est sur la même longueur d’onde !
+Tu sais pas où je pourrais me procurer dans
+le coin?</fr>
+         <en Choice_en="Drugs">Seems we're pretty like-minded ! Do you know any 
+supplier around ?</en>
+      </answer>
+      <answer fullID="80123" ID_Dialog="8012" ID_Answer="3" ID_NextDialog="8017" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Taquine (rock)">Vu comment tu danses je suppose que toi c’est 
+plus drugs que Rock’n Roll</fr>
+         <en Choice_en="Teasing (rock)">Seeing the way you dance, I'm guessing you do more 
+drugs than Rock'n Roll !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8013" ID_Dialog="8013" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Absolument pas, je suis pas vraiment du genre 
+à me caser.</fr>
+      <en Choice_en="">Definitely not, I'm not the settling-down kind of guy.</en>
+      <answer fullID="80131" ID_Dialog="8013" ID_Answer="1" ID_NextDialog="8020" ID_Character="08" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Déçue">Ah je vois, c’est bien dommage.</fr>
+         <en Choice_en="Disappointed">Oh, I see. Too bad.</en>
+      </answer>
+      <answer fullID="80132" ID_Dialog="8013" ID_Answer="2" ID_NextDialog="8020" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Admirative">Roh, t’as bien de la chance, je suis plutôt du 
+genre à m’attacher facilement moi.</fr>
+         <en Choice_en="Admiring">You're lucky, I'm more the kind of girl who becomes 
+attached too easily.</en>
+      </answer>
+      <answer fullID="80133" ID_Dialog="8013" ID_Answer="3" ID_NextDialog="8020" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Curieuse">Ah oui ? Tu es de quel genre alors ?</fr>
+         <en Choice_en="Curious">Really ? What kind of guy are you, then ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8014" ID_Dialog="8014" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">J’aime les gens qui prennent les devants. 
+Un mec qui arrive à s’affirmer, c’est bon.</fr>
+      <en Choice_en="">I like forward people. A guy who can assert himself, 
+it's all good.</en>
+      <answer fullID="80141" ID_Dialog="8014" ID_Answer="1" ID_NextDialog="8021" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Gay ?">Ah t’aimes les hommes en fait ?</fr>
+         <en Choice_en="Gay ?">Oh, you like guys, in fact ?</en>
+      </answer>
+      <answer fullID="80142" ID_Dialog="8014" ID_Answer="2" ID_NextDialog="8022" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Passif">Les gens qui prennent les devant hein ? 
+T’aimes laisser le boulot aux autres.</fr>
+         <en Choice_en="Passive">So, basically, you like to let other people do all the work ?</en>
+      </answer>
+      <answer fullID="80143" ID_Dialog="8014" ID_Answer="3" ID_NextDialog="8023" ID_Character="08" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Embrasser">Smack</fr>
+         <en Choice_en="Kiss">*Kiss*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8015" ID_Dialog="8015" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Coquine !!!</fr>
+      <en Choice_en="">Naughty !</en>
+      <answer fullID="80151" ID_Dialog="8015" ID_Answer="1" ID_NextDialog="8024" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Excitée">Mhhh, j’aime quand on a plus besoin des 
+mots pour se comprendre.</fr>
+         <en Choice_en="Excited">Hmm, I like it when we don't need words to understand 
+each other anymore...</en>
+      </answer>
+      <answer fullID="80152" ID_Dialog="8015" ID_Answer="2" ID_NextDialog="8024" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Gênée">Arrête de me dévisager...</fr>
+         <en Choice_en="Embarrassed">Stop staring at me...</en>
+      </answer>
+      <answer fullID="80153" ID_Dialog="8015" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="80102">
+         <fr Choice_fr="Blasée">Ok…</fr>
+         <en Choice_en="Jaded">Ok...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8016" ID_Dialog="8016" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">Non désolé, ce soir mon fournisseur n’est pas 
+là, tu devrais demander à Manon elle pourra
+t’aider...</fr>
+      <en Choice_en="">No, sorry, my supplier ain't around tonight. You should 
+ask Manon, she should be able to help you...</en>
+   </dialog>
+   <dialog fullID="8017" ID_Dialog="8017" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">Ah c’est malin...</fr>
+      <en Choice_en="">Yeah, clever...</en>
+   </dialog>
+   <dialog fullID="8018" ID_Dialog="8018" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80103">
+      <fr Choice_fr="">T’inquiètes, parlons d’autres choses...</fr>
+      <en Choice_en="">Don't worry about it, let's talk about something else.</en>
+   </dialog>
+   <dialog fullID="8019" ID_Dialog="8019" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80103">
+      <fr Choice_fr="">Ah c’est malin...</fr>
+      <en Choice_en="">Yeah, right...</en>
+   </dialog>
+   <dialog fullID="8020" ID_Dialog="8020" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Bah tu sais, chacun son genre. Mais je suis 
+plutôt du style à ne pas me fermer de portes.</fr>
+      <en Choice_en="">Well, you know, to each their own. But I'm more the 
+kind of guy who keeps all doors open...</en>
+      <answer fullID="80201" ID_Dialog="8020" ID_Answer="1" ID_NextDialog="8025" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Agressive">C’est sûr que si tu trompes tes meufs, tu seras 
+toujours tout seul.</fr>
+         <en Choice_en="Agressive">Sure, if you cheat on your girfriends, you're always 
+gonna be alone !</en>
+      </answer>
+      <answer fullID="80202" ID_Dialog="8020" ID_Answer="2" ID_NextDialog="8026" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Sceptique">Il n’y a vraiment personne qui t’intéresse
+vraiment ?</fr>
+         <en Choice_en="Skeptical">There's really no one who interests you ?</en>
+      </answer>
+      <answer fullID="80203" ID_Dialog="8020" ID_Answer="3" ID_NextDialog="8026" ID_Character="08" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Compatissante">Mon pauvre, ça doit pas être facile de savoir 
+ce que tu veux !</fr>
+         <en Choice_en="Compassionate">Poor guy, it must be really hard to know what 
+you want...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8021" ID_Dialog="8021" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">Tu sais, moi les étiquettes, c’est pas trop mon
+truc. Je reste ouvert à toute nouvelle expérience.</fr>
+      <en Choice_en="">I'm not really into labeling people. I stay open to new 
+experiences.</en>
+   </dialog>
+   <dialog fullID="8022" ID_Dialog="8022" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <fr Choice_fr="">Non, mélanges pas tout ! J’aime les gens francs 
+et qui font ce qu’ils veulent.</fr>
+      <en Choice_en="">No, don't mix things up ! I like straightforward people 
+who do just what they wanna do.</en>
+   </dialog>
+   <dialog fullID="8023" ID_Dialog="8023" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80101">
+      <fr Choice_fr="">Je vois tu prends les devants, j’aime ça.</fr>
+      <en Choice_en="">You take the first step, I like that.</en>
+   </dialog>
+   <dialog fullID="8024" ID_Dialog="8024" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80102">
+      <fr Choice_fr="">La séduction ce n’est pas que des paroles, 
+les jeux de regards sont aussi importants.</fr>
+      <en Choice_en="">Seduction is not just words, eye contacts are very 
+important as well...</en>
+   </dialog>
+   <dialog fullID="8025" ID_Dialog="8025" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Mais attends meuf, t’es qui pour me juger?</fr>
+      <en Choice_en="">Wait a minute, girl, who the hell are you to judge me ?</en>
+      <answer fullID="80251" ID_Dialog="8025" ID_Answer="1" ID_NextDialog="8026" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="S’excuser">Tu as raison, tu es libre de faire ce que tu veux</fr>
+         <en Choice_en="Apologize">You're right, sorry, you're free to do what you want...</en>
+      </answer>
+      <answer fullID="80252" ID_Dialog="8025" ID_Answer="2" ID_NextDialog="0" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="80104">
+         <fr Choice_fr="Insister">Tu veux vraiment rien apprendre, tant pis pour
+toi.</fr>
+         <en Choice_en="Insist">You don't want to learn, that's your loss.</en>
+      </answer>
+      <answer fullID="80253" ID_Dialog="8025" ID_Answer="3" ID_NextDialog="8036" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Embrasser">* Smack *</fr>
+         <en Choice_en="Kiss">*Kiss*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8026" ID_Dialog="8026" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80104">
+      <fr Choice_fr="">Il y a bien Claire, la copine de Raphaël. 
+Je suis tombée sous son charme, mais elle ne
+m’est pas vraiment accessible...</fr>
+      <en Choice_en="">Well, there's Claire, Raphaël's girlfriend... I've got a 
+big crush on her, but she's out of my reach...</en>
+   </dialog>
+   <dialog fullID="8027" ID_Dialog="8027" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80101">
+      <fr Choice_fr="">Exactement, j’aime pas les devinette, si tu me
+dis rien je vais pas chercher.</fr>
+      <en Choice_en="">Exactly. I don't like riddles, if you don't tell me, I 
+won't try to guess.</en>
+   </dialog>
+   <dialog fullID="8028" ID_Dialog="8028" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80101">
+      <fr Choice_fr="">Je vois tu prends les devants, j’aime ça.</fr>
+      <en Choice_en="">You take the first step, I like that.</en>
+   </dialog>
+   <dialog fullID="8029" ID_Dialog="8029" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut, quoi de neuf ?</fr>
+      <en Choice_en="">Hi ! What's up ?</en>
+      <answer fullID="80291" ID_Dialog="8029" ID_Answer="1" ID_NextDialog="8030" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Claire">J’ai des nouvelles à propos de Claire qui 
+pourraient t’intéresser !</fr>
+         <en Choice_en="Claire">I've got news about Claire you might find of some 
+interest...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8030" ID_Dialog="8030" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Sérieux ? Sois pas vache, balance !</fr>
+      <en Choice_en="">Seriously ? Don't be a bitch, tell me !</en>
+      <answer fullID="80301" ID_Dialog="8030" ID_Answer="1" ID_NextDialog="8031" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Claire">Il parait que Claire perd toute inhibition quand 
+elle prend ce qui faut…Tiens ça pourrait t’aider !</fr>
+         <en Choice_en="Claire">I heard that Claire loses all inhibitions when she 
+takes the right product... It could help you !</en>
+      </answer>
+      <answer fullID="80302" ID_Dialog="8030" ID_Answer="2" ID_NextDialog="8032" ID_Character="08" Sympathy_value="-100" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Méchante">Finalement je garde ça pour moi, hahahahaha !</fr>
+         <en Choice_en="Mean">No, on second thought, I think I'm gonna keep it to 
+myself ! Hahaha !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8031" ID_Dialog="8031" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">De la drogue ? Mais c’est pas un peu rat comme 
+attitude ? Je suis pas un chien à ce point !</fr>
+      <en Choice_en="">Drugs ? Are you for real ? Do you think I'm some 
+kind of pig ?</en>
+      <answer fullID="80311" ID_Dialog="8031" ID_Answer="1" ID_NextDialog="8032" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Insister">Oh y’a rien de mal, elle sera juste plus libre de 
+comprendre que t’es le mec qui lui faut !</fr>
+         <en Choice_en="Insist">Oh, nothing wrong with it, she'll just be encouraged 
+to realize you're the right guy for her !</en>
+      </answer>
+      <answer fullID="80312" ID_Dialog="8031" ID_Answer="2" ID_NextDialog="8032" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Taquine">Dans ton cas, t’as pas trop le choix, mon beau
+loup...</fr>
+         <en Choice_en="Teasing">In your position, you don't really have a choice, handsome...</en>
+      </answer>
+      <answer fullID="80313" ID_Dialog="8031" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="Changer d’avis">Oui t’as raison, c’est pas honnête de forcer les 
+gens avec de la drogue...</fr>
+         <en Choice_en="Change mind">Yes, you're right, it's wrong to use drugs to take 
+advantage of someone...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8032" ID_Dialog="8032" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="8029">
+      <fr Choice_fr="">Mais … t’es une salope ! Vas-y barre toi.</fr>
+      <en Choice_en="">You... You're such a bitch ! Get outta here !</en>
+   </dialog>
+   <dialog fullID="8033" ID_Dialog="8033" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="8029">
+      <fr Choice_fr="">Bon j’aime pas trop ça, mais je suppose que 
+c’est un peu ma dernière option.</fr>
+      <en Choice_en="">All right... I don't really like that, but I guess it's 
+my last option...</en>
+   </dialog>
+   <dialog fullID="8034" ID_Dialog="8034" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">J'entends pas !</fr>
+      <en Choice_en="">Can't hear you !</en>
+      <answer fullID="80341" ID_Dialog="8034" ID_Answer="1" ID_NextDialog="8005" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Parler plus fort">SALUT !!!</fr>
+         <en Choice_en="Speak louder">Bye !</en>
+      </answer>
+      <answer fullID="80342" ID_Dialog="8034" ID_Answer="2" ID_NextDialog="8002" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Danser">*Danser*</fr>
+         <en Choice_en="Dance">*Dance*</en>
+      </answer>
+      <answer fullID="80343" ID_Dialog="8034" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+         <fr Choice_fr="Abandonner">*S’éloigne*</fr>
+         <en Choice_en="Leave">*Walk away*</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8035" ID_Dialog="8035" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Raaah ces citadins, tous les mêmes… Vous 
+nous prenez tous pour des bouseux.</fr>
+      <en Choice_en="">Pfff, city folks... All the same ! Always thinking we're 
+all dumb rednecks !</en>
+      <answer fullID="80351" ID_Dialog="8035" ID_Answer="1" ID_NextDialog="8018" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Excuses">Désolé, on s’est mal compris, je voulais juste
+ dire que j’ai du mal à m’intégrer.</fr>
+         <en Choice_en="Apologize">Sorry, it came out wrong. I just meant that I'm having 
+a hard time blending in...</en>
+      </answer>
+      <answer fullID="80352" ID_Dialog="8035" ID_Answer="2" ID_NextDialog="8019" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Insister">Bahh, tu ne peux pas nier que vous manquez 
+de divertissements.</fr>
+         <en Choice_en="Insist">Well, you can't deny that there's not much to keep 
+one entertained, around here !</en>
+      </answer>
+      <answer fullID="80353" ID_Dialog="8035" ID_Answer="3" ID_NextDialog="8019" ID_Character="08" Sympathy_value="-20" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Hautain">Tssss, tu comprends rien...</fr>
+         <en Choice_en="Haughty">You just don't get it...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="8036" ID_Dialog="8036" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80104">
+      <fr Choice_fr="">Je vois tu prends les devants, j’aime ça.</fr>
+      <en Choice_en="">I see you take the first step, I like that.</en>
+   </dialog>
+</dialogs>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="1001" ID_Dialog="1001" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut les filles, j’ai ramené la nouvelle.</fr>
+      <en Choice_en="">Hi everybody ! I brought the new girl !</en>
+      <answer fullID="10011" ID_Dialog="1001" ID_Answer="1" ID_NextDialog="1002" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Salut">Salut, moi c’est Kara.</fr>
+         <en Choice_en="Hi">Hi ! I'm Kara.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1002" ID_Dialog="1002" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut Kara.</fr>
+      <en Choice_en="">Hi Kara !</en>
+      <answer fullID="10021" ID_Dialog="1002" ID_Answer="1" ID_NextDialog="1003" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Continuer">Salut.</fr>
+         <en Choice_en="Continue">Hello.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1003" ID_Dialog="1003" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Bonsoir, j’ai vu que tu avais parlé avec Bastien tout a 
+l’heure, qu’est-ce que tu penses de lui ?</fr>
+      <en Choice_en="">Good evening. I saw you talking to Bastien earlier. 
+What do you think of him ?</en>
+      <answer fullID="10031" ID_Dialog="1003" ID_Answer="1" ID_NextDialog="1004" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Pour Bastien">Je le trouve sympathique, il sait s’amuser et se 
+préoccupe peu de l’opinion des autres.</fr>
+         <en Choice_en="Support Bastien">He's seems to be a nice guy. He knows how to have 
+fun, and he doesn't care about what others think of him.</en>
+      </answer>
+      <answer fullID="10032" ID_Dialog="1003" ID_Answer="2" ID_NextDialog="1005" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Contre Bastien">Ce tocard ? Il est ridicule quand il danse, je peux 
+plus le voir.</fr>
+         <en Choice_en="Against Bastien">That stupid slacker ? He looks so ridiculous when 
+he dances, I can't even watch him anymore !</en>
+      </answer>
+      <answer fullID="10033" ID_Dialog="1003" ID_Answer="3" ID_NextDialog="1004" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Neutre">Je n’ai pas spécialement d’opinion… il fait sa vie.</fr>
+         <en Choice_en="Neutral">I don't really have an opinion... He can take care 
+of himself.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1004" ID_Dialog="1004" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Cette tantouze ? Tu l’aimes bien, même en sachant 
+qu’il aime les hommes ?</fr>
+      <en Choice_en="">That faggot ? I like him, even knowing he likes dudes ?</en>
+      <answer fullID="10041" ID_Dialog="1004" ID_Answer="1" ID_NextDialog="1006" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Désapprouver l’homophobie">Qu’est ce que ça peut te faire qu’il soit homosexuel ? 
+De quel droit tu juges les gens sale catin ?</fr>
+         <en Choice_en="Disapprove homophobia">So what ? It doesn't matter, he does whatever he 
+wants ! It's not a sin !</en>
+      </answer>
+      <answer fullID="10042" ID_Dialog="1004" ID_Answer="2" ID_NextDialog="1007" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Approuver l'homophobie">Aimer les personnes du même sexe, c’est vraiment 
+un péché, je comprend pas comment ça peut arriver.</fr>
+         <en Choice_en="Approve homophobia">Liking people of your own sex... It's wrong, it's a 
+sin ! I don't even understand how that can happen !</en>
+      </answer>
+      <answer fullID="10043" ID_Dialog="1004" ID_Answer="3" ID_NextDialog="1008" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Impliquer ?Chloé">Chloé, tu n’as pas quelque chose à répondre à ça ?</fr>
+         <en Choice_en="Involve Chloe">Chloe ? Do you have something to say to this ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1005" ID_Dialog="1005" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Ouais c’est trop ça ! En plus, il est homo, c’est pas 
+naturel.</fr>
+      <en Choice_en="">Yeah, exactly ! Besides, his gay... That's so wrong !</en>
+      <answer fullID="10051" ID_Dialog="1005" ID_Answer="1" ID_NextDialog="1006" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Désapprouver l’homophobie">Qu’est ce que ça peut te faire qu’il soit homosexuel ? 
+De quel droit tu juges les gens sale catin ?</fr>
+         <en Choice_en="Disapprove homophobia">So what ? It doesn't matter, he does whatever he 
+wants ! It's not a sin !</en>
+      </answer>
+      <answer fullID="10052" ID_Dialog="1005" ID_Answer="2" ID_NextDialog="1007" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Approuver l'homophobie">Aimer les personnes du même sexe, c’est vraiment 
+un péché, je comprend pas comment ça peut arriver.</fr>
+         <en Choice_en="Approve homophobia">Liking people of your own sex... It's wrong, it's a 
+sin ! I don't even understand how that can happen !</en>
+      </answer>
+      <answer fullID="10053" ID_Dialog="1005" ID_Answer="3" ID_NextDialog="1008" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Impliquer ?Chloé">Chloé, tu n’as pas quelque chose à répondre à ça ?</fr>
+         <en Choice_en="Involve Chloe">Chloe ? Don't you have something to say to this ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1006" ID_Dialog="1006" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="closeDialogAndLoose2votes" BanAnswer="">
+      <fr Choice_fr="">Pff.. Je pensais que t’étais une meuf cool. Qu’est ce 
+que tu viens faire dans cette soirée, t’es pas la 
+bienvenue ici. Barre-toi.</fr>
+      <en Choice_en="">I thought you were a cool girl... What the hell are 
+you still doing here ? You're not welcome anymore. 
+Scram !</en>
+   </dialog>
+   <dialog fullID="1007" ID_Dialog="1007" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="closeDialogAndWin2votes" BanAnswer="">
+      <fr Choice_fr="">C’est contre nature, pour moi ça fait partie des 
+catastrophes naturelles, des abominations de ce monde.</fr>
+      <en Choice_en="">It's not natural ! It's a disease, it should not exist !</en>
+   </dialog>
+   <dialog fullID="1008" ID_Dialog="1008" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Quoi ? Qu’est ce que tu entends par là, j’ai rien à 
+dire, lâche moi !</fr>
+      <en Choice_en="">What ? Waht do you mean ? I've got nothing to say ! 
+Give me a break !</en>
+      <answer fullID="10081" ID_Dialog="1008" ID_Answer="1" ID_NextDialog="1009" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Embrasser">*Smack*</fr>
+         <en Choice_en="Kiss">*Kiss*</en>
+      </answer>
+      <answer fullID="10082" ID_Dialog="1008" ID_Answer="2" ID_NextDialog="0" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialogkeepChloe" BanAnswer="">
+         <fr Choice_fr="S'en aller">Je vois… je crois que je vais m’en aller, je n’insisterai 
+pas mais je n’en pense pas moins.</fr>
+         <en Choice_en="Leave">I see... I think I'm gonna go. I don't want to argue, 
+but I think you're wrong.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1009" ID_Dialog="1009" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialogAndloose3votes" BanAnswer="">
+      <fr Choice_fr="">Quoi ? Mais, mais, barre toi ! Qu’est-ce que tu crois 
+faire ? Regardez c’est une lesbich !</fr>
+      <en Choice_en="">What ? Get the fuck outta here ! What the hell do 
+you think you're doing ? Look everyone, she's a queer !</en>
+   </dialog>
+   <dialog fullID="1010" ID_Dialog="1010" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut les filles, j’ai ramené la nouvelle, c’est elle qui 
+à mis de la bonne musique toute à l’heure.</fr>
+      <en Choice_en="">Hi girls ! Look, I brought the new girl. It's her we have 
+to thank for that good song that played earlier !</en>
+      <answer fullID="10101" ID_Dialog="1010" ID_Answer="1" ID_NextDialog="1012" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Salut">Salut, moi c’est Kara.</fr>
+         <en Choice_en="Hi">Hi ! I'm Kara.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1012" ID_Dialog="1012" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut Kara.</fr>
+      <en Choice_en="">Hi Kara.</en>
+      <answer fullID="10121" ID_Dialog="1012" ID_Answer="1" ID_NextDialog="1013" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Continuer">Salut.</fr>
+         <en Choice_en="Continue">Hello.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1013" ID_Dialog="1013" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Alors dis nous Kara, qu’est-ce que tu penses de la 
+cette soirée ? Pas terrible hein ?</fr>
+      <en Choice_en="">So, tell us Kara, what do you think of that party ? 
+Pretty lame, huh ?</en>
+      <answer fullID="10131" ID_Dialog="1013" ID_Answer="1" ID_NextDialog="1014" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Blasée">Vraiment nulle, c'est d'un ennui !</fr>
+         <en Choice_en="Jaded">So lame, it's just plain boring !</en>
+      </answer>
+      <answer fullID="10132" ID_Dialog="1013" ID_Answer="2" ID_NextDialog="1015" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Dynamique">Oh, je pense qu'il y a du potention si jamais on veut 
+se marrer, il suffit de se bouger et de profiter.</fr>
+         <en Choice_en="Dynamic">Oh, I reckon it's got potential. We've just got to move 
+our asses and find something to do !</en>
+      </answer>
+      <answer fullID="10133" ID_Dialog="1013" ID_Answer="3" ID_NextDialog="1014" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Neutre">C'est pas trop ça, ça casse pas des briques mais 
+il y a quelqes gens cool.</fr>
+         <en Choice_en="Neutral">Not much fun, it's true, but still, there are some 
+cool people !</en>
+      </answer>
+      <answer fullID="10134" ID_Dialog="1013" ID_Answer="4" ID_NextDialog="1016" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Drogue">Goutez moi ça les filles, je vous garantis que la 
+soirée passera beaucoup mieux !!</fr>
+         <en Choice_en="Drug">Have a taste of that, girls, I garantee the night's 
+gonna be a lot better !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1014" ID_Dialog="1014" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Tu l’as dit c’est pas super, heureusement que t’as 
+parlé au DJ</fr>
+      <en Choice_en="">You said it... Luckily, you got a chance to talk to 
+the DJ !</en>
+      <answer fullID="10141" ID_Dialog="1014" ID_Answer="1" ID_NextDialog="1018" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Blasée">Ouais, vraiment aucun goût ce DJ, c’est la dernière 
+fois que je participe à une soirée comme ça !</fr>
+         <en Choice_en="Jaded">Seems like that DJ only plays crappy music ! You 
+won't catch me in another of those parties ever 
+again, trust me !</en>
+      </answer>
+      <answer fullID="10142" ID_Dialog="1014" ID_Answer="2" ID_NextDialog="1019" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Dynamique">Ça vous dis on boit un verre ? Ça sera marrant !</fr>
+         <en Choice_en="Dynamic">How about a drink ? That would be a start !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1015" ID_Dialog="1015" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="closeDialogAndLoose2votes" BanAnswer="">
+      <fr Choice_fr="">T’es superficielle un peu comme tout le monde quoi ...</fr>
+      <en Choice_en="">You're just shallow, like everyone else around here...</en>
+   </dialog>
+   <dialog fullID="1016" ID_Dialog="1016" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">De la drogue ?</fr>
+      <en Choice_en="">Drugs ?</en>
+      <answer fullID="10161" ID_Dialog="1016" ID_Answer="1" ID_NextDialog="1017" ID_Character="17" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Oui">Exactement !</fr>
+         <en Choice_en="Yes">Exactly !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1017" ID_Dialog="1017" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Tu penses vraiment que ça se fait ?</fr>
+      <en Choice_en="">You really think that's cool ?</en>
+      <answer fullID="10171" ID_Dialog="1017" ID_Answer="1" ID_NextDialog="1020" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Dynamique">Vous ne le saurez jamais si vous n'essayez pas, 
+aller un peu de courage !</fr>
+         <en Choice_en="Dynamic">You'll never know if you don't try ! Come on, give 
+it a shot !</en>
+      </answer>
+      <answer fullID="10172" ID_Dialog="1017" ID_Answer="2" ID_NextDialog="1021" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Dégoutée">Aller ! Vous êtes fatiguantes à pas faire d'efforts ! 
+Je ne peux rien faire pour vous !</fr>
+         <en Choice_en="Disguted">Oh, come on ! You could try, at least ! Forget it... 
+You guys are hopeless...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1018" ID_Dialog="1018" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">T’as raison, la dernière fois ! On m’y reprendra pas !</fr>
+      <en Choice_en="">Definitely ! It's the last time !</en>
+      <answer fullID="10181" ID_Dialog="1018" ID_Answer="1" ID_NextDialog="1022" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Affirmative">Ouais, c'est sûr...</fr>
+         <en Choice_en="Affirmative">Yeah, sure...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1019" ID_Dialog="1019" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Pas trop envie</fr>
+      <en Choice_en="">Don't really feel like it...</en>
+      <answer fullID="10191" ID_Dialog="1019" ID_Answer="1" ID_NextDialog="1024" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Déçue">Oh, dommage...vous n'aimez pas boire ?</fr>
+         <en Choice_en="Disappointed">Oh...you don't like to drink ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1020" ID_Dialog="1020" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Whaaa les filles, vous ressentez ça aussi ?</fr>
+      <en Choice_en="" />
+      <answer fullID="10201" ID_Dialog="1020" ID_Answer="1" ID_NextDialog="1023" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Affirmative">Oh oui, c'est cool hein ?</fr>
+         <en Choice_en="Affirmative">Oh yeah...it's cool, isn't it ?</en>
+      </answer>
+   </dialog>
+   <dialog fullID="1021" ID_Dialog="1021" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="closeDialogAndloose3votes" BanAnswer="">
+      <fr Choice_fr="">Hooo t’es relou !</fr>
+      <en Choice_en="">Give us a break !</en>
+   </dialog>
+   <dialog fullID="1022" ID_Dialog="1022" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="closeDialogAndWin2votes" BanAnswer="">
+      <fr Choice_fr="">Oui, trop nulle.</fr>
+      <en Choice_en="">Yeah, it sucks...</en>
+   </dialog>
+   <dialog fullID="1023" ID_Dialog="1023" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="closeDialogAndWin2votes" BanAnswer="">
+      <fr Choice_fr="">C’est de la bonne...</fr>
+      <en Choice_en="">That's good shit...</en>
+   </dialog>
+   <dialog fullID="1024" ID_Dialog="1024" ID_Answer="" ID_NextDialog="" ID_Character="17" Sympathy_value="" Condition="basic" Action="closeDialogKeepVanessa" BanAnswer="">
+      <fr Choice_fr="">Oui boire c’est ennuyeux !</fr>
+      <en Choice_en="">Drinking is boring !</en>
+   </dialog>
+</dialogs>

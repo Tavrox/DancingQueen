@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>alex_body.png</key>
+            <key>GroupeBoris.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{267,3},{261,337}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>alice_body.png</key>
+            <key>GroupeVanessaChloé.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{531,3},{261,337}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>bastien_body.png</key>
+            <key>Jeremie_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{795,3},{261,337}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>bob_body.png</key>
+            <key>alex_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1059,3},{261,337}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>boris_body.png</key>
+            <key>alice_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1323,3},{261,337}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>charlie_body.png</key>
+            <key>bastien_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1587,3},{261,337}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>chloe_body.png</key>
+            <key>bob_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,343},{261,337}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>christine_body.png</key>
+            <key>boris_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{267,343},{261,337}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>claire_body.png</key>
+            <key>charlie_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{531,343},{261,337}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>didier_body.png</key>
+            <key>chloe_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{795,343},{261,337}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>jeremie_body.png</key>
+            <key>christine_body.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1059,343},{261,337}}</string>
@@ -160,10 +160,36 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
+            <key>claire_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1323,343},{261,337}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{261,337}}</string>
+                <key>sourceSize</key>
+                <string>{261,337}</string>
+            </dict>
+            <key>didier_body.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1587,343},{261,337}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{261,337}}</string>
+                <key>sourceSize</key>
+                <string>{261,337}</string>
+            </dict>
             <key>kara_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1323,343},{196,383}}</string>
+                <string>{{3,683},{196,383}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +202,7 @@
             <key>manon_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1522,343},{261,337}}</string>
+                <string>{{202,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +215,7 @@
             <key>paul_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,729},{261,337}}</string>
+                <string>{{466,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +228,7 @@
             <key>raphael_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{267,729},{261,337}}</string>
+                <string>{{730,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>stephane_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{531,729},{261,337}}</string>
+                <string>{{994,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +254,7 @@
             <key>thomasDanse_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{795,729},{261,337}}</string>
+                <string>{{1258,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -238,10 +264,10 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
-            <key>thomas_bar.png</key>
+            <key>thomas_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1059,729},{261,337}}</string>
+                <string>{{1522,683},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +280,7 @@
             <key>vanessa_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1323,729},{261,337}}</string>
+                <string>{{3,1069},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +293,7 @@
             <key>yannick_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1587,729},{261,337}}</string>
+                <string>{{267,1069},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -283,13 +309,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>character.png</string>
+            <string>v2_character.png</string>
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:94aee0d5f9be57d3a0577c33bf4cc820:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:de57e24ed541ce3fe1a5318eee3ae0e0:1/1$</string>
             <key>textureFileName</key>
-            <string>character.png</string>
+            <string>v2_character.png</string>
         </dict>
     </dict>
 </plist>

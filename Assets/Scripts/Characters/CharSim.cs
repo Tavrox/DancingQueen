@@ -26,7 +26,9 @@ public class CharSim : MonoBehaviour {
 		Christine,	// ID 17
 		Manon,		// ID 02
 		Raphael,	// ID 13
-		Kara		// ID 04
+		Kara,		// ID 04
+		Girls,	// ID 01
+		Boys		// ID 03
 	};
 	public string characterID;
 	public charList charac;
@@ -35,6 +37,8 @@ public class CharSim : MonoBehaviour {
 	public bool triggeredUltimate = false;
 	public bool voteForPlayer = false;
 	public int[] banAnswers = new int[20];
+	public Color color;
+	public bool tutoMode = false;
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -43,9 +47,8 @@ public class CharSim : MonoBehaviour {
 	[Range (0,5)] public float frequencyWhispers = 0.5f;
 
 	// Use this for initialization
-	void Start () {
-	
-	
+	void Start () 
+	{
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
@@ -54,8 +57,9 @@ public class CharSim : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+
 	}
 	
 	
@@ -127,6 +131,7 @@ public class CharSim : MonoBehaviour {
 			transfRand = rand.ToString();
 		}
 		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_" + transfRand);
+
 	}
 
 	private void OnMouseOver()
@@ -233,10 +238,21 @@ public class CharSim : MonoBehaviour {
 				res = "raphael_body";
 				break;
 			}
-
+			case (charList.Girls) :
+			{
+				res = "GroupeVanessaChloé";
+				break;
+			}
+			case (charList.Boys) :
+			{
+			res = "GroupeBoris";
+				break;
+			}
+			
 		}
 		return res;
-
 	}
+
+
 
 }

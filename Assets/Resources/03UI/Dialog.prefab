@@ -333,7 +333,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .25999999, y: .245000005, z: 1}
+  m_LocalPosition: {x: .269800544, y: .0587896109, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.09150028, y: 8.04300117, z: 1}
+  m_LocalScale: {x: 4.09149981, y: 8.04300117, z: 1}
   m_Children: []
   m_Father: {fileID: 400022}
 --- !u!4 &400012
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: overlaySprite-3
   _position: {x: 0, y: 0}
-  _size: {x: 4.09150028, y: 8.04300117}
+  _size: {x: 4.09149981, y: 8.04300117}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -876,7 +876,7 @@ MonoBehaviour:
   protoType: 
   baseName: overlaySprite
   oSize: {x: 4.08333349, y: 7.97916698}
-  imageSize: {x: 4.09150028, y: 8.04300117}
+  imageSize: {x: 4.09149981, y: 8.04300117}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 15
+  _frameIndex: 16
   _frameName: overlay-dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -1155,7 +1155,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: 
-  m_Anchor: 0
+  m_Anchor: 6
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: .800000012
@@ -1166,7 +1166,7 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4280032284
+    rgba: 4278190142
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!132 &13200002

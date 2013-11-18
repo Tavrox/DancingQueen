@@ -37,39 +37,16 @@ public class LevelManager : MonoBehaviour {
 
 	private GameObject[] wpChars;
 	private GameObject[] wpDoors;
+	private OTSprite black;
 
 	public enum MusicList
 	{
-		ElectroBar,
-		ElectroToilets,
-		ElectroVIP,
-		ElectroDancefloor,
-		GroovyBar,
-		GroovyToilets,
-		GroovyVIP,
-		GroovyDancefloor,
-		SlowBar,
-		SlowToilets,
-		SlowVIP,
-		SlowDancefloor,
-		CountryBar,
-		CountryToilets,
-		CountryVIP,
-		CountryDancefloor
+		Electro,
+		Groovy,
+		Country,
+		Slow
 	}
-	public MusicList musicLvl;
-	public int stepVotesForWin = 8;
-	private string musicToPlay;
-	private GUIText Timer;
-	private int Hours = 20;
-	private int Minutes = 0;
-	private OTSprite black;
-
-	private string backBarFrame;
-	private string backDancefloorFrame;
-	private string backToiletsFrame;
-	private string backVIPFrame;
-	
+	public MusicList musicLvl = MusicList.Groovy;
 	public enum levelList
 	{
 		Bar,
@@ -79,23 +56,36 @@ public class LevelManager : MonoBehaviour {
 	}
 	public levelList currentLvl;
 
+	public int stepVotesForWin = 8;
+	public float updateTimerEvery = 1.35f;
+	private string musicToPlay;
+	private GUIText Timer;
+	public int Hours = 20;
+	public int Minutes = 0;
+	private string musicStyle;
+
+	private string backBarFrame;
+	private string backDancefloorFrame;
+	private string backToiletsFrame;
+	private string backVIPFrame;
+
+
 	void Awake()
 	{
-		InvokeRepeating("updateTimer",0, 0.5f);
+		black = GameObject.Find("Overlay").GetComponent<OTSprite>();
+		InvokeRepeating("updateTimer",0, updateTimerEvery);
 		setCharPrefab();
 		setBackgrounds();
 		setWaypoints();
 		instantiateDoors();
 		Screen.showCursor = false;
-		setMusic();
-		MasterAudio.TriggerPlaylistClip(musicToPlay);
+		setMusic(musicLvl, levelList.Bar);
 		_Player = GameObject.Find("PlayerData");
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
-		black = GameObject.Find("Overlay").GetComponent<OTSprite>();
 		_Player = GameObject.Find("PlayerData");
 		Timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<GUIText>();
 
@@ -144,6 +134,7 @@ public class LevelManager : MonoBehaviour {
 			MinutesTransfo = Minutes.ToString();
 		}
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
+		checkTimer();
 	}
 
 	void updateTimer()
@@ -157,38 +148,52 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	void checkTimer()
-	{
-		if (Hours > 21)
+	{Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
+		print ("omg dat print");
+		if (Hours >= 21)
 		{
+			print ("Alex!1");
 			if (DialogUI.exists != true)
 			{
-				if (_Alex.GetComponent<Alex>().casseCouilleS1 != true)
+				if (GO.casseCouilleS1 != true)
 				{
-					// Trigger Dialog
-					_Alex.GetComponent<Alex>().casseCouilleS1 = true;
+					print ("Alex!3");
+					if (DialogUI.exists != true)
+					{
+						print ("Alex!4");
+						DialogUI.createDialog(GO);
+						IngameUI.destroyIngameUI();
+//						GO.dialToTrigger = "11006";
+					}
+					GO.casseCouilleS1 = true;
 				}
 
 			}
 		}
 
-		if (Hours > 22)
+		if (Hours >= 22)
 		{
 			if (DialogUI.exists != true)
 			{
-				if (_Alex.GetComponent<Alex>().casseCouilleS2 != true && _Alex.GetComponent<Alex>().gotPlayerInVIP != true)
+				if (GO.casseCouilleS2 != true && GO.gotPlayerInVIP != true)
 				{
 					// Trigger Dialog
-					_Alex.GetComponent<Alex>().casseCouilleS2 = true;
+					GO.casseCouilleS2 = true;
 				}
 				
 			}
 		}
 
-		if (Hours > 23)
+		if (Hours >= 23)
 		{
-			if (_Alex.GetComponent<Alex>().casseCouilleS3 != true && _Alex.GetComponent<Alex>().gotPlayerInVIP != true)
+			if (DialogUI.exists != true)
 			{
-				// Trigger Dialog
+				if (GO.casseCouilleS3 != true && GO.gotPlayerInVIP != true)
+				{
+					// Trigger Dialog
+					GO.casseCouilleS3 = true;
+				}
+				
 			}
 		}
 
@@ -198,7 +203,7 @@ public class LevelManager : MonoBehaviour {
 			OTSprite gameo = GameObject.Find("Overlay").GetComponent<OTSprite>();
 			OTSprite gameoLoose = GameObject.Find("Win").GetComponent<OTSprite>();
 			OTSprite gameoWin = GameObject.Find("Loose").GetComponent<OTSprite>();
-			gameo.alpha = 0.5f;
+			gameo.alpha = 1f;
 
 			if (calculateWin() == true)
 			{
@@ -217,10 +222,10 @@ public class LevelManager : MonoBehaviour {
 	public void changeRoom ( levelList lv)
 	{
 		Debug.Log ("ChangeRoom");
+		currentLvl = lv;
 		setWaypoints();
 		_Player = GameObject.Find("PlayerData");
 		_Player.GetComponent<PlayerSim>().reloadCharacs();
-		currentLvl = lv;
 		setCharacGO("");
 		setCharPrefab();
 		setBackgrounds();
@@ -228,6 +233,7 @@ public class LevelManager : MonoBehaviour {
 		cleanDoors();
 		instantiateDoors();
 		setCharPos();
+		setMusic(musicLvl, lv);
 	}
 
 	private void setCharacGO(string str)
@@ -251,8 +257,7 @@ public class LevelManager : MonoBehaviour {
 
 		if (str == "killAll")
 		{
-			_Alex.collider.enabled = false;
-			_Anais.collider.enabled = false; 	
+			_Alex.collider.enabled = false;	
 			_Bastien.collider.enabled = false; 
 			_Bob.collider.enabled = false; 	
 			_Boris.collider.enabled = false; 	
@@ -412,11 +417,6 @@ public class LevelManager : MonoBehaviour {
 
 	private void setCharPos()
 	{
-
-		// Check Current place
-		// Check events for specific char places
-		// Instantiate good chars, destroy wrong chars
-		// Set Pos
 		switch (currentLvl)
 		{
 			case (levelList.Dancefloor) :
@@ -437,13 +437,14 @@ public class LevelManager : MonoBehaviour {
 				unhideChar("Didier");
 				unhideChar("Manon");
 
-			if (_Vanessa.GetComponent<Vanessa>().isSad == true)
+				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-
+//					_Vanessa.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
+//					unhideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-
+//					hideChar("Thomas");
 				}
 				if (_Raphael.GetComponent<Raphael>().coupleClaire == false)
 				{
@@ -464,12 +465,16 @@ public class LevelManager : MonoBehaviour {
 				unhideChar("Yannick");
 				unhideChar("Vanessa");
 				unhideChar("Chloe");
-				if (_Vanessa.GetComponent<Vanessa>().triggeredUltimate == true)
+
+				if (_Vanessa.GetComponent<Vanessa>().isSad == true)
 				{
+//					hideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-				}
+//					_Thomas.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
+//					unhideChar("Thomas");
+                }
 				break;
 			}
 			case (levelList.Toilets) :
@@ -499,41 +504,124 @@ public class LevelManager : MonoBehaviour {
 				hideChar("Thomas");
 				hideChar("Didier");
 				hideChar("Manon");
+
+				unhideChar("Bob");
 			
 			if (_Bob.GetComponent<Bob>().unlocked == true)
 				{
-					unhideChar("Bob");
+					
 				}
 				break;
 			}
 		}
 	}
 
-	private void setMusic()
+	public void setMusic(MusicList music, levelList level)
 	{
-		switch (musicLvl)
+
+		if (level == levelList.Bar)
 		{
-			case (MusicList.SlowBar) :
-			{
-				musicToPlay = "SlowBar";
-				break;
-			}
-			case (MusicList.GroovyBar) :
+			if (music ==  MusicList.Groovy)
 			{
 				musicToPlay = "GroovyBar";
-				break;
+
 			}
-			case (MusicList.CountryBar) :
-			{
-				musicToPlay = "GBar";
-				break;
-			}
-			case (MusicList.ElectroBar) :
+			if (music ==  MusicList.Electro)
 			{
 				musicToPlay = "ElectroBar";
-				break;
+				
+			}
+			if (music ==  MusicList.Country)
+			{
+				musicToPlay = "CountryBar";
+				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+				go.dialToTrigger = "7009";
+				go.isSad = false;
+			}
+			if (music ==  MusicList.Slow)
+			{
+				musicToPlay = "SlowBar";
+				
 			}
 		}
+		if (level == levelList.Dancefloor)
+		{
+			if (music ==  MusicList.Groovy)
+			{
+				musicToPlay = "GroovyDancefloor";
+				
+			}
+			if (music ==  MusicList.Electro)
+			{
+				musicToPlay = "ElectroDancefloor";
+				
+			}
+			if (music ==  MusicList.Country)
+			{
+				musicToPlay = "CountryDancefloor";
+				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+				go.dialToTrigger = "7009";
+				go.isSad = false;
+			}
+			if (music ==  MusicList.Slow)
+			{
+				musicToPlay = "SlowDancefloor";
+				
+			}
+		}
+		if (level == levelList.Toilets)
+		{
+			if (music ==  MusicList.Groovy)
+			{
+				musicToPlay = "GroovyToilets";
+				
+			}
+			if (music ==  MusicList.Electro)
+			{
+				musicToPlay = "ElectroToilets";
+				
+			}
+			if (music ==  MusicList.Country)
+			{
+				musicToPlay = "CountryToilets";
+				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+				go.dialToTrigger = "7009";
+				go.isSad = false;
+			}
+			if (music ==  MusicList.Slow)
+			{
+				musicToPlay = "SlowToilets";
+				
+			}
+		}
+		if (level == levelList.VIP)
+		{
+			if (music ==  MusicList.Groovy)
+			{
+				musicToPlay = "GroovyVIP";
+				
+			}
+			if (music ==  MusicList.Electro)
+			{
+				musicToPlay = "ElectroVIP";
+				
+			}
+			if (music ==  MusicList.Country)
+			{
+				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+				go.dialToTrigger = "7009";
+				go.isSad = false;
+				musicToPlay = "CountryVIP";
+				
+			}
+			if (music ==  MusicList.Slow)
+			{
+				musicToPlay = "SlowVIP";
+				
+			}
+		}
+		MasterAudio.TriggerPlaylistClip(musicToPlay);
+		
 	}
 	private void chooseMusic()
 	{
@@ -550,15 +638,8 @@ public class LevelManager : MonoBehaviour {
 		InvokeRepeating("lowerAlpha", 0f, 0.5f);
 		DialogUI.exists = false;
 	}
-
-	IEnumerator Wait(float WaitTime)
-	{
-		yield return new WaitForSeconds(WaitTime);
-	}
-
 	private void raiseAlpha()
 	{
-		Debug.Log("Fade" + black.alpha);
 		if (black.alpha < 1)
 		{
 			black.alpha += 0.2f;
@@ -571,7 +652,6 @@ public class LevelManager : MonoBehaviour {
 
 	private void lowerAlpha()
 	{
-		Debug.Log("Fade" + black.alpha);
  		if (black.alpha > 0)
 		{
 			black.alpha -= 0.2f;
@@ -581,11 +661,16 @@ public class LevelManager : MonoBehaviour {
 			CancelInvoke();
 		}
 	}
+	IEnumerator Wait(float WaitTime)
+	{
+		yield return new WaitForSeconds(WaitTime);
+	}
 	private void hideChar(string gameo)
 	{
 		if (gameo != null)
 		{
 //			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = false;
+			print(GameObject.FindGameObjectWithTag(gameo).name);
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = false;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
@@ -609,7 +694,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		GameObject.Find(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
 	}
-	private bool calculateWin()
+	public bool calculateWin()
 	{
 		setCharacGO("");
 		int numberVotes = 0;

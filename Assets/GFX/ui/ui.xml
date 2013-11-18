@@ -69,10 +69,36 @@
                 <key>sourceSize</key>
                 <string>{800,231}</string>
             </dict>
+            <key>backbtn.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{802,233},{400,108}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{400,108}}</string>
+                <key>sourceSize</key>
+                <string>{400,108}</string>
+            </dict>
+            <key>backbtn_hover.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1203,233},{400,108}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{400,108}}</string>
+                <key>sourceSize</key>
+                <string>{400,108}</string>
+            </dict>
             <key>black.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{802,233},{800,600}}</string>
+                <string>{{1,465},{800,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +111,7 @@
             <key>close_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1603,233},{30,30}}</string>
+                <string>{{802,465},{30,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +124,7 @@
             <key>cursor_default.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1634,233},{50,50}}</string>
+                <string>{{833,465},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +137,7 @@
             <key>cursor_talk.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1685,233},{50,50}}</string>
+                <string>{{884,465},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +150,7 @@
             <key>cursor_use.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1736,233},{50,50}}</string>
+                <string>{{935,465},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +163,7 @@
             <key>drogue_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1787,233},{50,50}}</string>
+                <string>{{986,465},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +176,7 @@
             <key>en.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1838,233},{40,40}}</string>
+                <string>{{1037,465},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +189,7 @@
             <key>fr.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1879,233},{40,40}}</string>
+                <string>{{1078,465},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +202,7 @@
             <key>loose.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,834},{300,225}}</string>
+                <string>{{1119,465},{300,225}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +215,7 @@
             <key>notebook_full_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{302,834},{600,450}}</string>
+                <string>{{1420,465},{600,450}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +228,7 @@
             <key>notebook_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{903,834},{50,50}}</string>
+                <string>{{1,1066},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>overlay-dialog.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{954,834},{800,600}}</string>
+                <string>{{52,1066},{800,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +254,7 @@
             <key>quitdialog_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1755,834},{50,100}}</string>
+                <string>{{853,1066},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +267,7 @@
             <key>trombi_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1806,834},{50,50}}</string>
+                <string>{{904,1066},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,20 +280,20 @@
             <key>trombino_full_ui.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,1435},{600,450}}</string>
+                <string>{{955,1066},{800,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{600,450}}</string>
+                <string>{{0,0},{800,600}}</string>
                 <key>sourceSize</key>
-                <string>{600,450}</string>
+                <string>{800,600}</string>
             </dict>
             <key>watch.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{602,1435},{100,100}}</string>
+                <string>{{1756,1066},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,7 +306,7 @@
             <key>win.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{703,1435},{300,225}}</string>
+                <string>{{1,1667},{300,225}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -300,7 +326,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ba72c671a999862ead7bb9e0dbd764f8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3c8a06554a1001f3926452ec8c3212a3:1/1$</string>
             <key>textureFileName</key>
             <string>ui.png</string>
         </dict>

@@ -13,9 +13,19 @@ public class LevelDoor : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () 
-	{
+	{ 
+
 		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		GameEventManager.NextLevel += NextLevel;
+	}
+	void Update()
+	{
+		Bob bobby = GameObject.FindGameObjectWithTag("Bob").GetComponent<Bob>();
+		if ( bobby.unlocked == true)
+		{
+			this.locked = false;
+		}
+
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -32,11 +42,16 @@ public class LevelDoor : MonoBehaviour {
 
 	private void OnMouseOver()
 	{
-		if (DialogUI.exists != true && locked != true)
-		{
-			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-			spr.frameName = "cursor_use";
-		}
+		GameObject _Yannick = GameObject.FindGameObjectWithTag("Yannick");
+		/*
+		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == true)
+		{*/
+			if (DialogUI.exists != true && locked != true)
+			{
+				OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+				spr.frameName = "cursor_use";
+			}
+//		}
 	}
 
 	private void OnMouseExit()
@@ -79,16 +94,26 @@ public class LevelDoor : MonoBehaviour {
 
 	private void OnMouseDown()
 	{
-		if (locked != true)
-		{
-			if (DialogUI.exists != true  && locked != true)
+		GameObject _Yannick = GameObject.FindGameObjectWithTag("Yannick");
+//		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == true)
+//		{
+			if (locked != true)
 			{
-				if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
-				else GameEventManager.TriggerNextLevel();
-				MasterAudio.PlaySound("Porte_full", "porte_full",0f);
-				lvManager.changeRoom(this.goToLevel);
+				if (DialogUI.exists != true  && locked != true)
+				{
+					MasterAudio.PlaySound("Porte", "Porte",0f);
+					StartCoroutine( openDoor(1.15f) );
+
+				}
 			}
-		}
+//		}
 	}
-	
+
+	IEnumerator openDoor(float wait)
+	{
+		yield return new WaitForSeconds(wait);
+		if(myDoorType.ToString()=="BeginLevel") GameEventManager.TriggerNextLevel();
+		else GameEventManager.TriggerNextLevel();
+		lvManager.changeRoom(this.goToLevel);
+	}
 }

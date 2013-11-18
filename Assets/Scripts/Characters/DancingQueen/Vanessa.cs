@@ -3,10 +3,6 @@ using System.Collections;
 
 public class Vanessa : CharSim 
 {
-	public bool isSad;
-
-	public void modeHappyVanessa()
-	{
-		this.triggeredUltimate = true;
-	}
+	public bool isSad = true;
+	public bool knowsDance = false;
 }

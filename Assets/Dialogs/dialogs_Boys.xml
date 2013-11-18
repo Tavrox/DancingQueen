@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+   <dialog fullID="3001" ID_Dialog="3001" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Salut les mec, je voulais vous présenter... 
+heuuu...</fr>
+      <en Choice_en="">Hey guys ! This is...errr...</en>
+      <answer fullID="30021" ID_Dialog="3002" ID_Answer="1" ID_NextDialog="3003" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Salut">Kara, enchantée !</fr>
+         <en Choice_en="Hi">Kara ! Pleased to meet you !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3003" ID_Dialog="3003" ID_Answer="" ID_NextDialog="" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Enchanté</fr>
+      <en Choice_en="">Likewise.</en>
+      fullID="30031" ID_Dialog="3003" ID_Answer="1" ID_NextDialog="3004" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer=""
+      <fr Choice_fr="Moi aussi">De même.</fr>
+      <en Choice_en="Me too">The same for me.</en>
+   </dialog>
+   <dialog fullID="3004" ID_Dialog="3004" ID_Answer="" ID_NextDialog="" ID_Character="B20" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Bonsoir et bienvenue dans notre groupe.</fr>
+      <en Choice_en="">Good evening ! Welcome to our little group.</en>
+      fullID="30041" ID_Dialog="3004" ID_Answer="1" ID_NextDialog="3005" ID_Character="B20" Sympathy_value="" Condition="basic" Action="" BanAnswer=""
+      <fr Choice_fr="Merci">Merci.</fr>
+      <en Choice_en="Thanks">Thanks.</en>
+   </dialog>
+   <dialog fullID="3005" ID_Dialog="3005" ID_Answer="" ID_NextDialog="" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Et Stéphane il n’est pas avec vous ?</fr>
+      <en Choice_en="">Where's Stéphane ? He's not with you ?</en>
+      fullID="30051" ID_Dialog="3005" ID_Answer="1" ID_NextDialog="3006" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer=""
+      <fr Choice_fr="Non">Merci.</fr>
+      <en Choice_en="Thanks">Thanks.</en>
+   </dialog>
+   <dialog fullID="3006" ID_Dialog="3006" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Non, j’en avais assez de l’attendre et aussi 
+il fallait que je vous dise ...</fr>
+      <en Choice_en="">No, I got tired of waiting for him. Also, I 
+wanted to tell you...</en>
+      fullID="30061" ID_Dialog="3006" ID_Answer="1" ID_NextDialog="3007" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer=""
+      <fr Choice_fr="Regardez !">Regardez, il arrive !</fr>
+      <en Choice_en="Look !">Look here ! He is coming !</en>
+   </dialog>
+   <dialog fullID="3007" ID_Dialog="3007" ID_Answer="" ID_NextDialog="" ID_Character="B15" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Heeyyy, je suis ‘’hic’’ de retour les mecs !</fr>
+      <en Choice_en="">Yo, guys ! I'm *hiccup* back...</en>
+      <answer fullID="30071" ID_Dialog="3007" ID_Answer="1" ID_NextDialog="3008" ID_Character="B15" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Se moquer du groupe">Hééé mais il est bourré, je croyais qu'aucun 
+de vous ne buvait, hahaha bravo la team</fr>
+         <en Choice_en="Make fun of the group">My, this guy is drunk ! I thought you were 
+all straight-edge and stuff ! Well played, team !</en>
+      </answer>
+      <answer fullID="30072" ID_Dialog="3007" ID_Answer="2" ID_NextDialog="3008" ID_Character="B15" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Curieuse">C'est lui qui était ''malade'' aux toilettes ?</fr>
+         <en Choice_en="Curious">Is he the one who was sick in the bathroom ?</en>
+      </answer>
+      <answer fullID="30073" ID_Dialog="3007" ID_Answer="3" ID_NextDialog="3008" ID_Character="B15" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Agressive">Hooo, c'est intolérable, on aime pas les 
+gens qui boivent de l'alcool chez nous !!!</fr>
+         <en Choice_en="Agressive">Hey, that's a disgrace ! We don't like people 
+who drink alcohol around here !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3008" ID_Dialog="3008" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Putain Stéphane, dans que état t'es ! Mais 
+... mais... t'as bu !! Espèce de con. Je te 
+renie de notre fratrie !!</fr>
+      <en Choice_en="">Shit, Stéphane, what the hell, man ! You've... 
+You've been drinking ! You jackass ! I disown
+you this instant !</en>
+      <answer fullID="30081" ID_Dialog="3008" ID_Answer="1" ID_NextDialog="3010" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Affirmative">T'as raison Boris, franchement ça se fait 
+pas de boire autant. C'est irresponsable.</fr>
+         <en Choice_en="Affirmative">Way to go, Boris, that behaviour is not 
+tolerable ! It's irresponsible !</en>
+      </answer>
+      <answer fullID="30082" ID_Dialog="3008" ID_Answer="2" ID_NextDialog="3011" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="En désaccord">Oh, Boris, tu t'es pris pour qui ? laisse-le 
+tranquille, il fait ce qu'il veut !</fr>
+         <en Choice_en="Disagree">Oh, come on, Boris, give the guy a break, what's
+ wrong with having a little fun once in a while ?</en>
+      </answer>
+      <answer fullID="30083" ID_Dialog="3008" ID_Answer="3" ID_NextDialog="3009" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Muette">...</fr>
+         <en Choice_en="Mute">...</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3009" ID_Dialog="3009" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Tu nous fais honte devant notre nouvelle 
+amie Kara, on a l'air de quoi nous maitnenant. 
+Dis-lui Kara qu'il est ridicule, qu'il devrait 
+avoir honte.</fr>
+      <en Choice_en="">You're embarrassing us in front of Kara, our 
+new friend ! Look at yourself ! Kara, tell him 
+he's ridiculous, he should be ashamed of 
+himself !</en>
+      <answer fullID="30091" ID_Dialog="3009" ID_Answer="1" ID_NextDialog="3010" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Affirmative">C'est vrai, t'es complètement ridicule 
+Stéphane, pourqui t'as fait ça ?</fr>
+         <en Choice_en="Affirmative">That's right, you're completely ridiculous, 
+Stéphane, why would you do something like this ?</en>
+      </answer>
+      <answer fullID="30092" ID_Dialog="3009" ID_Answer="2" ID_NextDialog="3011" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="En désaccord">Boris, lâche le un peu, c'est une soirée, 
+il faut savoir s'amuser et profiter. T'es pas 
+son père !</fr>
+         <en Choice_en="Disagree">Hey, you're not his dad, Boris ! This is party, 
+the whole point of a party is to have fun and 
+enjoy yourself !</en>
+      </answer>
+      <answer fullID="30093" ID_Dialog="3009" ID_Answer="3" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="closeDialogAndlooseAll" BanAnswer="">
+         <fr Choice_fr="Non impliquée">C'est pas mes oignons, je vais vous laisser 
+régler ça entre vous. À plus tard les gars.</fr>
+         <en Choice_en="Not involved">It's not my business, I'll let you guys settle 
+this. Later !</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3010" ID_Dialog="3010" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Tu vois même Kara elle est d’accord avec 
+moi. T’es vraiment une merde, je veux plus 
+te voir parmi nous, je sais même pas ce 
+que tu fous encore ici.</fr>
+      <en Choice_en="">You see, even Kara can see what a little 
+shit you are ! I don't ever want to see you 
+among us again ! Just go away before I 
+get really mad !</en>
+      <answer fullID="30101" ID_Dialog="3010" ID_Answer="1" ID_NextDialog="3012" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Continuer">Au revoir Stéphane.</fr>
+         <en Choice_en="Continue">Good bye Stephane.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3011" ID_Dialog="3011" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">T’as rien compris à la vie bouffonne. C’est 
+comme ça qu’on finit dans le caniveau, seul 
+comme un déchet.</fr>
+      <en Choice_en="">You don't get it, do you, you idiot ? That's 
+how people end up alone in the gutter !</en>
+      <answer fullID="30111" ID_Dialog="3011" ID_Answer="1" ID_NextDialog="3013" ID_Character="B18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Énervée">T'es vraiment un crétin, on a plus rien à se dire.</fr>
+         <en Choice_en="Angry">You moron, don't speak with me anomore.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3012" ID_Dialog="3012" ID_Answer="" ID_NextDialog="" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Ouais, t'as trop raison Boris, tu devrais avoir 
+honte Stéphane :</fr>
+      <en Choice_en="">Totally ! You should be ashamed, Stéphane !</en>
+      <answer fullID="30121" ID_Dialog="3012" ID_Answer="1" ID_NextDialog="3014" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Acquiescer">Complètement...c'est un comportement immature.</fr>
+         <en Choice_en="Yes">Completely...childish behaviour.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3013" ID_Dialog="3013" ID_Answer="" ID_NextDialog="" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">On aurait pas dû lui faire confiance Boris.</fr>
+      <en Choice_en="">I knew we shouldn't have trusted him...</en>
+      <answer fullID="30131" ID_Dialog="3013" ID_Answer="1" ID_NextDialog="3015" ID_Character="B19" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Énervée">C'est moi qui n'aurait pas du essayer de vous parler.</fr>
+         <en Choice_en="Angry">I shouldn't have tried to speak with you.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3014" ID_Dialog="3014" ID_Answer="" ID_NextDialog="" ID_Character="B20" Sympathy_value="" Condition="basic" Action="closeDialogAndWin3votes" BanAnswer="">
+      <fr Choice_fr="">Aller venez les gars, on va laisser ce petit 
+con tranquille</fr>
+      <en Choice_en="">Come guys, let's leave the little shit alone...</en>
+   </dialog>
+   <dialog fullID="3015" ID_Dialog="3015" ID_Answer="" ID_NextDialog="" ID_Character="B20" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <fr Choice_fr="">Débarassez-nous le plancher tous les deux, 
+on veut plus vous voir ici. Hein Boris ?</fr>
+      <en Choice_en="">Beat it, the two of you ! You're not welcome 
+here anymore !</en>
+      <answer fullID="30151" ID_Dialog="3015" ID_Answer="1" ID_NextDialog="3016" ID_Character="B20" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Oui">T'en fais pas, j'ai pas l'intention de rester avec 
+des débiles pareils.</fr>
+         <en Choice_en="Yes">Don't worry, I don't intend to stay with silly 
+guys like you.</en>
+      </answer>
+   </dialog>
+   <dialog fullID="3016" ID_Dialog="3016" ID_Answer="" ID_NextDialog="" ID_Character="B18" Sympathy_value="" Condition="basic" Action="closeDialogandWinStephane" BanAnswer="">
+      <fr Choice_fr="">Ouais t'as raison Dom !</fr>
+      <en Choice_en="">Yeah, you tell him, Dom !</en>
+   </dialog>
+</dialogs>
