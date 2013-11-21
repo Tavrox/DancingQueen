@@ -125,7 +125,7 @@ public class LevelManager : MonoBehaviour {
 			Debug.Log(_Yannick.GetComponent<Yannick>().sympathy_score);
 		}
 		string MinutesTransfo;
-		if (Minutes <= 10)
+		if (Minutes < 10)
 		{
 			MinutesTransfo = "0" + Minutes.ToString();
 		}
@@ -135,6 +135,7 @@ public class LevelManager : MonoBehaviour {
 		}
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
 		checkTimer();
+		checkClaireState();
 	}
 
 	void updateTimer()
@@ -147,24 +148,49 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
+	private void checkClaireState()
+	{
+		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
+		Raphael Raph = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+		// Music
+		// Player kissed Raphael
+		// Player spoken to Raphael
+		
+		if (Raph.hasTalkedRaphael == true && Claire.talkedAboutFlirting == false)
+		{
+			if (DialogUI.exists != true)
+			{
+				Claire.dialToTrigger = "11006";
+				IngameUI.destroyIngameUI();
+				DialogUI.createDialog(Claire);
+				Claire.talkedAboutFlirting = true;
+			}
+		}
+		if (Raph.kissedPlayer == true && Claire.talkedAboutKissing == false)
+		{
+			if (DialogUI.exists != true)
+			{
+				Claire.dialToTrigger = "11006";
+				IngameUI.destroyIngameUI();
+				DialogUI.createDialog(Claire);
+				Claire.talkedAboutKissing = true;
+			}
+		}
+
+
+	}
+
 	void checkTimer()
-	{Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
-		print ("omg dat print");
+	{
+		Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
 		if (Hours >= 21)
 		{
-			print ("Alex!1");
 			if (DialogUI.exists != true)
 			{
 				if (GO.casseCouilleS1 != true)
 				{
-					print ("Alex!3");
-					if (DialogUI.exists != true)
-					{
-						print ("Alex!4");
-						DialogUI.createDialog(GO);
-						IngameUI.destroyIngameUI();
-//						GO.dialToTrigger = "11006";
-					}
+					IngameUI.destroyIngameUI();
+					DialogUI.createDialog(GO);
 					GO.casseCouilleS1 = true;
 				}
 
@@ -177,7 +203,8 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS2 != true && GO.gotPlayerInVIP != true)
 				{
-					// Trigger Dialog
+					IngameUI.destroyIngameUI();
+					DialogUI.createDialog(GO);
 					GO.casseCouilleS2 = true;
 				}
 				
@@ -190,7 +217,8 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS3 != true && GO.gotPlayerInVIP != true)
 				{
-					// Trigger Dialog
+					IngameUI.destroyIngameUI();
+					DialogUI.createDialog(GO);
 					GO.casseCouilleS3 = true;
 				}
 				
@@ -199,6 +227,7 @@ public class LevelManager : MonoBehaviour {
 
 		if (Hours == 24)
 		{
+			fadeToBlack();
 			setCharacGO("killAll");
 			OTSprite gameo = GameObject.Find("Overlay").GetComponent<OTSprite>();
 			OTSprite gameoLoose = GameObject.Find("Win").GetComponent<OTSprite>();
@@ -207,12 +236,12 @@ public class LevelManager : MonoBehaviour {
 
 			if (calculateWin() == true)
 			{
-				gameo.frameName = "loose";
+				gameo.frameName = "win";
 
 			}
 			else
 			{
-				gameo.frameName = "win";
+				gameo.frameName = "loose";
 			}
 
 		}
@@ -504,12 +533,19 @@ public class LevelManager : MonoBehaviour {
 				hideChar("Thomas");
 				hideChar("Didier");
 				hideChar("Manon");
-
-				unhideChar("Bob");
 			
-			if (_Bob.GetComponent<Bob>().unlocked == true)
+				hideChar("Bob");
+			
+				if (_Bob.GetComponent<Bob>().unlocked == true)
 				{
-					
+					unhideChar("Bob");
+				}
+				
+				if ( _Alex.GetComponent<Alex>().gotPlayerInVIP == true)
+			    {
+				Debug.Log("Isolate player");
+					IngameUI.destroyIngameUI();
+					DialogUI.createDialog(_Alex.GetComponent<Alex>());
 				}
 				break;
 			}
@@ -617,15 +653,10 @@ public class LevelManager : MonoBehaviour {
 			if (music ==  MusicList.Slow)
 			{
 				musicToPlay = "SlowVIP";
-				
 			}
 		}
 		MasterAudio.TriggerPlaylistClip(musicToPlay);
 		
-	}
-	private void chooseMusic()
-	{
-
 	}
 	private void fadeToBlack()
 	{
@@ -670,7 +701,6 @@ public class LevelManager : MonoBehaviour {
 		if (gameo != null)
 		{
 //			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().enabled = false;
-			print(GameObject.FindGameObjectWithTag(gameo).name);
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = false;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
@@ -701,7 +731,43 @@ public class LevelManager : MonoBehaviour {
 		bool res = false;
 		if (_Paul.GetComponent<CharSim>().voteForPlayer == true)
 		{
-
+			numberVotes += 1;
+		}
+		if (_Alex.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Vanessa.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Boris.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Bob.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Bastien.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Thomas.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Yannick.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Stephane.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Chloe.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
 		}
 		numberVotes += _Player.GetComponent<PlayerSim>().votesAdded;
 		if (numberVotes > stepVotesForWin)
@@ -713,7 +779,8 @@ public class LevelManager : MonoBehaviour {
 		{
 			Debug.Log("Loose");
 		}
-		Debug.Log(numberVotes);
+		Debug.Log("PPL voted you : " + numberVotes);
+		Debug.Log("PPL need : " + stepVotesForWin);
 		return res;
 	}
 }

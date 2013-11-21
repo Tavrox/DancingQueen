@@ -58,7 +58,7 @@ public class DialogDisplayer : MonoBehaviour {
 		//WWW www = new WWW(url);
 		TextAsset textAsset = getCharacXML(currentChar.charac);
 		//Resources.Load("dialogs_Yannick") as TextAsset;
-		print (textAsset);
+		//print (textAsset);
 		//Load the data and yield (wait) till it's ready before we continue executing the rest of this method.
 		//yield return www;
 		
@@ -66,7 +66,7 @@ public class DialogDisplayer : MonoBehaviour {
 		//{
 			//Sucessfully loaded the XML
 			
-			//Create a new XML document out of the loaded data
+		//Create a new XML document out of the loaded data
 		XmlDocument xmlDoc = new XmlDocument();
 		                                  xmlDoc.LoadXml(textAsset.text);
 			
@@ -246,15 +246,13 @@ public class DialogDisplayer : MonoBehaviour {
 			talkLines[0]= arrayAnswers[indexAnswer,9];
 		}
 		CharDialID = displayedAnswer.ID_nextDialog;
-		Debug.Log("Answer Action" + displayedAnswer.action);
 		checkAction(displayedAnswer.action);
 		modifySympathy(fullDialog[1], displayedAnswer.sympathy_value);
 		banDialogID(arrayAnswers[indexAnswer,10]);
-		Debug.Log ("RESULT CHECK =" + checkCondition(displayedAnswer.condition));
-		Debug.Log ("CONDITION =" + displayedAnswer.condition);
 		finishedTalking = false;
 		startDialog();
 		playerSpeaking = true;
+		Debug.Log("ACTION " + displayedAnswer.action);
 	}
 
 	//Call to the dialog from another class
@@ -298,7 +296,6 @@ public class DialogDisplayer : MonoBehaviour {
 		
 		if ( checkCondition(answerToSet.condition) != true && answerToSet.condition != "basic" )
 		{
-			Debug.Log(answerToSet.condition);
 			answerToSet.GetComponentInChildren<OTSprite>().renderer.enabled = false;
 			answerToSet.collider.enabled = false;
 			answerToSet.enabled = false;
@@ -382,11 +379,6 @@ public class DialogDisplayer : MonoBehaviour {
 	{
 		Dialog dial = new Dialog();
 		dial.fetchLines();
-		// Seek ID of current answer.
-		// Seek ID of Next dialog according to current answer
-		
-		
-		//FORNOW
 		return dial;
 		
 	}
@@ -395,7 +387,6 @@ public class DialogDisplayer : MonoBehaviour {
 	{
 		GameObject go = GameObject.FindGameObjectWithTag("Bastien");
 		bool res = false;
-		Debug.Log("Check Condition, Condition Entered =" + Condition);
 		switch (Condition)
 		{
 		case ("Sympathy_value_Bastien25") :
@@ -554,6 +545,19 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			break;
 		}
+		case ("hasTalkedRaphael") :
+		{
+			Raphael charac = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+			if (charac.hasTalkedRaphael == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
 		case ("HasDrug") :
 		{
 			PlayerSim charac = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
@@ -649,6 +653,20 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Raphael>().kissedPlayer = true; 
 				break;
 			}
+			case ("closeDialogDisableBastien") :
+			{
+				go = getCharacGO("Bastien");
+				go.GetComponent<Bastien>().refusedMission = true; 
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogGetAlex") :
+			{
+				go = getCharacGO("Alex");
+				go.GetComponent<Alex>().voteForPlayer = true; 
+				killAtferDisplay = true;
+				break;
+			}
 			case ("closeDialogtalkedClaire") :
 			{
 				go = getCharacGO("Claire");
@@ -660,7 +678,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().hasTalkedThomas = true;
-			killAtferDisplay = true;
+				killAtferDisplay = true;
 				break;
 			}
 			case ("closeDialogYannickSpoken") :
@@ -725,6 +743,7 @@ public class DialogDisplayer : MonoBehaviour {
 				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().isBattleDance = true;
 				go.GetComponent<Thomas>().dialToTrigger = "8010";
+				go.GetComponent<Thomas>().hasTalkedThomas = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -754,7 +773,7 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
-		case ("missionDidierDone") :
+			case ("missionDidierDone") :
 			{
 				go = getCharacGO("Didier");
 				go.GetComponent<Didier>().missionDidierDone = true;
@@ -769,6 +788,10 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("playerGoVIP") :
 			{
 				_Player.GetComponent<PlayerSim>().canGoVIP = true;
+				go = getCharacGO("Alex");
+				go.GetComponent<Alex>().dialToTrigger = "11014";
+				go.GetComponent<Alex>().gotPlayerInVIP = true;
+				killAtferDisplay = true;
 				break;
 			}
 			case ("triggerGroupGirls") :
@@ -791,89 +814,86 @@ public class DialogDisplayer : MonoBehaviour {
 				gameoboys.TriggerDialog();
 				break;
 			}
-			
-		case ("looseDestroyBob") :
-		{
-			go = getCharacGO("Bob");
-			go.GetComponent<Bob>().unlocked = false;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("winDestroyBob") :
-		{
-			go = getCharacGO("Bob");
-			go.GetComponent<Bob>().unlocked = true;
-			GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogAndLoose2votes") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded -= 2;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogAndWin2votes") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 2;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogAndWin3votes") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 3;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogandWinStephane") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 1;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogkeepChloe") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 1;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogAndloose3votes") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded -= 3;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogKeepVanessa") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 1;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("closeDialogAndlooseAll") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded -= 4;
-			killAtferDisplay = true;
-			break;
-		}
-		case ("unlockThomasPechoClaire") :
-		{
-			go = getCharacGO("Player");
-			go.GetComponent<PlayerSim>().votesAdded += 1;
-			killAtferDisplay = true;
-			break;
-		}
-			
-			
-			
-			
+			case ("looseDestroyBob") :
+			{
+				go = getCharacGO("Bob");
+				go.GetComponent<Bob>().unlocked = false;
+				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
+				killAtferDisplay = true;
+				break;
+			}
+			case ("winDestroyBob") :
+			{
+				go = getCharacGO("Bob");
+				go.GetComponent<Bob>().unlocked = true;
+				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
+				killAtferDisplay = true;
+				break;
+			}
+			/////////////////////////////////////////////
+			case ("closeDialogAndLoose2votes") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded -= 2;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogAndWin2votes") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 2;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogAndWin3votes") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 3;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogandWinStephane") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 1;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogkeepChloe") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 1;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogAndloose3votes") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded -= 3;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogKeepVanessa") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 1;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogAndlooseAll") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded -= 4;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("unlockThomasPechoClaire") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 1;
+				killAtferDisplay = true;
+				break;
+			}
 		}
 	}
 	

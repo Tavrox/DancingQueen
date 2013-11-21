@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Bastien : CharSim 
 {
+	public bool refusedMission = false;
+
 	public void GiveBeer()
 	{
 		
@@ -10,7 +12,7 @@ public class Bastien : CharSim
 
 	void OnMouseDown()
 	{
-		if (DialogUI.exists != true && GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>().hasTalkedThomas == true)
+		if (DialogUI.exists != true && GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>().hasTalkedThomas == true  && refusedMission == false )
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
@@ -19,7 +21,7 @@ public class Bastien : CharSim
 	}
 	void OnMouseOver()
 	{
-		if(DialogUI.exists != true  && GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>().hasTalkedThomas == true)
+		if(DialogUI.exists != true  && GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>().hasTalkedThomas == true && refusedMission == false )
 		{
 			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
 			spr.frameName = "cursor_talk";

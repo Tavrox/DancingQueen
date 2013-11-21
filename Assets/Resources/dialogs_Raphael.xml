@@ -3,17 +3,17 @@
    <dialog fullID="13001" ID_Dialog="13001" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Qu’est-ce qui a deux pouces et qui dit de la 
 merde ? Raphaël, enchanté</fr>
-      <en Choice_en="">Hey, what's got two thumbs and talks shit ? Raphaël, 
-nice to meet ya !</en>
-      <answer fullID="130011" ID_Dialog="13001" ID_Answer="1" ID_NextDialog="13004" ID_Character="13" Sympathy_value="-5" Condition="basic" Action="" BanAnswer="">
+      <en Choice_en="">Hey, what's got two thumbs and talks shit ? 
+Raphaël, nice to meet ya !</en>
+      <answer fullID="130011" ID_Dialog="13001" ID_Answer="1" ID_NextDialog="13004" ID_Character="13" Sympathy_value="-5" Condition="basic" Action="hasTalkedRaphael" BanAnswer="">
          <fr Choice_fr="Danse">Pourquoi tu danses pas ?</fr>
          <en Choice_en="Dance">Why aren't you dancing ?</en>
       </answer>
-      <answer fullID="130012" ID_Dialog="13001" ID_Answer="2" ID_NextDialog="13005" ID_Character="13" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="130012" ID_Dialog="13001" ID_Answer="2" ID_NextDialog="13005" ID_Character="13" Sympathy_value="20" Condition="basic" Action="hasTalkedRaphael" BanAnswer="">
          <fr Choice_fr="Rire">hahahahahahaha</fr>
          <en Choice_en="Laugh">Hahahaha !</en>
       </answer>
-      <answer fullID="130013" ID_Dialog="13001" ID_Answer="3" ID_NextDialog="13006" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="130013" ID_Dialog="13001" ID_Answer="3" ID_NextDialog="13006" ID_Character="13" Sympathy_value="10" Condition="basic" Action="hasTalkedRaphael" BanAnswer="">
          <fr Choice_fr="Célibataire">T’es venu seul avec tes blagues ou tout ton 
 public t’as suivi ?</fr>
          <en Choice_en="Single">Are you here alone with your jokes, or did you bring your 

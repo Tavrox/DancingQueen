@@ -16,7 +16,7 @@ public class PlayerSim : MonoBehaviour {
 	[Range (0,5)] public float randomDelayMax = 0.01f;
 	[Range (0,5)] public float frequencyWhispers = 0.5f;
 	public string characterID;
-	public bool canGoVIP;
+	public bool canGoVIP = false;
 	public bool modeIntro = true;
 	private OTSprite black;
 	
@@ -30,7 +30,6 @@ public class PlayerSim : MonoBehaviour {
 		{
 
 		}
-
 	}
 
 	public void reloadCharacs()

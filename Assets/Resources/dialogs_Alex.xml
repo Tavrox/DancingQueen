@@ -14,7 +14,7 @@ chance.</fr>
          <fr Choice_fr="Neutre">Qu’est ce que tu me veux ?</fr>
          <en Choice_en="Neutral">What is it you want ?</en>
       </answer>
-      <answer fullID="110013" ID_Dialog="11001" ID_Answer="3" ID_NextDialog="1004" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="110013" ID_Dialog="11001" ID_Answer="3" ID_NextDialog="11004" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Agressive">Vas-y casse toi me fais pas chier.</fr>
          <en Choice_en="Agressive">Beat it, I'm not in the mood.</en>
       </answer>
@@ -40,7 +40,7 @@ Wanna come ?</en>
    <dialog fullID="11003" ID_Dialog="11003" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Je veux qu’on s’embrasse, c’est tout.</fr>
       <en Choice_en="">I just wanna kiss you, that's all.</en>
-      <answer fullID="110031" ID_Dialog="11003" ID_Answer="1" ID_NextDialog="1005" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="110031" ID_Dialog="11003" ID_Answer="1" ID_NextDialog="11005" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Interrogation">Pourquoi je devrais accepter ça ?</fr>
          <en Choice_en="Interrogation">And why should I ?</en>
       </answer>
@@ -308,27 +308,27 @@ de drogue pourrait te faire changer d’avis ?</fr>
 to get you high ? Would that change your mind ?</en>
       </answer>
    </dialog>
-   <dialog fullID="11020" ID_Dialog="11020" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11020" ID_Dialog="11020" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Et ben voilà ! Tu vois quand tu veux. A plus bébé.</fr>
       <en Choice_en="">There ! See ? Wasn't that hard, was it ? See ya baby !</en>
    </dialog>
-   <dialog fullID="11021" ID_Dialog="11021" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11021" ID_Dialog="11021" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">T’en entendras parler !</fr>
       <en Choice_en="">This ins't over, trust me !</en>
    </dialog>
-   <dialog fullID="11022" ID_Dialog="11022" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11022" ID_Dialog="11022" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">T’es plus rien à leur yeux espèce de garce.</fr>
       <en Choice_en="">You're nothing to them, you ugly slut !</en>
    </dialog>
-   <dialog fullID="11023" ID_Dialog="11023" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11023" ID_Dialog="11023" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Pourquoi pas...</fr>
       <en Choice_en="">Why not...</en>
    </dialog>
-   <dialog fullID="11024" ID_Dialog="11024" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11024" ID_Dialog="11024" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Ahhhhh la garceeee !</fr>
       <en Choice_en="">You fuckin' biiiiiiiiitch !</en>
    </dialog>
-   <dialog fullID="11025" ID_Dialog="11025" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="11025" ID_Dialog="11025" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialogGetAlex" BanAnswer="">
       <fr Choice_fr="">Hannnnnnnnnnnn</fr>
       <en Choice_en="">Hggggggnnnnnnn...</en>
    </dialog>

@@ -12,11 +12,7 @@ toi ?</fr>
          <fr Choice_fr="Taquine">Ah, tu te décides finalement à m’aborder ?</fr>
          <en Choice_en="Teasing">Ah, finally, you gathered the nerve to approach me ?</en>
       </answer>
-      <answer fullID="100013" ID_Dialog="10001" ID_Answer="3" ID_NextDialog="10002" ID_Character="10" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="(defaut)">...</fr>
-         <en Choice_en="(default)">...</en>
-      </answer>
-      <answer fullID="100014" ID_Dialog="10001" ID_Answer="4" ID_NextDialog="0" ID_Character="10" Sympathy_value="-100" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="100013" ID_Dialog="10001" ID_Answer="3" ID_NextDialog="0" ID_Character="10" Sympathy_value="-100" Condition="basic" Action="closeDialogDisableBastien" BanAnswer="">
          <fr Choice_fr="Sèchement">Non désolé j’ai pas le temps.</fr>
          <en Choice_en="Crude">Sorry, no time right now.</en>
       </answer>
@@ -42,7 +38,7 @@ les gosses toi ?</fr>
          <en Choice_en="Clash">Really ? I thought you'd rather fuck little boys !</en>
       </answer>
       <answer fullID="100024" ID_Dialog="10002" ID_Answer="4" ID_NextDialog="10012" ID_Character="10" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
-         <fr Choice_fr="Refus poli (défaut)">Ah non j’ai pas le temps désolé...</fr>
+         <fr Choice_fr="Refus poli">Ah non j’ai pas le temps désolé...</fr>
          <en Choice_en="Politely refuse">Sorry, no time right now...</en>
       </answer>
    </dialog>
@@ -100,10 +96,10 @@ dancefloor on fire, tonight ?</en>
       <fr Choice_fr="">Alors, ça c’est bien passé ?</fr>
       <en Choice_en="">So, how'd it go ?</en>
       <answer fullID="100101" ID_Dialog="10010" ID_Answer="1" ID_NextDialog="10011" ID_Character="10" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Défaut">Avant de commencer, j’ai besoin d’infos. 
+         <fr Choice_fr="Infos">Avant de commencer, j’ai besoin d’infos. 
 Quelle musique tu kifferais pour mettre 
 l’ambiance sur le dancefloor ?</fr>
-         <en Choice_en="Default">Before I get started, I need some informations. Wich music 
+         <en Choice_en="Infos">Before I get started, I need some informations. Which music 
 would you like to bring it on the dancefloor ?</en>
       </answer>
    </dialog>

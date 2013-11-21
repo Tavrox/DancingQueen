@@ -38,13 +38,13 @@ public class DialogUI : MonoBehaviour {
 		switch (dialogItem)
 		{
 			case (ListDialog.CloseDialog) :
-				{
-					destroyDialog();
-					IngameUI.destroyIngameUI();
-					MenuUI.destroyMenu();
-					IngameUI.createIngameUI();
-					break;
-				}
+			{
+				destroyDialog();
+				IngameUI.destroyIngameUI();
+				MenuUI.destroyMenu();
+				IngameUI.createIngameUI();
+				break;
+			}
 		}
 	}
 	private void GameStart () 
@@ -85,10 +85,10 @@ public class DialogUI : MonoBehaviour {
 	}
 	public static void createDialog(CharSim _chosenChar)
 	{
+		exists = true;
 		GameEventManager.TriggerGameDialog();
 		GameObject prefabSprite = Resources.Load("03UI/Dialog") as GameObject;
 		Instantiate(prefabSprite);
 		LevelManager.currentCharacterSpeaking = _chosenChar;
-		exists = true;
 	}
 }

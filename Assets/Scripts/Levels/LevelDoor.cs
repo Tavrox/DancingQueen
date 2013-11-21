@@ -20,8 +20,13 @@ public class LevelDoor : MonoBehaviour {
 	}
 	void Update()
 	{
-		Bob bobby = GameObject.FindGameObjectWithTag("Bob").GetComponent<Bob>();
-		if ( bobby.unlocked == true)
+		Bob _bob = GameObject.FindGameObjectWithTag("Bob").GetComponent<Bob>();
+		if ( _bob.unlocked == true)
+		{
+			this.locked = false;
+		}
+		PlayerSim _play = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+		if (_play.canGoVIP == true)
 		{
 			this.locked = false;
 		}
