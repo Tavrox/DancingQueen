@@ -10,7 +10,8 @@ so smart in front of Raphaël !</en>
       <answer fullID="140011" ID_Dialog="14001" ID_Answer="1" ID_NextDialog="14003" ID_Character="14" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Raisonnable">Je t’assure qu’il ne s’est rien passé, c’est pas 
 mon genre. Calme toi.</fr>
-         <en Choice_en="Sensible">I assure you, nothing happened. He's not my type. Calm down.</en>
+         <en Choice_en="Sensible">I assure you, nothing happened. He's not
+my type. Calm down.</en>
       </answer>
       <answer fullID="140012" ID_Dialog="14001" ID_Answer="2" ID_NextDialog="14004" ID_Character="14" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Provocatrice">Oh sois pas si jalouse comme ça, c’est qu’un
@@ -36,13 +37,13 @@ happened.</en>
 everyone !</en>
       </answer>
    </dialog>
-   <dialog fullID="14003" ID_Dialog="14003" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogtalkedClaire" BanAnswer="">
+   <dialog fullID="14003" ID_Dialog="14003" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireFlirting" BanAnswer="">
       <fr Choice_fr="">Mhh d’accord… Bon, fais attention à toi. 
 J’espère ne pas te revoir près de lui.</fr>
       <en Choice_en="">Hmm, all right, I guess... But you watch yourself ! 
 Don't let me catch you near him again !</en>
    </dialog>
-   <dialog fullID="14004" ID_Dialog="14004" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogtalkedClaire" BanAnswer="">
+   <dialog fullID="14004" ID_Dialog="14004" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireFlirting" BanAnswer="">
       <fr Choice_fr="">T’as pas intérêt à rester plus longtemps dans 
 cette fête, j’aurais aucune pitié pour toi !</fr>
       <en Choice_en="">I think you better leave this party right now, or it might 
@@ -67,7 +68,7 @@ mis la langue.</fr>
       <answer fullID="140053" ID_Dialog="14005" ID_Answer="3" ID_NextDialog="14006" ID_Character="14" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Menteuse">Ah mince j’ai oublié qu’il avait quelqu’un, 
 quelle idiote.</fr>
-         <en Choice_en="Lier">Shit, I forgot he already had someone, silly me !</en>
+         <en Choice_en="Liar">Shit, I forgot he already had someone, silly me !</en>
       </answer>
    </dialog>
    <dialog fullID="14006" ID_Dialog="14006" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -108,11 +109,11 @@ that slow ?</en>
          <en Choice_en="Don't know">Me ? Hmm, no.</en>
       </answer>
    </dialog>
-   <dialog fullID="14008" ID_Dialog="14008" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="14008" ID_Dialog="14008" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireSlow" BanAnswer="">
       <fr Choice_fr="">C’est très sympa de ta part en tout cas, merci !</fr>
       <en Choice_en="">Anyway, it's really nice of you, thanks !</en>
    </dialog>
-   <dialog fullID="14009" ID_Dialog="14009" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="14009" ID_Dialog="14009" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireSlow" BanAnswer="">
       <fr Choice_fr="">Ah d’accord… on a du mal m’informer.</fr>
       <en Choice_en="">Oh, okay... I must be mistaken...</en>
    </dialog>
