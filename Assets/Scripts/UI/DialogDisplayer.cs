@@ -97,6 +97,8 @@ public class DialogDisplayer : MonoBehaviour {
 		if(talking == true)
 		{
 			if(playerSpeaking == true) {
+				
+				_Player.GetComponent<PlayerSim>().playWhispers();
 				_BgDialogPNJ.renderer.enabled = false;
 				_BgDialogPlayer.renderer.enabled = true;
 			}
@@ -1004,7 +1006,7 @@ public class DialogDisplayer : MonoBehaviour {
 				currentChar.playWhispers();
 			}
 		}
-		if (finishedTalking == true)
+		if(playerSpeaking == true) 
 		{
 			_Player.GetComponent<PlayerSim>().playWhispers();
 		}

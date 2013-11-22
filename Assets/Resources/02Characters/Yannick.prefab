@@ -29,7 +29,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   m_Layer: 8
-  m_Name: characSprite-15
+  m_Name: characSprite-19-1
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.91000009, y: 4.07999992, z: 20}
   m_Center: {x: -.920000017, y: .270000011, z: 0}
@@ -106,11 +106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 226ae98fe018ada49b8fe58cce496e5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 47750754203ad70489e1eb965fec1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterID: 
-  charac: 10
+  charac: 19
   dialToTrigger: 
   sympathy_score: 0
   triggeredUltimate: 0
@@ -118,13 +118,13 @@ MonoBehaviour:
   banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
+  dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 13
+  maxRandomVarWhispers: 0
   randomDelayMin: 0
   randomDelayMax: .00999999978
-  frequencyWhispers: .939999998
-  hasSpokenOnceToPlayer: 0
+  frequencyWhispers: .5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: characSprite-15
+  _name: characSprite-19-1
   _position: {x: 0, y: 0}
   _size: {x: 5, y: 5}
   _rotation: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: characSprite
+  baseName: characSprite-19
   oSize: {x: 5.89583349, y: 7.14583349}
   imageSize: {x: 5, y: 5}
   _offset: {x: 0, y: 0}

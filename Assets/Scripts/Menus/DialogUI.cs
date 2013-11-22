@@ -90,7 +90,7 @@ public class DialogUI : MonoBehaviour {
 		GameObject prefabSprite = Resources.Load("03UI/Dialog") as GameObject;
 		if (_DialToTrigger != null)
 		{
-			prefabSprite.GetComponent<CharSim>().dialToTrigger = _DialToTrigger;
+			_chosenChar.dialToTrigger = _DialToTrigger;
 		}
 		Instantiate(prefabSprite);
 		LevelManager.currentCharacterSpeaking = _chosenChar;

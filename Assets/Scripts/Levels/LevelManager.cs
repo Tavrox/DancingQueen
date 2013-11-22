@@ -105,7 +105,6 @@ public class LevelManager : MonoBehaviour {
 			if (raphaelSingle == true)
 			{
 				GameObject obj = GameObject.Find("Boris");
-				print (obj.GetType());
 				Destroy(obj);
 
 			}
@@ -158,6 +157,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
 		Raphael Raph = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+		Didier Didi = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
 		// Music
 		// Player kissed Raphael
 		// Player spoken to Raphael
@@ -166,9 +166,8 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				Claire.dialToTrigger = "11006";
 				IngameUI.destroyIngameUI();
-				DialogUI.createDialog(Claire);
+				DialogUI.createDialog(Claire, "14010");
 				Claire.talkedAboutFlirting = true;
 			}
 		}
@@ -176,38 +175,40 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				Claire.dialToTrigger = "11006";
 				IngameUI.destroyIngameUI();
-				DialogUI.createDialog(Claire);
+				DialogUI.createDialog(Claire, "14005");
 				Claire.talkedAboutKissing = true;
 			}
 		}
-
-
+		if (Didi.hasPutSlow == true && Claire.talkedAboutSlow == false)
+		{
+			if (DialogUI.exists != true)
+			{
+				IngameUI.destroyIngameUI();
+				DialogUI.createDialog(Claire, "14007");
+				Claire.talkedAboutSlow = true;
+			}
+		}
 	}
 
 	void checkTimer()
 	{
 		Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
-		print ("CassCo1" + GO.casseCouilleS1);
-		print ("CassCo2" + GO.casseCouilleS2);
-		print ("CassCo3" + GO.casseCouilleS3);
-		print ("Dialog State" + DialogUI.exists);
-		if (Hours >= 21)
+		if (Hours == 21)
 		{
 			if (DialogUI.exists != true)
 			{
 				if (GO.casseCouilleS1 != true)
 				{
 					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO);
+					DialogUI.createDialog(GO, "11001" );
 					GO.casseCouilleS1 = true;
 				}
 
 			}
 		}
 
-		if (Hours > 22)
+		if (Hours == 22)
 		{
 			if (DialogUI.exists != true)
 			{
@@ -221,7 +222,7 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-		if (Hours > 23)
+		if (Hours == 23)
 		{
 			if (DialogUI.exists != true)
 			{
@@ -456,7 +457,6 @@ public class LevelManager : MonoBehaviour {
 
 	private void setCharPos()
 	{
-		print ("Change pos char");
 		switch (currentLvl)
 		{
 			case (levelList.Dancefloor) :
@@ -479,13 +479,11 @@ public class LevelManager : MonoBehaviour {
 
 				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-					print ("instantiate thomas bar");
 					_Vanessa.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
 					unhideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-					print ("hide thomas dance");
 					hideChar("Thomas");
 				}
 				if (_Raphael.GetComponent<Raphael>().coupleClaire == false)
@@ -513,7 +511,6 @@ public class LevelManager : MonoBehaviour {
 			       
 				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-					print ("Hide vanessa bar");
 					hideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
@@ -521,8 +518,6 @@ public class LevelManager : MonoBehaviour {
 					_Thomas.GetComponentInChildren<OTSprite>().frameName = "thomas_fullbar";
 					_Thomas.transform.position = new Vector3(-2.060373f, 0.8314278f, 3f);
 					_Thomas.transform.localScale = new Vector3(0.4477435f, 0.4477435f, 0.4477435f);
-					print(_Thomas.GetComponentInChildren<OTSprite>().frameName);
-					print ("Unhide thomas bar");
 					unhideChar("Thomas");
                 }
 

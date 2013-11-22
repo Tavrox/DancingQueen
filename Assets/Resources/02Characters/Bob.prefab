@@ -34,7 +34,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -42,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.18393707, y: 1.09036064, z: .00170875434}
-  m_LocalScale: {x: 5, y: 8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.54999971, y: 5.54666662, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -53,8 +53,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .398618698, y: -.470510989, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.69654989, y: .911974788, z: 0}
+  m_LocalScale: {x: .696115315, y: .696115315, z: .696115315}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -94,10 +94,10 @@ BoxCollider:
   m_GameObject: {fileID: 100002}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 6, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.01000023, y: 3.95000005, z: 20}
+  m_Center: {x: .129999995, y: -.75, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,18 +109,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a81dcd69598b9488cd97a2c98769e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: 18
+  characterID: 05
   charac: 3
+  dialToTrigger: 5001
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  tutoMode: 0
+  dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 0
-  minRandomDelay: 0
-  maxRandomDelay: 0
-  frequencyWhispers: .5
+  maxRandomVarWhispers: 11
+  randomDelayMin: 0
+  randomDelayMax: .200000003
+  frequencyWhispers: .400000006
   unlocked: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -134,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: characSprite-4
-  _position: {x: -6.18393707, y: 1.09036064}
-  _size: {x: 5, y: 8}
+  _position: {x: 0, y: 0}
+  _size: {x: 4.54999971, y: 5.54666662}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -157,8 +161,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: characSprite
-  oSize: {x: 8.33333397, y: 12.5}
-  imageSize: {x: 5, y: 8}
+  oSize: {x: 7.58333349, y: 8.66666698}
+  imageSize: {x: 4.54999971, y: 5.54666662}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -170,10 +174,10 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
+  _frameIndex: 7
   _frameName: bob_body
   _spriteContainer: {fileID: 0}
-  _containerName: character
+  _containerName: characterPortrait
   _newSprite: 0
 --- !u!1001 &100100000
 Prefab:

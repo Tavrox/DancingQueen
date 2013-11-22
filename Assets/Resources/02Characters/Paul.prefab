@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.255897522, z: -.00255897525}
-  m_LocalScale: {x: 3, y: 6, z: 1}
+  m_LocalScale: {x: 3, y: 6.00000048, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -64,7 +64,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -94,9 +94,9 @@ BoxCollider:
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 6, z: 20}
+  m_Size: {x: 2.3499999, y: 5.13999987, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -111,16 +111,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterID: 09
   charac: 8
+  dialToTrigger: 9001
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  tutoMode: 0
+  dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 7
-  minRandomDelay: 0
-  maxRandomDelay: 0
-  frequencyWhispers: .5
+  maxRandomVarWhispers: 11
+  randomDelayMin: 0
+  randomDelayMax: .25999999
+  frequencyWhispers: .550000012
+  PlayerKnowsIsDealer: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-9
   _position: {x: 0, y: -.255897522}
-  _size: {x: 3, y: 6}
+  _size: {x: 3, y: 6.00000048}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -157,7 +162,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 6.41666698, y: 15.395834}
-  imageSize: {x: 3, y: 6}
+  imageSize: {x: 3, y: 6.00000048}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
