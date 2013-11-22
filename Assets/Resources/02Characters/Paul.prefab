@@ -118,7 +118,10 @@ MonoBehaviour:
   banAnswers: 
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
+<<<<<<< HEAD
   dialDisabled: 0
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 11

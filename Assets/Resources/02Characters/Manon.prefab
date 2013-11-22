@@ -118,7 +118,10 @@ MonoBehaviour:
   banAnswers: 
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
+<<<<<<< HEAD
   dialDisabled: 0
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 8
@@ -126,7 +129,10 @@ MonoBehaviour:
   randomDelayMax: .219999999
   frequencyWhispers: .829999983
   missionEncours: 0
+<<<<<<< HEAD
   missionDone: 0
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

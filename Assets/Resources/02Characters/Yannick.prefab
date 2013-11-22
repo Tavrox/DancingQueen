@@ -109,22 +109,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47750754203ad70489e1eb965fec1b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   characterID: 
   charac: 19
   dialToTrigger: 
+=======
+  characterID: 06
+  charac: 10
+  dialToTrigger: 6001
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   color: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   tutoMode: 0
   dialDisabled: 0
+=======
+  tutoMode: 1
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 0
   randomDelayMin: 0
+<<<<<<< HEAD
   randomDelayMax: .00999999978
   frequencyWhispers: .5
+=======
+  randomDelayMax: .5
+  frequencyWhispers: 1.00999999
+  hasSpokenOnceToPlayer: 0
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -326,6 +326,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100040
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400040}
+  - 132: {fileID: 13200006}
+  m_Layer: 0
+  m_Name: DialogNext>
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -389,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.09149981, y: 8.04300117, z: 1}
+  m_LocalScale: {x: 4.09149933, y: 8.04300117, z: 1}
   m_Children: []
   m_Father: {fileID: 400022}
 --- !u!4 &400012
@@ -400,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16.7000008, y: 4.85100031, z: 1}
+  m_LocalScale: {x: 16.7000008, y: 5.04000092, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
 --- !u!4 &400014
@@ -422,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16.7000008, y: 4.85100031, z: 1}
+  m_LocalScale: {x: 16.7000008, y: 5.04000092, z: 1}
   m_Children: []
   m_Father: {fileID: 400028}
 --- !u!4 &400018
@@ -535,6 +551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
+  - {fileID: 400040}
   - {fileID: 400028}
   - {fileID: 400026}
   - {fileID: 400024}
@@ -565,6 +582,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+--- !u!4 &400040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .920000017, y: .261346579, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400034}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -835,7 +863,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 7
+  _frameIndex: 10
   _frameName: chloe_body
   _spriteContainer: {fileID: 0}
   _containerName: characterPortrait
@@ -853,7 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: overlaySprite-3
   _position: {x: 0, y: 0}
-  _size: {x: 4.09149981, y: 8.04300117}
+  _size: {x: 4.09149933, y: 8.04300117}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -876,7 +904,7 @@ MonoBehaviour:
   protoType: 
   baseName: overlaySprite
   oSize: {x: 4.08333349, y: 7.97916698}
-  imageSize: {x: 4.09149981, y: 8.04300117}
+  imageSize: {x: 4.09149933, y: 8.04300117}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -888,7 +916,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 12
+  _frameIndex: 14
   _frameName: kara_body
   _spriteContainer: {fileID: 0}
   _containerName: characterPortrait
@@ -906,7 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: overlaySprite-2
   _position: {x: 0, y: 0}
-  _size: {x: 16.7000008, y: 4.85100031}
+  _size: {x: 16.7000008, y: 5.04000092}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -928,8 +956,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: overlaySprite
-  oSize: {x: 16.6666679, y: 4.8125}
-  imageSize: {x: 16.7000008, y: 4.85100031}
+  oSize: {x: 16.6666679, y: 5}
+  imageSize: {x: 16.7000008, y: 5.04000092}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -994,7 +1022,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 16
+  _frameIndex: 18
   _frameName: overlay-dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -1012,7 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: overlaySprite
   _position: {x: 0, y: 0}
-  _size: {x: 16.7000008, y: 4.85100031}
+  _size: {x: 16.7000008, y: 5.04000092}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1034,8 +1062,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: overlaySprite
-  oSize: {x: 16.6666679, y: 4.8125}
-  imageSize: {x: 16.7000008, y: 4.85100031}
+  oSize: {x: 16.6666679, y: 5}
+  imageSize: {x: 16.7000008, y: 5.04000092}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1100,7 +1128,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 17
+  _frameIndex: 19
   _frameName: quitdialog_ui
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -1213,6 +1241,29 @@ GUIText:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13200006
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: "\xB0 \xB0 \xB0"
+  m_Anchor: 0
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: d3519b37dfbb7f7448570d0ec59c9a69, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 22
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282861383
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1001 &100100000
