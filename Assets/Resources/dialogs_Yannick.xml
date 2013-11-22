@@ -123,19 +123,19 @@ See you later !</en>
          <fr Choice_fr="Parler de :">Je voudrais en savoir plus sur quelqu’un.</fr>
          <en Choice_en="Talk about">I'd like to know more about someone.</en>
       </answer>
-      <answer fullID="60072" ID_Dialog="6007" ID_Answer="2" ID_NextDialog="6009" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60072" ID_Dialog="6007" ID_Answer="2" ID_NextDialog="6009" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="60072">
          <fr Choice_fr="Barman">Dis m’en plus sur toi. Qu’est ce que ça fait 
 d’être Barman.</fr>
          <en Choice_en="Bartender">Tell me more about you. What's it like 
 to be a bartender ?</en>
       </answer>
-      <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
          <fr Choice_fr="Parler de soi">Ce village est plus sympa que mon ancien 
 chez moi.</fr>
          <en Choice_en="Talk about you">This village is nicer than the town 
 I come from...</en>
       </answer>
-      <answer fullID="60074" ID_Dialog="6007" ID_Answer="4" ID_NextDialog="6011" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60074" ID_Dialog="6007" ID_Answer="4" ID_NextDialog="6011" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="60074">
          <fr Choice_fr="Les gens qui passent">Ta place de barman te permet de parler avec
 beaucoup de monde.</fr>
          <en Choice_en="People passing by">As a bartender, you talk to a lot with people, 

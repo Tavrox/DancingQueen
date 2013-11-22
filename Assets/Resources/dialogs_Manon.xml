@@ -6,27 +6,33 @@ défoncée haha !</fr>
       <en Choice_en="">Hi you ! I've never seen you before... 
 I'm so wasted ! Haha !</en>
 
-      <answer fullID="20011" ID_Dialog="2001" ID_Answer="1" ID_NextDialog="2002" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20011" ID_Dialog="2001" ID_Answer="1" ID_NextDialog="2002" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20011">
          <fr Choice_fr="Nouvelle">Oui je suis nouvelle, tu te plais ici ? Les gens 
 sont sympa ?</fr>
          <en Choice_en="New girl">Yes, I'm new... Do you like it here ? Are 
 people nice ?</en>
       </answer>
-      <answer fullID="20012" ID_Dialog="2001" ID_Answer="2" ID_NextDialog="2003" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20012" ID_Dialog="2001" ID_Answer="2" ID_NextDialog="2003" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20012">
          <fr Choice_fr="Défoncée">T’as pas l’air au top, ça va ?</fr>
          <en Choice_en="High">You don't seem too peachy, are you ok ?</en>
       </answer>
-      <answer fullID="20013" ID_Dialog="2001" ID_Answer="3" ID_NextDialog="2004" ID_Character="02" Sympathy_value="10" Condition="HasDrug" Action="looseDrugManon" BanAnswer="">
+      <answer fullID="20013" ID_Dialog="2001" ID_Answer="3" ID_NextDialog="2004" ID_Character="02" Sympathy_value="10" Condition="HasDrug" Action="looseDrugManon" BanAnswer="20013">
          <fr Choice_fr="Drogue">Hé ! On m’a donné de la bonne, tu veux 
 goûter ?</fr>
          <en Choice_en="Drugs">Hey ! I was given some of the good stuff. 
 Want a taste ?</en>
       </answer>
+<<<<<<< HEAD
 	  <answer fullID="20014" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="">
          <fr Choice_fr="Service"> J'ai l'impression que tu veux me demander quelque chose...</fr>
          <en Choice_en="Something to do">Looks like you want to ask me something.</en>
+=======
+	  <answer fullID="20014" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="20014">
+         <fr Choice_fr="Service">Tu peux me rendre un service ?</fr>
+         <en Choice_en="Something to do">Can you do something for me ?</en>
+>>>>>>> c1cd9511701cde0aa2ed982660b579a2fe722718
       </answer>
-      <answer fullID="20015" ID_Dialog="2001" ID_Answer="5" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="">
+      <answer fullID="20015" ID_Dialog="2001" ID_Answer="5" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="20015">
          <fr Choice_fr="Infos">Alors, y’a des choses en particulier à savoir
 sur cette soirée ?</fr>
          <en Choice_en="Infos">So, anything in particular to know about tonight ?</en>

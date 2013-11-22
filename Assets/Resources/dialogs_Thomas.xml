@@ -82,24 +82,24 @@ with himself*</en>
    <dialog fullID="8010" ID_Dialog="8010" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="isBattleDance" Action="" BanAnswer="">
       <fr Choice_fr="">Alors la reine de la piste, quoi de neuf ?</fr>
       <en Choice_en="">So, dancing queen, what's up ?</en>
-      <answer fullID="80101" ID_Dialog="8010" ID_Answer="1" ID_NextDialog="8011" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="80101" ID_Dialog="8010" ID_Answer="1" ID_NextDialog="8011" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="80101">
          <fr Choice_fr="Amitié">T’as des amis ici ?</fr>
          <en Choice_en="Friendship">Do you have friends here ?</en>
       </answer>
-      <answer fullID="80102" ID_Dialog="8010" ID_Answer="2" ID_NextDialog="8012" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="80102" ID_Dialog="8010" ID_Answer="2" ID_NextDialog="8012" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="80102">
          <fr Choice_fr="La soirée">C’est assez calme dans le coin, Il y a moyen 
 de s’amuser un peu dans cette soirée ?</fr>
          <en Choice_en="Party">It's pretty calm around here. Is there anything fun to do 
 at this party ?</en>
       </answer>
-      <answer fullID="80103" ID_Dialog="8010" ID_Answer="3" ID_NextDialog="8035" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="80103" ID_Dialog="8010" ID_Answer="3" ID_NextDialog="8035" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="80103">
          <fr Choice_fr="Parler de soi">Vu que je viens d’une grande ville, j’ai un peu 
 de mal à me faire à l’ambiance de ce petit
 patelin.</fr>
          <en Choice_en="Talk about me">I'm from a big town, it's a little hard for me to get used 
 to the atmosphere of this little village.</en>
       </answer>
-      <answer fullID="80104" ID_Dialog="8010" ID_Answer="4" ID_NextDialog="8013" ID_Character="08" Sympathy_value="" Condition="ThomasSympathy50" Action="" BanAnswer="">
+      <answer fullID="80104" ID_Dialog="8010" ID_Answer="4" ID_NextDialog="8013" ID_Character="08" Sympathy_value="" Condition="ThomasSympathy50" Action="" BanAnswer="80104">
          <fr Choice_fr="Amour">T’es jamais tombé amoureux ?</fr>
          <en Choice_en="Love">Ever fallen in love ?</en>
       </answer>

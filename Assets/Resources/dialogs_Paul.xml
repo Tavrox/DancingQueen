@@ -9,24 +9,24 @@ soirée.</fr>
          <en Choice_en="Talk about">I'd like to know more about the persons who are here 
 tonight.</en>
       </answer>
-      <answer fullID="90012" ID_Dialog="9001" ID_Answer="2" ID_NextDialog="9004" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="90012" ID_Dialog="9001" ID_Answer="2" ID_NextDialog="9004" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="90012">
          <fr Choice_fr="La manipulation">Penses-tu que la manipulation soit indispensable 
 pour séduire un maximum de personnes 
 rapidement ?</fr>
          <en Choice_en="Manipulation">Do you think manipulation is unavoidable to seduct a 
 lot of people quickly ?</en>
       </answer>
-      <answer fullID="90013" ID_Dialog="9001" ID_Answer="3" ID_NextDialog="9007" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="90013" ID_Dialog="9001" ID_Answer="3" ID_NextDialog="9007" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="90013">
          <fr Choice_fr="L’hypocrisie">Pour toi, l’hypocrisie est-elle nécessaire à la 
 réussite sociale ?</fr>
          <en Choice_en="Hypocrisy">In your opinion, is hypocrisy necessary to succeed, 
 socialy speaking ?</en>
       </answer>
-      <answer fullID="90014" ID_Dialog="9001" ID_Answer="4" ID_NextDialog="9011" ID_Character="09" Sympathy_value="" Condition="PaulSympathy50" Action="" BanAnswer="">
+      <answer fullID="90014" ID_Dialog="9001" ID_Answer="4" ID_NextDialog="9011" ID_Character="09" Sympathy_value="" Condition="PaulSympathy50" Action="" BanAnswer="90014">
          <fr Choice_fr="Révélation">Quoi de neuf l’ami ?</fr>
          <en Choice_en="Revelation">What's up, friend ?</en>
       </answer>
-      <answer fullID="90125" ID_Dialog="9012" ID_Answer="5" ID_NextDialog="9013" ID_Character="09" Sympathy_value="" Condition="MissionManonEnCours" Action="" BanAnswer="">
+      <answer fullID="90125" ID_Dialog="9012" ID_Answer="5" ID_NextDialog="9013" ID_Character="09" Sympathy_value="" Condition="MissionManonEnCours" Action="" BanAnswer="90015">
          <fr Choice_fr="Manon">Dis moi, Manon est à côté, elle m’a dit que
 t’avais un truc pour elle. Mais elle est pas 
 trop en état de se déplacer j’ai l’impression...</fr>
@@ -34,7 +34,7 @@ trop en état de se déplacer j’ai l’impression...</fr>
 something for her, but she's not really able to move, 
 right now...</en>
       </answer>
-      <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="">
+      <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="90016">
          <fr Choice_fr="Drogues">T’as quoi à proposer mec ?</fr>
          <en Choice_en="Drugs">What have you got, man ?</en>
       </answer>

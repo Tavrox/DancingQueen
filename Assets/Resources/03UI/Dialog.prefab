@@ -1165,7 +1165,7 @@ MonoBehaviour:
   answer6TextGUI: {fileID: 0}
   speaker: {fileID: 13200004}
   talkLines: []
-  textScrollSpeed: 60
+  textScrollSpeed: 100
   firstDialog: {fileID: 11400002}
   answer1: {fileID: 0}
   answer2: {fileID: 0}

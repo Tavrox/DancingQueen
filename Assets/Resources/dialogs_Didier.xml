@@ -19,7 +19,11 @@
          <fr Choice_fr="Changer de musique">Dis moi tu pourrais me mettre une musique ?</fr>
          <en Choice_en="Change music">Could you put on a song for me ?</en>
       </answer>
+<<<<<<< HEAD
       <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="250015">
+=======
+      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="25015">
+>>>>>>> c1cd9511701cde0aa2ed982660b579a2fe722718
          <fr Choice_fr="Requête">... Tu as l'air pensif.</fr>
          <en Choice_en="Request">... You look pensive...</en>
       </answer>
