@@ -34,7 +34,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 6.5, z: 1}
+  m_LocalScale: {x: 4.50000048, y: 6.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 6, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.3499999, y: 6.4000001, z: 20}
+  m_Center: {x: .589999974, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-6
   _position: {x: 0, y: 0}
-  _size: {x: 4.5, y: 6.5}
+  _size: {x: 4.50000048, y: 6.5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 4.70833349, y: 7.39583349}
-  imageSize: {x: 4.5, y: 6.5}
+  imageSize: {x: 4.50000048, y: 6.5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -164,15 +164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterID: 12
   charac: 5
+  dialToTrigger: 12001
   sympathy_score: 0
   triggeredUltimate: 0
-  voteForPlayer: 0
+  voteForPlayer: 1
+  banAnswers: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  tutoMode: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 0
-  minRandomDelay: 0
-  maxRandomDelay: 0
-  frequencyWhispers: .5
+  maxRandomVarWhispers: 21
+  randomDelayMin: 0
+  randomDelayMax: .209999993
+  frequencyWhispers: .219999999
   isInToilet: 0
 --- !u!1001 &100100000
 Prefab:

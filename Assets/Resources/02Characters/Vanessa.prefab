@@ -175,8 +175,8 @@ MonoBehaviour:
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 7
   randomDelayMin: 0
-  randomDelayMax: .00999999978
-  frequencyWhispers: 1.48000002
+  randomDelayMax: .610000014
+  frequencyWhispers: 1.15999997
   isSad: 1
   knowsDance: 0
 --- !u!1001 &100100000
