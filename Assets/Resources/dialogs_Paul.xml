@@ -26,6 +26,18 @@ socialy speaking ?</en>
          <fr Choice_fr="Révélation">Quoi de neuf l’ami ?</fr>
          <en Choice_en="Revelation">What's up, friend ?</en>
       </answer>
+      <answer fullID="90125" ID_Dialog="9012" ID_Answer="5" ID_NextDialog="9013" ID_Character="09" Sympathy_value="" Condition="MissionManonEnCours" Action="" BanAnswer="">
+         <fr Choice_fr="Manon">Dis moi, Manon est à côté, elle m’a dit que
+t’avais un truc pour elle. Mais elle est pas 
+trop en état de se déplacer j’ai l’impression...</fr>
+         <en Choice_en="Manon">Say, Manon is out there, she told me you've got 
+something for her, but she's not really able to move, 
+right now...</en>
+      </answer>
+      <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="">
+         <fr Choice_fr="Drogues">T’as quoi à proposer mec ?</fr>
+         <en Choice_en="Drugs">What have you got, man ?</en>
+      </answer>
    </dialog>
    <dialog fullID="9002" ID_Dialog="9002" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, de qui ?</fr>
@@ -99,6 +111,8 @@ judge a fact without analysing it's consequences.
 If the cause is just, the end justifies the means...</en>
       </answer>
    </dialog>
+   
+   
    <dialog fullID="9005" ID_Dialog="9005" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ohhh, c’est mignon la petite sainte nitouche !!</fr>
       <en Choice_en="">Oh, how sweet ! We got ourselves a little nun !</en>
@@ -138,6 +152,8 @@ Mister Philosopher !</en>
          <en Choice_en="Mean">Yeah, right... You didn't get a single word I said, kiddo...</en>
       </answer>
    </dialog>
+   
+   
    <dialog fullID="9007" ID_Dialog="9007" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">D’après moi, non ce n’est pas forcément
 nécessaire. Ensuite, tout dépend de  ce que 
@@ -272,55 +288,39 @@ maintenant !</fr>
 this bathroom. I get it now !</en>
       </answer>
    </dialog>
-   <dialog fullID="9012" ID_Dialog="9012" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Paul, dealer en orbite, au rapport.</fr>
-      <en Choice_en="">Paul, space dealer, reporting for duty !</en>
-      <answer fullID="90121" ID_Dialog="9012" ID_Answer="1" ID_NextDialog="9013" ID_Character="09" Sympathy_value="" Condition="MissionManonEnCours" Action="" BanAnswer="">
-         <fr Choice_fr="Manon">Dis moi, Manon est à côté, elle m’a dit que
-t’avais un truc pour elle. Mais elle est pas 
-trop en état de se déplacer j’ai l’impression...</fr>
-         <en Choice_en="Manon">Say, Manon is out there, she told me you've got 
-something for her, but she's not really able to move, 
-right now...</en>
-      </answer>
-      <answer fullID="90122" ID_Dialog="9012" ID_Answer="2" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Drogues">T’as quoi à proposer mec ?</fr>
-         <en Choice_en="Drugs">What have you got, man ?</en>
-      </answer>
-   </dialog>
    <dialog fullID="9013" ID_Dialog="9013" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="getDrug" BanAnswer="">
       <fr Choice_fr="">Ah oui, ça arrive souvent… Tiens voilà sa 
 commande ! Profitez-en bien les filles.</fr>
       <en Choice_en="">Yeah, it happens to her a lot ! Here's her order. 
 Enjoy, girls !</en>
-      <answer fullID="90131" ID_Dialog="9013" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="90121">
+      <answer fullID="90131" ID_Dialog="9013" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogMissionManonDone" BanAnswer="90121">
          <fr Choice_fr="Offusquée">Mhh merci, mais je ne touche plus à ça.</fr>
          <en Choice_en="Offended">Hmm, thanks, but I don't do that kind of stuff anymore.</en>
       </answer>
-      <answer fullID="90132" ID_Dialog="9013" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="10" Condition="basic" Action="" BanAnswer="90121">
+      <answer fullID="90132" ID_Dialog="9013" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="10" Condition="basic" Action="closeDialogMissionManonDone" BanAnswer="90121">
          <fr Choice_fr="Gentille">Merci, t’inquiètes pas pour ça !</fr>
          <en Choice_en="Kind">Thanks, don't worry about it !</en>
       </answer>
-      <answer fullID="90133" ID_Dialog="9013" ID_Answer="3" ID_NextDialog="0" ID_Character="09" Sympathy_value="-20" Condition="basic" Action="" BanAnswer="90121">
+      <answer fullID="90133" ID_Dialog="9013" ID_Answer="3" ID_NextDialog="0" ID_Character="09" Sympathy_value="-20" Condition="basic" Action="closeDialogMissionManonDone" BanAnswer="90121">
          <fr Choice_fr="Choquée">Nan mais c’est pas pour moi, te fais pas 
 d’idée !</fr>
          <en Choice_en="Shocked">No, really, it's not for me, don't get any ideas !</en>
       </answer>
    </dialog>
-   <dialog fullID="9014" ID_Dialog="9014" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="9014" ID_Dialog="9014" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Je peux t’avoir tout ce que tu veux si t’as 
 de quoi payer !</fr>
       <en Choice_en="">I can get you whatever you want, if you can pay for it.</en>
-      <answer fullID="90141" ID_Dialog="9014" ID_Answer="1" ID_NextDialog="9017" ID_Character="09" Sympathy_value="10" Condition="basic" Action="" BanAnswer="90122">
+      <answer fullID="90141" ID_Dialog="9014" ID_Answer="1" ID_NextDialog="9017" ID_Character="09" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="90122">
          <fr Choice_fr="Intéressé">Mhh j’ai rien pour le moment, mais ça peut
 évoluer…</fr>
          <en Choice_en="Interested">Hmm, nothing right now, but maybe later...</en>
       </answer>
-      <answer fullID="90142" ID_Dialog="9014" ID_Answer="2" ID_NextDialog="9018" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="90122">
+      <answer fullID="90142" ID_Dialog="9014" ID_Answer="2" ID_NextDialog="9018" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="90122">
          <fr Choice_fr="Embrasser">*Smack*</fr>
          <en Choice_en="Kiss">*Kiss*</en>
       </answer>
-      <answer fullID="90143" ID_Dialog="9014" ID_Answer="3" ID_NextDialog="9019" ID_Character="09" Sympathy_value="0" Condition="basic" Action="" BanAnswer="90122">
+      <answer fullID="90143" ID_Dialog="9014" ID_Answer="3" ID_NextDialog="9019" ID_Character="09" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="90122">
          <fr Choice_fr="Embarassée">Euhhh, j’ai rien désolé.</fr>
          <en Choice_en="Embarrassed">Errr, sorry, I'm broke.</en>
       </answer>

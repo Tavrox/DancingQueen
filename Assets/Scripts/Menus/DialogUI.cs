@@ -83,11 +83,15 @@ public class DialogUI : MonoBehaviour {
 		}
 		GameEventManager.TriggerGameUnpause();
 	}
-	public static void createDialog(CharSim _chosenChar)
+	public static void createDialog(CharSim _chosenChar, string _DialToTrigger = null)
 	{
 		exists = true;
 		GameEventManager.TriggerGameDialog();
 		GameObject prefabSprite = Resources.Load("03UI/Dialog") as GameObject;
+		if (_DialToTrigger != null)
+		{
+			prefabSprite.GetComponent<CharSim>().dialToTrigger = _DialToTrigger;
+		}
 		Instantiate(prefabSprite);
 		LevelManager.currentCharacterSpeaking = _chosenChar;
 	}

@@ -18,7 +18,8 @@ public class Answer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
 	}
 	
@@ -39,7 +40,11 @@ public class Answer : MonoBehaviour {
 	
 	void OnMouseDown()
 	{
-		triggered = true;
+		if (Input.GetMouseButtonDown(0))
+		{
+			triggered = true;
+		}
+
 	}
 	void OnMouseUp()
 	{

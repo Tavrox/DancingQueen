@@ -171,6 +171,8 @@
             <filename>GroupeBoris.png</filename>
             <filename>GroupeVanessaChloé.png</filename>
             <filename>thomas_body.png</filename>
+            <filename>thomas_fullbar.png</filename>
+            <filename>thomas_dance.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
