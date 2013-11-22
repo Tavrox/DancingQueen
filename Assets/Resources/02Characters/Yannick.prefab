@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.91000009, y: 4.07999992, z: 20}
   m_Center: {x: -.920000017, y: .270000011, z: 0}
@@ -109,21 +109,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226ae98fe018ada49b8fe58cce496e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: 
+  characterID: 06
   charac: 10
-  dialToTrigger: 
+  dialToTrigger: 6001
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   color: {r: 0, g: 0, b: 0, a: 0}
-  tutoMode: 0
+  tutoMode: 1
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 13
   randomDelayMin: 0
-  randomDelayMax: .00999999978
-  frequencyWhispers: .939999998
+  randomDelayMax: .5
+  frequencyWhispers: 1.00999999
   hasSpokenOnceToPlayer: 0
 --- !u!114 &11400002
 MonoBehaviour:
