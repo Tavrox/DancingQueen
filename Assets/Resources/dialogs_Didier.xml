@@ -7,19 +7,19 @@
          <fr Choice_fr="Parler de :">J’aimerais en savoir plus sur les gens de la soirée.</fr>
          <en Choice_en="Talk about">I'd like to know more about someone.</en>
       </answer>
-      <answer fullID="250012" ID_Dialog="25001" ID_Answer="2" ID_NextDialog="25007" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250012" ID_Dialog="25001" ID_Answer="2" ID_NextDialog="25007" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="250012">
          <fr Choice_fr="Musique">C’est quoi le programme musical de la soirée ?</fr>
          <en Choice_en="Music">What's the musical program for the night ?</en>
       </answer>
-      <answer fullID="250013" ID_Dialog="25001" ID_Answer="3" ID_NextDialog="25008" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250013" ID_Dialog="25001" ID_Answer="3" ID_NextDialog="25008" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="250013">
          <fr Choice_fr="DJ">Alors, c’est sympa de faire DJ pour ce genre de soirée ?</fr>
          <en Choice_en="DJ">So, it must be cool to DJ for this kind of party !</en>
       </answer>
-      <answer fullID="250014" ID_Dialog="25001" ID_Answer="4" ID_NextDialog="25011" ID_Character="25" Sympathy_value="" Condition="bastienMusic" Action="" BanAnswer="">
+      <answer fullID="250014" ID_Dialog="25001" ID_Answer="4" ID_NextDialog="25011" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Changer de musique">Dis moi tu pourrais me mettre une musique ?</fr>
          <en Choice_en="Change music">Could you put on a song for me ?</en>
       </answer>
-      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="250015">
          <fr Choice_fr="Requête">... Tu as l'air pensif.</fr>
          <en Choice_en="Request">... You look pensive...</en>
       </answer>
@@ -76,16 +76,16 @@ Claire...</en>
       <en Choice_en="">So, I'm gonna play ''Monkey Style'', ''I Wanna Be 
 your Monkey'', My Huge Banana''... Huhu, kidding. 
 Only home-made stuff !</en>
-      <answer fullID="250071" ID_Dialog="25007" ID_Answer="1" ID_NextDialog="0" ID_Character="25" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="250012">
+      <answer fullID="250071" ID_Dialog="25007" ID_Answer="1" ID_NextDialog="0" ID_Character="25" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Flatteuse">J’ai hâte de les écouter !</fr>
          <en Choice_en="Flattering">Can't wait to hear them !</en>
       </answer>
-      <answer fullID="250072" ID_Dialog="25007" ID_Answer="2" ID_NextDialog="0" ID_Character="25" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="250012">
+      <answer fullID="250072" ID_Dialog="25007" ID_Answer="2" ID_NextDialog="0" ID_Character="25" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Clash">T’es aussi fin dans ton humour que dans ta
  musique ?</fr>
          <en Choice_en="Clash">Are you as clever in music as you are in humour ?</en>
       </answer>
-      <answer fullID="250073" ID_Dialog="25007" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="250012">
+      <answer fullID="250073" ID_Dialog="25007" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Blasée">On va voir ce que ça donne, ça a l’air un
  peu naze.</fr>
          <en Choice_en="Jaded">All right, sounds pretty lame, but let's check it out...</en>
@@ -153,15 +153,15 @@ Sure, what do you want ?</en>
          <fr Choice_fr="Base">Un truc passe partout, ça sera parfait.</fr>
          <en Choice_en="Base">Something discreet would be perfect.</en>
       </answer>
-      <answer fullID="250112" ID_Dialog="25011" ID_Answer="2" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="basic" Action="changeMusicSlow" BanAnswer="">
+      <answer fullID="250112" ID_Dialog="25011" ID_Answer="2" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="claireMusic" Action="changeMusicSlow" BanAnswer="">
          <fr Choice_fr="Slow">Un slow histoire de créer une atmosphère romantique.</fr>
          <en Choice_en="Slow">A slow, to create a romantique ambiance.</en>
       </answer>
-      <answer fullID="250113" ID_Dialog="25011" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="basic" Action="changeMusicCountry" BanAnswer="">
+      <answer fullID="250113" ID_Dialog="25011" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="vanessaMusic" Action="changeMusicCountry" BanAnswer="">
          <fr Choice_fr="Variété">Un peu de variété, c’est trop sexy.</fr>
          <en Choice_en="Variety music">Gimme some variety music, it's so hot !</en>
       </answer>
-      <answer fullID="250114" ID_Dialog="25011" ID_Answer="4" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="basic" Action="changeMusicElectro" BanAnswer="">
+      <answer fullID="250114" ID_Dialog="25011" ID_Answer="4" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="bastienMusic" Action="changeMusicElectro" BanAnswer="">
          <fr Choice_fr="Electro">De l’électro s’il te plait.</fr>
          <en Choice_en="Electro">Something electro, please.</en>
       </answer>
@@ -182,10 +182,10 @@ Sure, what do you want ?</en>
          <en Choice_en="Refuse">Sorry, not interested.</en>
       </answer>
    </dialog>
-   <dialog fullID="25013" ID_Dialog="25013" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="25012">
+   <dialog fullID="25013" ID_Dialog="25013" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Informes-toi de la musique qui mettrait le feu au 
 cul de Bastien, qu’il ramène des gens sur la piste de danse.</fr>
-      <en Choice_en="">Try to find out wich music would really set Bastien on 
+      <en Choice_en="">Try to find out which music would really set Bastien on 
 fire, so he'll bring more people to the dancefloor !</en>
    </dialog>
 </dialogs>

@@ -4,11 +4,7 @@ using System.Collections;
 public class Bastien : CharSim 
 {
 	public bool refusedMission = false;
-
-	public void GiveBeer()
-	{
-		
-	}
+	public bool hasSpokenOncePlayer = false;
 
 	void OnMouseDown()
 	{

@@ -729,7 +729,6 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Manon");
 				go.GetComponent<Manon>().missionDone = true;
-				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
 				killAtferDisplay = true;
 				break;
 			}

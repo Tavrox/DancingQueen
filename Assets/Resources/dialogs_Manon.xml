@@ -23,8 +23,8 @@ goûter ?</fr>
 Want a taste ?</en>
       </answer>
 	  <answer fullID="20014" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="">
-         <fr Choice_fr="Service">Tu peux me rendre un service ?</fr>
-         <en Choice_en="Something to do">Can you do something for me ?</en>
+         <fr Choice_fr="Service"> J'ai l'impression que tu veux me demander quelque chose...</fr>
+         <en Choice_en="Something to do">Looks like you want to ask me something.</en>
       </answer>
       <answer fullID="20015" ID_Dialog="2001" ID_Answer="5" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="">
          <fr Choice_fr="Infos">Alors, y’a des choses en particulier à savoir
@@ -170,7 +170,7 @@ ain't you ? I like you.</en>
 qui doit me donner un petit truc pour la soirée, 
 tu peux aller me le chercher ? Je suis pas trop 
 en état là !</fr>
-      <en Choice_en="">By the way, Paul, you know, the dealer ? 
+      <en Choice_en="">Paul, you know, the dealer ? 
 He's in the bathroom, he's supposed to give me 
 a little something for the party. Can you get 
 it for me ? I'm not really in shape, there...</en>

@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 7.5, y: 4, z: 1}
+  m_LocalScale: {x: 7.49999952, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!4 &400004
@@ -124,7 +124,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 2.5, z: 40}
+  m_Size: {x: 6.4000001, y: 2.5, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: AnswerBtn2
   _position: {x: 0, y: 0}
-  _size: {x: 7.5, y: 4}
+  _size: {x: 7.49999952, y: 4}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
   protoType: 
   baseName: AnswerBtn2
   oSize: {x: 8.33333397, y: 2.25}
-  imageSize: {x: 13.636364, y: 8.63999939}
+  imageSize: {x: 7.49999952, y: 4}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0

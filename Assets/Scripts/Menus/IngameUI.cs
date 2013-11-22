@@ -39,13 +39,27 @@ public class IngameUI : MonoBehaviour {
 	{
 		if (DialogUI.exists == false)
 		{
-			if (_Player.numberDrugs > 0 && GameObject.Find("Drugs") != null)
+			switch (_Player.numberDrugs)
 			{
-				GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
-			}
-			else
-			{
-				GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = false;
+
+				case 1 :
+				{
+					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
+					break;
+				}
+				case 2 :
+				{	
+					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
+					GameObject.Find("Drugs2").GetComponentInChildren<OTSprite>().renderer.enabled = true;
+					break;
+				}
+
+				default :
+				{
+					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = false;
+					GameObject.Find("Drugs2").GetComponentInChildren<OTSprite>().renderer.enabled = false;
+					break;
+				}
 			}
 		}
 	}
