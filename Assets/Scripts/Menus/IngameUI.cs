@@ -39,7 +39,7 @@ public class IngameUI : MonoBehaviour {
 	{
 		if (DialogUI.exists == false)
 		{
-			if (_Player.numberDrugs > 0)
+			if (_Player.numberDrugs > 0 && GameObject.Find("Drugs") != null)
 			{
 				GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
 			}

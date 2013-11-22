@@ -59,6 +59,10 @@ public class CharSim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (this.sympathy_score > 100 && this.voteForPlayer != true)
+		{
+			voteForPlayer = true;
+		}
 
 	}
 	
