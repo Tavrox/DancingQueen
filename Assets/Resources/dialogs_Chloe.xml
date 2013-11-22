@@ -140,11 +140,11 @@ all a little different.</en>
 mieux !</fr>
       <en Choice_en="">Being mean to a total stranger is no better !</en>
    </dialog>
-   <dialog fullID="12010" ID_Dialog="12010" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="120011">
+   <dialog fullID="12010" ID_Dialog="12010" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Merci, on pense pareil avec mes amies.</fr>
       <en Choice_en="">Thanks, my friends and i think the same.</en>
    </dialog>
-   <dialog fullID="12011" ID_Dialog="12011" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="120011">
+   <dialog fullID="12011" ID_Dialog="12011" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">C’est ce qu’on dit quand on veut pas se mouiller.</fr>
       <en Choice_en="">That's not taking much risks...</en>
    </dialog>

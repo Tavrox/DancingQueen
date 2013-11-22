@@ -40,7 +40,6 @@ public class PlayerSim : MonoBehaviour {
 	public void addBanAnswers(string id)
 	{
 		banAnswers.Add(id);
-		Debug.Log("Banned ["+id+"]");
 	}
 
 	public bool findBanAnswers(string id)
@@ -48,7 +47,6 @@ public class PlayerSim : MonoBehaviour {
 		bool result = false;
 		if (banAnswers.Contains(id))
 		{
-			Debug.Log("Ban found ["+id+"]");
 			result = true;
 		}
 		else 

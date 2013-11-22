@@ -160,7 +160,7 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				Claire.dialToTrigger = "14010";
+				Claire.dialToTrigger = "11006";
 				IngameUI.destroyIngameUI();
 				DialogUI.createDialog(Claire);
 				Claire.talkedAboutFlirting = true;
@@ -170,7 +170,7 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				Claire.dialToTrigger = "14005";
+				Claire.dialToTrigger = "11006";
 				IngameUI.destroyIngameUI();
 				DialogUI.createDialog(Claire);
 				Claire.talkedAboutKissing = true;
@@ -479,14 +479,6 @@ public class LevelManager : MonoBehaviour {
 				{
 					
 				}
-				if (_Claire.GetComponent<Claire>().talkedAboutSlow == false && _Claire.GetComponent<Claire>().heardTheSlow == true &&
-			    _Raphael.GetComponent<Raphael>().coupleClaire == false)
-				{
-					Debug.Log("Isolate player");
-					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(_Claire.GetComponent<Claire>());
-				}
-				
 				break;
 			}
 			case (levelList.Bar) :
@@ -551,7 +543,7 @@ public class LevelManager : MonoBehaviour {
 				
 				if ( _Alex.GetComponent<Alex>().gotPlayerInVIP == true)
 			    {
-					Debug.Log("Isolate player");
+				Debug.Log("Isolate player");
 					IngameUI.destroyIngameUI();
 					DialogUI.createDialog(_Alex.GetComponent<Alex>());
 				}
@@ -610,7 +602,7 @@ public class LevelManager : MonoBehaviour {
 			if (music ==  MusicList.Slow)
 			{
 				musicToPlay = "SlowDancefloor";
-				Claire go = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
+				
 			}
 		}
 		if (level == levelList.Toilets)

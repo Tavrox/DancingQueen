@@ -47,8 +47,7 @@ way, you know why the cat didn't cross the road ?</en>
       <answer fullID="130053" ID_Dialog="13005" ID_Answer="3" ID_NextDialog="13010" ID_Character="13" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Blasé">Elle est nulle cette blague on me la déjà 
 faite 10 fois</fr>
-         <en Choice_en="Jaded">No, not that joke, I heard it a hundred
-times, and it already sucked the first time !</en>
+         <en Choice_en="Jaded">No, not that joke, I heard it a hundred times, and it already sucked the first time !</en>
       </answer>
    </dialog>
    <dialog fullID="13006" ID_Dialog="13006" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -73,10 +72,7 @@ intéressant sont pris.</fr>
 Oh my goodness, oh my dayum. You know
 the difference between a weak kiss, and a 
 kiss that has strength ?</fr>
-      <en Choice_en="">Dayum, Dayum, Dayum mhhh, mhhh !!
-Oh my goodness, oh my dayum. You know the
-difference between a weak kiss, 
-and a kiss that has strength ?</en>
+      <en Choice_en="">Dayum, Dayum, Dayum mhhh, mhhh !! Oh my goodness, oh my dayum. You know the difference between a weak kiss, and a kiss that has strength ?</en>
    </dialog>
    <dialog fullID="13008" ID_Dialog="13008" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Paff le Raphaël hhahahaha?

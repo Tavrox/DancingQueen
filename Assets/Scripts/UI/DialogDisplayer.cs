@@ -212,7 +212,6 @@ public class DialogDisplayer : MonoBehaviour {
 				fullDialog[4] = node.Attributes.GetNamedItem("Action").Value;
 				fullDialog[5] = node.SelectSingleNode("fr").InnerText;
 				fullDialog[6] = node.SelectSingleNode("en").InnerText;
-				fullDialog[7] = node.Attributes.GetNamedItem("BanAnswer").Value;
 				int i=0;
 				foreach (XmlNode answer in node.SelectNodes("answer"))
 				{
@@ -232,8 +231,6 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				dialToDisplay = firstDialog;
 				talkLines = dialToDisplay.dialLines;
-				banDialogID(fullDialog[7]);
-				checkAction(fullDialog[4]);
 
 
 
@@ -267,11 +264,7 @@ public class DialogDisplayer : MonoBehaviour {
 		finishedTalking = false;
 		startDialog();
 		playerSpeaking = true;
-		if (displayedAnswer.action != "")
-		{
-			Debug.Log("ACTION " + displayedAnswer.action);
-		}
-
+		Debug.Log("ACTION " + displayedAnswer.action);
 	}
 
 	//Call to the dialog from another class
@@ -669,8 +662,7 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("kissRaphael") :
 			{
 				go = getCharacGO("Raphael");
-				go.GetComponent<Raphael>().kissedPlayer = true;
-				go.GetComponent<Raphael>().coupleClaire = true;  
+				go.GetComponent<Raphael>().kissedPlayer = true; 
 				break;
 			}
 			case ("closeDialogDisableBastien") :
@@ -687,27 +679,10 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
-			case ("closeDialogTalkedClaireFlirting") :
+			case ("closeDialogtalkedClaire") :
 			{
 				go = getCharacGO("Claire");
 				go.GetComponent<Claire>().dialToTrigger = "14005"; 
-				go.GetComponent<Claire>().talkedAboutFlirting = true;
-				killAtferDisplay = true;
-				break;
-			}
-			case ("closeDialogTalkedClaireKissing") :
-			{
-				go = getCharacGO("Claire");
-				go.GetComponent<Claire>().dialToTrigger = "14003";
-				go.GetComponent<Claire>().talkedAboutKissing = true;
-				killAtferDisplay = true;
-				break;
-			}
-			case ("closeDialogTalkedClaireSlow") :
-			{
-				go = getCharacGO("Claire");
-				go.GetComponent<Claire>().dialToTrigger = "14003";
-				go.GetComponent<Claire>().talkedAboutSlow = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -715,13 +690,6 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().hasTalkedThomas = true;
-				killAtferDisplay = true;
-				break;
-			}
-			case ("hasTalkedRaphael") :
-			{
-				go = getCharacGO("Raphael");
-				go.GetComponent<Raphael>().hasTalkedRaphael = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -755,9 +723,6 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Didier>().hasPutSlow = true;
 				go = getCharacGO("Vanessa");
 				go.GetComponent<Vanessa>().dialToTrigger = "7009";
-				go = getCharacGO("Claire");
-				go.GetComponent<Claire>().dialToTrigger = "14007";
-				go.GetComponent<Claire>().heardTheSlow = true;
 				lvManager.setMusic(LevelManager.MusicList.Slow, LevelManager.levelList.Dancefloor);
 				killAtferDisplay = true;
 				break;
@@ -1015,10 +980,8 @@ public class DialogDisplayer : MonoBehaviour {
 	}
 	private void banDialogID(string id)
 	{
-		if (id != "")
-		{
-			_Player.GetComponent<PlayerSim>().addBanAnswers(id);
-		}
+		_Player.GetComponent<PlayerSim>().addBanAnswers(id);
+
 	}
 	private void modifySympathy(string characID, int value)
 	{
