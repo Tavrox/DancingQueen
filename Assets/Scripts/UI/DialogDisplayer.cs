@@ -31,9 +31,10 @@ public class DialogDisplayer : MonoBehaviour {
 	private string[,] arrayAnswers = new string[8,10];
 	private bool answersInitiated;
 	private GameObject instance1,instance2,instance3,instance4,instance5,instance6, prefabSprite; 
-	private bool playerSpoken,playerSpeaking, killAtferDisplay, textInserted;
+	private bool playerSpoken,playerSpeaking, killAtferDisplay, textInserted, coroutineRunning;
 	private LevelManager  lvManager;
 	private GameObject _Player, _BgDialogPlayer, _BgDialogPNJ;
+	private GUIText _NextDialog;
 
 	//[HideInInspector] public Player player; //The player to lock
 	
@@ -54,7 +55,8 @@ public class DialogDisplayer : MonoBehaviour {
 		_BgDialogPlayer = GameObject.Find("overlaySprite");
 		_BgDialogPNJ.renderer.enabled = false;
 		_BgDialogPlayer.renderer.enabled = false;
-		
+		_NextDialog = GameObject.Find("DialogNext>").GetComponent<GUIText>();
+
 		/**ADD**/
 		// string url = "http://paultondeur.com/files/2010/UnityExternalJSONXML/books.xml";
 		// string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
@@ -141,24 +143,31 @@ public class DialogDisplayer : MonoBehaviour {
 						}
 					}
 					else {
+						//_NextDialog.enabled = true;
+						if(coroutineRunning == false) StartCoroutine("twinkleText");
 						if(Input.GetMouseButtonDown(0)) {
 							playerSpeaking = false;
+							_NextDialog.enabled = false;
 							launchNextDialog();
 						}
 					}
 				}
 				else {
+					if(coroutineRunning == false) StartCoroutine("twinkleText");
 					if(Input.GetMouseButtonDown(0)) {
 						playerSpeaking = false;
 						finishedTalking =false;
 						killAtferDisplay =false;
+						_NextDialog.enabled = false;
 						DialogUI.destroyDialog();
 					}
 				}
 			}
 			else {
+				if(coroutineRunning == false) StartCoroutine("twinkleText");
 				if(Input.GetMouseButtonDown(0)) {
 					finishedTalking =false;
+					_NextDialog.enabled = false;
 					if (fullDialog[4] != null)
 					{
 
@@ -960,7 +969,15 @@ public class DialogDisplayer : MonoBehaviour {
 		yield return new WaitForSeconds(waitTime);
 	    startDialog();
 	}
-	
+
+	IEnumerator twinkleText()
+	{
+		coroutineRunning = true;
+		_NextDialog.enabled = !_NextDialog.enabled;
+		yield return new WaitForSeconds(0.5f);
+		coroutineRunning = false;
+	}
+
 	//Scrolling Coroutine
 	IEnumerator StartScrolling() 
 	{

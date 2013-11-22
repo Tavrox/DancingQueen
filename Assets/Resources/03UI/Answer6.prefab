@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 132: {fileID: 13200000}
   m_Layer: 0
-  m_Name: AnswerTxt3
+  m_Name: AnswerTxt6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: AnswerBtn3
+  m_Name: AnswerBtn6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 7.5, y: 4, z: 1}
+  m_LocalScale: {x: 7.49999952, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!4 &400004
@@ -160,9 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: AnswerBtn3
+  _name: AnswerBtn6
   _position: {x: 0, y: 0}
-  _size: {x: 7.5, y: 4}
+  _size: {x: 7.49999952, y: 4}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -183,9 +183,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: AnswerBtn3
+  baseName: AnswerBtn6
   oSize: {x: 8.33333397, y: 2.25}
-  imageSize: {x: 9.090909, y: 5.39999962}
+  imageSize: {x: 7.49999952, y: 4}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
