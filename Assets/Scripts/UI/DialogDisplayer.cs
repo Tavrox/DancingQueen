@@ -546,6 +546,19 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			break;
 		}
+		case ("PlayerKnowsPaulDealer") :
+		{
+			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+			if (charac.PlayerKnowsIsDealer == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
 		case ("NoPlayerDoesntKnowsIsDealer") :
 		{
 			Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
@@ -601,7 +614,7 @@ public class DialogDisplayer : MonoBehaviour {
 		case ("MissionManonEnCours") :
 		{
 			Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
-			if (charac.missionEncours == true)
+			if (charac.missionEncours == true && charac.missionDone == false)
 			{
 				return true;
 			}
@@ -674,6 +687,13 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("closeDialogBanCharlie") :
+			{
+				killAtferDisplay = true;
+				go = getCharacGO("Charlie");
+				go.GetComponent<Charlie>().dialDisabled = true;
+				break;
+			}
 			case ("kissRaphael") :
 			{
 				go = getCharacGO("Raphael");
@@ -691,6 +711,14 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Alex");
 				go.GetComponent<Alex>().voteForPlayer = true; 
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogMissionManonDone") :
+			{
+				go = getCharacGO("Manon");
+				go.GetComponent<Manon>().missionDone = true;
+				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
 				killAtferDisplay = true;
 				break;
 			}
@@ -783,6 +811,7 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("closeDialogunlockVanessaDance"):
 			{
 				go = getCharacGO("Vanessa");
+				disableChar("Charlie");
 				go.GetComponent<Vanessa>().knowsDance = true;
 				killAtferDisplay = true;
 				break;
@@ -797,6 +826,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Paul");
 				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
+				go = getCharacGO("Manon");
+				go.GetComponent<Manon>().missionEncours = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -957,6 +988,12 @@ public class DialogDisplayer : MonoBehaviour {
 		textIsScrolling = false; //Text is not scrolling anymore
 
 	}
+
+	private void disableChar(string charac)
+	{
+		GameObject go = getCharacGO(charac);
+		go.GetComponent<CharSim>().dialDisabled = true;
+	}
 	
 	private void playWhispers()
 	{
@@ -1055,7 +1092,9 @@ public class DialogDisplayer : MonoBehaviour {
 		case ("08"):
 		{
 			go = getCharacGO("Thomas");
+			print ("Sympathy before adding " + go.GetComponent<Thomas>().sympathy_score);
 			go.GetComponent<Thomas>().sympathy_score += value;
+			print ("Sympathy after adding " + go.GetComponent<Thomas>().sympathy_score);
 			break;
 		}
 		case ("15"):

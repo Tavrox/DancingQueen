@@ -5,6 +5,7 @@
 défoncée haha !</fr>
       <en Choice_en="">Hi you ! I've never seen you before... 
 I'm so wasted ! Haha !</en>
+
       <answer fullID="20011" ID_Dialog="2001" ID_Answer="1" ID_NextDialog="2002" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Nouvelle">Oui je suis nouvelle, tu te plais ici ? Les gens 
 sont sympa ?</fr>
@@ -21,9 +22,14 @@ goûter ?</fr>
          <en Choice_en="Drugs">Hey ! I was given some of the good stuff. 
 Want a taste ?</en>
       </answer>
-	  <answer fullID="20013" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="">
+	  <answer fullID="20014" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="">
          <fr Choice_fr="Service">Tu peux me rendre un service ?</fr>
          <en Choice_en="Something to do">Can you do something for me ?</en>
+      </answer>
+      <answer fullID="20015" ID_Dialog="2001" ID_Answer="5" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="">
+         <fr Choice_fr="Infos">Alors, y’a des choses en particulier à savoir
+sur cette soirée ?</fr>
+         <en Choice_en="Infos">So, anything in particular to know about tonight ?</en>
       </answer>
    </dialog>
    <dialog fullID="2002" ID_Dialog="2002" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -139,7 +145,7 @@ Can you tell me that again later ?</en>
    </dialog>
    <dialog fullID="2009" ID_Dialog="2009" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="20012">
       <fr Choice_fr="">Hoo, c’est chiant !</fr>
-      <en Choice_en="">Man, that sucks !</en>
+      <en Choice_en="">Sista, that sucks !</en>
    </dialog>
    <dialog fullID="2010" ID_Dialog="2010" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="20012">
       <fr Choice_fr="">Ouais mais non, j’ai plus rien sur moi là ...</fr>
@@ -181,17 +187,12 @@ it for me ? I'm not really in shape, there...</en>
 Pas question.</fr>
          <en Choice_en="Meanly decline">Who am I, your bitch ? Forget it !</en>
       </answer>
-      <answer fullID="20144" ID_Dialog="2014" ID_Answer="4" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="">
-         <fr Choice_fr="Infos">Alors, y’a des choses en particulier à savoir
-sur cette soirée ?</fr>
-         <en Choice_en="Infos">So, anything in particular to know about tonight ?</en>
-      </answer>
    </dialog>
    <dialog fullID="2015" ID_Dialog="2015" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ahh yes, elle est vraiment bonne cette dope …
 Des choses à savoir tu dis ? Tu veux du gossip 
 ou des affaire de mafia, les deux peut être ?</fr>
-      <en Choice_en="">Man, that's good shit... Things to know, you say ? 
+      <en Choice_en="">Sista, that's good shit... Things to know, you say ? 
 As in gossips, or as in mafia business ? 
 Or maybe both ?</en>
       <answer fullID="20151" ID_Dialog="2015" ID_Answer="1" ID_NextDialog="2016" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

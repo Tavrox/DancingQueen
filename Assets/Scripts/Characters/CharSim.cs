@@ -39,6 +39,7 @@ public class CharSim : MonoBehaviour {
 	public int[] banAnswers = new int[20];
 	public Color color;
 	public bool tutoMode = false;
+	public bool dialDisabled = false;
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -109,7 +110,7 @@ public class CharSim : MonoBehaviour {
 	
 	private void OnMouseDown()
 	{
-		if (DialogUI.exists != true)
+		if (DialogUI.exists != true && dialDisabled != true)
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
@@ -140,7 +141,7 @@ public class CharSim : MonoBehaviour {
 
 	private void OnMouseOver()
 	{
-		if(DialogUI.exists != true)
+		if(DialogUI.exists != true && dialDisabled != true)
 		{
 			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
 			spr.frameName = "cursor_talk";

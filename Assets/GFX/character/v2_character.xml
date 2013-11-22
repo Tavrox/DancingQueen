@@ -277,10 +277,36 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
+            <key>thomas_dance.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1786,762},{170,220}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{170,220}}</string>
+                <key>sourceSize</key>
+                <string>{170,220}</string>
+            </dict>
+            <key>thomas_fullbar.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,1148},{300,500}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,500}}</string>
+                <key>sourceSize</key>
+                <string>{300,500}</string>
+            </dict>
             <key>vanessa_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,1148},{261,337}}</string>
+                <string>{{306,1148},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -293,7 +319,7 @@
             <key>yannick_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{267,1148},{261,337}}</string>
+                <string>{{570,1148},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -313,7 +339,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b58050d873e4853c3eb278cad204cacd:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:d95017241dc98db4c5dc68a90013e8be:1/1$</string>
             <key>textureFileName</key>
             <string>v2_character.png</string>
         </dict>

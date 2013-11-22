@@ -74,7 +74,7 @@ je dois encore attendre ?</fr>
          <en Choice_en="Learn more (teasing)">Have you already started saying interesting things, or 
 do I wait a while longer ?</en>
       </answer>
-      <answer fullID="190042" ID_Dialog="19004" ID_Answer="2" ID_NextDialog="0" ID_Character="19" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="190042" ID_Dialog="19004" ID_Answer="2" ID_NextDialog="0" ID_Character="19" Sympathy_value="-10" Condition="basic" Action="closeDialogBanCharlie" BanAnswer="">
          <fr Choice_fr="La fuite">Euh attends, on est en train de m’appeler là...</fr>
          <en Choice_en="Run away">Sorry, someone's calling me...</en>
       </answer>
@@ -83,7 +83,7 @@ do I wait a while longer ?</en>
          <en Choice_en="Learn more (kind)">Go on, please.</en>
       </answer>
    </dialog>
-   <dialog fullID="19005" ID_Dialog="19005" ID_Answer="" ID_NextDialog="" ID_Character="19" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="19005" ID_Dialog="19005" ID_Answer="" ID_NextDialog="" ID_Character="19" Sympathy_value="" Condition="basic" Action="closeDialogBanCharlie" BanAnswer="">
       <fr Choice_fr="">Allez laisse béton.</fr>
       <en Choice_en="">Come on, drop it.</en>
    </dialog>

@@ -13,9 +13,6 @@ public class LevelManager : MonoBehaviour {
 	public bool raphaelSingle = false;
 	public bool gameWon = false;
 	public bool canGoToVIP = false;
-	public string timeInterventionAlex_1;
-	public string timeInterventionAlex_2;
-	public string timeInterventionAlex_3;
 	
 	private GameObject _Alex;
 	private GameObject _Anais;
@@ -101,6 +98,7 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		setCharacGO("");
 		if (Input.GetKeyDown(KeyCode.A))
 		{
 			raphaelSingle = true;
@@ -132,6 +130,14 @@ public class LevelManager : MonoBehaviour {
 		else
 		{
 			MinutesTransfo = Minutes.ToString();
+		}
+		if ( _Thomas.GetComponent<Thomas>().isBattleDance == true && currentLvl == levelList.Dancefloor)
+		{
+			hideChar("Thomas");
+		}
+		if ( _Vanessa.GetComponent<Vanessa>().isSad == false && currentLvl == levelList.Dancefloor)
+		{
+			unhideChar("Vanessa");
 		}
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
 		checkTimer();
@@ -183,6 +189,10 @@ public class LevelManager : MonoBehaviour {
 	void checkTimer()
 	{
 		Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
+		print ("CassCo1" + GO.casseCouilleS1);
+		print ("CassCo2" + GO.casseCouilleS2);
+		print ("CassCo3" + GO.casseCouilleS3);
+		print ("Dialog State" + DialogUI.exists);
 		if (Hours >= 21)
 		{
 			if (DialogUI.exists != true)
@@ -197,25 +207,25 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-		if (Hours >= 22)
+		if (Hours > 22)
 		{
 			if (DialogUI.exists != true)
 			{
-				if (GO.casseCouilleS2 != true && GO.gotPlayerInVIP != true)
+				if (GO.casseCouilleS2 == false && GO.gotPlayerInVIP != true && GO.casseCouilleS1 == true)
 				{
 					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO);
+					DialogUI.createDialog(GO, "11006");
 					GO.casseCouilleS2 = true;
 				}
 				
 			}
 		}
 
-		if (Hours >= 23)
+		if (Hours > 23)
 		{
 			if (DialogUI.exists != true)
 			{
-				if (GO.casseCouilleS3 != true && GO.gotPlayerInVIP != true)
+				if (GO.casseCouilleS3 == false && GO.gotPlayerInVIP == false  && GO.casseCouilleS3 == true)
 				{
 					IngameUI.destroyIngameUI();
 					DialogUI.createDialog(GO);
@@ -446,6 +456,7 @@ public class LevelManager : MonoBehaviour {
 
 	private void setCharPos()
 	{
+		print ("Change pos char");
 		switch (currentLvl)
 		{
 			case (levelList.Dancefloor) :
@@ -468,12 +479,14 @@ public class LevelManager : MonoBehaviour {
 
 				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-//					_Vanessa.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
-//					unhideChar("Vanessa");
+					print ("instantiate thomas bar");
+					_Vanessa.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
+					unhideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-//					hideChar("Thomas");
+					print ("hide thomas dance");
+					hideChar("Thomas");
 				}
 				if (_Raphael.GetComponent<Raphael>().coupleClaire == false)
 				{
@@ -484,26 +497,35 @@ public class LevelManager : MonoBehaviour {
 			case (levelList.Bar) :
 			{
 				
+				setCharacGO("Thomas");
+
 				hideChar("Raphael");
 				hideChar("Bastien");
-				hideChar("Thomas");
 				hideChar("Didier");
 				hideChar("Manon");
+				hideChar("Thomas");
 
 				unhideItem("Comptoir");
 				unhideChar("Yannick");
 				unhideChar("Vanessa");
 				unhideChar("Chloe");
-
-				if (_Vanessa.GetComponent<Vanessa>().isSad == true)
+				hideChar("Thomas");
+			       
+				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-//					hideChar("Vanessa");
+					print ("Hide vanessa bar");
+					hideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
 				{
-//					_Thomas.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
-//					unhideChar("Thomas");
+					_Thomas.GetComponentInChildren<OTSprite>().frameName = "thomas_fullbar";
+					_Thomas.transform.position = new Vector3(-2.060373f, 0.8314278f, 3f);
+					_Thomas.transform.localScale = new Vector3(0.4477435f, 0.4477435f, 0.4477435f);
+					print(_Thomas.GetComponentInChildren<OTSprite>().frameName);
+					print ("Unhide thomas bar");
+					unhideChar("Thomas");
                 }
+
 				break;
 			}
 			case (levelList.Toilets) :
