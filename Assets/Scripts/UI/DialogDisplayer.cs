@@ -33,7 +33,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private GameObject instance1,instance2,instance3,instance4,instance5,instance6, prefabSprite; 
 	private bool playerSpoken,playerSpeaking, killAtferDisplay;
 	private LevelManager  lvManager;
-	private GameObject _Player;
+	private GameObject _Player, _BgDialogPlayer, _BgDialogPNJ;
 
 	//[HideInInspector] public Player player; //The player to lock
 	
@@ -50,6 +50,10 @@ public class DialogDisplayer : MonoBehaviour {
 		CharDialID = currentChar.dialToTrigger;
 		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		_Player = GameObject.Find("PlayerData");
+		_BgDialogPNJ = GameObject.Find("overlaySprite-2");
+		_BgDialogPlayer = GameObject.Find("overlaySprite");
+		_BgDialogPNJ.renderer.enabled = false;
+		_BgDialogPlayer.renderer.enabled = false;
 		
 		/**ADD**/
 		// string url = "http://paultondeur.com/files/2010/UnityExternalJSONXML/books.xml";
@@ -92,6 +96,14 @@ public class DialogDisplayer : MonoBehaviour {
 
 		if(talking == true)
 		{
+			if(playerSpeaking == true) {
+				_BgDialogPNJ.renderer.enabled = false;
+				_BgDialogPlayer.renderer.enabled = true;
+			}
+			else {
+				_BgDialogPNJ.renderer.enabled = true;
+				_BgDialogPlayer.renderer.enabled = false;
+			}
 			if(Input.GetMouseButtonDown(0)) 
 			{ 
 				//Dialog interaction button detection
