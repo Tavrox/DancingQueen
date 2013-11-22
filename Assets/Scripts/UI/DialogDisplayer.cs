@@ -31,7 +31,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private string[,] arrayAnswers = new string[8,10];
 	private bool answersInitiated;
 	private GameObject instance1,instance2,instance3,instance4,instance5,instance6, prefabSprite; 
-	private bool playerSpoken,playerSpeaking, killAtferDisplay;
+	private bool playerSpoken,playerSpeaking, killAtferDisplay, textInserted;
 	private LevelManager  lvManager;
 	private GameObject _Player, _BgDialogPlayer, _BgDialogPNJ;
 
@@ -80,7 +80,7 @@ public class DialogDisplayer : MonoBehaviour {
 		getDialogContent();
 
 		InvokeRepeating("playWhispers", UnityEngine.Random.Range(currentChar.randomDelayMin,currentChar.randomDelayMax) , currentChar.frequencyWhispers);
-		StartCoroutine( Wait(delayStart) );
+		startDialog();//StartCoroutine( Wait(delayStart) );
 		
 		GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
 		speaking.text = currentChar.name;
@@ -104,30 +104,29 @@ public class DialogDisplayer : MonoBehaviour {
 				_BgDialogPNJ.renderer.enabled = true;
 				_BgDialogPlayer.renderer.enabled = false;
 			}
-			if(Input.GetMouseButtonDown(0)) 
-			{ 
-				//Dialog interaction button detection
-				if(textIsScrolling)
-				{
-	            }
-				else {
-					if(currentLine < talkLines.Length - 1)
-					{ 
-						//If the text is not scrolling and still lines to read
-						currentLine++;	//Go to next line
-						StartCoroutine("StartScrolling");	//Start scroll effect
-					}
-					else
-					{	
-
-					}
-	          	}
-			}
+//			if(Input.GetMouseButtonDown(0)) 
+//			{ 
+//				//Dialog interaction button detection
+//				if(textIsScrolling)
+//				{
+//	            }
+//				else {
+//					if(currentLine < talkLines.Length - 1)
+//					{ print("CLICLIC");
+//						//If the text is not scrolling and still lines to read
+//						currentLine++;	//Go to next line
+//						StartCoroutine("StartScrolling");	//Start scroll effect
+//					}
+//					else
+//					{	
+//
+//					}
+//	          	}
+//			}
 			
 		}
 		if (finishedTalking == true)
 		{
-
 			if(fullDialog[4]!="closeDialog" || arrayAnswers[0,8] == "" || arrayAnswers[0,8] == "0" ) 
 			{
 
@@ -135,9 +134,11 @@ public class DialogDisplayer : MonoBehaviour {
 				{
 
 					if(!playerSpeaking) {
-						InstantiateAnswers();
-						finishedTalking =false;
-						answersInitiated =true;
+						if(!talking) {
+							InstantiateAnswers();
+							finishedTalking =false;
+							answersInitiated =true;
+						}
 					}
 					else {
 						if(Input.GetMouseButtonDown(0)) {
@@ -169,23 +170,26 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		if(answersInitiated) 
 		{
-			if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
-			{
-				answer1TextGUI.text = answer1.choice_en;
-				answer2TextGUI.text = answer2.choice_en;
-				answer3TextGUI.text = answer3.choice_en;
-				answer4TextGUI.text = answer4.choice_en;
-				answer5TextGUI.text = answer5.choice_en;
-				answer6TextGUI.text = answer6.choice_en;
-			}
-			else
-			{
-				answer1TextGUI.text = answer1.choice_fr;
-				answer2TextGUI.text = answer2.choice_fr;
-				answer3TextGUI.text = answer3.choice_fr;
-				answer4TextGUI.text = answer4.choice_fr;
-				answer5TextGUI.text = answer5.choice_fr;
-				answer6TextGUI.text = answer6.choice_fr;
+			if(!textInserted) {
+				if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
+				{
+					answer1TextGUI.text = answer1.choice_en;
+					answer2TextGUI.text = answer2.choice_en;
+					answer3TextGUI.text = answer3.choice_en;
+					answer4TextGUI.text = answer4.choice_en;
+					answer5TextGUI.text = answer5.choice_en;
+					answer6TextGUI.text = answer6.choice_en;
+				}
+				else
+				{
+					answer1TextGUI.text = answer1.choice_fr;
+					answer2TextGUI.text = answer2.choice_fr;
+					answer3TextGUI.text = answer3.choice_fr;
+					answer4TextGUI.text = answer4.choice_fr;
+					answer5TextGUI.text = answer5.choice_fr;
+					answer6TextGUI.text = answer6.choice_fr;
+				}
+				textInserted = true;
 			}
 			if (answer1.triggered == true) displayPlayerAnswer(answer1,0);
 			if (answer2.triggered == true) displayPlayerAnswer(answer2,1);
@@ -249,6 +253,15 @@ public class DialogDisplayer : MonoBehaviour {
 	
 	private void displayPlayerAnswer(Answer displayedAnswer, int indexAnswer) 
 	{
+		if(!playerSpeaking) {
+		answer1.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer1.collider.enabled = false;answer1.enabled = false;
+		answer2.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer2.collider.enabled = false;answer2.enabled = false;
+		answer3.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer3.collider.enabled = false;answer3.enabled = false;
+		answer4.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer4.collider.enabled = false;answer4.enabled = false;
+		answer5.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer5.collider.enabled = false;answer5.enabled = false;
+		answer6.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer6.collider.enabled = false;answer6.enabled = false;
+		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = false;
+
 		if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
 		{
 			talkLines[0]= arrayAnswers[indexAnswer,8];
@@ -264,6 +277,7 @@ public class DialogDisplayer : MonoBehaviour {
 		finishedTalking = false;
 		startDialog();
 		playerSpeaking = true;
+		}
 		Debug.Log("ACTION " + displayedAnswer.action);
 	}
 
@@ -293,6 +307,7 @@ public class DialogDisplayer : MonoBehaviour {
 		if (answer4 == null) setAnswer(ref answer4, "Answer4",ref instance4,ref answer4TextGUI,3);
 		if (answer5 == null) setAnswer(ref answer5, "Answer5",ref instance5,ref answer5TextGUI,4);
 		if (answer6 == null) setAnswer(ref answer6, "Answer6",ref instance6,ref answer6TextGUI,5);
+		textInserted = false;
 	}
 	
 	private void setAnswer(ref Answer answerToSet, string path,ref GameObject instance,ref GUIText answerTextGUI, int indexAnswer) {
@@ -381,7 +396,7 @@ public class DialogDisplayer : MonoBehaviour {
 		getDialogContent();
 		DestroyAnswers();
 		answersInitiated = false;
-		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = true;
+//		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = true;
 		talking = true;
 		currentLine = 0;
 		StartCoroutine("StartScrolling");
