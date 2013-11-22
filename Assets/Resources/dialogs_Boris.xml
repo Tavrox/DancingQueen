@@ -4,19 +4,19 @@
       <fr Choice_fr="">Si c’est pour de la drogue, boire un verre ou faire
 crack crack, passe ton chemin !</fr>
       <en Choice_en="">If you're here for drugs, alcohol, or quick sex, walk away !</en>
-      <answer fullID="180011" ID_Dialog="18001" ID_Answer="1" ID_NextDialog="18002" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180011" ID_Dialog="18001" ID_Answer="1" ID_NextDialog="18002" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180011">
          <fr Choice_fr="Quelle agressivité !">Tu es agressif avec tout le monde comme ça ?</fr>
          <en Choice_en="Agressivity">Geez ! Are you always that agressive ?</en>
       </answer>
-      <answer fullID="180012" ID_Dialog="18001" ID_Answer="2" ID_NextDialog="18007" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180012" ID_Dialog="18001" ID_Answer="2" ID_NextDialog="18007" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180012">
          <fr Choice_fr="La drogue">Tu as un problème avec la drogue ?</fr>
          <en Choice_en="Drugs">You've got a problem with drugs ?</en>
       </answer>
-      <answer fullID="180013" ID_Dialog="18001" ID_Answer="3" ID_NextDialog="18015" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180013" ID_Dialog="18001" ID_Answer="3" ID_NextDialog="18015" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180013">
          <fr Choice_fr="L’alcool">L’alcool en soirée, c’est contre tes principes ?</fr>
          <en Choice_en="Alcohol">Drinking in a party, that's against your principles ?</en>
       </answer>
-      <answer fullID="180014" ID_Dialog="18001" ID_Answer="4" ID_NextDialog="18023" ID_Character="18" Sympathy_value="" Condition="BorisSympathy75" Action="" BanAnswer="">
+      <answer fullID="180014" ID_Dialog="18001" ID_Answer="4" ID_NextDialog="18023" ID_Character="18" Sympathy_value="" Condition="BorisSympathy75" Action="" BanAnswer="180014">
          <fr Choice_fr="Donner drogue">Voilà une drogue que j’ai récupéré auprès du dealer...</fr>
          <en Choice_en="Give drugs">Here some dope I managed to get from the dealer...</en>
       </answer>

@@ -7,11 +7,11 @@
          <fr Choice_fr="Parler de :">J’aimerais en savoir plus sur les gens de la soirée.</fr>
          <en Choice_en="Talk about">I'd like to know more about someone.</en>
       </answer>
-      <answer fullID="250012" ID_Dialog="25001" ID_Answer="2" ID_NextDialog="25007" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250012" ID_Dialog="25001" ID_Answer="2" ID_NextDialog="25007" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="250012">
          <fr Choice_fr="Musique">C’est quoi le programme musical de la soirée ?</fr>
          <en Choice_en="Music">What's the musical program for the night ?</en>
       </answer>
-      <answer fullID="250013" ID_Dialog="25001" ID_Answer="3" ID_NextDialog="25008" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250013" ID_Dialog="25001" ID_Answer="3" ID_NextDialog="25008" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="250013">
          <fr Choice_fr="DJ">Alors, c’est sympa de faire DJ pour ce genre de soirée ?</fr>
          <en Choice_en="DJ">So, it must be cool to DJ for this kind of party !</en>
       </answer>
@@ -19,7 +19,7 @@
          <fr Choice_fr="Changer de musique">Dis moi tu pourrais me mettre une musique ?</fr>
          <en Choice_en="Change music">Could you put on a song for me ?</en>
       </answer>
-      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="25015">
          <fr Choice_fr="Requête">... Tu as l'air pensif.</fr>
          <en Choice_en="Request">... You look pensive...</en>
       </answer>

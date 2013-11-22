@@ -5,13 +5,13 @@
 de s’intégrer dans notre petite communauté...</fr>
       <en Choice_en="">Hi ! I hope it's not to much of a pain to try to be accepted by 
 our little community...</en>
-      <answer fullID="120011" ID_Dialog="12001" ID_Answer="1" ID_NextDialog="12002" ID_Character="12" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="120011" ID_Dialog="12001" ID_Answer="1" ID_NextDialog="12002" ID_Character="12" Sympathy_value="10" Condition="basic" Action="" BanAnswer="120011">
          <fr Choice_fr="Passion">Tout à fait d’accord, être la nouvelle c’est jamais 
 facile. T’as une passion sinon ?</fr>
          <en Choice_en="Passion">Yeah, being the new girl around is never easy... What are 
 you into ?</en>
       </answer>
-      <answer fullID="120012" ID_Dialog="12001" ID_Answer="2" ID_NextDialog="12021" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="120012" ID_Dialog="12001" ID_Answer="2" ID_NextDialog="12021" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="120012">
          <fr Choice_fr="Associale">Ouais c’est pas si simple… C’est pas spécialement 
 dans ma nature. Mais bon il faut bien que je fasse 
 connaissance avec les gens du coin.</fr>
