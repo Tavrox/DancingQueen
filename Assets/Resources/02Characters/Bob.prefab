@@ -119,7 +119,10 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   dialDisabled: 0
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 =======
 >>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   whisperSound: 
@@ -127,7 +130,11 @@ MonoBehaviour:
   maxRandomVarWhispers: 11
   randomDelayMin: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   randomDelayMax: .200000003
+=======
+  randomDelayMax: .189999998
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 =======
   randomDelayMax: .189999998
 >>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061

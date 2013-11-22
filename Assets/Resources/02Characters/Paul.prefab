@@ -119,7 +119,10 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   dialDisabled: 0
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 =======
 >>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   whisperSound: 

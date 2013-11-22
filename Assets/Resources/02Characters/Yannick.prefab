@@ -110,9 +110,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   characterID: 
   charac: 19
   dialToTrigger: 
+=======
+  characterID: 06
+  charac: 10
+  dialToTrigger: 6001
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 =======
   characterID: 06
   charac: 10
@@ -124,8 +130,12 @@ MonoBehaviour:
   banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   color: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   tutoMode: 0
   dialDisabled: 0
+=======
+  tutoMode: 1
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
 =======
   tutoMode: 1
 >>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
@@ -134,9 +144,12 @@ MonoBehaviour:
   maxRandomVarWhispers: 0
   randomDelayMin: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   randomDelayMax: .00999999978
   frequencyWhispers: .5
 =======
+=======
+>>>>>>> 1195ea0c32027ab9bf8502cd5246bd8fceb7c061
   randomDelayMax: .5
   frequencyWhispers: 1.00999999
   hasSpokenOnceToPlayer: 0
