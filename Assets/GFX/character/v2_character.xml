@@ -316,10 +316,36 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
+            <key>vanessa_body_full.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{570,1148},{172,341}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{172,341}}</string>
+                <key>sourceSize</key>
+                <string>{172,341}</string>
+            </dict>
+            <key>vanessa_dancing.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{745,1148},{300,500}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,500}}</string>
+                <key>sourceSize</key>
+                <string>{300,500}</string>
+            </dict>
             <key>yannick_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{570,1148},{261,337}}</string>
+                <string>{{1048,1148},{261,337}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -339,7 +365,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d95017241dc98db4c5dc68a90013e8be:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:71a569c5be37c772619e87dbb8b61e4c:1/1$</string>
             <key>textureFileName</key>
             <string>v2_character.png</string>
         </dict>

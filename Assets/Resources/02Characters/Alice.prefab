@@ -8,11 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 65: {fileID: 6500000}
+  - 33: {fileID: 3300000}
+  - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: Christine
-  m_TagString: Christine
+  m_Layer: 8
+  m_Name: characSprite-19
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,12 +26,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  - 33: {fileID: 3300000}
-  - 23: {fileID: 2300000}
+  - 65: {fileID: 6500000}
   - 114: {fileID: 11400002}
-  m_Layer: 8
-  m_Name: characSprite-7
-  m_TagString: Character
+  m_Layer: 0
+  m_Name: Alice
+  m_TagString: Alex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,11 +42,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.950691223, y: -.470510989, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 400002}
-  m_Father: {fileID: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 7.00000095, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -54,16 +53,17 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.00000048, y: 7.00000095, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400000}
+  m_LocalPosition: {x: -5.56568432, y: -.470510989, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400000}
+  m_Father: {fileID: 0}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,14 +84,14 @@ MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 0}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 0
@@ -106,39 +106,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8557ba357792545994dcc378afe4a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterID: 17
-  charac: 14
-  dialToTrigger: 0000
-  sympathy_score: 0
-  triggeredUltimate: 0
-  voteForPlayer: 0
-  banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  tutoMode: 0
-  dialDisabled: 0
-  whisperSound: 
-  minRandomVarWhispers: 0
-  maxRandomVarWhispers: 33
-  randomDelayMin: 0
-  randomDelayMax: .00999999978
-  frequencyWhispers: .209999993
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: characSprite-7
+  _name: characSprite-19
   _position: {x: 0, y: 0}
-  _size: {x: 5.00000048, y: 7.00000095}
+  _size: {x: 5, y: 7.00000095}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -160,8 +133,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: characSprite
-  oSize: {x: 6.25, y: 10.416667}
-  imageSize: {x: 5.00000048, y: 7.00000095}
+  oSize: {x: 8.33333397, y: 12.5}
+  imageSize: {x: 5, y: 7.00000095}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -173,11 +146,38 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: CharlieBody
+  _frameIndex: 1
+  _frameName: alex_body
   _spriteContainer: {fileID: 0}
   _containerName: character
   _newSprite: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c29c139cc0c8b4092b642b78122d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterID: 16
+  charac: 22
+  dialToTrigger: 0000
+  sympathy_score: 0
+  triggeredUltimate: 0
+  voteForPlayer: 0
+  banAnswers: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  tutoMode: 0
+  dialDisabled: 0
+  whisperSound: 
+  minRandomVarWhispers: 0
+  maxRandomVarWhispers: 26
+  randomDelayMin: 0
+  randomDelayMax: .219999999
+  frequencyWhispers: .209999993
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -187,6 +187,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 100000}
+  m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
   m_IsExploded: 1

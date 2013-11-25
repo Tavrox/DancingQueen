@@ -6,11 +6,6 @@ public class LevelManager : MonoBehaviour {
 	public OTSprite background;
 	[SerializeField] private Player player;
 	public static CharSim currentCharacterSpeaking;
-	
-	public bool thomasBattle = false;
-	public bool chloeToilets = false;
-	public bool vanessaSad = false;
-	public bool raphaelSingle = false;
 	public bool gameWon = false;
 	public bool canGoToVIP = false;
 	
@@ -99,28 +94,6 @@ public class LevelManager : MonoBehaviour {
 	void Update () 
 	{
 		setCharacGO("");
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			raphaelSingle = true;
-			if (raphaelSingle == true)
-			{
-				GameObject obj = GameObject.Find("Boris");
-				Destroy(obj);
-
-			}
-		}
-		if (Input.GetKeyDown(KeyCode.B))
-		{
-			fadeToWhite();
-		}
-		if (Input.GetKeyDown(KeyCode.C))
-		{
-			fadeToBlack();
-		}
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			Debug.Log(_Yannick.GetComponent<Yannick>().sympathy_score);
-		}
 		string MinutesTransfo;
 		if (Minutes < 10)
 		{
@@ -226,10 +199,10 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				if (GO.casseCouilleS3 == false && GO.gotPlayerInVIP == false  && GO.casseCouilleS3 == true)
+				if (GO.casseCouilleS3 == false && GO.gotPlayerInVIP == false  && GO.casseCouilleS2 == true)
 				{
 					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO);
+					DialogUI.createDialog(GO, "11011");
 					GO.casseCouilleS3 = true;
 				}
 				
@@ -479,7 +452,6 @@ public class LevelManager : MonoBehaviour {
 
 				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
 				{
-					_Vanessa.transform.position = new Vector3(-2.350567f, 0.5271564f,0);
 					unhideChar("Vanessa");
 				}
 				if (_Thomas.GetComponent<Thomas>().isBattleDance == true)
@@ -518,6 +490,8 @@ public class LevelManager : MonoBehaviour {
 					_Thomas.GetComponentInChildren<OTSprite>().frameName = "thomas_fullbar";
 					_Thomas.transform.position = new Vector3(-2.060373f, 0.8314278f, 3f);
 					_Thomas.transform.localScale = new Vector3(0.4477435f, 0.4477435f, 0.4477435f);
+					_Thomas.GetComponent<BoxCollider>().center = new Vector3 (0f, 1.31f, 0f);
+					_Thomas.GetComponent<BoxCollider>().size = new Vector3(6.2f, 13.82f, 20f);
 					unhideChar("Thomas");
                 }
 
@@ -531,19 +505,20 @@ public class LevelManager : MonoBehaviour {
 				hideChar("Thomas");
 				hideChar("Didier");
 				hideChar("Manon");
+				if (_Vanessa.GetComponent<Vanessa>().isSad == false)
+				{
+					hideChar("Vanessa");
+				}
+			hideChar("Vanessa");
 
 				unhideChar("Boris");
 				unhideChar("Paul");
 				unhideChar("Charlie");
-			
-			if (_Raphael.GetComponent<Raphael>().coupleClaire == true)
-				{
-
-				}
 				break;
 			}
 			case (levelList.VIP) :
 			{
+				setCharacGO("");
 			
 				hideChar("Raphael");
 				hideChar("Bastien");
@@ -672,6 +647,7 @@ public class LevelManager : MonoBehaviour {
 				musicToPlay = "SlowVIP";
 			}
 		}
+		Debug.Log("Playing music :" + musicToPlay);
 		MasterAudio.TriggerPlaylistClip(musicToPlay);
 		
 	}
@@ -731,8 +707,78 @@ public class LevelManager : MonoBehaviour {
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = true;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
 		}
+	}
+	public void launchDialogBoys()
+	{
+		if (DialogUI.exists != true)
+		{
+			StartCoroutine(WaitDialogBoris(1f));
+		}
+	}
+	public void launchDialogVanessa()
+	{
+		if (DialogUI.exists != true)
+		{
+			StartCoroutine(WaitDialogChloe(1f));
+		}
 
 	}
+	public void launchDialogVanessaMusic()
+	{
+		if (DialogUI.exists != true)
+		{
+			StartCoroutine(WaitDialogVanessaMusic(1f));
+		}
+
+	}
+	public void launchDialogChloe()
+	{
+		if (DialogUI.exists != true)
+		{
+			StartCoroutine(WaitDialogChloe(1f));
+		}
+
+	}
+	public void launchDialogClaireMusic()
+	{
+		if (DialogUI.exists != true)
+		{
+			StartCoroutine(WaitDialogClaireMusic(1f));
+		}
+	}
+	IEnumerator WaitDialogBoris(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		print ("Entered CoRoutine");
+		Boys _boys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
+		_boys.TriggerDialog();
+	}
+	IEnumerator WaitDialogChloe(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+		_girls.TriggerDialogChloe();
+	}
+	IEnumerator WaitDialogVanessa(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+		_girls.TriggerDialogVanessa();
+	}
+	//
+	IEnumerator WaitDialogClaireMusic(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		Claire _claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
+		_claire.TriggerDialogClaireMusic();
+	}
+	IEnumerator WaitDialogVanessaMusic(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		Vanessa _vanessa = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+		_vanessa.TriggerDialogVanessa();
+	}
+
 	private void hideItem(string gameo)
 	{
 		GameObject.Find(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = false;

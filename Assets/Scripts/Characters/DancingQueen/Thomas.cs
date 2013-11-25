@@ -5,9 +5,6 @@ public class Thomas : CharSim
 {
 	public bool isBattleDance = false;
 	public bool hasTalkedThomas = false;
-	
-	public void GiveBeer()
-	{
-		
-	}
+	public bool knowThomasPreferences = false;
+
 }

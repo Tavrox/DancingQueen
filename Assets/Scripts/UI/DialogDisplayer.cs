@@ -74,7 +74,7 @@ public class DialogDisplayer : MonoBehaviour {
 			
 		//Create a new XML document out of the loaded data
 		XmlDocument xmlDoc = new XmlDocument();
-		                                  xmlDoc.LoadXml(textAsset.text);
+		xmlDoc.LoadXml(textAsset.text);
 			
 			//Point to the book nodes and process them
 			dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
@@ -83,9 +83,7 @@ public class DialogDisplayer : MonoBehaviour {
 
 		InvokeRepeating("playWhispers", UnityEngine.Random.Range(currentChar.randomDelayMin,currentChar.randomDelayMax) , currentChar.frequencyWhispers);
 		startDialog();//StartCoroutine( Wait(delayStart) );
-		
-		GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
-		speaking.text = currentChar.name;
+
 		
 		OTSprite otherFace = GameObject.Find("otherFaceSpriteDialog").GetComponent<OTSprite>();
 		otherFace.frameName = currentChar.getCharFrame(currentChar.charac);
@@ -104,10 +102,12 @@ public class DialogDisplayer : MonoBehaviour {
 				_BgDialogPNJ.renderer.enabled = false;
 				_BgDialogPlayer.renderer.enabled = true;
 			}
-			else {
+			else 
+			{
 				_BgDialogPNJ.renderer.enabled = true;
 				_BgDialogPlayer.renderer.enabled = false;
 			}
+
 //			if(Input.GetMouseButtonDown(0)) 
 //			{ 
 //				//Dialog interaction button detection
@@ -221,6 +221,7 @@ public class DialogDisplayer : MonoBehaviour {
 				arrayAnswers = new string[8,11];
 				
 				fullDialog[0] = node.Attributes.GetNamedItem("fullID").Value;
+				print ("ID" + node.Attributes.GetNamedItem("ID_Character").Value);
 				fullDialog[1] = node.Attributes.GetNamedItem("ID_Character").Value;
 				fullDialog[2] = node.Attributes.GetNamedItem("Sympathy_value").Value;
 				fullDialog[3] = node.Attributes.GetNamedItem("Condition").Value;
@@ -247,7 +248,9 @@ public class DialogDisplayer : MonoBehaviour {
 				dialToDisplay = firstDialog;
 				talkLines = dialToDisplay.dialLines;
 
-
+				GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
+				string pickCharacter = returnCharacName(fullDialog[1]).ToString();
+				speaking.text = pickCharacter;
 
 				if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
 				{
@@ -258,6 +261,10 @@ public class DialogDisplayer : MonoBehaviour {
 					talkLines[0]=fullDialog[6];
 				}
 				break;
+			}
+			else
+			{
+//				Debug.Log("No dialog has been found");
 			}
 		}
 	}
@@ -407,7 +414,6 @@ public class DialogDisplayer : MonoBehaviour {
 		getDialogContent();
 		DestroyAnswers();
 		answersInitiated = false;
-//		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = true;
 		talking = true;
 		currentLine = 0;
 		StartCoroutine("StartScrolling");
@@ -466,19 +472,6 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			break;
 		}
-		case ("bastienMusic") :
-		{
-			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
-			if ( charac.missionDidierDone == true )
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-			break;
-		}
 		case ("Sympathy_value_Chloe50") :
 		{
 			Chloe charac = GameObject.FindGameObjectWithTag("Chloe").GetComponent<Chloe>();
@@ -496,6 +489,45 @@ public class DialogDisplayer : MonoBehaviour {
 		{
 			Thomas charac = GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
 			if (charac.isBattleDance == false)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("claireMusic") :
+		{
+			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
+			if (charac.canPutSlow == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("vanessaMusic") :
+		{
+			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
+			if (charac.canPutCountry == true)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("bastienMusic") :
+		{
+			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
+			if (charac.canPutElectro == true)
 			{
 				return true;
 			}
@@ -547,7 +579,8 @@ public class DialogDisplayer : MonoBehaviour {
 		case ("BorisSympathy75") :
 		{
 			Boris charac = GameObject.FindGameObjectWithTag("Boris").GetComponent<Boris>();
-			if (charac.sympathy_score > 75)
+			PlayerSim player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+			if (charac.sympathy_score > 75 && player.numberDrugs > 0 )
 			{
 				return true;
 			}
@@ -698,6 +731,13 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("knowsThomasPreferences") :
+			{
+				go = getCharacGO("Charlie");
+				go.GetComponent<Thomas>().knowThomasPreferences = true;
+				break;
+			}
+
 			case ("closeDialogBanCharlie") :
 			{
 				killAtferDisplay = true;
@@ -715,6 +755,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Bastien");
 				go.GetComponent<Bastien>().refusedMission = true; 
+				go.GetComponent<Bastien>().dialDisabled = true; 
 				killAtferDisplay = true;
 				break;
 			}
@@ -764,9 +805,21 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("closeDialogDisableVanessa") :
+			{
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
+				killAtferDisplay = true;
+				break;
+			}
 			case ("changeMusicCountry") :
 			{
 				lvManager.setMusic(LevelManager.MusicList.Country, LevelManager.levelList.Dancefloor);
+				GameObject _Vanessa = getCharacGO("Vanessa");
+				_Vanessa.transform.position = new Vector3(1.52f, -1.87f,0);
+				_Vanessa.transform.localScale = new Vector3(0.5630698f, 0.5630698f,0.5630698f);
+				_Vanessa.GetComponentInChildren<OTSprite>().frameName = "vanessa_dancing";
+				print (_Vanessa.GetComponentInChildren<OTSprite>().frameName);
 				killAtferDisplay = true;
 				break;
 			}
@@ -774,8 +827,6 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Didier");
 				go.GetComponent<Didier>().hasPutSlow = true;
-				go = getCharacGO("Vanessa");
-				go.GetComponent<Vanessa>().dialToTrigger = "7009";
 				lvManager.setMusic(LevelManager.MusicList.Slow, LevelManager.levelList.Dancefloor);
 				killAtferDisplay = true;
 				break;
@@ -845,12 +896,14 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Didier");
 				go.GetComponent<Didier>().missionDidierDone = true;
+				go.GetComponent<Didier>().canPutElectro = true;
 				break;
 			}
 			case ("playerSeeBob") :
 			{
 				go = getCharacGO("Bob");
 				go.GetComponent<Bob>().unlocked = true;
+				killAtferDisplay = true;
 				break;
 			}
 			case ("playerGoVIP") :
@@ -877,9 +930,14 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			case ("dialogGroupGuys") :
 			{
-				killAtferDisplay = true;
-				Boys gameoboys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
-				gameoboys.TriggerDialog();
+				print ("Triggered Coroutine");
+				PlayerSim _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+				_player.numberDrugs -= 1;
+			lvManager.launchDialogBoys();
+				DialogUI.destroyDialog();
+
+				
+				
 				break;
 			}
 			case ("looseDestroyBob") :
@@ -1019,7 +1077,7 @@ public class DialogDisplayer : MonoBehaviour {
 		{
 			if (textIsScrolling)
 			{
-				currentChar.playWhispers();
+				currentChar.playWhispers(fullDialog[1], returnCharacName(fullDialog[1]).ToString());
 			}
 		}
 		if(playerSpeaking == true) 
@@ -1065,6 +1123,12 @@ public class DialogDisplayer : MonoBehaviour {
 			go.GetComponent<Yannick>().sympathy_score += value;
 			break;
 		}
+		case ("25"):
+		{
+			go = getCharacGO("Didier");
+			go.GetComponent<Didier>().sympathy_score += value;
+			break;
+		}
 		case ("07"):
 		{
 			go = getCharacGO("Vanessa");
@@ -1073,14 +1137,14 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("05"):
 		{
-			go = getCharacGO("Boris");
-			go.GetComponent<Boris>().sympathy_score += value;
+			go = getCharacGO("Bob");
+			go.GetComponent<Bob>().sympathy_score += value;
 			break;
 		}
 		case ("18"):
 		{
-			go = getCharacGO("Bob");
-			go.GetComponent<Bob>().sympathy_score += value;
+			go = getCharacGO("Boris");
+			go.GetComponent<Boris>().sympathy_score += value;
 			break;
 		}
 		case ("11"):
@@ -1097,8 +1161,8 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("19"):
 		{
-//			go = getCharacGO("Jeremie");
-//			go.GetComponent<Jeremie>().sympathy_score += value;
+			go = getCharacGO("Charlie");
+			go.GetComponent<Charlie>().sympathy_score += value;
 			break;
 		}
 		case ("09"):
@@ -1117,14 +1181,14 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("15"):
 		{
-//			go = getCharacGO("Stephane");
-//			go.GetComponent<Stephane>().sympathy_score += value;
+			go = getCharacGO("Stephane");
+			go.GetComponent<Stephane>().sympathy_score += value;
 			break;
 		}
 		case ("17"):
 		{
-//			go = getCharacGO("Alice");
-//			go.GetComponent<Alice>().sympathy_score += value;
+			go = getCharacGO("Alice");
+			go.GetComponent<Alice>().sympathy_score += value;
 			break;
 		}
 		case ("14"):
@@ -1170,7 +1234,7 @@ public class DialogDisplayer : MonoBehaviour {
 		
 	}
 
-	private CharSim getCharac(string characID)
+	private CharSim.charList returnCharacName(string characID)
 	{
 		CharSim gameo = getCharacGO("Yannick").GetComponent<Yannick>();;
 		switch (characID)
@@ -1181,6 +1245,11 @@ public class DialogDisplayer : MonoBehaviour {
 			gameo = getCharacGO("Yannick").GetComponent<Yannick>();
 			break;
 		}
+		case ("25"):
+		{
+			gameo = getCharacGO("Didier").GetComponent<Didier>();
+			break;
+		}
 		case ("07"):
 		{
 			gameo = getCharacGO("Vanessa").GetComponent<Vanessa>();
@@ -1188,12 +1257,12 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("05"):
 		{
-			gameo = getCharacGO("Boris").GetComponent<Boris>();
+			gameo = getCharacGO("Bob").GetComponent<Bob>();
 			break;
 		}
 		case ("18"):
 		{
-			gameo = getCharacGO("Bob").GetComponent<Bob>();
+			gameo = getCharacGO("Boris").GetComponent<Boris>();
 			break;
 		}
 		case ("11"):
@@ -1208,7 +1277,7 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("19"):
 		{
-			gameo = getCharacGO("Jeremie").GetComponent<Jeremie>();
+			gameo = getCharacGO("Charlie").GetComponent<Charlie>();
 			break;
 		}
 		case ("09"):
@@ -1228,7 +1297,7 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		case ("17"):
 		{
-			gameo = getCharacGO("Alice").GetComponent<Alice>();
+			gameo = getCharacGO("Christine").GetComponent<Christine>();
 			break;
 		}
 		case ("14"):
@@ -1254,11 +1323,32 @@ public class DialogDisplayer : MonoBehaviour {
 			gameo = getCharacGO("Kara").GetComponent<Kara>();
 			break;
 		}
+		case ("03"):
+		{
+			gameo = getCharacGO("Boys").GetComponent<Boys>();
+			break;
+		}
+		case ("23"):
+		{
+			gameo = getCharacGO("Jeremie").GetComponent<Jeremie>();
+			break;
+		}
+		case ("20"):
+		{
+			gameo = getCharacGO("Dominique").GetComponent<Dominique>();
+			break;
+		}
+		case ("16"):
+		{
+			gameo = getCharacGO("Alice").GetComponent<Alice>();
+			break;
+		}
 
 		}
-		return gameo;
-		
+		return gameo.charac;
 	}
+
+
 
 	public void GameDialog()
 	{	

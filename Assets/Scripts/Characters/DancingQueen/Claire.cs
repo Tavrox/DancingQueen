@@ -7,8 +7,12 @@ public class Claire : CharSim
 	public bool talkedAboutKissing = false;
 	public bool talkedAboutSlow = false;
 
-	public void GiveBeer()
+	public void TriggerDialogClaireMusic()
 	{
-		
+		if (DialogUI.exists != true)
+		{
+			DialogUI.createDialog(this, "14010");
+			IngameUI.destroyIngameUI();
+		}
 	}
 }

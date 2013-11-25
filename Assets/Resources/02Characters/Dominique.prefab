@@ -11,8 +11,8 @@ GameObject:
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Christine
-  m_TagString: Christine
+  m_Name: Dominique
+  m_TagString: Dominique
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   m_Layer: 8
-  m_Name: characSprite-7
+  m_Name: characSprite-15
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.950691223, y: -.470510989, z: 0}
+  m_LocalPosition: {x: -12.6797466, y: -4.75309229, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.00000048, y: 7.00000095, z: 1}
+  m_LocalScale: {x: 2.92207623, y: 4.05954027, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -106,25 +106,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8557ba357792545994dcc378afe4a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 84b58cfbc6fd9ab41a6402be2728654e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: 17
-  charac: 14
+  characterID: 20
+  charac: 20
   dialToTrigger: 0000
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
-  banAnswers: 
+  banAnswers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   color: {r: 0, g: 0, b: 0, a: 0}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 33
+  maxRandomVarWhispers: 6
   randomDelayMin: 0
   randomDelayMax: .00999999978
-  frequencyWhispers: .209999993
+  frequencyWhispers: .5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: characSprite-7
+  _name: characSprite-15
   _position: {x: 0, y: 0}
-  _size: {x: 5.00000048, y: 7.00000095}
+  _size: {x: 2.92207623, y: 4.05954027}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 6.25, y: 10.416667}
-  imageSize: {x: 5.00000048, y: 7.00000095}
+  imageSize: {x: 2.92207623, y: 4.05954027}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0

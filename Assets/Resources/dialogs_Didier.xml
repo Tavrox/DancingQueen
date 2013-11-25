@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
-   <dialog fullID="25001" ID_Dialog="25001" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+<dialog fullID="25001" ID_Dialog="25001" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Salut !</fr>
       <en Choice_en="">Hi !</en>
       <answer fullID="250011" ID_Dialog="25001" ID_Answer="1" ID_NextDialog="25002" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -19,11 +19,7 @@
          <fr Choice_fr="Changer de musique">Dis moi tu pourrais me mettre une musique ?</fr>
          <en Choice_en="Change music">Could you put on a song for me ?</en>
       </answer>
-<<<<<<< HEAD
       <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="250015">
-=======
-      <answer fullID="250015" ID_Dialog="25001" ID_Answer="5" ID_NextDialog="25012" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="25015">
->>>>>>> c1cd9511701cde0aa2ed982660b579a2fe722718
          <fr Choice_fr="Requête">... Tu as l'air pensif.</fr>
          <en Choice_en="Request">... You look pensive...</en>
       </answer>
@@ -31,19 +27,19 @@
    <dialog fullID="25002" ID_Dialog="25002" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, de qui ?</fr>
       <en Choice_en="">Yes ? Who ?</en>
-      <answer fullID="250021" ID_Dialog="25002" ID_Answer="1" ID_NextDialog="25003" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250021" ID_Dialog="25002" ID_Answer="1" ID_NextDialog="25003" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Le coq">Le jeune coq qui fait le malin sur la piste de danse.</fr>
          <en Choice_en="The cock">The young cock boasting on the dancefloor.</en>
       </answer>
-      <answer fullID="250022" ID_Dialog="25002" ID_Answer="2" ID_NextDialog="25004" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250022" ID_Dialog="25002" ID_Answer="2" ID_NextDialog="25004" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Le chien">Le chien qui danse avec tout le monde.</fr>
          <en Choice_en="The dog">The dog dancing with everyone.</en>
       </answer>
-      <answer fullID="250023" ID_Dialog="25002" ID_Answer="3" ID_NextDialog="25005" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250023" ID_Dialog="25002" ID_Answer="3" ID_NextDialog="25005" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="La grenouille">La grenouille complètement droguée</fr>
          <en Choice_en="The frog">The frog who seems to be stoned off her ass.</en>
       </answer>
-      <answer fullID="250024" ID_Dialog="25002" ID_Answer="4" ID_NextDialog="25006" ID_Character="25" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250024" ID_Dialog="25002" ID_Answer="4" ID_NextDialog="25006" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Le chat">Le chat qui se marre tout seul.</fr>
          <en Choice_en="The cat">The cat laughing alone..</en>
       </answer>

@@ -3,17 +3,6 @@ using System.Collections;
 
 public class Girls : CharSim 
 {
-
-	void Start()
-	{
-
-	}
-
-	public void Update()
-	{
-
-	}
-
 	public void TriggerDialogVanessa()
 	{
 		if (DialogUI.exists != true)

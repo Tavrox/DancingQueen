@@ -28,7 +28,10 @@ public class CharSim : MonoBehaviour {
 		Raphael,	// ID 13
 		Kara,		// ID 04
 		Girls,	// ID 01
-		Boys		// ID 03
+		Boys,		// ID 03
+		Dominique,		// ID 20
+		Jeremie,		// ID 23
+		Alice		// ID XX
 	};
 	public string characterID;
 	public charList charac;
@@ -123,7 +126,7 @@ public class CharSim : MonoBehaviour {
 		return charList.Vanessa;
 	}
 		
-	public void playWhispers()
+	public void playWhispers(string characID, string charName)
 	{
 		int rand = Random.Range(minRandomVarWhispers,maxRandomVarWhispers);
 		string transfRand;
@@ -135,7 +138,7 @@ public class CharSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_" + transfRand);
+		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characID + "_" + charName + "_" + transfRand);
 
 	}
 

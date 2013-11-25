@@ -42,7 +42,7 @@
 		</answer>
 		<answer fullID="110032" ID_Dialog="11003" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
 			<fr Choice_fr="S’en aller">C’est bon, je me casse.</fr>
-			<en Choice_en="Leave">Right. I&apos;m outta here.</en>
+			<en Choice_en="Leave">Right. I'm outta here.</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11004" ID_Dialog="11004" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -134,20 +134,24 @@
 		</answer>
 	</dialog>
 	<dialog fullID="11010" ID_Dialog="11010" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-		<fr Choice_fr="">J’ai passé ma soirée dans mon coin VIP au chaud, ça te dit de venir ?</fr>
-		<en Choice_en="">I spend the evening nice and comfy in the VIP room... Wanna check it out ?</en>
+		<fr Choice_fr="">J’ai passé ma soirée dans mon coin VIP au chaud,
+ça te dit de venir ?</fr>
+		<en Choice_en="">I spend the evening nice and comfy in the VIP room... 
+Wanna check it out ?</en>
 		<answer fullID="110101" ID_Dialog="11010" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerGoVIP" BanAnswer="">
 			<fr Choice_fr="Accepter">Si ça peut te faire plaisir, allons-y.</fr>
 			<en Choice_en="">If it&apos;ll make you happy, why not ?</en>
 		</answer>
 		<answer fullID="110102" ID_Dialog="11010" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
-			<fr Choice_fr="S’en aller">C’est bon, j’aurais du m’en douter je me tire, espèce de branleur</fr>
+			<fr Choice_fr="S’en aller">C’est bon, j’aurais du m’en douter je me tire
+espèce de branleur</fr>
 			<en Choice_en="">I should have known... I&apos;m outta here, you stupid jerk !</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11011" ID_Dialog="11011" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
 		<fr Choice_fr="">Je sais que t’as envie d’être la reine de la soirée… j’ai un moyen de t’aider très efficace.</fr>
-		<en Choice_en="">I know you wanna be queen of the party. I&apos;ve got a great way to help you.</en>
+		<en Choice_en="">I know you wanna be queen of the party. I&apos;ve got a 
+great way to help you.</en>
 		<answer fullID="110111" ID_Dialog="11011" ID_Answer="1" ID_NextDialog="11012" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Curieux">Ah ouais… qu’est-ce que t’as à me proposer ?</fr>
 			<en Choice_en="Curious">Oh yeah ? What&apos;s that ?</en>
@@ -163,14 +167,15 @@
 	</dialog>
 	<dialog fullID="11012" ID_Dialog="11012" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
 		<fr Choice_fr="">Mon père est très influent… il t’attend dans la salle VIP je lui ai parlé de toi.</fr>
-		<en Choice_en="">My father&apos;s very powerful around here... He&apos;s waiting for you in the VIP room, I told him about you.</en>
+		<en Choice_en="">My father&apos;s very powerful around here... 
+He&apos;s waiting for you in the VIP room, I told him about you.</en>
 		<answer fullID="110121" ID_Dialog="11012" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerSeeBob" BanAnswer="">
 			<fr Choice_fr="Accepter">Allons-y, je suis curieuse de savoir ce qu’il se trame.</fr>
-			<en Choice_en="">Okay, let&apos;s go. I&apos;m curious to hear what he has to say.</en>
+			<en Choice_en="Agree">Okay, let&apos;s go. I&apos;m curious to hear what he has to say.</en>
 		</answer>
 		<answer fullID="110122" ID_Dialog="11012" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
 			<fr Choice_fr="S’en aller ">Non c’est bon, ça ira. Je m’en vais.</fr>
-			<en Choice_en="">Thanks, but no thanks. I&apos;m out !</en>
+			<en Choice_en="Leave">Thanks, but no thanks. I&apos;m out !</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11013" ID_Dialog="11013" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -178,11 +183,11 @@
 		<en Choice_en="">Come listen to my father&apos;s proposition. You&apos;ve got nothing to lose !</en>
 		<answer fullID="110131" ID_Dialog="11013" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerSeeBob" BanAnswer="">
 			<fr Choice_fr="Accepter">Allons-y, je suis curieuse de savoir ce qu’il se trame.</fr>
-			<en Choice_en="">Okay, let's go. I'm curious to see what's going on here.</en>
+			<en Choice_en="Agree">Okay, let's go. I'm curious to see what's going on here.</en>
 		</answer>
 		<answer fullID="110132" ID_Dialog="11013" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
 			<fr Choice_fr="S’en aller ">Non c’est bon, ça ira. Je m’en vais.</fr>
-			<en Choice_en="">Thanks, but no thanks. Kara out !</en>
+			<en Choice_en="Leave">Thanks, but no thanks. Kara out !</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11014" ID_Dialog="11014" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

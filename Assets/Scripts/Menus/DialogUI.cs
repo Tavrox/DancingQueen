@@ -75,13 +75,6 @@ public class DialogUI : MonoBehaviour {
 			Destroy(target[i]);
 			exists = false;
 		}
-		target = GameObject.FindGameObjectsWithTag("DialogDisplayer");
-		for (var i = 0; i < target.Length ; i++)
-		{
-			Destroy(target[i]);
-			exists = false;
-		}
-		GameEventManager.TriggerGameUnpause();
 	}
 	public static void createDialog(CharSim _chosenChar, string _DialToTrigger = null)
 	{
