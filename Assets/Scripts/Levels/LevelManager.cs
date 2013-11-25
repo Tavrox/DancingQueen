@@ -8,6 +8,11 @@ public class LevelManager : MonoBehaviour {
 	public static CharSim currentCharacterSpeaking;
 	public bool gameWon = false;
 	public bool canGoToVIP = false;
+	public bool triggerDialogVanessaGroup;
+	public bool triggerDialogGuys;
+	public bool triggerDialogVanessaMusic;
+	public bool triggerDialogClaireSlow;
+	public bool triggerDialogChloe;
 	
 	private GameObject _Alex;
 	private GameObject _Anais;
@@ -114,6 +119,7 @@ public class LevelManager : MonoBehaviour {
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
 		checkTimer();
 		checkClaireState();
+		checkDialogs();
 	}
 
 	void updateTimer()
@@ -355,6 +361,39 @@ public class LevelManager : MonoBehaviour {
 		{
 			Debug.LogError("Erreur dans la matrice : retour de background");
 			return (backBarFrame);
+		}
+	}
+	private void checkDialogs()
+	{
+		if (triggerDialogClaireSlow == true)
+		{
+			Claire _claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
+			_claire.TriggerDialogClaireMusic();
+			triggerDialogClaireSlow = false;
+		}
+		if (triggerDialogChloe == true)
+		{
+			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+			_girls.TriggerDialogChloe();
+			triggerDialogChloe = false;
+		}
+		if (triggerDialogGuys == true)
+		{
+			Boys _boys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
+			_boys.TriggerDialog();
+			triggerDialogGuys = false;
+		}
+		if (triggerDialogVanessaMusic == true)
+		{
+			Vanessa _vanessa = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+			_vanessa.TriggerDialogVanessa();
+			triggerDialogVanessaMusic = false;
+		}
+		if (triggerDialogVanessaGroup == true)
+		{
+			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+			_girls.TriggerDialogVanessa();
+			triggerDialogVanessaGroup = false;
 		}
 	}
 
@@ -707,76 +746,6 @@ public class LevelManager : MonoBehaviour {
 			GameObject.FindGameObjectWithTag(gameo).GetComponent<CharSim>().collider.enabled = true;
 			GameObject.FindGameObjectWithTag(gameo).GetComponentInChildren<OTSprite>().renderer.enabled = true;
 		}
-	}
-	public void launchDialogBoys()
-	{
-		if (DialogUI.exists != true)
-		{
-			StartCoroutine(WaitDialogBoris(1f));
-		}
-	}
-	public void launchDialogVanessa()
-	{
-		if (DialogUI.exists != true)
-		{
-			StartCoroutine(WaitDialogChloe(1f));
-		}
-
-	}
-	public void launchDialogVanessaMusic()
-	{
-		if (DialogUI.exists != true)
-		{
-			StartCoroutine(WaitDialogVanessaMusic(1f));
-		}
-
-	}
-	public void launchDialogChloe()
-	{
-		if (DialogUI.exists != true)
-		{
-			StartCoroutine(WaitDialogChloe(1f));
-		}
-
-	}
-	public void launchDialogClaireMusic()
-	{
-		if (DialogUI.exists != true)
-		{
-			StartCoroutine(WaitDialogClaireMusic(1f));
-		}
-	}
-	IEnumerator WaitDialogBoris(float waitTime)
-	{
-		yield return new WaitForSeconds(waitTime);
-		print ("Entered CoRoutine");
-		Boys _boys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
-		_boys.TriggerDialog();
-	}
-	IEnumerator WaitDialogChloe(float waitTime)
-	{
-		yield return new WaitForSeconds(waitTime);
-		Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-		_girls.TriggerDialogChloe();
-	}
-	IEnumerator WaitDialogVanessa(float waitTime)
-	{
-		yield return new WaitForSeconds(waitTime);
-		Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-		_girls.TriggerDialogVanessa();
-	}
-	//
-	IEnumerator WaitDialogClaireMusic(float waitTime)
-	{
-		yield return new WaitForSeconds(waitTime);
-		Claire _claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
-		_claire.TriggerDialogClaireMusic();
-	}
-	IEnumerator WaitDialogVanessaMusic(float waitTime)
-	{
-		yield return new WaitForSeconds(waitTime);
-		Vanessa _vanessa = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
-		_vanessa.TriggerDialogVanessa();
 	}
 
 	private void hideItem(string gameo)

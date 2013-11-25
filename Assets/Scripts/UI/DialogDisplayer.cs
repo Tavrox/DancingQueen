@@ -871,9 +871,9 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			case ("closeDialogunlockVanessaDance"):
 			{
-				go = getCharacGO("Vanessa");
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().canPutCountry = true;
 				disableChar("Charlie");
-				go.GetComponent<Vanessa>().knowsDance = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -923,21 +923,16 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			case ("closeDialogTriggerGroupMeuf") :
 			{
-				Girls gameoGirls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-				gameoGirls.TriggerDialogVanessa();
-				killAtferDisplay = true;
+				lvManager.triggerDialogVanessaGroup = true;
+				DialogUI.destroyDialog();
 				break;
 			}
 			case ("dialogGroupGuys") :
 			{
-				print ("Triggered Coroutine");
 				PlayerSim _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
 				_player.numberDrugs -= 1;
-			lvManager.launchDialogBoys();
+				lvManager.triggerDialogGuys = true;
 				DialogUI.destroyDialog();
-
-				
-				
 				break;
 			}
 			case ("looseDestroyBob") :
