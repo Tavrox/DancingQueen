@@ -8,7 +8,7 @@ public class Answer : MonoBehaviour {
 	public int sympathy_value;
 	public Dialog nextDialog;
 	private OTSprite spr;
-	public bool triggered;
+	public bool triggered = false;
 	public Object answer;
 	
 	
@@ -42,6 +42,7 @@ public class Answer : MonoBehaviour {
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
+			print ("triggered");
 			triggered = true;
 		}
 

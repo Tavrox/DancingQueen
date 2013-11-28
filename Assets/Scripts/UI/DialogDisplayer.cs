@@ -170,18 +170,14 @@ public class DialogDisplayer : MonoBehaviour {
 				if(Input.GetMouseButtonDown(0)) {
 					finishedTalking =false;
 					_NextDialog.enabled = false;
-					if (fullDialog[4] != null)
-					{
-
-						
-					}
 					DialogUI.destroyDialog();
 				}
 			}
 		}
 		if(answersInitiated) 
 		{
-			if(!textInserted) {
+			if(!textInserted) 
+			{
 				if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
 				{
 					answer1TextGUI.text = answer1.choice_en;
@@ -202,12 +198,42 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				textInserted = true;
 			}
-			if (answer1.triggered == true) displayPlayerAnswer(answer1,0);
-			if (answer2.triggered == true) displayPlayerAnswer(answer2,1);
-			if (answer3.triggered == true) displayPlayerAnswer(answer3,2);
-			if (answer4.triggered == true) displayPlayerAnswer(answer4,3);
-			if (answer5.triggered == true) displayPlayerAnswer(answer5,4);
-			if (answer6.triggered == true) displayPlayerAnswer(answer6,5);
+			if (answer1 != null && answer1.triggered == true) 
+			{
+				displayPlayerAnswer(answer1,0);  
+				checkAction(answer1.action);
+				DestroyAnswers();
+			}
+			if (answer2 != null && answer2.triggered == true) 
+			{
+				displayPlayerAnswer(answer2,1);
+				checkAction(answer2.action);
+				DestroyAnswers();
+			}
+			if (answer3 != null && answer3.triggered == true)
+			{
+				displayPlayerAnswer(answer3,2);  
+				checkAction(answer3.action);
+				DestroyAnswers();
+			}
+			if (answer4 != null && answer4.triggered == true)
+			{
+				displayPlayerAnswer(answer4,3);  
+				checkAction(answer4.action);
+				DestroyAnswers();
+			}
+			if (answer5 != null && answer5.triggered == true)
+			{
+				displayPlayerAnswer(answer5,4);  
+				checkAction(answer5.action); 
+				DestroyAnswers();
+			}
+			if (answer6 != null && answer6.triggered == true)
+			{
+				displayPlayerAnswer(answer6,5);  
+				checkAction(answer6.action);
+				DestroyAnswers();
+			}
 		}
 	}
 
@@ -221,7 +247,6 @@ public class DialogDisplayer : MonoBehaviour {
 				arrayAnswers = new string[8,11];
 				
 				fullDialog[0] = node.Attributes.GetNamedItem("fullID").Value;
-				print ("ID" + node.Attributes.GetNamedItem("ID_Character").Value);
 				fullDialog[1] = node.Attributes.GetNamedItem("ID_Character").Value;
 				fullDialog[2] = node.Attributes.GetNamedItem("Sympathy_value").Value;
 				fullDialog[3] = node.Attributes.GetNamedItem("Condition").Value;
@@ -271,32 +296,31 @@ public class DialogDisplayer : MonoBehaviour {
 	
 	private void displayPlayerAnswer(Answer displayedAnswer, int indexAnswer) 
 	{
-		if(!playerSpeaking) {
-		answer1.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer1.collider.enabled = false;answer1.enabled = false;
-		answer2.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer2.collider.enabled = false;answer2.enabled = false;
-		answer3.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer3.collider.enabled = false;answer3.enabled = false;
-		answer4.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer4.collider.enabled = false;answer4.enabled = false;
-		answer5.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer5.collider.enabled = false;answer5.enabled = false;
-		answer6.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer6.collider.enabled = false;answer6.enabled = false;
-		answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = false;
+		if(!playerSpeaking) 
+		{
+			answer1.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer1.collider.enabled = false;answer1.enabled = false;
+			answer2.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer2.collider.enabled = false;answer2.enabled = false;
+			answer3.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer3.collider.enabled = false;answer3.enabled = false;
+			answer4.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer4.collider.enabled = false;answer4.enabled = false;
+			answer5.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer5.collider.enabled = false;answer5.enabled = false;
+			answer6.GetComponentInChildren<OTSprite>().renderer.enabled = false;answer6.collider.enabled = false;answer6.enabled = false;
+			answer1TextGUI.enabled = answer2TextGUI.enabled = answer3TextGUI.enabled = answer4TextGUI.enabled = answer5TextGUI.enabled = answer6TextGUI.enabled = false;
 
-		if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
-		{
-			talkLines[0]= arrayAnswers[indexAnswer,8];
+			if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
+			{
+				talkLines[0]= arrayAnswers[indexAnswer,8];
+			}
+			else
+			{
+				talkLines[0]= arrayAnswers[indexAnswer,9];
+			}
+			CharDialID = displayedAnswer.ID_nextDialog;
+			modifySympathy(fullDialog[1], displayedAnswer.sympathy_value);
+			banDialogID(arrayAnswers[indexAnswer,10]);
+			finishedTalking = false;
+			startDialog();
+			playerSpeaking = true;
 		}
-		else
-		{
-			talkLines[0]= arrayAnswers[indexAnswer,9];
-		}
-		CharDialID = displayedAnswer.ID_nextDialog;
-		checkAction(displayedAnswer.action);
-		modifySympathy(fullDialog[1], displayedAnswer.sympathy_value);
-		banDialogID(arrayAnswers[indexAnswer,10]);
-		finishedTalking = false;
-		startDialog();
-		playerSpeaking = true;
-		}
-		Debug.Log("ACTION " + displayedAnswer.action);
 	}
 
 	//Call to the dialog from another class
@@ -407,12 +431,17 @@ public class DialogDisplayer : MonoBehaviour {
 		Destroy(answer4);
 		Destroy(answer5);
 		Destroy(answer6);
+		answer1 = null;
+		answer2 = null;
+		answer3 = null;
+		answer4 = null;
+		answer5 = null;
+		answer6 = null;
 	}
 	
 	public void launchNextDialog()
 	{
 		getDialogContent();
-		DestroyAnswers();
 		answersInitiated = false;
 		talking = true;
 		currentLine = 0;
@@ -436,6 +465,19 @@ public class DialogDisplayer : MonoBehaviour {
 		case ("Sympathy_value_Bastien25") :
 		{
 			Bastien charac = GameObject.FindGameObjectWithTag("Bastien").GetComponent<Bastien>();
+			if (charac.sympathy_score > 25)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			break;
+		}
+		case ("DidierSympathy25") :
+		{
+			Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
 			if (charac.sympathy_score > 25)
 			{
 				return true;
@@ -759,6 +801,13 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("closeDialogDisablePaul") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().dialDisabled = true; 
+				killAtferDisplay = true;
+				break;
+			}
 			case ("closeDialogGetAlex") :
 			{
 				go = getCharacGO("Alex");
@@ -770,6 +819,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Manon");
 				go.GetComponent<Manon>().missionDone = true;
+				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1016,6 +1066,7 @@ public class DialogDisplayer : MonoBehaviour {
 				break;
 			}
 		}
+		Debug.Log("DO Action " + Action);
 	}
 	
 	IEnumerator Wait(float waitTime)
@@ -1051,8 +1102,6 @@ public class DialogDisplayer : MonoBehaviour {
 		}
 		if (currentLine == talkLines.Length-1) 
 		{
-			//print ("Reached End of Dialog");
-			checkAction(fullDialog[4]);
 			finishedTalking = true;
 			talking = false;
 		}
@@ -1122,6 +1171,12 @@ public class DialogDisplayer : MonoBehaviour {
 		{
 			go = getCharacGO("Didier");
 			go.GetComponent<Didier>().sympathy_score += value;
+			break;
+		}
+		case ("10"):
+		{
+			go = getCharacGO("Bastien");
+			go.GetComponent<Bastien>().sympathy_score += value;
 			break;
 		}
 		case ("07"):
@@ -1232,9 +1287,14 @@ public class DialogDisplayer : MonoBehaviour {
 	private CharSim.charList returnCharacName(string characID)
 	{
 		CharSim gameo = getCharacGO("Yannick").GetComponent<Yannick>();;
+		print (characID);
 		switch (characID)
 		{
-	
+		case ("10"):
+		{
+			gameo = getCharacGO("Bastien").GetComponent<Bastien>();
+			break;
+		}
 		case ("06"):
 		{
 			gameo = getCharacGO("Yannick").GetComponent<Yannick>();
@@ -1338,12 +1398,27 @@ public class DialogDisplayer : MonoBehaviour {
 			gameo = getCharacGO("Alice").GetComponent<Alice>();
 			break;
 		}
-
+		default :
+		{
+			Debug.Log("Misses definition of char id");
+			break;
+		}
 		}
 		return gameo.charac;
 	}
 
+	private bool checkAnswersInitiated()
+	{
+		bool res = true;
+		if (answer1 == null) res = false;
+		if (answer2 == null) res = false;
+		if (answer3 == null) res = false;
+		if (answer4 == null) res = false;
+		if (answer5 == null) res = false;
+		if (answer6 == null) res = false;
+		return res;
 
+	}
 
 	public void GameDialog()
 	{	

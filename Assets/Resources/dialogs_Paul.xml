@@ -288,7 +288,7 @@ maintenant !</fr>
 this bathroom. I get it now !</en>
       </answer>
    </dialog>
-   <dialog fullID="9013" ID_Dialog="9013" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="getDrug" BanAnswer="">
+   <dialog fullID="9013" ID_Dialog="9013" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ah oui, ça arrive souvent… Tiens voilà sa 
 commande ! Profitez-en bien les filles.</fr>
       <en Choice_en="">Yeah, it happens to her a lot ! Here's her order. 
@@ -390,7 +390,7 @@ since he's been with Claire he doesn't buy anymore.</en>
 tu rates...</fr>
       <en Choice_en="">Your loss ! You don't know what you're missing !</en>
    </dialog>
-   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="NoRaphaelClairecoupleSympathy75" Action="getDrug" BanAnswer="">
+   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Rohh génial !! T’as réussi à libérer Raphaël 
 de l’emprise de Claire. Ils vont surement se 
 remettre à la drogue maintenant ! Tiens pour 
@@ -400,7 +400,7 @@ celle là, utilise là bien !</fr>
 evil grip ! Now they'll surely start buying my goods 
 again ! Here, as a thank you, another dose. It's the 
 last one, make good use of it !</en>
-      <answer fullID="90241" ID_Dialog="9024" ID_Answer="1" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="90241" ID_Dialog="9024" ID_Answer="1" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="getDrug" BanAnswer="">
          <fr Choice_fr="">Merci, t’inquiètes pas, elle est dans les mains 
 d’une experte !</fr>
          <en Choice_en="">Thanks ! Don't worry, it's in expert hands !</en>

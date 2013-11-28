@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.49999952, y: 6.5, z: 1}
+  m_LocalScale: {x: 3.49999976, y: 6.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2314415, y: .0318040848, z: 0}
+  m_LocalPosition: {x: 2.2314415, y: .0318040848, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-14
   _position: {x: 0, y: 0}
-  _size: {x: 3.49999952, y: 6.5}
+  _size: {x: 3.49999976, y: 6.5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 3.58333349, y: 7.10416698}
-  imageSize: {x: 3.49999952, y: 6.5}
+  imageSize: {x: 3.49999976, y: 6.5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -146,10 +146,10 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 15
-  _frameName: vanessa_body
+  _frameIndex: 24
+  _frameName: vanessa_body_full
   _spriteContainer: {fileID: 0}
-  _containerName: character
+  _containerName: characterPortrait
   _newSprite: 0
 --- !u!114 &11400002
 MonoBehaviour:

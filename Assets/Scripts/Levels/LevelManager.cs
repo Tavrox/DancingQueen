@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
 public class LevelManager : MonoBehaviour {
@@ -120,6 +121,7 @@ public class LevelManager : MonoBehaviour {
 		checkTimer();
 		checkClaireState();
 		checkDialogs();
+		checkEvents();
 	}
 
 	void updateTimer()
@@ -168,6 +170,31 @@ public class LevelManager : MonoBehaviour {
 				Claire.talkedAboutSlow = true;
 			}
 		}
+	}
+	private void checkEvents()
+	{
+		Alex compAlex 			= _Alex.GetComponent<Alex>();
+		Bastien compBastien 	= _Bastien.GetComponent<Bastien>();
+		Bob compBob 			= _Bob.GetComponent<Bob>();
+		Boris compBoris 		= _Boris.GetComponent<Boris>();
+		Charlie compCharlie		= _Charlie.GetComponent<Charlie>();
+		Chloe compChloe 		= _Chloe.GetComponent<Chloe>();
+		Christine compChristine	= _Christine.GetComponent<Christine>();
+		Claire compClaire 		= _Claire.GetComponent<Claire>();
+		Manon compManon 		= _Manon.GetComponent<Manon>();
+		Paul compPaul 			= _Paul.GetComponent<Paul>();
+		Raphael compRaphael 	= _Raphael.GetComponent<Raphael>();
+		Stephane compStephane 	= _Stephane.GetComponent<Stephane>();
+		Thomas compThomas 		= _Thomas.GetComponent<Thomas>();
+		Vanessa compVanessa 	= _Vanessa.GetComponent<Vanessa>();
+		Yannick compYannick 	= _Yannick.GetComponent<Yannick>();
+
+		if (compRaphael.coupleClaire == false && compPaul.sympathy_score > 75)
+		{
+			compPaul.dialToTrigger = "9024";
+		}
+
+
 	}
 
 	void checkTimer()
@@ -601,9 +628,6 @@ public class LevelManager : MonoBehaviour {
 			if (music ==  MusicList.Country)
 			{
 				musicToPlay = "CountryBar";
-				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
-				go.dialToTrigger = "7009";
-				go.isSad = false;
 			}
 			if (music ==  MusicList.Slow)
 			{
@@ -626,6 +650,8 @@ public class LevelManager : MonoBehaviour {
 			if (music ==  MusicList.Country)
 			{
 				musicToPlay = "CountryDancefloor";
+				musicLvl = MusicList.Country;
+				print ("Music set : "+music);
 				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
 				go.dialToTrigger = "7009";
 				go.isSad = false;
@@ -651,9 +677,6 @@ public class LevelManager : MonoBehaviour {
 			if (music ==  MusicList.Country)
 			{
 				musicToPlay = "CountryToilets";
-				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
-				go.dialToTrigger = "7009";
-				go.isSad = false;
 			}
 			if (music ==  MusicList.Slow)
 			{
@@ -675,9 +698,6 @@ public class LevelManager : MonoBehaviour {
 			}
 			if (music ==  MusicList.Country)
 			{
-				Vanessa go = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
-				go.dialToTrigger = "7009";
-				go.isSad = false;
 				musicToPlay = "CountryVIP";
 				
 			}
