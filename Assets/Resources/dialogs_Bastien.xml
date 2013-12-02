@@ -24,7 +24,7 @@ l’approcher ? En essayant de m’avoir quelques
 infos par exemple...</fr>
       <en Choice_en="">I saw you dancing with Thomas... I like him too, could you help 
 me get close to him ? Like, try to get me some info...?</en>
-      <answer fullID="100021" ID_Dialog="10002" ID_Answer="1" ID_NextDialog="10003" ID_Character="10" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="100021" ID_Dialog="10002" ID_Answer="1" ID_NextDialog="10003" ID_Character="10" Sympathy_value="20" Condition="basic" Action="missionBastienEncours" BanAnswer="">
          <fr Choice_fr="Etonnée">Ah merde, tu es gay ? Bah oui, pourquoi pas.</fr>
          <en Choice_en="Surprised">Oh, you're gay ? Well, sure, why not ?</en>
       </answer>

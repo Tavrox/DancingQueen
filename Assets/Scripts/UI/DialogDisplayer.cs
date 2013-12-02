@@ -82,7 +82,7 @@ public class DialogDisplayer : MonoBehaviour {
 		getDialogContent();
 
 		InvokeRepeating("playWhispers", UnityEngine.Random.Range(currentChar.randomDelayMin,currentChar.randomDelayMax) , currentChar.frequencyWhispers);
-		startDialog();//StartCoroutine( Wait(delayStart) );
+		startDialog("");//StartCoroutine( Wait(delayStart) );
 
 		
 		OTSprite otherFace = GameObject.Find("otherFaceSpriteDialog").GetComponent<OTSprite>();
@@ -273,6 +273,7 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				dialToDisplay = firstDialog;
 				talkLines = dialToDisplay.dialLines;
+				checkAction(fullDialog[4]);
 
 				GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
 				string pickCharacter = returnCharacName(fullDialog[1]).ToString();
@@ -320,14 +321,15 @@ public class DialogDisplayer : MonoBehaviour {
 			modifySympathy(fullDialog[1], displayedAnswer.sympathy_value);
 			banDialogID(arrayAnswers[indexAnswer,10]);
 			finishedTalking = false;
-			startDialog();
+			startDialog(fullDialog[4]);
 			playerSpeaking = true;
 		}
 	}
 
 	//Call to the dialog from another class
-	public void startDialog() 
+	public void startDialog(string action) 
 	{
+		checkAction(action);
 		talking = true;	//Activtate talking state
 		currentLine = 0;
 		StartCoroutine("StartScrolling");	//Start displaying text
@@ -864,7 +866,7 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				go = getCharacGO("Bastien");
 				go.GetComponent<Bastien>().acceptedMission = true;
-			go.GetComponent<Bastien>().dialToTrigger = "10014";
+				go.GetComponent<Bastien>().dialToTrigger = "10014";
 				break;
 			}
 
@@ -1177,7 +1179,7 @@ public class DialogDisplayer : MonoBehaviour {
 	IEnumerator Wait(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
-	    startDialog();
+	    startDialog("");
 	}
 
 	IEnumerator twinkleText()
