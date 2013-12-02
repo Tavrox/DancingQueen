@@ -10,6 +10,7 @@ public class Vanessa : CharSim
 	{
 		if (DialogUI.exists != true)
 		{
+			DialogUI.exists = true;
 			DialogUI.createDialog(this, "7009");
 			IngameUI.destroyIngameUI();
 		}

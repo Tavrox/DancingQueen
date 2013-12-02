@@ -4,12 +4,6 @@ using System.Collections;
 public class Chloe : CharSim 
 {
 	public bool isInToilet = false;
+	public bool knowsHomo = false;
 
-	public void Update()
-	{
-		if (this.sympathy_score > 100)
-		{
-
-		}
-	}
 }

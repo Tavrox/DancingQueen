@@ -30,7 +30,7 @@ public class DialogUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+//		print ("Dialog exists ?" + exists);
 	}
 	
 	private void OnMouseDown()
@@ -78,6 +78,7 @@ public class DialogUI : MonoBehaviour {
 	}
 	public static void createDialog(CharSim _chosenChar, string _DialToTrigger = null)
 	{
+		DialogUI.exists = true;
 		exists = true;
 		GameEventManager.TriggerGameDialog();
 		GameObject prefabSprite = Resources.Load("03UI/Dialog") as GameObject;

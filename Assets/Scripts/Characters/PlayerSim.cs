@@ -22,7 +22,7 @@ public class PlayerSim : MonoBehaviour {
 	
 	void Start()
 	{
-		black = GameObject.Find("Overlay").GetComponent<OTSprite>();
+
 	}
 	void Update()
 	{

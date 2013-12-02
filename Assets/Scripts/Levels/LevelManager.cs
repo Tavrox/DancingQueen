@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour {
 	private GUIText Timer;
 	public int Hours = 20;
 	public int Minutes = 0;
+	public bool eventHappening = false;
 	private string musicStyle;
 
 	private string backBarFrame;
@@ -70,7 +71,6 @@ public class LevelManager : MonoBehaviour {
 
 	void Awake()
 	{
-		black = GameObject.Find("Overlay").GetComponent<OTSprite>();
 		InvokeRepeating("updateTimer",0, updateTimerEvery);
 		setCharPrefab();
 		setBackgrounds();
@@ -92,7 +92,7 @@ public class LevelManager : MonoBehaviour {
 		DontDestroyOnLoad(this);
 //		print (MasterAudio.TriggerPlaylistClip(musicName));
 //		PlaylistController.PlayNextSong();
-		//		PlaylistController.PlayNextSong();
+//		PlaylistController.PlayNextSong();
 
 	}
 	
@@ -132,17 +132,43 @@ public class LevelManager : MonoBehaviour {
 			Hours+=1;
 			Minutes = 0;
 		}
+		if (Hours ==24)
+		{
+			Timer.text = "";
+		}
 	}
 
 	private void checkClaireState()
 	{
+
+	}
+	private void checkEvents()
+	{
+		Alex compAlex 			= _Alex.GetComponent<Alex>();
+		Bastien compBastien 	= _Bastien.GetComponent<Bastien>();
+		Bob compBob 			= _Bob.GetComponent<Bob>();
+		Boris compBoris 		= _Boris.GetComponent<Boris>();
+		Charlie compCharlie		= _Charlie.GetComponent<Charlie>();
+		Chloe compChloe 		= _Chloe.GetComponent<Chloe>();
+		Christine compChristine	= _Christine.GetComponent<Christine>();
+		Claire compClaire 		= _Claire.GetComponent<Claire>();
+		Manon compManon 		= _Manon.GetComponent<Manon>();
+		Paul compPaul 			= _Paul.GetComponent<Paul>();
+		Raphael compRaphael 	= _Raphael.GetComponent<Raphael>();
+		Stephane compStephane 	= _Stephane.GetComponent<Stephane>();
+		Thomas compThomas 		= _Thomas.GetComponent<Thomas>();
+		Vanessa compVanessa 	= _Vanessa.GetComponent<Vanessa>();
+		Yannick compYannick 	= _Yannick.GetComponent<Yannick>();
+
+		if (compRaphael.coupleClaire == false && compPaul.sympathy_score > 75)
+		{
+			compPaul.dialToTrigger = "9024";
+		}
+
 		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
 		Raphael Raph = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
 		Didier Didi = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
-		// Music
-		// Player kissed Raphael
-		// Player spoken to Raphael
-		
+
 		if (Raph.hasTalkedRaphael == true && Claire.talkedAboutFlirting == false)
 		{
 			if (DialogUI.exists != true)
@@ -170,30 +196,6 @@ public class LevelManager : MonoBehaviour {
 				Claire.talkedAboutSlow = true;
 			}
 		}
-	}
-	private void checkEvents()
-	{
-		Alex compAlex 			= _Alex.GetComponent<Alex>();
-		Bastien compBastien 	= _Bastien.GetComponent<Bastien>();
-		Bob compBob 			= _Bob.GetComponent<Bob>();
-		Boris compBoris 		= _Boris.GetComponent<Boris>();
-		Charlie compCharlie		= _Charlie.GetComponent<Charlie>();
-		Chloe compChloe 		= _Chloe.GetComponent<Chloe>();
-		Christine compChristine	= _Christine.GetComponent<Christine>();
-		Claire compClaire 		= _Claire.GetComponent<Claire>();
-		Manon compManon 		= _Manon.GetComponent<Manon>();
-		Paul compPaul 			= _Paul.GetComponent<Paul>();
-		Raphael compRaphael 	= _Raphael.GetComponent<Raphael>();
-		Stephane compStephane 	= _Stephane.GetComponent<Stephane>();
-		Thomas compThomas 		= _Thomas.GetComponent<Thomas>();
-		Vanessa compVanessa 	= _Vanessa.GetComponent<Vanessa>();
-		Yannick compYannick 	= _Yannick.GetComponent<Yannick>();
-
-		if (compRaphael.coupleClaire == false && compPaul.sympathy_score > 75)
-		{
-			compPaul.dialToTrigger = "9024";
-		}
-
 
 	}
 
@@ -319,6 +321,17 @@ public class LevelManager : MonoBehaviour {
 			_Vanessa.collider.enabled = false; 
 			_Yannick.collider.enabled = false; 
 
+		}
+	}
+
+	private void createEventTransition(CharSim charToTrigg, string dialToTrigg)
+	{
+		if (eventHappening == true)
+		{
+			eventHappening = false;
+			DialogEvent dialEve = new DialogEvent();
+			dialEve.triggerEvent();
+			StartCoroutine(WaitEvent(3f, dialEve));
 		}
 	}
 	private void setCharPrefab()
@@ -601,7 +614,7 @@ public class LevelManager : MonoBehaviour {
 				
 				if ( _Alex.GetComponent<Alex>().gotPlayerInVIP == true)
 			    {
-				Debug.Log("Isolate player");
+					Debug.Log("Isolate player");
 					IngameUI.destroyIngameUI();
 					DialogUI.createDialog(_Alex.GetComponent<Alex>());
 				}
@@ -747,6 +760,11 @@ public class LevelManager : MonoBehaviour {
 	IEnumerator Wait(float WaitTime)
 	{
 		yield return new WaitForSeconds(WaitTime);
+	}
+	IEnumerator WaitEvent(float WaitTime, DialogEvent eve)
+	{
+		yield return new WaitForSeconds(WaitTime);
+		Destroy(GameObject.Find("Event(Clone)"));
 	}
 	private void hideChar(string gameo)
 	{

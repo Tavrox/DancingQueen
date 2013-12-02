@@ -7,6 +7,8 @@ public class CharSim : MonoBehaviour {
 	private OTSprite full_body;
 	private OTSprite dialog_pic;
 	private DialogDisplayer dial;
+	private LevelManager _LevMan;
+
 	public enum charList
 	{
 		Vanessa, 	// ID 07
@@ -40,7 +42,7 @@ public class CharSim : MonoBehaviour {
 	public bool triggeredUltimate = false;
 	public bool voteForPlayer = false;
 	public int[] banAnswers = new int[20];
-	public Color color;
+	public Color colorDialogs = new Color(1f,1,1f,1f);
 	public bool tutoMode = false;
 	public bool dialDisabled = false;
 	
@@ -58,6 +60,8 @@ public class CharSim : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.GameDialog += GameDialog;
+
+		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -110,10 +114,26 @@ public class CharSim : MonoBehaviour {
 	{
 
 	}
+
+	private void OnMouseOver()
+	{
+		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+		if(DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true)
+		{
+			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+			spr.frameName = "cursor_talk";
+		}
+	}
 	
+	private void OnMouseExit()
+	{
+		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+		spr.frameName = "cursor_default";
+	}
 	private void OnMouseDown()
 	{
-		if (DialogUI.exists != true && dialDisabled != true)
+		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+		if (DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true)
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
@@ -142,20 +162,7 @@ public class CharSim : MonoBehaviour {
 
 	}
 
-	private void OnMouseOver()
-	{
-		if(DialogUI.exists != true && dialDisabled != true)
-		{
-			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-			spr.frameName = "cursor_talk";
-		}
-	}
-	
-	private void OnMouseExit()
-	{
-		OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-		spr.frameName = "cursor_default";
-	}
+
 
 	public string getCharFrame(CharSim.charList charac)
 	{

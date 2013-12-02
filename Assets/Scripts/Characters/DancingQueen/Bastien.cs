@@ -5,6 +5,8 @@ public class Bastien : CharSim
 {
 	public bool refusedMission = false;
 	public bool hasSpokenOncePlayer = false;
+	public bool acceptedMission = false;
+	public bool succeedMission = false;
 
 	void OnMouseDown()
 	{

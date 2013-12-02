@@ -36,13 +36,13 @@ happened.</en>
 everyone !</en>
       </answer>
    </dialog>
-   <dialog fullID="14003" ID_Dialog="14003" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogtalkedClaire" BanAnswer="">
+   <dialog fullID="14003" ID_Dialog="14003" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireFlirting" BanAnswer="">
       <fr Choice_fr="">Mhh d’accord… Bon, fais attention à toi. 
 J’espère ne pas te revoir près de lui.</fr>
       <en Choice_en="">Hmm, all right, I guess... But you watch yourself ! 
 Don't let me catch you near him again !</en>
    </dialog>
-   <dialog fullID="14004" ID_Dialog="14004" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogtalkedClaire" BanAnswer="">
+   <dialog fullID="14004" ID_Dialog="14004" ID_Answer="" ID_NextDialog="" ID_Character="14" Sympathy_value="" Condition="basic" Action="closeDialogTalkedClaireFlirting" BanAnswer="">
       <fr Choice_fr="">T’as pas intérêt à rester plus longtemps dans 
 cette fête, j’aurais aucune pitié pour toi !</fr>
       <en Choice_en="">I think you better leave this party right now, or it might 

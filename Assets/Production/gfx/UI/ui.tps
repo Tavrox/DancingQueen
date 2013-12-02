@@ -172,6 +172,7 @@
             <filename>trombino_full_ui.png</filename>
             <filename>backbtn.png</filename>
             <filename>backbtn_hover.png</filename>
+            <filename>Event.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

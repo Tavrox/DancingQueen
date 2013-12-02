@@ -9,6 +9,7 @@ Material:
   m_Name: OTMaterial-tinted
   m_Shader: {fileID: 10722, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -28,7 +29,7 @@ Material:
       data:
         first:
           name: _EmisColor
-        second: {r: .910447776, g: .789384246, b: .244597927, a: 1}
+        second: {r: .617647052, g: .551246881, b: .37694636, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

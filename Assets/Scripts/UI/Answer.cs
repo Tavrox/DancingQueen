@@ -42,7 +42,6 @@ public class Answer : MonoBehaviour {
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			print ("triggered");
 			triggered = true;
 		}
 

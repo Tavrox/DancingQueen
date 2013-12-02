@@ -7,10 +7,12 @@ public class Didier : CharSim
 	public bool canPutElectro = false;
 	public bool canPutCountry = false;
 
-	public bool missionDidierDone = false;
 
 	public bool hasPutSlow = false;
 	public bool hasPutCountry = false;
 	public bool hasPutElectro = false;
+
+	public bool missionDidierEncours = false;
+	public bool missionDidierDone = false;
 
 }

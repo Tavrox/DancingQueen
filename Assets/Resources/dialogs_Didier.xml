@@ -23,6 +23,10 @@
          <fr Choice_fr="Requête">... Tu as l'air pensif.</fr>
          <en Choice_en="Request">... You look pensive...</en>
       </answer>
+	  <answer fullID="250016" ID_Dialog="25001" ID_Answer="6" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="MissionDidierFinie" Action="" BanAnswer="250016">
+         <fr Choice_fr="Musique de Bastien">Bastien</fr>
+         <en Choice_en="Bastien's music">... You look pensive...</en>
+      </answer>
    </dialog>
    <dialog fullID="25002" ID_Dialog="25002" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, de qui ?</fr>
@@ -167,8 +171,8 @@ Sure, what do you want ?</en>
       </answer>
    </dialog>
    <dialog fullID="25012" ID_Dialog="25012" ID_Answer="" ID_NextDialog="" ID_Character="25" Sympathy_value="Sympathy50" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Au fait, tu pourrais me rendre un petit service ?</fr>
-      <en Choice_en="">By the way, could you do me a little favour ?</en>
+      <fr Choice_fr="">Hmm.... Oui. Tu pourrais me rendre un petit service ?</fr>
+      <en Choice_en="">Yeah, maybe you can help me... could you do me a favour ?</en>
       <answer fullID="250121" ID_Dialog="25012" ID_Answer="1" ID_NextDialog="25013" ID_Character="25" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Accepter">Ah ouais ? Qu’est ce que c’est ?</fr>
          <en Choice_en="Accept">Yeah ? What's that ?</en>
