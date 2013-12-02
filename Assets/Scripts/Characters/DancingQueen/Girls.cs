@@ -3,24 +3,21 @@ using System.Collections;
 
 public class Girls : CharSim 
 {
+
 	public void TriggerDialogVanessa()
 	{
 		if (DialogUI.exists != true)
 		{
-			Girls GO = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-			GO.dialToTrigger = "1001";
-			DialogUI.createDialog(GO);
-			IngameUI.destroyIngameUI();
+			GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1001");
 		}
 	}
 	public void TriggerDialogChloe()
 	{
 		if (DialogUI.exists != true)
 		{
-			Girls GO = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-			GO.dialToTrigger = "1010";
-			DialogUI.createDialog(this);
-			IngameUI.destroyIngameUI();
+			GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1010");
 		}
 	}
 }

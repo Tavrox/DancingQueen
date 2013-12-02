@@ -6,7 +6,7 @@
       <answer fullID="190011" ID_Dialog="19001" ID_Answer="1" ID_NextDialog="19002" ID_Character="19" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Taquine">Je cherchais le débile du coin, il semblerait que je
 sois bien tombé.</fr>
-         <en Choice_en="Teasing">Well, since I was looking for the village idiot, I'd say no, 
+         <en Choice_en="Teasing">Well, since I was looking for the city idiot, I'd say no, 
 I'm not lost...</en>
       </answer>
       <answer fullID="190012" ID_Dialog="19001" ID_Answer="2" ID_NextDialog="19003" ID_Character="19" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">

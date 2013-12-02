@@ -158,13 +158,13 @@ Mister Philosopher !</en>
       <fr Choice_fr="">D’après moi, non ce n’est pas forcément
 nécessaire. Ensuite, tout dépend de  ce que 
 l’on entend par réussite sociale bien entendu.</fr>
-      <en Choice_en="">No, personaly, I don't think it's necessary... But it all 
+      <en Choice_en="">No, personally, I don't think it's necessary... But it all 
 depends on what you mean by social success.</en>
       <answer fullID="90071" ID_Dialog="9007" ID_Answer="1" ID_NextDialog="9008" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Cupidité">Et bien, le paradoxe d’Easterlin est bel et bien 
 une réalité. Ne viens pas me faire la morale 
 avec tes phrases toutes faites comme « l’argent 
-ne fait pas le bonheur. » c’est trop facile.</fr>
+ne fait pas le bonheur. », c’est trop facile.</fr>
          <en Choice_en="Greed">Well, Easterlin's paradox is indeed a reality. Do not 
 patronize me with ready-made sentences such as 
 ''money doesn't buy happiness'', or that kind of stuff. 
@@ -257,7 +257,7 @@ just a girl who believes in love between human beings !</en>
    </dialog>
    <dialog fullID="9011" ID_Dialog="9011" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Maintenant que je sais que tu as bien 
-assimilé les codes sociaux du village, 
+assimilé les codes sociaux du city, 
 je peux te révéler qui je suis vraiment. 
 Comme tu l’avais peut être déjà deviné,
 je peux te fournir n’importe quelle substance, 

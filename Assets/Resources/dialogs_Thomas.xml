@@ -83,13 +83,13 @@ with himself*</en>
       <fr Choice_fr="">Alors la reine de la piste, quoi de neuf ?</fr>
       <en Choice_en="">So, dancing queen, what's up ?</en>
       <answer fullID="80101" ID_Dialog="8010" ID_Answer="1" ID_NextDialog="8011" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="80101">
-         <fr Choice_fr="Amitié">T’as des amis ici ?</fr>
-         <en Choice_en="Friendship">Do you have friends here ?</en>
+         <fr Choice_fr="Parler d'amitié">T’as des amis ici ?</fr>
+         <en Choice_en="Talk about friendship">Do you have friends here ?</en>
       </answer>
       <answer fullID="80102" ID_Dialog="8010" ID_Answer="2" ID_NextDialog="8012" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="80102">
          <fr Choice_fr="La soirée">C’est assez calme dans le coin, Il y a moyen 
 de s’amuser un peu dans cette soirée ?</fr>
-         <en Choice_en="Party">It's pretty calm around here. Is there anything fun to do 
+         <en Choice_en="The party">It's pretty calm around here. Is there anything fun to do 
 at this party ?</en>
       </answer>
       <answer fullID="80103" ID_Dialog="8010" ID_Answer="3" ID_NextDialog="8035" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="80103">
@@ -97,10 +97,10 @@ at this party ?</en>
 de mal à me faire à l’ambiance de ce petit
 patelin.</fr>
          <en Choice_en="Talk about me">I'm from a big town, it's a little hard for me to get used 
-to the atmosphere of this little village.</en>
+to the atmosphere of this little city.</en>
       </answer>
       <answer fullID="80104" ID_Dialog="8010" ID_Answer="4" ID_NextDialog="8013" ID_Character="08" Sympathy_value="" Condition="ThomasSympathy50" Action="" BanAnswer="80104">
-         <fr Choice_fr="Amour">T’es jamais tombé amoureux ?</fr>
+         <fr Choice_fr="L'amour">T’es jamais tombé amoureux ?</fr>
          <en Choice_en="Love">Ever fallen in love ?</en>
       </answer>
    </dialog>
@@ -119,7 +119,7 @@ gens ?</fr>
 in people ?</en>
       </answer>
       <answer fullID="80112" ID_Dialog="8011" ID_Answer="2" ID_NextDialog="8014" ID_Character="08" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Polie">Ah ouais ? Dis m’en plus sur toi ?</fr>
+         <fr Choice_fr="Poliment">Ah ouais ? Dis m’en plus sur toi ?</fr>
          <en Choice_en="Polite">Yeah ? Tell me more about you.</en>
       </answer>
       <answer fullID="80113" ID_Dialog="8011" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="80101">
@@ -133,9 +133,9 @@ partout ! Sex, drugs and Rock’ Roll babe !!</fr>
       <en Choice_en="">Oh, you know, some leisures are exerced everywhere ! 
 Sex, drugs and Rock'n Roll, baby !</en>
       <answer fullID="80121" ID_Dialog="8012" ID_Answer="1" ID_NextDialog="8015" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Amusée (sex)">Héhé, c’est sûr qu’avec les bonnes personnes 
+         <fr Choice_fr="Amusée">Héhé, c’est sûr qu’avec les bonnes personnes 
 on peut s’amuser n’importe où !</fr>
-         <en Choice_en="Amused (sex)">Sure, with the right person, you can have your fun 
+         <en Choice_en="Amused">Sure, with the right person, you can have your fun 
 anywhere !</en>
       </answer>
       <answer fullID="80122" ID_Dialog="8012" ID_Answer="2" ID_NextDialog="8016" ID_Character="08" Sympathy_value="" Condition="NoPlayerDoesntKnowsIsDealer" Action="" BanAnswer="">
@@ -146,9 +146,9 @@ le coin?</fr>
 supplier around ?</en>
       </answer>
       <answer fullID="80123" ID_Dialog="8012" ID_Answer="3" ID_NextDialog="8017" ID_Character="08" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Taquine (rock)">Vu comment tu danses je suppose que toi c’est 
+         <fr Choice_fr="Taquine">Vu comment tu danses je suppose que toi c’est 
 plus drugs que Rock’n Roll</fr>
-         <en Choice_en="Teasing (rock)">Seeing the way you dance, I'm guessing you do more 
+         <en Choice_en="Teasing">Seeing the way you dance, I'm guessing you do more 
 drugs than Rock'n Roll !</en>
       </answer>
    </dialog>

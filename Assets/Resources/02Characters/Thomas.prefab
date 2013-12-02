@@ -169,7 +169,7 @@ MonoBehaviour:
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 
@@ -179,7 +179,8 @@ MonoBehaviour:
   randomDelayMax: .289999992
   frequencyWhispers: .550000012
   isBattleDance: 0
-  hasTalkedThomas: 0
+  hasTalkedThomas: 1
+  knowThomasPreferences: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

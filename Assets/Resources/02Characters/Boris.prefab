@@ -112,11 +112,11 @@ MonoBehaviour:
   characterID: 18
   charac: 2
   dialToTrigger: 18001
-  sympathy_score: 0
+  sympathy_score: 120
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 

@@ -169,8 +169,9 @@ MonoBehaviour:
   triggeredUltimate: 0
   voteForPlayer: 1
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  tutoMode: 0
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
+  tutoMode: 1
+  dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
   maxRandomVarWhispers: 21
@@ -178,6 +179,7 @@ MonoBehaviour:
   randomDelayMax: .209999993
   frequencyWhispers: .219999999
   isInToilet: 0
+  knowsHomo: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

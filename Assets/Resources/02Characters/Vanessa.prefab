@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.49999976, y: 6.5, z: 1}
+  m_LocalScale: {x: 3.49999952, y: 6.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: characSprite-14
   _position: {x: 0, y: 0}
-  _size: {x: 3.49999976, y: 6.5}
+  _size: {x: 3.49999952, y: 6.5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   protoType: 
   baseName: characSprite
   oSize: {x: 3.58333349, y: 7.10416698}
-  imageSize: {x: 3.49999976, y: 6.5}
+  imageSize: {x: 3.49999952, y: 6.5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 

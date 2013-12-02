@@ -16,6 +16,7 @@ public class TestMode : MonoBehaviour {
 	private Christine _Christine;
 	private Claire _Claire;
 	private Didier _Didier;
+	private Girls _Girls;
 	private Manon _Manon;
 	private Paul _Paul;
 	private Raphael _Raphael;
@@ -45,6 +46,7 @@ public class TestMode : MonoBehaviour {
 		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
 		_Vanessa 	= GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
 		_Yannick 	= GameObject.FindGameObjectWithTag("Yannick").GetComponent<Yannick>();
+		_Girls 		= GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
 		_Player 	= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
 		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
 	}
@@ -59,21 +61,24 @@ public class TestMode : MonoBehaviour {
 		
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
-			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-			_girls.TriggerDialogChloe();
+			_Girls.TriggerDialogChloe();
 		}
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-			_girls.TriggerDialogVanessa();
+			_Girls.TriggerDialogVanessa();
 		}
 		if (Input.GetKeyDown(KeyCode.R))
 		{
-//			eve.triggerEvent();
+			GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+			dialEvent.GetComponent<DialogEvent>().setupEvent(_Girls,"1010");
+
+//			DialogEvent dialEv = GameObject.FindGameObjectWithTag("Event").GetComponent<DialogEvent>();
 		}
 		if (Input.GetKeyDown(KeyCode.T))
 		{
-//			eve.triggerDeath();
+			DialogEvent dialEvent = GameObject.FindGameObjectWithTag("Event").GetComponent<DialogEvent>();
+			dialEvent.setupEvent(_Girls,"1010");
+			dialEvent.triggerDeath();
 		}
 	}
 
@@ -114,6 +119,7 @@ public class TestMode : MonoBehaviour {
 		_Alex.casseCouilleS2 = false;
 		_Alex.casseCouilleS3 = false;
 		_Alex.gotPlayerInVIP = false;
+		_Alex.sympathy_score = 0;
 		_Bastien.refusedMission = false;
 		_Bastien.hasSpokenOncePlayer = false;
 		_Bastien.acceptedMission = false;
@@ -121,6 +127,7 @@ public class TestMode : MonoBehaviour {
 		_Bob.unlocked = false;
 		_Chloe.isInToilet = false;
 		_Chloe.knowsHomo = false;
+		_Chloe.sympathy_score = 0;
 		_Claire.talkedAboutSlow = false;
 		_Claire.talkedAboutKissing = false;
 		_Claire.talkedAboutFlirting = false;

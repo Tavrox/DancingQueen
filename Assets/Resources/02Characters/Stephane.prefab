@@ -111,12 +111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterID: 15
   charac: 11
-  dialToTrigger: 
+  dialToTrigger: 0000
   sympathy_score: 0
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 

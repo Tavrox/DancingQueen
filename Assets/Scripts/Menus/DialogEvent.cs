@@ -3,52 +3,68 @@ using System.Collections;
 
 public class DialogEvent : MonoBehaviour {
 
-	private GUIText notifier;
 	private LevelManager _LevMan;
 	private PlayerSim _Player;
+
+	private CharSim charToTrigger;
+	private string idDialog;
+
+	private OTSprite _overlay;
+	private OTSprite _bubble;
+	private GUIText _text;
+	
 	private float lifeTime = 3f;
 
 	// Use this for initialization
-	void Start () {
-
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
+	void Start () 
 	{
-	}
+		StartCoroutine("Wait", lifeTime);
 
-	public void triggerEvent()
-	{
-		GameObject prefabSprite = Resources.Load("03UI/Event") as GameObject;
-		Instantiate(prefabSprite);
-		notifier = GameObject.Find("EventNotifier").GetComponent<GUIText>();
+		_overlay = GameObject.Find("Event(Clone)/evOverlay/EvOvSprite").GetComponent<OTSprite>();
+		_bubble = GameObject.Find("Event(Clone)/Bubble").GetComponent<OTSprite>();
+		_text = GameObject.Find("Event(Clone)/EventNotifier").GetComponent<GUIText>();
+		IngameUI.destroyIngameUI();
+		DialogUI.exists = true;
+
 		_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
-		if (_Player.langChosen == PlayerSim.langList.en)
+		if (_Player.langChosen == PlayerSim.langList.en && _text.text != null && _Player != null)
 		{
-			notifier.text = "Wait... Someone wants \n to tell you something !";
+			_text.text = "Wait... Someone wants \n to tell you something !";
 		}
 		else
 		{
-			notifier.text = "Attends... quelqu'un \n vient te parler !";
+			_text.text = "Attends... quelqu'un vient  \n  te parler !";
 		}
+	}
 
+	public void setupEvent(CharSim _char, string _dialTrigger)
+	{
+		charToTrigger = _char;
+		idDialog = _dialTrigger;
 	}
 	public void triggerDeath()
 	{
-		StartCoroutine("Wait", 3f);
+		OTTween bubbleOut = new OTTween(_bubble, 1f).Tween("alpha", 0f);
+		OTTween textOut = new OTTween(_text, 1f).Tween("color", Color.clear);
+		DialogUI.createDialog(charToTrigger, idDialog);
+		_overlay.alpha = 0;
+		StartCoroutine("WaitDestroy", 5f);
 	}
 
 	public void destroyEvent()
 	{
-		Destroy (this);
-		print("Event destroyed");
+		Destroy (gameObject);
 	}
 
 	IEnumerator Wait(float life)
 	{
 		yield return new WaitForSeconds(life);
-//		destroyEvent();
+		triggerDeath();
 	}
+	IEnumerator WaitDestroy(float life)
+	{
+		yield return new WaitForSeconds(life);
+		destroyEvent();
+	}
+
 }

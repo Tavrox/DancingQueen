@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.26448989, y: -3.10899305, z: 0}
+  m_LocalPosition: {x: -3.03299999, y: -3.10899305, z: 0}
   m_LocalScale: {x: 1.10520756, y: 1.10520756, z: 1.10520756}
   m_Children:
   - {fileID: 400000}
@@ -116,7 +116,7 @@ MonoBehaviour:
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 
@@ -125,7 +125,7 @@ MonoBehaviour:
   randomDelayMin: 0
   randomDelayMax: .600000024
   frequencyWhispers: 1
-  coupleClaire: 1
+  coupleClaire: 0
   kissedPlayer: 0
   hasTalkedRaphael: 0
   neededSympathyForKiss: 50

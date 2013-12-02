@@ -12,7 +12,7 @@ fais là ?</fr>
 doing here ?</en>
       </answer>
       <answer fullID="60012" ID_Dialog="6001" ID_Answer="2" ID_NextDialog="6003" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Court Rappel">Vite fait. Tu peux me faire un récapitulatif ?</fr>
+         <fr Choice_fr="Court rappel">Vite fait. Tu peux me faire un récapitulatif ?</fr>
          <en Choice_en="Short reminder">Sort of. Can you sum it up for me ?</en>
       </answer>
       <answer fullID="60013" ID_Dialog="6001" ID_Answer="3" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
@@ -25,11 +25,11 @@ in. Talk to you later !</en>
    <dialog fullID="6002" ID_Dialog="6002" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Alors, tu m’avais dit être arrivée depuis peu 
 dans cette ville et donc tu ne connais personne. 
-Aujourd’hui, nous célébrons le bi-centenaire du 
-village avec cette petite fête.</fr>
+Aujourd’hui, nous célébrons le bi-centenaire de 
+la ville avec cette petite fête.</fr>
       <en Choice_en="">So, you told me you just arrived in this town, 
 and you don't know anybody. We are celebrating 
-today the bi-centenial of our village with this 
+today the bi-centenial of our city with this 
 little party.</en>
       <answer fullID="60021" ID_Dialog="6002" ID_Answer="1" ID_NextDialog="6004" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Continuer">Oui c’est bien ça, je t’en prie continue.</fr>
@@ -39,12 +39,15 @@ little party.</en>
    <dialog fullID="6003" ID_Dialog="6003" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Pour faire simple, si tu arrives à sympathiser 
 avec les gens de la fête, tu pourras être élue 
-reine du village, pour faciliter ton intégration! 
-Il suffit de leur parler et de leur rendre service.</fr>
+reine du ville, pour faciliter ton intégration! 
+Il suffit de leur parler et de leur rendre service. Si tu arrives à
+percevoir leur personnalité, tu te lieras d'amitié rapidement avec eux.
+</fr>
       <en Choice_en="">Simply put, if you manage to sympathize with 
 people at the party, you will get a chance to be 
-elected queen of the village, to make your integration easier. 
-All you got to do is talk to them and help them out.</en>
+elected queen of the city, to make your integration easier. 
+All you got to do is talk to them and help them out. If you understand how
+they think, you'll be friend with them fast.</en>
       <answer fullID="60031" ID_Dialog="6003" ID_Answer="1" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
          <fr Choice_fr="Terminer">D’accord, je vois. Je vais aller leur parler alors, à
  plus tard !</fr>
@@ -56,13 +59,13 @@ See you later !</en>
       <fr Choice_fr="">Donc voilà, aujourd’hui c’est la fête et tu vas
 pouvoir rencontrer plein de monde. Qui sait,
 peut-être même qu’avant minuit tu vas pouvoir
-être la reine du village?</fr>
+être la reine de la ville?</fr>
       <en Choice_en="">So, today is the party, and you'll get to meet 
 a lot of people ! Who knows, maybe before 
-midnight, you'll be queen of the village ?</en>
+midnight, you'll be queen of the city ?</en>
       <answer fullID="60041" ID_Dialog="6004" ID_Answer="1" ID_NextDialog="6005" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="60041">
-         <fr Choice_fr="Reine du village">Reine du village ? Pourquoi je voudrais l’être ?</fr>
-         <en Choice_en="Queen of the village">Queen of the village ? Why would I want that ?</en>
+         <fr Choice_fr="Reine de la ville ?">Reine de la ville ? Pourquoi je voudrais l’être ?</fr>
+         <en Choice_en="Queen of the city ?">Queen of the city ? Why would I want that ?</en>
       </answer>
       <answer fullID="60042" ID_Dialog="6004" ID_Answer="2" ID_NextDialog="6006" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="60042">
          <fr Choice_fr="Le trombinoscope">Parle moice trombinoscope que
@@ -107,8 +110,8 @@ associer visage et prénom.</fr>
 the persons invited to the party. Convenient 
 to match names and faces.</en>
       <answer fullID="60061" ID_Dialog="6006" ID_Answer="1" ID_NextDialog="6026" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Reine du village">Reine du village ? Pourquoi je voudrais l’être ?</fr>
-         <en Choice_en="Queen of the village">Queen of the village ? Why would I want that ?</en>
+         <fr Choice_fr="Reine de la ville ?">Reine de la ville ? Pourquoi je voudrais l’être ?</fr>
+         <en Choice_en="Queen of the city ?">Queen of the city ? Why would I want that ?</en>
       </answer>
       <answer fullID="60062" ID_Dialog="6006" ID_Answer="2" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
          <fr Choice_fr="Quitter">Ça devrait aller pour la suite, merci. A plus tard !</fr>
@@ -130,9 +133,9 @@ d’être Barman.</fr>
 to be a bartender ?</en>
       </answer>
       <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
-         <fr Choice_fr="Parler de soi">Ce village est plus sympa que mon ancien 
+         <fr Choice_fr="Parler de soi">Cette ville est plus sympa que mon ancien 
 chez moi.</fr>
-         <en Choice_en="Talk about you">This village is nicer than the town 
+         <en Choice_en="Talk about you">This city is nicer than the town 
 I come from...</en>
       </answer>
       <answer fullID="60074" ID_Dialog="6007" ID_Answer="4" ID_NextDialog="6011" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="60074">

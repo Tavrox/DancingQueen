@@ -165,6 +165,11 @@ public class LevelManager : MonoBehaviour {
 			compPaul.dialToTrigger = "9024";
 		}
 
+		if (compChloe.knowsHomo == true && compChloe.sympathy_score > compChloe.neededToKiss)
+		{
+			compChloe.dialToTrigger = "12016";
+		}
+
 		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
 		Raphael Raph = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
 		Didier Didi = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
@@ -328,10 +333,10 @@ public class LevelManager : MonoBehaviour {
 	{
 		if (eventHappening == true)
 		{
-			eventHappening = false;
-			DialogEvent dialEve = new DialogEvent();
-			dialEve.triggerEvent();
-			StartCoroutine(WaitEvent(3f, dialEve));
+//			eventHappening = false;
+//			DialogEvent dialEve = new DialogEvent();
+//			dialEve.triggerEvent();
+//			StartCoroutine(WaitEvent(3f, dialEve));
 		}
 	}
 	private void setCharPrefab()

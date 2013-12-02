@@ -853,6 +853,12 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Charlie>().dialDisabled = true;
 				break;
 			}
+			case ("disableChloe") :
+			{
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
+				break;
+			}
 			case ("missionBastienEncours") :
 			{
 				killAtferDisplay = true;
@@ -1062,8 +1068,9 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			case ("triggerGroupGirls") :
 			{
-				Girls gameoGirls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
-				gameoGirls.TriggerDialogChloe();
+				lvManager.triggerDialogChloe = true;
+				killAtferDisplay = true;
+				DialogUI.destroyDialog();
 				break;
 			}
 			case ("closeDialogTriggerGroupMeuf") :

@@ -205,11 +205,11 @@ gangster.</fr>
       </answer>
    </dialog>
    <dialog fullID="2016" ID_Dialog="2016" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Paraît que le maire du village truque les 
+      <fr Choice_fr="">Paraît que le maire de la ville truque les 
 élections des concours chaque année. 
 Sachant ça, tu serais intéressée de gagner
 le concours de miss ?</fr>
-      <en Choice_en="">Heard the village mayor fakes the contest 
+      <en Choice_en="">Heard the city mayor fakes the contest 
 elections every year. Knowing that, would 
 you be interested in winning the Miss contest ?</en>
       <answer fullID="20161" ID_Dialog="2016" ID_Answer="1" ID_NextDialog="2018" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="20013">
@@ -258,11 +258,11 @@ influence... Maybe he can introduce you ?</en>
       <en Choice_en="">I don't remember what I wanted to say...</en>
    </dialog>
    <dialog fullID="2020" ID_Dialog="2020" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Paraît que le maire du village truque les 
+      <fr Choice_fr="">Paraît que le maire de la ville truque les 
 élections des concours chaque année. 
 Sachant ça, tu serais intéressée de gagner
 le concours de miss ?</fr>
-      <en Choice_en="">Heard the village mayor fakes the contest 
+      <en Choice_en="">Heard the city mayor fakes the contest 
 elections every year. Knowing that, would 
 you be interested in winning the Miss contest ?</en>
       <answer fullID="20201" ID_Dialog="2020" ID_Answer="1" ID_NextDialog="2024" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogUnlockDernierDialogueAlex" BanAnswer="">

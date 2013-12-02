@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.05557632, y: .574855566, z: 0}
+  m_LocalPosition: {x: -2.1400001, y: .574855566, z: 0}
   m_LocalScale: {x: .580093026, y: .580093026, z: .580093026}
   m_Children:
   - {fileID: 400002}
@@ -116,7 +116,7 @@ MonoBehaviour:
   triggeredUltimate: 0
   voteForPlayer: 0
   banAnswers: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0
   dialDisabled: 0
   whisperSound: 
@@ -126,6 +126,9 @@ MonoBehaviour:
   randomDelayMax: .0900000036
   frequencyWhispers: .150000006
   refusedMission: 0
+  hasSpokenOncePlayer: 0
+  acceptedMission: 0
+  succeedMission: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
