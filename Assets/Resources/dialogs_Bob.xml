@@ -30,9 +30,9 @@ lies to me, no one disrespects me, and
 everything is fine. What do you think of my 
 son, Alex ?</en>
       <answer fullID="50021" ID_Dialog="5002" ID_Answer="1" ID_NextDialog="5004" ID_Character="05" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Clasher Alex">C’est un petit rat. Il n’ira pas loin dans la vie en 
+         <fr Choice_fr="Clasher alex">C’est un petit rat. Il n’ira pas loin dans la vie en 
 restant sous votre protection.</fr>
-         <en Choice_en="Bad Alex">He's a little scumbag. He won't go anywhere in life 
+         <en Choice_en="Alex is a dumbass">He's a little scumbag. He won't go anywhere in life 
 by staying under your protection and thinking is 
 a big shot.</en>
       </answer>
@@ -40,7 +40,9 @@ a big shot.</en>
          <fr Choice_fr="Valoriser Alex">Il a du caractère et sait ce qu’il veut. C’est une 
 preuve de sa détermination. Il a par ailleurs 
 beaucoup de charme...</fr>
-         <en Choice_en="Good Alex">He's got some spirit, and he knows what he wants. It's proof of his determination. Besides, he's very charming...</en>
+         <en Choice_en="Alex is smart and cool">He's got some spirit, and he knows what he wants.
+It's proof of his determination.
+Besides, he's very charming...</en>
       </answer>
       <answer fullID="50023" ID_Dialog="5002" ID_Answer="3" ID_NextDialog="5006" ID_Character="05" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Rester silencieuse">...</fr>

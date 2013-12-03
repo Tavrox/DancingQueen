@@ -179,7 +179,7 @@ MonoBehaviour:
   randomDelayMax: .289999992
   frequencyWhispers: .550000012
   isBattleDance: 0
-  hasTalkedThomas: 1
+  hasTalkedThomas: 0
   knowThomasPreferences: 0
 --- !u!1001 &100100000
 Prefab:

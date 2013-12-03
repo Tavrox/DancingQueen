@@ -141,8 +141,8 @@ public class DialogDisplayer : MonoBehaviour {
 					if(!playerSpeaking) {
 						if(!talking) {
 							InstantiateAnswers();
-							finishedTalking =false;
-							answersInitiated =true;
+							finishedTalking = false;
+							answersInitiated = true;
 						}
 					}
 					else {
@@ -832,12 +832,29 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("hasTalkedRaphael") :
 			{
 				go = getCharacGO("Raphael");
-			go.GetComponent<Raphael>().hasTalkedRaphael = true;
+				go.GetComponent<Raphael>().hasTalkedRaphael = true;
+				break;
+			}
+			case ("closeDialogVIP") :
+			{
+				go = GameObject.Find("DoorDanceToVIP(Clone)");
+				go.GetComponent<LevelDoor>().locked = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogCanPutElectro") :
+			{
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().canPutElectro = true;
+				go.GetComponent<Didier>().hasPutElectro = true;
+				lvManager.setMusic(LevelManager.MusicList.Electro, LevelManager.levelList.Dancefloor);
+				lvManager.musicLvl = LevelManager.MusicList.Electro;
+				killAtferDisplay = true;
 				break;
 			}
 			case ("knowsThomasPreferences") :
 			{
-				go = getCharacGO("Charlie");
+				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().knowThomasPreferences = true;
 				break;
 			}
@@ -853,6 +870,13 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				go = getCharacGO("Charlie");
 				go.GetComponent<Charlie>().dialDisabled = true;
+				break;
+			}
+			case ("closeDialogMissionDidier") :
+			{
+				killAtferDisplay = true;
+				go = getCharacGO("Didier");
+				go.GetComponent<Didier>().missionDidierEncours = true;
 				break;
 			}
 			case ("disableChloe") :
@@ -1071,7 +1095,6 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("triggerGroupGirls") :
 			{
 				lvManager.triggerDialogChloe = true;
-				killAtferDisplay = true;
 				DialogUI.destroyDialog();
 				break;
 			}
@@ -1206,6 +1229,7 @@ public class DialogDisplayer : MonoBehaviour {
 				talkTextGUI.text = displayText;
 				yield return new WaitForSeconds((float) (1f/ textScrollSpeed)); //Waiting textScrollSpeed between each update
 			}
+
 		}
 		if (currentLine == talkLines.Length-1) 
 		{

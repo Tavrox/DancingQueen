@@ -94,7 +94,8 @@
 		<en Choice_en="">That&apos;s nice of you. So how&apos;s your night going ? Are you having fun ?</en>
 		<answer fullID="110071" ID_Dialog="11007" ID_Answer="1" ID_NextDialog="11009" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Gentille">Super bien, je te remercie c’est pas facile de s’intégrer dans cette soirée.</fr>
-			<en Choice_en="Kind">Well, actually, yeah, it&apos;s going great, thank you ! It&apos;s not easy when you don&apos;t know anybody...</en>
+			<en Choice_en="Kind">Well, actually, yeah, it&apos;s going great, thank you !
+It&apos;s not easy when you don&apos;t know anybody...</en>
 		</answer>
 		<answer fullID="110072" ID_Dialog="11007" ID_Answer="2" ID_NextDialog="11010" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Neutre">Ça va tranquille et toi ?</fr>
@@ -110,7 +111,8 @@
 		<en Choice_en="">Just talk... How&apos;s your night going ?</en>
 		<answer fullID="110081" ID_Dialog="11008" ID_Answer="1" ID_NextDialog="11009" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Gentille">Super bien, je te remercie c’est pas facile de s’intégrer dans cette soirée.</fr>
-			<en Choice_en="Kind">Well, actually, yeah, it&apos;s going great, thank you ! It&apos;s not easy when you don&apos;t know anybody...</en>
+			<en Choice_en="Kind">Well, actually, yeah, it&apos;s going great, thank you !
+It&apos;s not easy when you don&apos;t know anybody...</en>
 		</answer>
 		<answer fullID="110082" ID_Dialog="11008" ID_Answer="2" ID_NextDialog="11010" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Neutre">Ça va tranquille et toi ?</fr>
@@ -173,7 +175,7 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 			<fr Choice_fr="Accepter">Allons-y, je suis curieuse de savoir ce qu’il se trame.</fr>
 			<en Choice_en="Agree">Okay, let&apos;s go. I&apos;m curious to hear what he has to say.</en>
 		</answer>
-		<answer fullID="110122" ID_Dialog="11012" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
+		<answer fullID="110122" ID_Dialog="11012" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 			<fr Choice_fr="S’en aller ">Non c’est bon, ça ira. Je m’en vais.</fr>
 			<en Choice_en="Leave">Thanks, but no thanks. I&apos;m out !</en>
 		</answer>
@@ -185,7 +187,7 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 			<fr Choice_fr="Accepter">Allons-y, je suis curieuse de savoir ce qu’il se trame.</fr>
 			<en Choice_en="Agree">Okay, let's go. I'm curious to see what's going on here.</en>
 		</answer>
-		<answer fullID="110132" ID_Dialog="11013" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
+		<answer fullID="110132" ID_Dialog="11013" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 			<fr Choice_fr="S’en aller ">Non c’est bon, ça ira. Je m’en vais.</fr>
 			<en Choice_en="Leave">Thanks, but no thanks. Kara out !</en>
 		</answer>
@@ -201,7 +203,7 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 			<fr Choice_fr="Interrogatif">T’as pas autre chose à me proposer ?</fr>
 			<en Choice_en="Interrogation">Weren&apos;t we talking about something else you might have for me ?</en>
 		</answer>
-		<answer fullID="110143" ID_Dialog="11014" ID_Answer="3" ID_NextDialog="11018" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
+		<answer fullID="110143" ID_Dialog="11014" ID_Answer="3" ID_NextDialog="11018" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 			<fr Choice_fr="S’en aller">Je crois que j’ai fais une erreur en venant ici… je vais m’en aller.</fr>
 			<en Choice_en="Leave">I think this was a mistake. I&apos;m gonna go.</en>
 		</answer>
@@ -227,15 +229,17 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 		<en Choice_en="">You don&apos;t have a choice anymore, everyone saw you get in... Your reputation is ruined !</en>
 	</dialog>
 	<dialog fullID="11018" ID_Dialog="11018" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-		<fr Choice_fr="">J’ai écouté votre petite conversation, j’ai tout entendu. Tu sais, tu me plais et on a toujours rien fait ensemble...</fr>
-		<en Choice_en="">I heard your little conversation, everything you said... You know, I like you, and we still haven&apos;t done anything together...</en>
+		<fr Choice_fr="">J’ai écouté votre petite conversation, j’ai tout entendu.
+Tu sais, tu me plais et on a toujours rien fait ensemble...</fr>
+		<en Choice_en="">I heard your little conversation, everything you said...
+You know, I like you, and we still haven&apos;t done anything together...</en>
 		<answer fullID="110181" ID_Dialog="11018" ID_Answer="1" ID_NextDialog="11019" ID_Character="11" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Interrogatif">Pourquoi j’accepterais de faire quelque chose avec toi ?</fr>
 			<en Choice_en="Interrogation">And why would I want to do anything with you ?</en>
 		</answer>
 		<answer fullID="110182" ID_Dialog="11018" ID_Answer="2" ID_NextDialog="11019" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Refuser">C’est vrai… et c’est pas plus mal. Tu m’intéresses pas, casse-toi.</fr>
-			<en Choice_en="Refuse">Right... And that&apos;s as it should be ! I&apos;m not interested in you. Beat it !</en>
+			<en Choice_en="Refuse">Right... And that&apos;s as it should be ! I'm not interested in you. Beat it !</en>
 		</answer>
 		<answer fullID="110183" ID_Dialog="11018" ID_Answer="3" ID_NextDialog="11020" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="L’Embrasser">* Smack *</fr>
@@ -243,11 +247,15 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11019" ID_Dialog="11019" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-		<fr Choice_fr="">Je t’explique, si le bruit court qu’il y a eu corruption… tu risques gros. Ca peut aller loin tu sais ?</fr>
-		<en Choice_en="">Let me tell you, if word gets around that bribery was involved... You could get int a lot of trouble... And I mean a lot, you get me ?</en>
+		<fr Choice_fr="">Je t’explique, si le bruit court qu’il y a eu corruption… tu risques gros.
+Ca peut aller loin tu sais ?</fr>
+		<en Choice_en="">Let me tell you, if word gets around that bribery was involved...
+You could get int a lot of trouble... And I mean a lot, you get me ?</en>
 		<answer fullID="110191" ID_Dialog="11019" ID_Answer="1" ID_NextDialog="11021" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-			<fr Choice_fr="Accepter">Si ça peut te faire plaisir… Mais t’auras aucune raison de t’en vanter, t’es un vrai connard.</fr>
-			<en Choice_en="Accept">If it&apos;ll make you go away... But you won&apos;t have anything to brag about. You&apos;ll just be an asshole.</en>
+			<fr Choice_fr="Accepter">Si ça peut te faire plaisir…
+Mais t’auras aucune raison de t’en vanter, t’es un vrai connard.</fr>
+			<en Choice_en="Accept">If it&apos;ll make you go away... 
+But you won't have anything to brag about. You&apos;ll just be an asshole.</en>
 		</answer>
 		<answer fullID="110192" ID_Dialog="11019" ID_Answer="2" ID_NextDialog="11022" ID_Character="11" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
 			<fr Choice_fr="Garder la tête haute">J’ai aucune intention de céder à ton chantage espèce de con. J’ai mon honneur.</fr>
@@ -258,23 +266,23 @@ He&apos;s waiting for you in the VIP room, I told him about you.</en>
 			<en Choice_en="Give drugs">Trying to blackmail me, are you ? How about something to get you high ? Would that change your mind ?</en>
 		</answer>
 	</dialog>
-	<dialog fullID="11020" ID_Dialog="11020" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+	<dialog fullID="11020" ID_Dialog="11020" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 		<fr Choice_fr="">Et ben voilà ! Tu vois quand tu veux. A plus bébé.</fr>
 		<en Choice_en="">There ! See ? Wasn&apos;t that hard, was it ? See ya baby !</en>
 	</dialog>
-	<dialog fullID="11021" ID_Dialog="11021" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialog" BanAnswer="">
+	<dialog fullID="11021" ID_Dialog="11021" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 		<fr Choice_fr="">T’en entendras parler !</fr>
 		<en Choice_en="">This ins&apos;t over, trust me !</en>
 	</dialog>
-	<dialog fullID="11022" ID_Dialog="11022" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialog" BanAnswer="">
+	<dialog fullID="11022" ID_Dialog="11022" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 		<fr Choice_fr="">T’es plus rien à leur yeux espèce de garce.</fr>
 		<en Choice_en="">You&apos;re nothing to them, you ugly slut !</en>
 	</dialog>
-	<dialog fullID="11023" ID_Dialog="11023" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialog" BanAnswer="">
+	<dialog fullID="11023" ID_Dialog="11023" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="100" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 		<fr Choice_fr="">Pourquoi pas...</fr>
 		<en Choice_en="">Why not...</en>
 	</dialog>
-	<dialog fullID="11024" ID_Dialog="11024" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialog" BanAnswer="">
+	<dialog fullID="11024" ID_Dialog="11024" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="-100" Condition="basic" Action="closeDialogVIP" BanAnswer="">
 		<fr Choice_fr="">Ahhhhh la garceeee !</fr>
 		<en Choice_en="">You fuckin&apos; biiiiiiiiitch !</en>
 	</dialog>

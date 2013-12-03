@@ -151,6 +151,7 @@ public class TestMode : MonoBehaviour {
 		_Vanessa.isSad = true;
 		_Vanessa.knowsDance = false;
 		_Yannick.hasSpokenOnceToPlayer = false;
+		_Player.numberDrugs = 0;
 
 
 	}

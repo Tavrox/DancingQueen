@@ -42,17 +42,17 @@ course in delirium. Interested in the job ?</en>
       <fr Choice_fr="">Ouhla, mais t’es pas très marrante toi !</fr>
       <en Choice_en="">Waw, you're quite the buzzkill, aren't you ?</en>
       <answer fullID="190031" ID_Dialog="19003" ID_Answer="1" ID_NextDialog="19004" ID_Character="19" Sympathy_value="30" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Taquine">J’avais besoin d’un maître jedi de la connerie, pour 
+         <fr Choice_fr="Taquiner à nouveau">J’avais besoin d’un maître jedi de la connerie, pour 
 m’apprendre les bases, ça t’intéresse ?</fr>
-         <en Choice_en="Teasing">I was just thinking I might need a jedi master for a crash 
+         <en Choice_en="Tease again">I was just thinking I might need a jedi master for a crash 
 course in delirium. Interested in the job ?</en>
       </answer>
       <answer fullID="190032" ID_Dialog="19003" ID_Answer="2" ID_NextDialog="19005" ID_Character="19" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Défensive">Ca vous amuse de faire chier les gens ?</fr>
-         <en Choice_en="Defensive">Do you enjoy annoying people ?</en>
+         <fr Choice_fr="Sur la défensive">Ca vous amuse de faire chier les gens ?</fr>
+         <en Choice_en="Be defensive">Do you enjoy annoying people ?</en>
       </answer>
       <answer fullID="190033" ID_Dialog="19003" ID_Answer="3" ID_NextDialog="19005" ID_Character="19" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Pas compris">Bon, je crois que je vais m’en aller...</fr>
+         <fr Choice_fr="Toujours pas compris">Bon, je crois que je vais m’en aller...</fr>
          <en Choice_en="Still didn't get it">Okay... I think I'm gonna go, now...</en>
       </answer>
    </dialog>

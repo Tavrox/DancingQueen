@@ -10,13 +10,14 @@ public class LevelDoor : MonoBehaviour {
 	private LevelManager lvManager;
 
 	public bool locked = false;
+	public bool delayTransitionOver = false;
 	
 	// Use this for initialization
 	void Start () 
 	{ 
-
 		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		GameEventManager.NextLevel += NextLevel;
+		StartCoroutine(WaitTransition(4f));
 	}
 	void Update()
 	{
@@ -47,16 +48,11 @@ public class LevelDoor : MonoBehaviour {
 
 	private void OnMouseOver()
 	{
-		GameObject _Yannick = GameObject.FindGameObjectWithTag("Yannick");
-		/*
-		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == true)
-		{*/
-			if (DialogUI.exists != true && locked != true)
-			{
-				OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
-				spr.frameName = "cursor_use";
-			}
-//		}
+		if (DialogUI.exists != true && locked != true  && IngameUI.trombiTrigg == false && delayTransitionOver == true)
+		{
+			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
+			spr.frameName = "cursor_use";
+		}
 	}
 
 	private void OnMouseExit()
@@ -97,21 +93,22 @@ public class LevelDoor : MonoBehaviour {
 			}
 	}
 
+	IEnumerator WaitTransition(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		delayTransitionOver = true;
+	}
 	private void OnMouseDown()
 	{
-		GameObject _Yannick = GameObject.FindGameObjectWithTag("Yannick");
-//		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == true)
-//		{
-			if (locked != true)
+		if (locked != true  && delayTransitionOver == true)
+		{
+			if (DialogUI.exists != true  && locked != true)
 			{
-				if (DialogUI.exists != true  && locked != true)
-				{
-					MasterAudio.PlaySound("Porte", "Porte",0f);
-					StartCoroutine( openDoor(1.15f) );
+				MasterAudio.PlaySound("Porte", "Porte",0f);
+				StartCoroutine( openDoor(1.15f) );
 
-				}
 			}
-//		}
+		}
 	}
 
 	IEnumerator openDoor(float wait)

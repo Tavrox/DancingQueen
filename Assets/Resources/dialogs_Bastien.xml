@@ -70,7 +70,7 @@ sale homophobe de merde. Casse-toi !</fr>
       <en Choice_en="">Okay, I'm done wasting my time with you, you homophobic
 bitch ! Fuck off !</en>
    </dialog>
-   <dialog fullID="10011" ID_Dialog="10011" ID_Answer="" ID_NextDialog="" ID_Character="10" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="10011" ID_Dialog="10011" ID_Answer="" ID_NextDialog="" ID_Character="10" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Ah trop cool ! Moi je kiffe l'éléctro, c'est de la bombe.</fr>
       <en Choice_en=""> Oh that's cool from him ! Well, I love House music, it's so good ! </en>
    </dialog>
@@ -91,7 +91,7 @@ et qui assument leur sexualité. Ah aussi pense
 they really are. And give him some eye contacts, too... 
 That works well on that naughty boy !</en>
       </answer>
-	  <answer fullID="100143" ID_Dialog="10014" ID_Answer="3" ID_NextDialog="10013" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="missionDidierDone" BanAnswer="100143">
+	  <answer fullID="100143" ID_Dialog="10014" ID_Answer="3" ID_NextDialog="10011" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="missionDidierDone" BanAnswer="100143">
          <fr Choice_fr="Sa musique préférée">Didier voudrait savoir quel est ton 
 genre de musique préférée, pour en mettre un disque !</fr>
          <en Choice_en="His favorite music">Didier wants to know what is your favorite

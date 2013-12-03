@@ -18,6 +18,7 @@ public class IngameUI : MonoBehaviour {
 	private Object prefabSprite;
 	private OTSprite childSpr;
 	public static bool exists;
+	public static bool trombiTrigg;
 	private PlayerSim _Player;
 	// Use this for initialization
 	
@@ -77,6 +78,7 @@ public class IngameUI : MonoBehaviour {
 				prefabSprite = Resources.Load("03UI/Trombi");
 				Instantiate(prefabSprite);
 				GameEventManager.TriggerGamePause();
+				trombiTrigg = true;
 				break;
 			}
 			case (ListAction.DisplayNotebook) :
@@ -122,6 +124,7 @@ public class IngameUI : MonoBehaviour {
 	}
 	private void GameUnpause()
 	{
+		trombiTrigg = false;
 		
 	}
 	private void GameDialog()
@@ -136,6 +139,7 @@ public class IngameUI : MonoBehaviour {
 			Destroy(target[i]);
 			exists = false;
 		}
+		trombiTrigg = false;
 	}
 	public static void createIngameUI()
 	{

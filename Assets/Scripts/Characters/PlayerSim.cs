@@ -26,10 +26,7 @@ public class PlayerSim : MonoBehaviour {
 	}
 	void Update()
 	{
-		if (numberDrugs > 0)
-		{
 
-		}
 	}
 
 	public void reloadCharacs()

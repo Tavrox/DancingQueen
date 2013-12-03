@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharSim : MonoBehaviour {
 	
@@ -45,6 +46,7 @@ public class CharSim : MonoBehaviour {
 	public Color colorDialogs = new Color(1f,1,1f,1f);
 	public bool tutoMode = false;
 	public bool dialDisabled = false;
+	private List<string> banList;
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -61,6 +63,7 @@ public class CharSim : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.GameDialog += GameDialog;
 
+		banList = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>().banAnswers;
 		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 	}
 	
@@ -71,6 +74,12 @@ public class CharSim : MonoBehaviour {
 		{
 			voteForPlayer = true;
 		}
+		checkBanAnswers(banList);
+	}
+
+	private void checkBanAnswers(List<string> listBanAnswer)
+	{
+
 
 	}
 	
@@ -118,7 +127,7 @@ public class CharSim : MonoBehaviour {
 	private void OnMouseOver()
 	{
 		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
-		if(DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true)
+		if(DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true && IngameUI.trombiTrigg == false)
 		{
 			OTSprite spr = GameObject.Find("cursorSprite").GetComponent<OTSprite>();
 			spr.frameName = "cursor_talk";
@@ -133,7 +142,7 @@ public class CharSim : MonoBehaviour {
 	private void OnMouseDown()
 	{
 		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
-		if (DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true)
+		if (DialogUI.exists != true && dialDisabled != true && _LevMan.eventHappening != true && IngameUI.trombiTrigg == false)
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();

@@ -272,22 +272,42 @@ Je suis pas ce genre de monstre ! Reste loin de moi !</fr>
       <en Choice_en="">Hey, what the hell ! Who d'you think I am ! I'm not a freak ! 
 Stay away from me !</en>
    </dialog>
-   <dialog fullID="12020" ID_Dialog="12020" ID_Answer="" ID_NextDialog="0" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="12016">
-      <fr Choice_fr="">WoW Pourquoi ? Ok tu me plaîs peut être… 
-Mais mais… s’il te plait ne le dit pas aux autres.
-Si tu veux je peux te les présenter mais essaie de 
-rester de discrète sur ce qu’il vient de se passer.</fr>
-      <en Choice_en="">hey, take it easy ! Ok, maybe I kinda liike you...
-But... Please, don't tell the others... 
-I can take you to them, but please, 
-not a word about what just happened. I'd like us to be friends, but
-don't ruin it.</en>
-	<answer fullID="120201" ID_Dialog="12020" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="20" Condition="triggerGroupGirls" Action="" BanAnswer="">
+   
+   
+   <dialog fullID="12020" ID_Dialog="12020" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="12016">
+      <fr Choice_fr="">Euh quoi... ? 
+* Se laisse embrasser par Kara sans la repousser *
+Ok tu me plaîs peut être… Mais mais… s’il te plait ne le dit pas aux autres.
+J'aimerais te les présenter mais s'il te plait, ne ruine pas tout,
+pas maintenant.</fr>
+      <en Choice_en="">hey, take it easy ! 
+*Let herself go without pushing Kara back* 
+Ok, maybe I kinda like you... But... Please, don't tell the others... 
+I want you to meet them, but please, not a word about what just happened.
+I'd like us to be friends, just don't ruin it.</en>
+	<answer fullID="120201" ID_Dialog="12020" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="20" Condition="basic" Action="triggerGroupGirls" BanAnswer="">
          <fr Choice_fr="La suivre"> D'accord, allons-les voir.</fr>
          <en Choice_en="Follow her"> Okay, let's go see them.</en>
     </answer>
    </dialog>
-   <dialog fullID="12021" ID_Dialog="12021" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <dialog fullID="12021" ID_Dialog="12021" ID_Answer="" ID_NextDialog="120212" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, je vois ce que tu veux dire… Parfois j’aimerais
 pouvoir être nouvelle, pouvoir me refaire peau neuve !</fr>
       <en Choice_en="">Yes, I know what you mean... Sometimes, I wish I could be 

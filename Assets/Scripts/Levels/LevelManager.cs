@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour {
 	private GameObject[] wpChars;
 	private GameObject[] wpDoors;
 	private OTSprite black;
+	private bool stopTimer = false;
 
 	public enum MusicList
 	{
@@ -126,15 +127,23 @@ public class LevelManager : MonoBehaviour {
 
 	void updateTimer()
 	{
-		Minutes +=1;
-		if (Minutes == 60)
+		if (stopTimer != true)
 		{
-			Hours+=1;
-			Minutes = 0;
+			Minutes +=1;
+			if (Minutes == 60)
+			{
+				Hours+=1;
+				Minutes = 0;
+			}
+			if (Hours == 24)
+			{
+				Timer.text = "";
+			}
 		}
-		if (Hours ==24)
+		else
 		{
-			Timer.text = "";
+			Hours = 0;
+			Minutes = 0;
 		}
 	}
 
@@ -178,8 +187,8 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				IngameUI.destroyIngameUI();
-				DialogUI.createDialog(Claire, "14010");
+				GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+				dialEvent.GetComponent<DialogEvent>().setupEvent(Claire,"14010");
 				Claire.talkedAboutFlirting = true;
 			}
 		}
@@ -187,8 +196,11 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				IngameUI.destroyIngameUI();
-				DialogUI.createDialog(Claire, "14005");
+//				IngameUI.destroyIngameUI();
+//				DialogUI.createDialog(Claire, "14005");
+				
+				GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+				dialEvent.GetComponent<DialogEvent>().setupEvent(Claire,"14005");
 				Claire.talkedAboutKissing = true;
 			}
 		}
@@ -196,8 +208,11 @@ public class LevelManager : MonoBehaviour {
 		{
 			if (DialogUI.exists != true)
 			{
-				IngameUI.destroyIngameUI();
-				DialogUI.createDialog(Claire, "14007");
+//				IngameUI.destroyIngameUI();
+//				DialogUI.createDialog(Claire, "14007");
+				
+				GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+				dialEvent.GetComponent<DialogEvent>().setupEvent(Claire,"14007");
 				Claire.talkedAboutSlow = true;
 			}
 		}
@@ -213,8 +228,10 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS1 != true)
 				{
-					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO, "11001" );
+//					IngameUI.destroyIngameUI();
+//					DialogUI.createDialog(GO, "11001" );
+					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11001");
 					GO.casseCouilleS1 = true;
 				}
 
@@ -227,8 +244,10 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS2 == false && GO.gotPlayerInVIP != true && GO.casseCouilleS1 == true)
 				{
-					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO, "11006");
+//					IngameUI.destroyIngameUI();
+//					DialogUI.createDialog(GO, "11006");
+					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11006");
 					GO.casseCouilleS2 = true;
 				}
 				
@@ -241,8 +260,10 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS3 == false && GO.gotPlayerInVIP == false  && GO.casseCouilleS2 == true)
 				{
-					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(GO, "11011");
+//					IngameUI.destroyIngameUI();
+//					DialogUI.createDialog(GO, "11011");
+					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11011");
 					GO.casseCouilleS3 = true;
 				}
 				
@@ -252,6 +273,7 @@ public class LevelManager : MonoBehaviour {
 		if (Hours == 24)
 		{
 			fadeToBlack();
+			stopTimer = true;
 			setCharacGO("killAll");
 			OTSprite gameo = GameObject.Find("Overlay").GetComponent<OTSprite>();
 			OTSprite gameoLoose = GameObject.Find("Win").GetComponent<OTSprite>();
@@ -415,30 +437,35 @@ public class LevelManager : MonoBehaviour {
 			Claire _claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
 			_claire.TriggerDialogClaireMusic();
 			triggerDialogClaireSlow = false;
+			Debug.Log("triggerDialogClaireSlow");
 		}
 		if (triggerDialogChloe == true)
 		{
 			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
 			_girls.TriggerDialogChloe();
 			triggerDialogChloe = false;
+			Debug.Log("triggerDialogChloe");
 		}
 		if (triggerDialogGuys == true)
 		{
 			Boys _boys = GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
 			_boys.TriggerDialog();
 			triggerDialogGuys = false;
+			Debug.Log("triggerDialogGuys");
 		}
 		if (triggerDialogVanessaMusic == true)
 		{
 			Vanessa _vanessa = GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
 			_vanessa.TriggerDialogVanessa();
 			triggerDialogVanessaMusic = false;
+			Debug.Log("triggerDialogVanessaMusic");
 		}
 		if (triggerDialogVanessaGroup == true)
 		{
 			Girls _girls = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
 			_girls.TriggerDialogVanessa();
 			triggerDialogVanessaGroup = false;
+			Debug.Log("triggerDialogVanessaGroup");
 		}
 	}
 
@@ -527,6 +554,7 @@ public class LevelManager : MonoBehaviour {
 				hideChar("Boris");
 				hideChar("Paul");
 				hideChar("Charlie");
+				hideChar("Bob");
 			
 				unhideChar("Raphael");
 				unhideChar("Bastien");

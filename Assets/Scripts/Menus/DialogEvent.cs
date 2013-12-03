@@ -23,6 +23,9 @@ public class DialogEvent : MonoBehaviour {
 		_overlay = GameObject.Find("Event(Clone)/evOverlay/EvOvSprite").GetComponent<OTSprite>();
 		_bubble = GameObject.Find("Event(Clone)/Bubble").GetComponent<OTSprite>();
 		_text = GameObject.Find("Event(Clone)/EventNotifier").GetComponent<GUIText>();
+		_bubble.alpha = 0f;
+		_text.color = Color.clear;
+
 		IngameUI.destroyIngameUI();
 		DialogUI.exists = true;
 
@@ -35,6 +38,9 @@ public class DialogEvent : MonoBehaviour {
 		{
 			_text.text = "Attends... quelqu'un vient  \n  te parler !";
 		}
+		
+		OTTween bubbleOut = new OTTween(_bubble, 1f).Tween("alpha", 1f);
+		OTTween textOut = new OTTween(_text, 1f).Tween("color", Color.white);
 	}
 
 	public void setupEvent(CharSim _char, string _dialTrigger)

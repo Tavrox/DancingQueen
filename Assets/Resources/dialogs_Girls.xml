@@ -34,8 +34,8 @@ plus le voir.</fr>
 he dances, I can't even watch him anymore !</en>
       </answer>
       <answer fullID="10033" ID_Dialog="1003" ID_Answer="3" ID_NextDialog="1004" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Neutre">Je n’ai pas spécialement d’opinion… il fait sa vie.</fr>
-         <en Choice_en="Neutral">I don't really have an opinion... He can take care 
+         <fr Choice_fr="Rester neutre">Je n’ai pas spécialement d’opinion… il fait sa vie.</fr>
+         <en Choice_en="Stay neutral">I don't really have an opinion... He can take care 
 of himself.</en>
       </answer>
    </dialog>
@@ -100,8 +100,8 @@ dire, lâche moi !</fr>
       <en Choice_en="">What ? Waht do you mean ? I've got nothing to say ! 
 Give me a break !</en>
       <answer fullID="10081" ID_Dialog="1008" ID_Answer="1" ID_NextDialog="1009" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Embrasser">*Smack*</fr>
-         <en Choice_en="Kiss">*Kiss*</en>
+         <fr Choice_fr="Embrasser">*Essaie d'approcher Chloe*</fr>
+         <en Choice_en="Kiss">*Tries to approach Chloe*</en>
       </answer>
       <answer fullID="10082" ID_Dialog="1008" ID_Answer="2" ID_NextDialog="0" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialogkeepChloe" BanAnswer="">
          <fr Choice_fr="S'en aller">Je vois… je crois que je vais m’en aller, je n’insisterai 
@@ -111,9 +111,9 @@ but I think you're wrong.</en>
       </answer>
    </dialog>
    <dialog fullID="1009" ID_Dialog="1009" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="closeDialogAndloose3votes" BanAnswer="">
-      <fr Choice_fr="">Quoi ? Mais, mais, barre toi ! Qu’est-ce que tu crois 
+      <fr Choice_fr="">*Repousse Kara violemment* Quoi ? Mais, mais, barre toi ! Qu’est-ce que tu crois 
 faire ? Regardez c’est une lesbich !</fr>
-      <en Choice_en="">What ? Get the fuck outta here ! What the hell do 
+      <en Choice_en="">*Pushes Kara back* What ? Get the fuck outta here ! What the hell do 
 you think you're doing ? Look everyone, she's a queer !</en>
    </dialog>
    <dialog fullID="1010" ID_Dialog="1010" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

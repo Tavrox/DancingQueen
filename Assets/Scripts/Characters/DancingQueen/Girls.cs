@@ -9,7 +9,7 @@ public class Girls : CharSim
 		if (DialogUI.exists != true)
 		{
 			GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
-			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1001");
+			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1010");
 		}
 	}
 	public void TriggerDialogChloe()
@@ -17,7 +17,7 @@ public class Girls : CharSim
 		if (DialogUI.exists != true)
 		{
 			GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
-			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1010");
+			dialEvent.GetComponent<DialogEvent>().setupEvent(this,"1001");
 		}
 	}
 }

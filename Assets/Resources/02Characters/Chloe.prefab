@@ -170,7 +170,7 @@ MonoBehaviour:
   voteForPlayer: 1
   banAnswers: 
   colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
-  tutoMode: 1
+  tutoMode: 0
   dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   frequencyWhispers: .219999999
   isInToilet: 0
   knowsHomo: 0
+  neededToKiss: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

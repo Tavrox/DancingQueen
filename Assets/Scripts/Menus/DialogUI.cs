@@ -75,6 +75,7 @@ public class DialogUI : MonoBehaviour {
 			Destroy(target[i]);
 			exists = false;
 		}
+		IngameUI.createIngameUI();
 	}
 	public static void createDialog(CharSim _chosenChar, string _DialToTrigger = null)
 	{
