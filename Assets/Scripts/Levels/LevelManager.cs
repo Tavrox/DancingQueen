@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour {
 	public OTSprite background;
 	[SerializeField] private Player player;
 	public static CharSim currentCharacterSpeaking;
-	public bool gameWon = false;
+	public bool gameEnded = false;
 	public bool canGoToVIP = false;
 	public bool triggerDialogVanessaGroup;
 	public bool triggerDialogGuys;
@@ -270,26 +270,11 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-		if (Hours == 24)
+		if (Hours == 24 && gameEnded != true)
 		{
-			fadeToBlack();
-			stopTimer = true;
-			setCharacGO("killAll");
-			OTSprite gameo = GameObject.Find("Overlay").GetComponent<OTSprite>();
-			OTSprite gameoLoose = GameObject.Find("Win").GetComponent<OTSprite>();
-			OTSprite gameoWin = GameObject.Find("Loose").GetComponent<OTSprite>();
-			gameo.alpha = 1f;
-
-			if (calculateWin() == true)
-			{
-				gameo.frameName = "win";
-
-			}
-			else
-			{
-				gameo.frameName = "loose";
-			}
-
+			gameEnded = true;
+			GameObject EndingEvent = Instantiate(Resources.Load("04Misc/Ending")) as GameObject;
+			Ending _end = EndingEvent.GetComponent<Ending>();
 		}
 
 	}

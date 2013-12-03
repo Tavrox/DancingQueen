@@ -162,8 +162,8 @@ Sure, what do you want ?</en>
          <en Choice_en="Slow">A slow, to create a romantique ambiance.</en>
       </answer>
       <answer fullID="250113" ID_Dialog="25011" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="vanessaMusic" Action="changeMusicCountry" BanAnswer="">
-         <fr Choice_fr="Country">Un peu de variété, c’est trop sexy.</fr>
-         <en Choice_en="Country music">Gimme some variety music, it's so hot !</en>
+         <fr Choice_fr="Country">Un peu de country, c’est trop sexy.</fr>
+         <en Choice_en="Country music">Gimme some country music, it's so hot !</en>
       </answer>
       <answer fullID="250114" ID_Dialog="25011" ID_Answer="4" ID_NextDialog="0" ID_Character="25" Sympathy_value="" Condition="bastienMusic" Action="changeMusicElectro" BanAnswer="">
          <fr Choice_fr="Electro">De l’électro s’il te plait.</fr>

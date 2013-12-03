@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 132: {fileID: 13200000}
   m_Layer: 0
-  m_Name: Ending
+  m_Name: EndingVotes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,6 +50,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400006}
+  - 132: {fileID: 13200002}
+  m_Layer: 0
+  m_Name: EndingExplanation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -57,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0993642807, y: .901950598, z: -8}
+  m_LocalPosition: {x: .0993639976, y: .59502238, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -72,6 +88,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
+  - {fileID: 400006}
   - {fileID: 400000}
   m_Father: {fileID: 0}
 --- !u!4 &400004
@@ -81,8 +98,19 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .640521765, y: -1, z: -5.00106382}
-  m_LocalScale: {x: 20.442873, y: 20.442873, z: 10.2214365}
+  m_LocalPosition: {x: .640521765, y: -1, z: -15.0010643}
+  m_LocalScale: {x: 20.442873, y: 20.442873, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+--- !u!4 &400006
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0993642807, y: .901950598, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!23 &2300000
@@ -142,7 +170,7 @@ MonoBehaviour:
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
   _registerInput: 0
-  _depth: -5
+  _depth: -15
   _collidable: 0
   _physics: 0
   _colliderType: 0
@@ -160,7 +188,7 @@ MonoBehaviour:
   protoType: 
   baseName: BlackOverlay
   oSize: {x: .208333343, y: .208333343}
-  imageSize: {x: .299999982, y: .299999982}
+  imageSize: {x: 20.442873, y: 20.442873}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -185,10 +213,34 @@ GUIText:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: "Informes-toi de la musique qui mettrait le feu au \r\ncul de Bastien, Informes-toi
-    de la musique qui mettrait le feu au \r\ncul de Bastien, Informes-toi de la musique
-    qui mettrait le feu au \r\ncul de Bastien, Informes-toi de la musique qui mettrait
-    le feu au \r\ncul de Bastien,"
+  m_Text: "X personnes sur X ont vot\xE9 pour toi lors de l'\xE9lection de la Dancing
+    Queen..."
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 20
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13200002
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: "Bravo, les personnes de la soir\xE9e ont vot\xE9 pour toi \r\nlors de l'\xE9l\xE9ction
+    de la Dancing Queen. Mais quel est\r\nle co\xFBt de ce succ\xE8s ? As-tu correspondu
+    \xE0 \r\n\"ce qu'on attendait de toi\" ? Est-ce que tu t'es forc\xE9e \r\n\xE0
+    parler aux gens pour gagner leur sympathie ?"
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}

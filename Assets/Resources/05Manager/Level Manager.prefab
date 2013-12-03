@@ -40,18 +40,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 0}
   player: {fileID: 0}
-  waypoint1: {fileID: 0}
-  waypoint2: {fileID: 0}
-  thomasBattle: 0
-  chloeToilets: 0
-  vanessaSad: 0
-  raphaelSingle: 0
-  gameWon: 0
-  _Thomas: {fileID: 0}
-  _Chloe: {fileID: 0}
-  _Raphael: {fileID: 0}
-  _Vanessa: {fileID: 0}
+  gameEnded: 0
+  canGoToVIP: 0
+  triggerDialogVanessaGroup: 0
+  triggerDialogGuys: 0
+  triggerDialogVanessaMusic: 0
+  triggerDialogClaireSlow: 0
+  triggerDialogChloe: 0
+  musicLvl: 1
   currentLvl: 0
+  stepVotesForWin: 8
+  updateTimerEvery: 1.79999995
+  Hours: 20
+  Minutes: 55
+  eventHappening: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

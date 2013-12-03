@@ -5,6 +5,7 @@ using UnityEditor;
 public class TestMode : MonoBehaviour {
 	
 	public int[] wantedTweaks;
+	public bool activated;
 //	private GUI debugBoris;
 	
 	private Alex _Alex;
@@ -49,6 +50,12 @@ public class TestMode : MonoBehaviour {
 		_Girls 		= GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
 		_Player 	= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
 		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
+
+		if (activated == true)
+		{
+			ResetGame();
+			print ("reset");
+		}
 	}
 	// Update is called once per frame
 	void Update () 
@@ -107,9 +114,9 @@ public class TestMode : MonoBehaviour {
 		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		_PC 		= GameObject.Find("PlaylistController").GetComponent<PlaylistController>();
 
-		_LM.Hours = 0;
+		_LM.Hours = 20;
 		_LM.Minutes = 0;
-		_LM.gameWon = false;
+		_LM.gameEnded = false;
 		_LM.updateTimerEvery = 1.8f;
 		_LM.canGoToVIP = false;
 		_LM.setMusic(LevelManager.MusicList.Groovy, LevelManager.levelList.Bar);
@@ -124,13 +131,16 @@ public class TestMode : MonoBehaviour {
 		_Bastien.hasSpokenOncePlayer = false;
 		_Bastien.acceptedMission = false;
 		_Bastien.succeedMission = false;
+		_Bastien.sympathy_score = 0;
 		_Bob.unlocked = false;
+		_Bob.sympathy_score = 0;
 		_Chloe.isInToilet = false;
 		_Chloe.knowsHomo = false;
 		_Chloe.sympathy_score = 0;
 		_Claire.talkedAboutSlow = false;
 		_Claire.talkedAboutKissing = false;
 		_Claire.talkedAboutFlirting = false;
+		_Claire.sympathy_score = 0;
 		_Didier.canPutSlow = false;
 		_Didier.canPutElectro = false;
 		_Didier.canPutCountry = false;
@@ -139,18 +149,25 @@ public class TestMode : MonoBehaviour {
 		_Didier.hasPutSlow = false;
 		_Didier.missionDidierDone = false;
 		_Didier.missionDidierEncours = false;
+		_Didier.sympathy_score = 0;
 		_Manon.missionDone = false;
 		_Manon.missionEncours = false;
+		_Manon.sympathy_score = 0;
 		_Paul.PlayerKnowsIsDealer = false;
+		_Paul.sympathy_score = 0;
 		_Raphael.coupleClaire = true;
 		_Raphael.kissedPlayer = false;
 		_Raphael.hasTalkedRaphael = false;
+		_Raphael.sympathy_score = 0;
 		_Thomas.knowThomasPreferences = false;
 		_Thomas.hasTalkedThomas = false;
 		_Thomas.isBattleDance = false;
+		_Thomas.sympathy_score = 0;
 		_Vanessa.isSad = true;
 		_Vanessa.knowsDance = false;
+		_Vanessa.sympathy_score = 0;
 		_Yannick.hasSpokenOnceToPlayer = false;
+		_Yannick.sympathy_score = 0;
 		_Player.numberDrugs = 0;
 
 
