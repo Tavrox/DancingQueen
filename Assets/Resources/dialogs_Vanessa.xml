@@ -6,11 +6,11 @@ c’est pas l’éclate !</fr>
       <en Choice_en="">Are you bored out of your mind too ? Cause I sure as hell 
 am...</en>
       <answer fullID="70011" ID_Dialog="7001" ID_Answer="1" ID_NextDialog="7002" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="70011">
-         <fr Choice_fr="Seul ?">T'es toute seule ?</fr>
+         <fr Choice_fr="Seule ?">T'es toute seule ?</fr>
          <en Choice_en="Alone ?">Are you alone ?</en>
       </answer>
       <answer fullID="70012" ID_Dialog="7001" ID_Answer="2" ID_NextDialog="7003" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="70012">
-         <fr Choice_fr="Problème ?">Un problème ? Pourquoi tu te fais chier ?</fr>
+         <fr Choice_fr="Y'a un problème ?">Un problème ? Pourquoi tu te fais chier ?</fr>
          <en Choice_en="Problem ?">Is there a problem ? Why are you so bored ?</en>
       </answer>
    </dialog>

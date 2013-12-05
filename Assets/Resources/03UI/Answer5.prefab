@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .610000014, y: 1.85000002, z: 1}
+  m_LocalPosition: {x: .610000014, y: 1.80996907, z: 1}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 7.49999905, y: 4, z: 1}
+  m_LocalScale: {x: 7.49999857, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
 --- !u!4 &400004
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: AnswerBtn5
   _position: {x: 0, y: 0}
-  _size: {x: 7.49999905, y: 4}
+  _size: {x: 7.49999857, y: 4}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   protoType: 
   baseName: AnswerBtn5
   oSize: {x: 8.33333397, y: 2.25}
-  imageSize: {x: 7.49999905, y: 4}
+  imageSize: {x: 7.49999857, y: 4}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
+  _frameIndex: 6
   _frameName: backbtn
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -210,11 +210,11 @@ GUIText:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Agressive
+  m_Text: "Laugh \r\n\t\t (without knowing the answer)"
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 0
+  m_LineSpacing: .75
   m_TabSize: 0
   m_Font: {fileID: 12800000, guid: d3519b37dfbb7f7448570d0ec59c9a69, type: 3}
   m_Material: {fileID: 0}

@@ -91,7 +91,14 @@ et qui assument leur sexualité. Ah aussi pense
 they really are. And give him some eye contacts, too... 
 That works well on that naughty boy !</en>
       </answer>
-	  <answer fullID="100143" ID_Dialog="10014" ID_Answer="3" ID_NextDialog="10011" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="missionDidierDone" BanAnswer="100143">
+	  <answer fullID="100143" ID_Dialog="10014" ID_Answer="3" ID_NextDialog="10015" ID_Character="10" Sympathy_value="-50" Condition="knowsThomasPreferences" Action="" BanAnswer="100143">
+         <fr Choice_fr="Garder pour soi">On a pas mal discuté... et il me plait beaucoup...
+En fait, je crois que je vais garder les infos pour moi... T'as qu'a y aller toi même crétin.</fr>
+         <en Choice_en="Keep the informations
+for yourself">He told me what he likes... but the thing is I'm interested in him.
+Sorry dude, you'd better reach him by yourself dumbass.</en>
+      </answer>
+	  <answer fullID="100144" ID_Dialog="10014" ID_Answer="4" ID_NextDialog="10011" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="missionDidierDone" BanAnswer="100144">
          <fr Choice_fr="Sa musique préférée">Didier voudrait savoir quel est ton 
 genre de musique préférée, pour en mettre un disque !</fr>
          <en Choice_en="His favorite music">Didier wants to know what is your favorite
@@ -112,5 +119,9 @@ things are on the other side of life, my gaydar is telling me you
 should give Chloe a shot ! But if I were you, I'd take her 
 somewhere quiet, first, so she doesn't get embarrased in front 
 of her friends...</en>
+   </dialog>
+   <dialog fullID="10015" ID_Dialog="10015" ID_Answer="" ID_NextDialog="0" ID_Character="10" Sympathy_value="" Condition="basic" Action="closeDialogDisableBastien" BanAnswer="">
+      <fr Choice_fr="">Quoi ? Mais t'es trop horrible comme meuf ! Vas y je me barre.</fr>
+      <en Choice_en=""> Seriously ? No kidding... You're so fucked up, I'd better go.</en>
    </dialog>
 </dialogs>

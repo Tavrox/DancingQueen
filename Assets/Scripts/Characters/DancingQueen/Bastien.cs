@@ -14,7 +14,7 @@ public class Bastien : CharSim
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
-			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
+			MasterAudio.PlaySound("010_Bastien_00",1f,1f ,0f,"0" + characterID + "_" + charac.ToString() + "_click" );
 		}
 	}
 	void OnMouseOver()

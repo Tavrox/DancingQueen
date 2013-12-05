@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class LevelManager : MonoBehaviour {
@@ -168,15 +167,40 @@ public class LevelManager : MonoBehaviour {
 		Thomas compThomas 		= _Thomas.GetComponent<Thomas>();
 		Vanessa compVanessa 	= _Vanessa.GetComponent<Vanessa>();
 		Yannick compYannick 	= _Yannick.GetComponent<Yannick>();
+		PlayerSim compPlayer 	= _Player.GetComponent<PlayerSim>();
 
-		if (compRaphael.coupleClaire == false && compPaul.sympathy_score > 75)
+		// PAUL EVENTS
+		// TRIGGER MISSION DECLARATION
+		if (compPaul.sympathy_score > compPaul.amountMissionRaph && compRaphael.coupleClaire == false )
 		{
-			compPaul.dialToTrigger = "9024";
+			compPaul.dialToTrigger = "9021";
+		}
+		// TRIGGER MISSION 
+		if (compPaul.missionEncours == true && compPaul.missionDone != true)
+		{
+			compPaul.dialToTrigger = "9025";
+		}
+		// RESET AFTER MISSION
+		if (compPaul.resetAfterMission == true)
+		{
+			compPaul.dialToTrigger = "9001";
 		}
 
+		// CHLOE
 		if (compChloe.knowsHomo == true && compChloe.sympathy_score > compChloe.neededToKiss)
 		{
 			compChloe.dialToTrigger = "12016";
+		}
+
+		//THOMAS
+		if (compThomas.isBattleDance == true && compThomas.hasHeardAboutClaire == true)
+		{
+			compThomas.dialToTrigger = "8010";
+		}
+		if (compThomas.isBattleDance == true && compThomas.hasHeardAboutClaire == false 
+		    && compRaphael.coupleClaire == false && compPlayer.numberDrugs > 0)
+		{
+			compThomas.dialToTrigger = "8029";
 		}
 
 		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
@@ -521,7 +545,6 @@ public class LevelManager : MonoBehaviour {
 			Destroy(doors[i]);
 			Debug.LogWarning ("Door Destroyed");
 		}
-
 	}
 
 	private void setCharPos()

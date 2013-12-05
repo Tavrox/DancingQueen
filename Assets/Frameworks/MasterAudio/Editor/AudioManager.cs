@@ -18,7 +18,7 @@ public class AudioManager : EditorWindow {
 				new Rect (0, 0, 520, 220)
 		);	
 		
-		var playlistCont = GUIHelper.GetSinglePlaylistController();
+		var playlistCont = PlaylistController.Instance;
 		var plControllerInScene = playlistCont != null;
 
 		Texture header = (Texture) Resources.LoadAssetAtPath("Assets/MasterAudio/Sources/Textures/inspector_header_master_audio.png", typeof(Texture));
@@ -27,7 +27,7 @@ public class AudioManager : EditorWindow {
 		}
 		Texture settings = (Texture) Resources.LoadAssetAtPath("Assets/MasterAudio/Sources/Textures/gearIcon.png", typeof(Texture));
 		
-		var ma = GUIHelper.GetSingleMasterAudio();
+		var ma = MasterAudio.Instance;
 		
 		GUIHelper.ShowColorWarning("The Master Audio prefab holds sound FX group and mixer controls. Add this first (only one per scene).");
 		EditorGUILayout.BeginHorizontal(EditorStyles.objectFieldThumb);
@@ -104,7 +104,11 @@ public class AudioManager : EditorWindow {
 			Debug.LogError("Could not find MasterAudio prefab. Please drag it into the scene yourself. It is located under MasterAudio/Prefabs.");
 			return;
 		}
-		var go = GameObject.Instantiate(ma);
+
+        var go = GameObject.Instantiate(ma) as GameObject;
+
+        UndoHelper.CreateObjectForUndo(go, "Create Master Audio prefab");
+
 		go.name = "MasterAudio";
 	}
 	
@@ -114,8 +118,11 @@ public class AudioManager : EditorWindow {
 			Debug.LogError("Could not find PlaylistController prefab. Please drag it into the scene yourself. It is located under MasterAudio/Prefabs.");
 			return;
 		}
-		var go = GameObject.Instantiate(pc);
+
+        var go = GameObject.Instantiate(pc) as GameObject;
 		go.name = "PlaylistController";
+
+        UndoHelper.CreateObjectForUndo(go, "Create Playlist Controller prefab");
 	}
 	
 	private void CreateDynamicSoundGroupCreator() {
@@ -124,7 +131,9 @@ public class AudioManager : EditorWindow {
 			Debug.LogError("Could not find DynamicSoundGroupCreator prefab. Please drag it into the scene yourself. It is located under MasterAudio/Prefabs.");
 			return;
 		}
-		var go = GameObject.Instantiate(pc);
+		var go = GameObject.Instantiate(pc) as GameObject;
 		go.name = "DynamicSoundGroupCreator";
+
+        UndoHelper.CreateObjectForUndo(go, "Create Dynamic Sound Group Creator prefab");
 	}
 }

@@ -34,7 +34,7 @@ trop en état de se déplacer j’ai l’impression...</fr>
 something for her, but she's not really able to move, 
 right now...</en>
       </answer>
-      <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="90016">
+      <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="90126">
          <fr Choice_fr="Drogues">T’as quoi à proposer mec ?</fr>
          <en Choice_en="Drugs">What have you got, man ?</en>
       </answer>
@@ -111,8 +111,6 @@ judge a fact without analysing it's consequences.
 If the cause is just, the end justifies the means...</en>
       </answer>
    </dialog>
-   
-   
    <dialog fullID="9005" ID_Dialog="9005" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ohhh, c’est mignon la petite sainte nitouche !!</fr>
       <en Choice_en="">Oh, how sweet ! We got ourselves a little nun !</en>
@@ -361,49 +359,67 @@ for you !</en>
       <fr Choice_fr="">Tu sais pas ce que tu rates. Dommage !</fr>
       <en Choice_en="">You don't know what you're missing. Too bad !</en>
    </dialog>
-   <dialog fullID="9021" ID_Dialog="9021" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="RaphaelClaireCouplesympathy50" Action="" BanAnswer="">
+   <dialog fullID="9021" ID_Dialog="9021" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">DIs moi, pourrais-tu m'aider ?</fr>
       <en Choice_en="">Say, can you help me out ?</en>
       <answer fullID="90211" ID_Dialog="9021" ID_Answer="1" ID_NextDialog="9022" ID_Character="09" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Acepter (gentille)">Oui bien sur, que puis-je pour toi ?</fr>
-         <en Choice_en="Accept (kind)">Sure, what can I do for you ?</en>
-      </answer>
-      <answer fullID="90212" ID_Dialog="9021" ID_Answer="2" ID_NextDialog="9022" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Accepter ((intéressée))">Dis toujours, ça peut m’intéresser</fr>
-         <en Choice_en="Accept (interested)">Go ahead.</en>
+         <fr Choice_fr="Ecouter sa demande ">Dis-moi tout.</fr>
+         <en Choice_en="Listen to his request">Tell me first and I'll see what I can do.</en>
       </answer>
       <answer fullID="90213" ID_Dialog="9021" ID_Answer="3" ID_NextDialog="9023" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Occupée">Désolé, j’ai autre chose à faire.</fr>
-         <en Choice_en="Refuse">Sorry, I've got a lot on my plate right now.</en>
+         <fr Choice_fr="D'autres chats à fouetter">Désolé, j’ai autre chose à faire.</fr>
+         <en Choice_en="Better things to do">Sorry, I've got a lot on my plate right now.</en>
       </answer>
    </dialog>
-   <dialog fullID="9022" ID_Dialog="9022" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="9021">
+   <dialog fullID="9022" ID_Dialog="9022" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="9021">
       <fr Choice_fr="">Je vais être sincère, Raphaël était un de 
 mes clients les plus fidèles. Malheureusement 
-depuis qu’il est avec Claire il ne consomme plus rien.</fr>
+depuis qu’il est avec Claire il ne consomme plus rien.
+Je te donnerais un bout de drogue en échange de tes services.</fr>
       <en Choice_en="">I'll be as forthcoming as I can be. Raphaël was one 
 of my best and most loyal customer. Sadly, ever 
-since he's been with Claire he doesn't buy anymore.</en>
+since he's been with Claire he doesn't buy anymore.
+I'd give you a piece of weed if you succeed.</en>
+		<answer fullID="90221" ID_Dialog="9022" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogAcceptPaul" BanAnswer="">
+         <fr Choice_fr="Accepter sa demande"> Ca pourrait être drôle... pourquoi pas.
+Je vais voir ce que je peux faire. </fr>
+         <en Choice_en="Agree his request"> This could be fun... why not.
+I'll see what I can do.</en>
+      </answer>
+	  <answer fullID="90222" ID_Dialog="9022" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogRefusePaul" BanAnswer="">
+         <fr Choice_fr="Refuser sa demande">Désolé, j’ai autre chose à faire.</fr>
+         <en Choice_en="Deny his request">Sorry, I've got a lot on my plate right now.</en>
+      </answer>
    </dialog>
    <dialog fullID="9023" ID_Dialog="9023" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="9021">
-      <fr Choice_fr="">Tant pis pour toi… Tu sais pas ce que 
-tu rates...</fr>
-      <en Choice_en="">Your loss ! You don't know what you're missing !</en>
+      <fr Choice_fr="">Ah mince... Ok, tant pis.</fr>
+      <en Choice_en="">Oh. Well, doesn't matter.</en>
    </dialog>
-   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="missionPaulDone" BanAnswer="">
       <fr Choice_fr="">Rohh génial !! T’as réussi à libérer Raphaël 
 de l’emprise de Claire. Ils vont surement se 
 remettre à la drogue maintenant ! Tiens pour 
-te remercier, une nouvelle dose, c’est la dernière
+te remercier, la nouvelle dose, c’est la dernière
 celle là, utilise là bien !</fr>
       <en Choice_en="">Awesome ! You managed to free Raphaël from Claire's 
 evil grip ! Now they'll surely start buying my goods 
-again ! Here, as a thank you, another dose. It's the 
+again ! Here, as a thank you, the dose. It's the 
 last one, make good use of it !</en>
-      <answer fullID="90241" ID_Dialog="9024" ID_Answer="1" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="getDrug" BanAnswer="">
-         <fr Choice_fr="">Merci, t’inquiètes pas, elle est dans les mains 
-d’une experte !</fr>
-         <en Choice_en="">Thanks ! Don't worry, it's in expert hands !</en>
-      </answer>
+   </dialog>
+   <dialog fullID="9025" ID_Dialog="9025" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="9021">
+      <fr Choice_fr="">Alors, comment ça s'est passé ?
+Raphaël et Claire ont rompus ? </fr>
+      <en Choice_en="">So what are the news ?
+Raphael and Claire have splitted up ?</en>
+		<answer fullID="90251" ID_Dialog="9025" ID_Answer="1" ID_NextDialog="9024" ID_Character="09" Sympathy_value="" Condition="basic" Action="coupleBroken" BanAnswer="90251">
+         <fr Choice_fr="Un plan réussi"> Voilà qui est fait comme tu le voulais...
+c'était un jeu d'enfant ! Par ici la récompense !</fr>
+         <en Choice_en="A real success">Yeah, it's done as you wanted... 
+maybe you can give me my reward now ?</en>
+       </answer>
+	   <answer fullID="90252" ID_Dialog="9025" ID_Answer="2" ID_NextDialog="9023" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="On en est encore loin">J'ai encore besoin de temps pour y arriver.</fr>
+         <en Choice_en="Still far from it">No, I still need time to do it.</en>
+       </answer>
    </dialog>
 </dialogs>

@@ -13,7 +13,7 @@ public class AudioCalcEventInspector : Editor {
         EditorGUIUtility.LookLikeControls();
 		EditorGUI.indentLevel = 1;
 
-		var ma = GUIHelper.GetSingleMasterAudio();
+		var ma = MasterAudio.Instance;
 		if (ma != null) {
 			GUIHelper.DrawTexture(ma.logoTexture);
 		}
@@ -26,11 +26,21 @@ public class AudioCalcEventInspector : Editor {
 		}
 		
 		GUILayout.Label("Group Controls", EditorStyles.boldLabel);
-		sounds.soundSpawnMode = (MasterAudio.SoundSpawnLocationMode) EditorGUILayout.EnumPopup("Sound Spawn Mode", sounds.soundSpawnMode);
-		sounds.disableSounds = EditorGUILayout.Toggle("Disable Sounds", sounds.disableSounds);
+
+		var newSpawnMode = (MasterAudio.SoundSpawnLocationMode) EditorGUILayout.EnumPopup("Sound Spawn Mode", sounds.soundSpawnMode);
+		if (newSpawnMode != sounds.soundSpawnMode) {
+			UndoHelper.RecordObjectPropertyForUndo(sounds, "change Spawn Mode");
+			sounds.soundSpawnMode = newSpawnMode;
+		}
+
+		var newDisable = EditorGUILayout.Toggle("Disable Sounds", sounds.disableSounds);
+		if (newDisable != sounds.disableSounds) {
+			UndoHelper.RecordObjectPropertyForUndo(sounds, "toggle Disable Sounds");
+			sounds.disableSounds = newDisable;
+		}
 
 		EditorGUILayout.Separator();
-		GUILayout.Label("Trigger Sounds", EditorStyles.boldLabel);
+		GUILayout.Label("Sound Triggers", EditorStyles.boldLabel);
 		
 		var disabledText = "";
 		if (sounds.disableSounds) {
@@ -44,7 +54,11 @@ public class AudioCalcEventInspector : Editor {
 			GUI.color = Color.white;
 			sounds.useAudioSourceEndedSound = false;
 		} else {
-			sounds.useAudioSourceEndedSound = EditorGUILayout.BeginToggleGroup("Audio Source Ended Sound" + disabledText, sounds.useAudioSourceEndedSound);
+			var newAudioEnded = EditorGUILayout.BeginToggleGroup("Audio Source Ended" + disabledText, sounds.useAudioSourceEndedSound);
+			if (newAudioEnded != sounds.useAudioSourceEndedSound) {
+				UndoHelper.RecordObjectPropertyForUndo(sounds, "toggle Audio  Source Ended");
+				sounds.useAudioSourceEndedSound = newAudioEnded;
+			}
 			if (sounds.useAudioSourceEndedSound && !sounds.disableSounds) {
 				EditorGUI.indentLevel = 2;
 
@@ -53,13 +67,17 @@ public class AudioCalcEventInspector : Editor {
 		
 					int? groupIndex = null;
 					
-					if (existingIndex >= 0) {
+					if (existingIndex >= 1) {
 						groupIndex = EditorGUILayout.Popup("Sound Group", existingIndex, groupNames.ToArray());
 					} else if (existingIndex == -1 && sounds.audioSourceEndedSound.soundType == MasterAudio.NO_GROUP_NAME) {
 						groupIndex = EditorGUILayout.Popup("Sound Group", existingIndex, groupNames.ToArray());
 					} else { // non-match
-						GUIHelper.ShowColorWarning("Sound Group found no match. Choose one from 'All Sound Groups'.");
-						sounds.audioSourceEndedSound.soundType = EditorGUILayout.TextField("Sound Group", sounds.audioSourceEndedSound.soundType);
+						GUIHelper.ShowColorWarning("Sound Group found no match. Type in or choose one.");
+						var newGroup = EditorGUILayout.TextField("Sound Group", sounds.audioSourceEndedSound.soundType);
+						if (newGroup != sounds.audioSourceEndedSound.soundType) {
+							UndoHelper.RecordObjectPropertyForUndo(sounds, "change Sound Group");
+							sounds.audioSourceEndedSound.soundType = newGroup;
+						}
 						var newIndex = EditorGUILayout.Popup("All Sound Groups", -1, groupNames.ToArray());
 						if (newIndex >= 0) {
 							groupIndex = newIndex;
@@ -67,6 +85,10 @@ public class AudioCalcEventInspector : Editor {
 					}
 					
 					if (groupIndex.HasValue) {
+						if (existingIndex != groupIndex.Value) {
+							UndoHelper.RecordObjectPropertyForUndo(sounds, "change Sound Group");
+						}
+
 						if (groupIndex.Value == -1) {
 							sounds.audioSourceEndedSound.soundType = MasterAudio.NO_GROUP_NAME;
 						} else {
@@ -74,16 +96,51 @@ public class AudioCalcEventInspector : Editor {
 						}
 					}
 				} else {
-					sounds.audioSourceEndedSound.soundType = EditorGUILayout.TextField("Sound Group", sounds.audioSourceEndedSound.soundType);
+					var newSoundGroup = EditorGUILayout.TextField("Sound Group", sounds.audioSourceEndedSound.soundType);
+					if (newSoundGroup != sounds.audioSourceEndedSound.soundType) {
+						UndoHelper.RecordObjectPropertyForUndo(sounds, "change Sound Group");
+						sounds.audioSourceEndedSound.soundType = newSoundGroup;
+					}
 				}
 
-		    	sounds.audioSourceEndedSound.volume = EditorGUILayout.Slider("Volume", sounds.audioSourceEndedSound.volume, 0f, 1f);
-				#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5
-				#else
-				sounds.audioSourceEndedSound.delaySound = EditorGUILayout.Slider("Delay Sound (sec)", sounds.audioSourceEndedSound.delaySound, 0f, 10f);
-				#endif
-				sounds.audioSourceEndedSound.emitParticles = EditorGUILayout.Toggle("Emit Particle", sounds.audioSourceEndedSound.emitParticles);
-				sounds.audioSourceEndedSound.particleCountToEmit = EditorGUILayout.IntSlider("Particle Count", sounds.audioSourceEndedSound.particleCountToEmit, 1, 100);
+				var newVolume = EditorGUILayout.Slider("Volume", sounds.audioSourceEndedSound.volume, 0f, 1f);
+				if (newVolume != sounds.audioSourceEndedSound.volume) {
+					UndoHelper.RecordObjectPropertyForUndo(sounds, "change Volume");
+					sounds.audioSourceEndedSound.volume = newVolume;
+				} 
+
+				var newPitch = EditorGUILayout.Toggle("Override pitch?", sounds.audioSourceEndedSound.useFixedPitch);
+				if (newPitch != sounds.audioSourceEndedSound.useFixedPitch) {
+					UndoHelper.RecordObjectPropertyForUndo(sounds, "toggle Override pitch");
+					sounds.audioSourceEndedSound.useFixedPitch = newPitch;
+				}
+
+				if (sounds.audioSourceEndedSound.useFixedPitch) {
+					GUIHelper.ShowColorWarning("*Random pitches for the variation will not be used.");
+					var newFixedPitch = EditorGUILayout.Slider("Pitch", sounds.audioSourceEndedSound.pitch, -3f, 3f);
+					if (newFixedPitch != sounds.audioSourceEndedSound.pitch) {
+						UndoHelper.RecordObjectPropertyForUndo(sounds, "change Pitch");
+						sounds.audioSourceEndedSound.pitch = newFixedPitch;
+					}
+				}
+
+				var newDelay = EditorGUILayout.Slider("Delay Sound (sec)", sounds.audioSourceEndedSound.delaySound, 0f, 10f);
+				if (newDelay != sounds.audioSourceEndedSound.delaySound) {
+					UndoHelper.RecordObjectPropertyForUndo(sounds, "change Delay Sound");
+					sounds.audioSourceEndedSound.delaySound = newDelay;
+				}
+
+				var newEmit = EditorGUILayout.Toggle("Emit Particle", sounds.audioSourceEndedSound.emitParticles);
+				if (newEmit != sounds.audioSourceEndedSound.emitParticles) {
+					UndoHelper.RecordObjectPropertyForUndo(sounds, "toggle Emit Particle");
+					sounds.audioSourceEndedSound.emitParticles = newEmit;
+				}
+
+				var newParticleCount = EditorGUILayout.IntSlider("Particle Count", sounds.audioSourceEndedSound.particleCountToEmit, 1, 100);
+				if (newParticleCount != sounds.audioSourceEndedSound.particleCountToEmit) {
+					UndoHelper.RecordObjectPropertyForUndo(sounds, "change Particle Count");
+					sounds.audioSourceEndedSound.particleCountToEmit = newParticleCount;
+				}
 			}
 			EditorGUILayout.EndToggleGroup();
 		}
@@ -91,7 +148,9 @@ public class AudioCalcEventInspector : Editor {
 		if (GUI.changed) {
 			EditorUtility.SetDirty(target);
 		}
-		
+
+		GUIHelper.RepaintIfUndoOrRedo(this);
+
 		//DrawDefaultInspector();
     }
 }

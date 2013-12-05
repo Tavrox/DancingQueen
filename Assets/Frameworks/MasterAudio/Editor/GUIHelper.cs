@@ -6,8 +6,16 @@ public static class GUIHelper {
 	private const string ALERT_TITLE = "Master Audio Alert";
 	private const string ALERT_OK_TEXT = "Ok";
 	private const string FOLD_OUT_TOOLTIP = "Click to expand or collapse";
-    private const int CONTROLS_DEFAULT_LABEL_WIDTH = 140;
-
+    private const float LED_FRAME_TIME = .07f;
+	
+	public enum JukeboxButtons {
+		None,
+		NextSong,
+		Pause,
+		Play,
+		RandomSong
+	}
+	
 	public enum DTFunctionButtons { 
 		None, 
 		Add, 
@@ -28,14 +36,49 @@ public static class GUIHelper {
 		GUI.DrawTexture(rect, tex);
 	}
 
-	public static MasterAudio GetSingleMasterAudio() {
-		var masterAudio = (MasterAudio) GameObject.FindObjectOfType(typeof(MasterAudio));
-		return masterAudio;
+	public static bool AddDeleteIcon(MasterAudio sounds) {
+		var deleteIcon = sounds.deleteTexture;
+		return GUILayout.Button(new GUIContent(deleteIcon, "Click to delete Duck Sound"), EditorStyles.toolbarButton, GUILayout.MaxWidth(30));
 	}
-	
-	public static PlaylistController GetSinglePlaylistController() {
-		var controller = (PlaylistController) GameObject.FindObjectOfType(typeof(PlaylistController));
-		return controller;
+
+	public static JukeboxButtons AddJukeboxIcons(MasterAudio sounds) {
+		JukeboxButtons buttonPressed = JukeboxButtons.None;
+		
+		var pauseIcon = sounds.pauseTrackTexure;
+		var pauseContent = pauseIcon == null ? new GUIContent("Pause", "Pause Playlist") : new GUIContent(pauseIcon, "Pause Playlist");
+		var buttonWidth = pauseIcon == null ? 50 : 30;
+		if (GUILayout.Button(pauseContent, EditorStyles.toolbarButton, GUILayout.MaxWidth(buttonWidth))) {
+			buttonPressed = JukeboxButtons.Pause;
+		}
+
+		var playIcon = sounds.playTrackTexture;
+		var playContent = playIcon == null ? new GUIContent("Play", "Play Playlist") : new GUIContent(playIcon, "Play Playlist");
+		buttonWidth = playIcon == null ? 50 : 30;
+		if (GUILayout.Button(playContent, EditorStyles.toolbarButton, GUILayout.MaxWidth(buttonWidth))) {
+			buttonPressed = JukeboxButtons.Play;
+		}
+		
+		var nextTrackIcon = sounds.nextTrackTexture;
+		var nextContent = nextTrackIcon == null ? new GUIContent("Next", "Next Track in Playlist") : new GUIContent(nextTrackIcon, "Next Track in Playlist");
+		buttonWidth = nextTrackIcon == null ? 50 : 30;
+		if (GUILayout.Button(nextContent, EditorStyles.toolbarButton, GUILayout.MaxWidth(buttonWidth))) {
+			buttonPressed = JukeboxButtons.NextSong;
+		}
+
+		GUILayout.Space(10);
+		
+		var randomIcon = sounds.randomTrackTexure;
+		var randomContent = randomIcon == null ? new GUIContent("Random", "Random Track in Playlist") : new GUIContent(randomIcon, "Random Track in Playlist");
+		buttonWidth = randomIcon == null ? 50 : 30;
+		if (GUILayout.Button(randomContent, EditorStyles.toolbarButton, GUILayout.MaxWidth(buttonWidth))) {
+			buttonPressed = JukeboxButtons.RandomSong;
+		}
+		
+		if (!Application.isPlaying) {
+			buttonPressed = JukeboxButtons.None;
+		}
+		
+		return buttonPressed;
 	}
 	
 	public static DTFunctionButtons AddMixerBusButtons(GroupBus gb, MasterAudio sounds) {
@@ -74,6 +117,61 @@ public static class GUIHelper {
 		}
 
 		return DTFunctionButtons.None;
+	}
+	
+	public static DTFunctionButtons AddVariationButtons(MasterAudio sounds, string buttonTooltip) {
+		if (GUILayout.Button(new GUIContent(sounds.playTexture, buttonTooltip), EditorStyles.toolbarButton, GUILayout.Width(40))) {
+			return DTFunctionButtons.Play;
+		}
+		
+		return DTFunctionButtons.None;
+	}
+
+    public static DTFunctionButtons AddMixerMuteButton(string itemName, MasterAudio sounds) {
+		var muteContent = new GUIContent(sounds.muteOffTexture, "Click to mute " + itemName);
+		
+		if (sounds.mixerMuted) {
+			muteContent.image = sounds.muteOnTexture;
+		}
+		
+		bool mutePressed = GUILayout.Button(muteContent, EditorStyles.toolbarButton);
+		
+		if (mutePressed == true) {
+			return DTFunctionButtons.Mute;
+		}
+		
+        return DTFunctionButtons.None;
+	}	
+	
+	public static void AddLedSignalLight(MasterAudio sounds, string groupName) {
+		if (sounds.ledTextures.Length == 0) {
+			return;
+		}
+		
+		GUIContent content = new GUIContent(sounds.ledTextures[sounds.ledTextures.Length - 1]); 
+		
+		if (Application.isPlaying) {
+			var groupInfo = MasterAudio.GetGroupInfo(groupName);
+			if (groupInfo != null && groupInfo._lastTimePlayed > 0f && groupInfo._lastTimePlayed <= Time.time) {
+				var timeDiff = Time.time - groupInfo._lastTimePlayed;
+				
+				var timeSlot = (int)(timeDiff / LED_FRAME_TIME);
+				
+				if (timeSlot >= 4 && timeSlot < 5) {
+					content = new GUIContent(sounds.ledTextures[4]); 
+				} else if (timeSlot >= 3 && timeSlot < 4) {
+					content = new GUIContent(sounds.ledTextures[3]); 
+				} else if (timeSlot >= 2 && timeSlot < 3) {
+					content = new GUIContent(sounds.ledTextures[2]); 
+				} else if (timeSlot >= 1 && timeSlot < 2) {
+					content = new GUIContent(sounds.ledTextures[1]); 
+				} else if (timeSlot >= 0 && timeSlot < 1f) {
+					content = new GUIContent(sounds.ledTextures[0]); 
+				}
+			}
+		} 
+		
+		GUILayout.Label(content, EditorStyles.toolbarButton, GUILayout.Width(26));
 	}
 	
     public static DTFunctionButtons AddMixerButtons(MasterAudioGroup aGroup, string itemName, MasterAudio sounds)
@@ -127,39 +225,6 @@ public static class GUIHelper {
         return DTFunctionButtons.None;
     }
 	
- 	public static DTFunctionButtons AddSingleFoldOutListItemButtons()
-    {
-        EditorGUI.indentLevel = 1;
-		
-		EditorGUILayout.BeginHorizontal(GUILayout.MaxWidth(100));
-
-        // A little space between button groups
-        GUILayout.Space(14);
-
-        // Add button - Process presses later
-        bool addPressed = GUILayout.Button(new GUIContent("+", "Click to add new item after the last one"),
-                                           EditorStyles.toolbarButton);
-
-        GUILayout.Space(4);
-		
-		// Remove Button - Process presses later
-        bool removePressed = GUILayout.Button(new GUIContent("-", "Click to remove last item"),
-                                              EditorStyles.toolbarButton);
-
-        EditorGUILayout.EndHorizontal();
-
-        // Return the pressed button if any
-        if (removePressed == true) {
-			return DTFunctionButtons.Remove;
-		}
-        
-		if (addPressed == true) {
-			return DTFunctionButtons.Add;
-		}
-
-        return DTFunctionButtons.None;
-    }
-	
     public static DTFunctionButtons AddFoldOutListItemButtons(int position, int totalPositions, string itemName, bool showAfterText, bool showMoveButtons = false)
     {
         EditorGUILayout.BeginHorizontal(GUILayout.MaxWidth(100));
@@ -186,13 +251,14 @@ public static class GUIHelper {
 			}
 		}
 
-			
-        // Add button - Process presses later
         var buttonText = "Click to add new " + itemName;
 		if (showAfterText) {
 			buttonText += " after this one";
 		}
-		bool addPressed = GUILayout.Button(new GUIContent("+", buttonText),
+		bool addPressed = false;	
+		
+        // Add button - Process presses later
+		addPressed = GUILayout.Button(new GUIContent("+", buttonText),
                                            EditorStyles.toolbarButton);
 
 		// Remove Button - Process presses later
@@ -220,10 +286,8 @@ public static class GUIHelper {
 	
 	public static bool Foldout(bool expanded, string label)
     {
-        EditorGUIUtility.LookLikeInspector();
         var content = new GUIContent(label, FOLD_OUT_TOOLTIP);
         expanded = EditorGUILayout.Foldout(expanded, content);
-        LookLikeControls();
 
         return expanded;
     }
@@ -238,13 +302,20 @@ public static class GUIHelper {
 		GUI.color = Color.white;
 	}
 	
-    public static void LookLikeControls()
-    {
-        EditorGUIUtility.LookLikeControls(CONTROLS_DEFAULT_LABEL_WIDTH);
-    }
-
 	public static void ShowAlert(string text) {
-		EditorUtility.DisplayDialog(GUIHelper.ALERT_TITLE, text,
-				GUIHelper.ALERT_OK_TEXT);
+		if (Application.isPlaying) {
+			Debug.LogWarning(text);
+		} else {
+			EditorUtility.DisplayDialog(GUIHelper.ALERT_TITLE, text,
+					GUIHelper.ALERT_OK_TEXT);
+		}
+	}
+
+	public static void RepaintIfUndoOrRedo(Editor editor) {
+		if (Event.current.type == EventType.ValidateCommand) {
+			if (Event.current.commandName == "UndoRedoPerformed") {
+				editor.Repaint();
+			}
+		}
 	}
 }

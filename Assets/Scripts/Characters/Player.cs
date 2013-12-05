@@ -15,8 +15,6 @@ public class Player : Character {
 	public OTAnimatingSprite currSprite;
 	
 	[SerializeField] private Rect hp_display;
-	[SerializeField] private SoundSprite soundMan;
-	[SerializeField] private ModulatedSound mdSound;
 	
 	public bool shootingKnife;
 	[HideInInspector] public bool paused = false;
@@ -33,16 +31,12 @@ public class Player : Character {
 		
 		enabled = false;
 		spawnPos = thisTransform.position;
-		soundMan = GetComponent<SoundSprite>();
-		mdSound = GetComponent<ModulatedSound>();
 		//dialog = GameObject.Find("Dialog").GetComponent<Dialog>();
 	}
 	
 	// Update is called once per frame
 	public void Update () 
 	{
-		
-		mdSound.PercentSound(this);
 		Debug.Log ("Player_Shield" + hasShield);
 		UpdateMovement();
 	}

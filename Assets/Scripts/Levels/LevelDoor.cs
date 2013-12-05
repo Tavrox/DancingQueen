@@ -104,7 +104,7 @@ public class LevelDoor : MonoBehaviour {
 		{
 			if (DialogUI.exists != true  && locked != true)
 			{
-				MasterAudio.PlaySound("Porte", "Porte",0f);
+				MasterAudio.PlaySound("Porte",1f,1f ,0f, "Porte");
 				StartCoroutine( openDoor(1.15f) );
 
 			}

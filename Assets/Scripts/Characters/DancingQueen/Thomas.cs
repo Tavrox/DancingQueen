@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class Thomas : CharSim 
 {
-	public bool isBattleDance = false;
-	public bool hasTalkedThomas = false;
-	public bool knowThomasPreferences = false;
+	[SerializeField] public bool isBattleDance = false;
+	[SerializeField] public bool hasTalkedThomas = false;
+	[SerializeField] public bool knowThomasPreferences = true;
+	public bool hasHeardAboutClaire = false;
 
 }

@@ -156,7 +156,6 @@
             <filename>trombi_ui.png</filename>
             <filename>drogue_ui.png</filename>
             <filename>close_ui.png</filename>
-            <filename>notebook_full_ui.png</filename>
             <filename>quitdialog_ui.png</filename>
             <filename>backOtherDialog.png</filename>
             <filename>backPlayerDialog.png</filename>
@@ -165,14 +164,14 @@
             <filename>02backbtn.png</filename>
             <filename>watch.png</filename>
             <filename>black.png</filename>
-            <filename>loose.png</filename>
-            <filename>win.png</filename>
             <filename>en.png</filename>
             <filename>fr.png</filename>
             <filename>trombino_full_ui.png</filename>
             <filename>backbtn.png</filename>
             <filename>backbtn_hover.png</filename>
             <filename>Event.png</filename>
+            <filename>C:/Users/Tav/Pictures/4edgeslogo.png</filename>
+            <filename>title.jpg</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -37,12 +37,14 @@ C’est un chat qui traverse la route et ...</fr>
       <en Choice_en="">Oh, the little miss is receptive to my humour... By the 
 way, you know why the cat didn't cross the road ?</en>
       <answer fullID="130051" ID_Dialog="13005" ID_Answer="1" ID_NextDialog="13008" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Répondre(défaut)">Paff le chat</fr>
-         <en Choice_en="Answer">Because it was waiting for the light to go green !</en>
+         <fr Choice_fr="Paf le chat !">Paff le chat</fr>
+         <en Choice_en="It was waiting for green">Because it was waiting for the light to go green !</en>
       </answer>
       <answer fullID="130052" ID_Dialog="13005" ID_Answer="2" ID_NextDialog="13009" ID_Character="13" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Rire( sans avoir la chute)">Hahahahahahaha</fr>
-         <en Choice_en="Laugh (without knowing the answer)">Hahahahaha !</en>
+         <fr Choice_fr="Rire
+		 (sans avoir la chute)">Hahahahahahaha</fr>
+         <en Choice_en="Laugh 
+		 (without knowing the answer)">Hahahahaha !</en>
       </answer>
       <answer fullID="130053" ID_Dialog="13005" ID_Answer="3" ID_NextDialog="13010" ID_Character="13" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Blasé">Elle est nulle cette blague on me la déjà 
@@ -84,9 +86,10 @@ Hahahahaha ! And what's black and smells bad ?</en>
          <en Choice_en="Answer">My ex.</en>
       </answer>
       <answer fullID="130082" ID_Dialog="13008" ID_Answer="2" ID_NextDialog="13010" ID_Character="13" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Rire (sans avoir la chute)">hahahahahahaha</fr>
+         <fr Choice_fr="Rire
+(sans avoir la chute)">hahahahahahaha</fr>
          <en Choice_en="Laugh 
-		 (without knowing the answer)">Hahahaha !</en>
+(without knowing the answer)">Hahahaha !</en>
       </answer>
       <answer fullID="130083" ID_Dialog="13008" ID_Answer="3" ID_NextDialog="13019" ID_Character="13" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Blasé">Elle est nulle cette blague on me l'a déjà
@@ -104,8 +107,10 @@ Qu’est-ce qui est noir et qui sent mauvais ?</fr>
          <en Choice_en="Answer">My ex.</en>
       </answer>
       <answer fullID="130092" ID_Dialog="13009" ID_Answer="2" ID_NextDialog="13019" ID_Character="13" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Rire (sans avoir la chute)">hahahahahahaha</fr>
-         <en Choice_en="Laugh (without knowing the answer)">Hahahaha !</en>
+         <fr Choice_fr="Rire
+(sans avoir la chute)">hahahahahahaha</fr>
+         <en Choice_en="Laugh
+(without knowing the answer)">Hahahaha !</en>
       </answer>
       <answer fullID="130093" ID_Dialog="13009" ID_Answer="3" ID_NextDialog="13018" ID_Character="13" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Blasé">Elle est nulle cette blague on me l'a déjà 

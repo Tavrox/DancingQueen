@@ -120,7 +120,7 @@ public class TestMode : MonoBehaviour {
 		_LM.updateTimerEvery = 1.8f;
 		_LM.canGoToVIP = false;
 		_LM.setMusic(LevelManager.MusicList.Groovy, LevelManager.levelList.Bar);
-		_PC.masterPlaylistVolume = 1f;
+		MasterAudio.PlaylistMasterVolume = 1f;
 		_Alex.voteForPlayer = false;
 		_Alex.casseCouilleS1 = false;
 		_Alex.casseCouilleS2 = false;
@@ -169,13 +169,56 @@ public class TestMode : MonoBehaviour {
 		_Yannick.hasSpokenOnceToPlayer = false;
 		_Yannick.sympathy_score = 0;
 		_Player.numberDrugs = 0;
+	}
 
+	[ContextMenu ("ThomasDialogAboutClaire")]
+	private void ThomasDialogAboutClaire()
+	{
+		Debug.Log("ThomasDialogAboutClaire");
 
+		_Paul 		= GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+		_Raphael 	= GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+		_Player 	= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
+		_PC 		= GameObject.Find("PlaylistController").GetComponent<PlaylistController>();
+
+		_Paul.PlayerKnowsIsDealer = true;
+		_Paul.missionDone = false;
+		_Paul.sympathy_score = 100;
+		_Raphael.coupleClaire = false;
+		_Raphael.kissedPlayer = false;
+		_Raphael.hasTalkedRaphael = false;
+		_Raphael.sympathy_score = 100;
+		_Thomas.knowThomasPreferences = false;
+		_Thomas.hasTalkedThomas = false;
+		_Thomas.isBattleDance = false;
+		_Thomas.sympathy_score = 100;
+		_Player.numberDrugs = 3;
+	}
+
+	[ContextMenu ("MissionPaulOver")]
+	private void MissionPaulOver()
+	{
+		Debug.Log("MissionPullOver");
+		
+		_Paul 		= GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+		_Raphael 	= GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+		_Player 	= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
+		_PC 		= GameObject.Find("PlaylistController").GetComponent<PlaylistController>();
+		
+		_Paul.PlayerKnowsIsDealer = true;
+		_Paul.missionEncours = false;
+		_Paul.missionDone = true;
+		_Paul.sympathy_score = 100;
 	}
 	
 	void OnGUI()
 	{
-
+		if (GUI.changed)
+			EditorUtility.SetDirty(_Thomas);
 //		debugBoris = GUI.HorizontalSlider (new Rect (25, 25, 100, 30), moveVel, 0f, 10f);
 		
 	}

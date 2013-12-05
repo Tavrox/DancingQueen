@@ -336,29 +336,32 @@ myself ! Hahaha !</en>
 attitude ? Je suis pas un chien à ce point !</fr>
       <en Choice_en="">Drugs ? Are you for real ? Do you think I'm some 
 kind of pig ?</en>
-      <answer fullID="80311" ID_Dialog="8031" ID_Answer="1" ID_NextDialog="8032" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="80311" ID_Dialog="8031" ID_Answer="1" ID_NextDialog="8033" ID_Character="08" Sympathy_value="" Condition="basic" Action="looseDrug" BanAnswer="">
          <fr Choice_fr="Insister">Oh y’a rien de mal, elle sera juste plus libre de 
-comprendre que t’es le mec qui lui faut !</fr>
+comprendre que t’es le mec qui lui faut ! Pas de soucis pour le matos, je te le donne.</fr>
          <en Choice_en="Insist">Oh, nothing wrong with it, she'll just be encouraged 
-to realize you're the right guy for her !</en>
+to realize you're the right guy for her ! For the drug, I'm so cool 
+I'll gave you a piece.</en>
       </answer>
-      <answer fullID="80312" ID_Dialog="8031" ID_Answer="2" ID_NextDialog="8032" ID_Character="08" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="80312" ID_Dialog="8031" ID_Answer="2" ID_NextDialog="8033" ID_Character="08" Sympathy_value="" Condition="basic" Action="looseDrug" BanAnswer="">
          <fr Choice_fr="Taquine">Dans ton cas, t’as pas trop le choix, mon beau
-loup...</fr>
-         <en Choice_en="Teasing">In your position, you don't really have a choice, handsome...</en>
+loup... Et puis j'ai une petite dose que je vais te donner, c'est cadeau.</fr>
+         <en Choice_en="Teasing">In your position, you don't really 
+have a choice, handsome...
+Moreover, I have some drug for you, consider it as a gift.</en>
       </answer>
-      <answer fullID="80313" ID_Dialog="8031" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="80313" ID_Dialog="8031" ID_Answer="3" ID_NextDialog="0" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogHeardThomas" BanAnswer="">
          <fr Choice_fr="Changer d’avis">Oui t’as raison, c’est pas honnête de forcer les 
 gens avec de la drogue...</fr>
          <en Choice_en="Change mind">Yes, you're right, it's wrong to use drugs to take 
 advantage of someone...</en>
       </answer>
    </dialog>
-   <dialog fullID="8032" ID_Dialog="8032" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="8029">
+   <dialog fullID="8032" ID_Dialog="8032" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogHeardThomasSucceed" BanAnswer="8029">
       <fr Choice_fr="">Mais … t’es une salope ! Vas-y barre toi.</fr>
       <en Choice_en="">You... You're such a bitch ! Get outta here !</en>
    </dialog>
-   <dialog fullID="8033" ID_Dialog="8033" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="8029">
+   <dialog fullID="8033" ID_Dialog="8033" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogHeardThomasSucceed" BanAnswer="8029">
       <fr Choice_fr="">Bon j’aime pas trop ça, mais je suppose que 
 c’est un peu ma dernière option.</fr>
       <en Choice_en="">All right... I don't really like that, but I guess it's 

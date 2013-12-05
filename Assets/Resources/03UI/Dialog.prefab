@@ -462,7 +462,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 16.7000008, y: 12.6000004, z: 1}
   m_Children: []
   m_Father: {fileID: 400026}
@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .910000026, y: 1.42999995, z: 1}
+  m_LocalScale: {x: .909999967, y: 1.42999995, z: 1}
   m_Children: []
   m_Father: {fileID: 400030}
 --- !u!4 &400020
@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8479774, y: -.53985846, z: -3.00015497}
-  m_LocalScale: {x: 2.97648072, y: 1.23123693, z: 1}
+  m_LocalScale: {x: 2.97648048, y: 1.23123693, z: 1}
   m_Children: []
   m_Father: {fileID: 400034}
 --- !u!4 &400044
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
   _registerInput: 0
-  _depth: 0
+  _depth: 1
   _collidable: 0
   _physics: 0
   _colliderType: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: closeSprite
   _position: {x: 0, y: 0}
-  _size: {x: .910000026, y: 1.42999995}
+  _size: {x: .909999967, y: 1.42999995}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   protoType: 
   baseName: closeSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: .999999404, y: 1.99999881}
+  imageSize: {x: .909999967, y: 1.42999995}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: OvCharPlayer
   _position: {x: -3.8479774, y: -.53985846}
-  _size: {x: 2.97648072, y: 1.23123693}
+  _size: {x: 2.97648048, y: 1.23123693}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1326,7 +1326,7 @@ MonoBehaviour:
   protoType: 
   baseName: OvCharPlayer
   oSize: {x: 8.33333397, y: 2.25}
-  imageSize: {x: 2.97648072, y: 1.23123693}
+  imageSize: {x: 2.97648048, y: 1.23123693}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0

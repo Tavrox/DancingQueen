@@ -146,7 +146,7 @@ public class CharSim : MonoBehaviour {
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
-			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
+//			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
 		}
 	}
 	
@@ -167,8 +167,7 @@ public class CharSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characID + "_" + charName + "_" + transfRand);
-
+		PlaySoundResult psr = MasterAudio.PlaySound("0" + characID + "_" + charName);
 	}
 
 

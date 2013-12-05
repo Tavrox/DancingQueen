@@ -38,31 +38,7 @@ public class IngameUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (DialogUI.exists == false)
-		{
-			switch (_Player.numberDrugs)
-			{
 
-				case 1 :
-				{
-					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
-					break;
-				}
-				case 2 :
-				{	
-					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = true;
-					GameObject.Find("Drugs2").GetComponentInChildren<OTSprite>().renderer.enabled = true;
-					break;
-				}
-
-				default :
-				{
-					GameObject.Find("Drugs").GetComponentInChildren<OTSprite>().renderer.enabled = false;
-					GameObject.Find("Drugs2").GetComponentInChildren<OTSprite>().renderer.enabled = false;
-					break;
-				}
-			}
-		}
 	}
 	private void OnMouseOver()
 	{

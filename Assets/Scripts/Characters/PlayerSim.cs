@@ -9,6 +9,8 @@ public class PlayerSim : MonoBehaviour {
 	public int votesAdded;
 	public enum langList {  fr, en };
 	public langList langChosen = langList.fr;
+	public OTSprite drugN1;
+	public OTSprite drugN2;
 
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -26,6 +28,43 @@ public class PlayerSim : MonoBehaviour {
 	}
 	void Update()
 	{
+		if (DialogUI.exists == false)
+		{
+			switch (numberDrugs)
+			{
+
+			case 0 : 
+			{
+				drugN1.renderer.enabled = false;
+				drugN1.renderer.enabled = false;
+				Debug.Log("0Drug");
+				break;
+			}
+				
+			case 1 :
+			{
+				drugN1.renderer.enabled = true;
+				drugN2.renderer.enabled = false;
+				Debug.Log("1Drug");
+				break;
+			}
+			case 2 :
+			{	
+				drugN1.renderer.enabled = true;
+				drugN2.renderer.enabled = true;
+				Debug.Log("2Drug");
+				break;
+			}
+				
+			default :
+			{
+				drugN1.renderer.enabled = false;
+				drugN2.renderer.enabled = false;
+				print ("Default case drugs");
+				break;
+			}
+			}
+		}
 
 	}
 
@@ -65,7 +104,7 @@ public class PlayerSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_Kara_" + transfRand);
+		PlaySoundResult psr = MasterAudio.PlaySound("0" + characterID + "_" + "Kara");
 	}
 	private void fadeToBlack()
 	{

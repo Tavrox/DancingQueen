@@ -1,0 +1,63 @@
+// ENDING
+
+Bravo, les personnes de la soirée ont voté pour toi 
+lors de l'éléction de la Dancing Queen. Mais quel est
+le coût de ce succès ? As-tu correspondu à 
+"ce qu'on attendait de toi" ? Est-ce que tu t'es forcée 
+à parler aux gens pour gagner leur sympathie ?
+Gagner, c'est un peu surfait.
+
+Désolé, vous n'avez pas été élue Dancing Queen ce soir...
+Mais quelle importance ? Est-ce si important d'être la reine,
+Celle qu'on idole et qu'on porte haut dans son estime ?
+Le regard des autres est-il si important ?
+A vous de voir... Peut-être n'avez-vous pas
+perdu... ?
+
+X personnes sur Y ont voté pour vous.
+
+Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane.
+Vous avez rencontré le groupe d'amis de Boris et vous avez désapprouvé le rejet de Stéphane.
+Vous n'avez pas rencontré le groupe d'amis de Boris.
+
+Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez approuvé leur homophobie.
+Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.
+Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.
+
+Vous avez rencontré Bob, le maire de la ville, et l'avez convaincu de truquer les votes.
+Vous avez rencontré Bob, le maire de la ville, et ne l'avez pas convaincu de truquer les votes.
+Vous n'avez pas rencontré Bob, le maire de la ville.
+
+Vous avez aidé Bastien à se rapprocher de Thomas.
+Vous avez refusé d'aider Bastien à se rapprocher de Thomas.
+
+Vous avez fait rompre Claire et Raphaël.
+Claire et Raphaël sont toujours ensembles.
+
+Vous avez incité Thomas à droguer une fille pour sortir avec elle.
+
+Ce sont les choix que vous avez ou n'avez pas fait.
+Those were the choices you made or didn't made.
+____
+
+
+
+// INTRODUCTION
+
+      Composé de ...
+
+Bastien Nanceau - Programmeur / Graphiste
+Paul Lagarrigue - Level designer / Sound designer
+Thomas Goffinet - Game designer / Graphiste
+Yannick Elahee - Programmeur / Game designer
+
+          Avec l'aide de 
+Julien Commenrenc - Traducteur FR/EN
+Stéphane Damo - Compositeur
+
+// 
+Il est vingt heures.
+A minuit, la soirée se terminera et à ce moment-là,
+on élira la Dancing Queen, celle qui a plu au plus grand nombre...
+
+Ainsi commencèrent les intrigues de la cour.

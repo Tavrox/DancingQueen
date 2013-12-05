@@ -492,6 +492,20 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				break;
 			}
+			case ("coupleBroken") :
+			{
+				Raphael charac = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+				Paul charac2 = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+				if (charac.coupleClaire == false || charac2.missionDone == true )
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
+			}
 			case ("missionDidierEncours") :
 			{
 				Didier charac = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
@@ -1019,6 +1033,53 @@ public class DialogDisplayer : MonoBehaviour {
 				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
 				break;
 			}
+			case ("missionPaulDone") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().missionDone = true;
+				go.GetComponent<Paul>().resetAfterMission = true;
+				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogAcceptPaul") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().missionEncours = true;
+				killAtferDisplay = true;
+				break;
+			}	
+			case ("closeDialogRefusePaul") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().resetAfterMission = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogHeardThomas") :
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().hasHeardAboutClaire = true;
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().missionFailed = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogHeardThomasSucceed") :
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().hasHeardAboutClaire = true;
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().missionDone = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("getDrugClose") :
+			{
+				_Player.GetComponent<PlayerSim>().numberDrugs +=1;
+				killAtferDisplay = true;
+				break;
+			}
 			case ("looseDrugManon") :
 			{
 				_Player.GetComponent<PlayerSim>().numberDrugs -=1;
@@ -1116,6 +1177,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Bob");
 				go.GetComponent<Bob>().unlocked = false;
+				go.GetComponent<Bob>().dialDisabled = true;
 				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
 				killAtferDisplay = true;
 				break;
@@ -1124,11 +1186,11 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Bob");
 				go.GetComponent<Bob>().unlocked = true;
+				go.GetComponent<Bob>().dialDisabled = true;
 				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
 				killAtferDisplay = true;
 				break;
 			}
-			/////////////////////////////////////////////
 			case ("closeDialogAndLoose2votes") :
 			{
 				go = getCharacGO("Player");
