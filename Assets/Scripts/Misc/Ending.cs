@@ -7,6 +7,26 @@ public class Ending : MonoBehaviour {
 
 	private OTSprite _blackOv;
 
+	
+	private Alex _Alex;
+	private Bastien _Bastien;
+	private Bob _Bob;
+	private Boris _Boris;
+	private Boys _Boys;
+	private Charlie _Charlie;
+	private Chloe _Chloe;
+	private Christine _Christine;
+	private Claire _Claire;
+	private Didier _Didier;
+	private Girls _Girls;
+	private Manon _Manon;
+	private Paul _Paul;
+	private Raphael _Raphael;
+	private Stephane _Stephane;
+	private Thomas _Thomas;
+	private Vanessa _Vanessa;
+	private Yannick _Yannick;
+
 	private GUIText _txtExplanation;
 	private GUIText _txtNumberVotes;
 	private GUIText _txtGroupBoys;
@@ -20,11 +40,34 @@ public class Ending : MonoBehaviour {
 
 	private LevelManager _LM;
 	private PlayerSim _Player;
+	private int nbVotes;
 
 	// Use this for initialization
 	void Start () {
 
 		DialogUI.destroyDialog();
+
+		_Alex 		= GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
+		_Bob 		= GameObject.FindGameObjectWithTag("Bob").GetComponent<Bob>();
+		_Boris 		= GameObject.FindGameObjectWithTag("Boris").GetComponent<Boris>();
+		_Bastien 	= GameObject.FindGameObjectWithTag("Bastien").GetComponent<Bastien>();
+		_Charlie	= GameObject.FindGameObjectWithTag("Charlie").GetComponent<Charlie>();
+		_Boys		= GameObject.FindGameObjectWithTag("Boys").GetComponent<Boys>();
+		_Chloe 		= GameObject.FindGameObjectWithTag("Chloe").GetComponent<Chloe>();
+		_Christine	= GameObject.FindGameObjectWithTag("Christine").GetComponent<Christine>();
+		_Claire 	= GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
+		_Didier 	= GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();
+		_Manon 		= GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
+		_Paul 		= GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
+		_Raphael 	= GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
+		_Stephane 	= GameObject.FindGameObjectWithTag("Stephane").GetComponent<Stephane>();
+		_Thomas 	= GameObject.FindGameObjectWithTag("Thomas").GetComponent<Thomas>();
+		_Vanessa 	= GameObject.FindGameObjectWithTag("Vanessa").GetComponent<Vanessa>();
+		_Yannick 	= GameObject.FindGameObjectWithTag("Yannick").GetComponent<Yannick>();
+		_Girls 		= GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+		_Player 	= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+		_LM 		= GameObject.Find("Level Manager").GetComponent<LevelManager>();
+
 
 		_LM = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
@@ -43,95 +86,149 @@ public class Ending : MonoBehaviour {
 		watchTxt = GameObject.Find("Timer").GetComponent<GUIText>();
 		watchTxt.color = Color.clear;
 
+		_txtExplanation.text = "";
+		_txtNumberVotes.text = "";
+		_txtGroupBoys.text = "";
+		_txtGroupGirls.text = "";
+		_txtCorrupted.text = "";
+		_txtBastien.text = "";
+		_txtRaphael.text = "";
+		_txtThomas.text = "";
+		_txtChoices.text = "";
+
+		OTTween _overlayOutX = new OTTween(_blackOv, 4f).Tween("size" , new Vector2(20f, 15f));
+		OTTween _overlayAlpha = new OTTween(_blackOv, 2f).Tween("alpha" , 1f);
+		_overlayOutX.OnFinish(displayExpl);
+
 		exists = true;
+		DialogUI.exists = true;
+
+		nbVotes = _LM.getVotes();
 
 		settleTexts();
 	}
 
+	private void displayExpl(OTTween _tween)
+	{
 
+	}
+	private void displayVotes(OTTween _tween)
+	{
+		
+	}
+	private void displayBoys(OTTween _tween)
+	{
+		
+	}
+	private void displayGirls(OTTween _tween)
+	{
+		
+	}
+	private void displayCorrupt(OTTween _tween)
+	{
+		
+	}
+	private void displayBastien(OTTween _tween)
+	{
+		
+	}
+	private void displayRaphael(OTTween _tween)
+	{
+		
+	}
+	private void displayThomas(OTTween _tween)
+	{
+		
+	}
+	private void displayChoices(OTTween _tween)
+	{
+		
+	}
 
 	private void settleTexts()
 	{
 		if (_Player.langChosen == PlayerSim.langList.fr)
 		{
-			_txtExplanation.text = "[ALLTEXTBROKEN]Bravo, les personnes de la soirée ont voté pour toi\n "
-					+ "lors de l'éléction de la Dancing Queen. Mais quel est\n " 
-					+ "le coût de ce succès ? As-tu correspondu à\n "
-					+ "ce qu'on attendait de toi ? Est-ce que tu tes forcée\n "
-					+ "à parler aux gens pour gagner leur sympathie ?\n "
-					+ "Gagner, c'est un peu surfait. \n";
+			if (nbVotes > _LM.stepVotesForWin)
+			{
+				_txtExplanation.text = 
+						"Bravo, vous avez été élue Dancing Queen ce soir.\n"
+						+ "Vous êtes sur le podium et tout le monde vous regarde.\n"
+						+ "Ce regard a t-il guidé vos choix ?";
+			}
+			else
+			{
+				_txtExplanation.text =
+						  "La soirée touche à sa fin, vous n'avez pas été élue Dancing Queen...\n" 
+						+ "Mais quelle importance, ce n'est qu'un concours après tout. \n"
+						+ "Le regard des autres est-il si précieux pour vous ? \n" 
+						+ "De toute façon, la défaite est une notion bien relative.";
+			}
 
-			_txtExplanation.text = "[ALLTEXTBROKEN]La soirée touche à sa fin, vous n'avez pas été élue Dancing Queen ce soir... \n" 
-					+ "Mais quelle importance ? Est-ce si important d'être la reine, \n" 
-					+ "Celle qu'on idole et qu'on porte haut dans son estime ?\n " 
-					+ "Le regard des autres est-il si important ? \n" 
-					+ "A vous de voir... Peut-être n'avez-vous pas \n" 
-					+ "perdu... ? \n" ;
+			_txtNumberVotes.text = nbVotes + " personnes sur 15 ont voté pour vous.";
 
-			_txtNumberVotes.text = "X personnes sur Y ont voté pour vous.";
+			if (_Boys.disapprovedStephane == true)
+			{
+				_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane." ;
+			}
+			if (_Boys.disapprovedStephane == false && _Boys.met == true)
+			{
+				_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez désapprouvé le rejet de Stéphane. ";
+			}
+			if (_Boys.met == false)
+			{
+				_txtGroupBoys.text = "Vous n'avez pas rencontré le groupe d'amis de Boris." ;
+			}
 
-			_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane." ;
-			_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez désapprouvé le rejet de Stéphane. ";
-			_txtGroupBoys.text = "Vous n'avez pas rencontré le groupe d'amis de Boris." ;
 
 			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez approuvé leur homophobie.";
 			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.";
 			_txtGroupGirls.text = "Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.";
 
-			_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, et l'avez convaincu de truquer les votes.";
-			_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, et ne l'avez pas convaincu de truquer les votes.";
-			_txtCorrupted.text = "Vous n'avez pas rencontré Bob, le maire de la ville.";
+			if (_Bob.met == true && _Bob.convinced == true)
+			{
+				_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, et l'avez convaincu de truquer les votes.";
+			}
+			if (_Bob.met == true && _Bob.convinced == false)
+			{
+				_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, mais n'a pas été convaincu de votre comportement";
+			}
+			else if (_Bob.met == false && _Bob.convinced == false)
+			{
+				_txtCorrupted.text = "Vous n'avez pas rencontré Bob, le maire de la ville.";
+			}
+
+			if (_Bastien.succeedMission == true)
+			{
+				_txtBastien.text = "Vous avez aidé Bastien à se rapprocher de Thomas.";
+			}
+			if (_Bastien.refusedMission == true)
+			{
+				_txtBastien.text = "Vous n'avez pas aidé Bastien à se rapprocher de Thomas.";
+			}
+
 			
-			_txtBastien.text = "Vous avez aidé Bastien à se rapprocher de Thomas.";
-			_txtBastien.text = "Vous avez refusé d'aider Bastien à se rapprocher de Thomas.";
-			
-			_txtRaphael.text = "Vous avez fait rompre Claire et Raphaël.";
-			_txtRaphael.text = "Claire et Raphaël sont toujours ensembles.";
-			
-			_txtThomas.text = "Vous avez incité Thomas à droguer une fille pour sortir avec elle.";
+			if (_Raphael.coupleClaire == false)
+			{
+				_txtRaphael.text = "Vous avez fait rompre Claire et Raphaël.";
+			}
+			else if (_Raphael.coupleClaire == true)
+			{
+				_txtRaphael.text = "Claire et Raphaël sont toujours ensembles.";
+			}
+
+
+			if (_Paul.missionDone == true)
+			{
+				_txtThomas.text = "Vous avez incité Thomas à droguer une fille pour sortir avec elle.";
+			}
 				
 			_txtChoices.text = "Ce sont les choix que vous avez ou n'avez pas fait.";
 
 		}
 		else
 		{
-			_txtExplanation.text = "[ALLTEXTBROKEN]Bravo, les personnes de la soirée ont voté pour toi\n "
-				+ " lors de l'éléction de la Dancing Queen. Mais quel est\n " 
-					+ " le coût de ce succès ? As-tu correspondu à\n "
-					+ " ce qu'on attendait de toi ? Est-ce que tu tes forcée\n "
-					+ " à parler aux gens pour gagner leur sympathie ?\n "
-					+ " Gagner, c'est un peu surfait. \n";
-			
-			_txtExplanation.text = "[ALLTEXTBROKEN]La soirée touche à sa fin, vous n'avez pas été élue Dancing Queen ce soir... \n" 
-				+ " Mais quelle importance ? Est-ce si important d'être la reine, \n" 
-					+ " Celle qu'on idole et qu'on porte haut dans son estime ?\n " 
-					+ " Le regard des autres est-il si important ? \n" 
-					+ " A vous de voir... Peut-être n'avez-vous pas \n" 
-					+ " perdu... ? \n" ;
-			
-			_txtNumberVotes.text = "X personnes sur Y ont voté pour vous.";
-			
-			_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane." ;
-			_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez désapprouvé le rejet de Stéphane. ";
-			_txtGroupBoys.text = "Vous n'avez pas rencontré le groupe d'amis de Boris." ;
-			
-			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez approuvé leur homophobie.";
-			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.";
-			_txtGroupGirls.text = "Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.";
-			
-			_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, et l'avez convaincu de truquer les votes.";
-			_txtCorrupted.text = "Vous avez rencontré Bob, le maire de la ville, et ne l'avez pas convaincu de truquer les votes.";
-			_txtCorrupted.text = "Vous n'avez pas rencontré Bob, le maire de la ville.";
-			
-			_txtBastien.text = "Vous avez aidé Bastien à se rapprocher de Thomas.";
-			_txtBastien.text = "Vous avez refusé d'aider Bastien à se rapprocher de Thomas.";
-			
-			_txtRaphael.text = "Vous avez fait rompre Claire et Raphaël.";
-			_txtRaphael.text = "Claire et Raphaël sont toujours ensembles.";
-			
-			_txtThomas.text = "Vous avez incité Thomas à droguer une fille pour sortir avec elle.";
-			
-			_txtChoices.text = "Ce sont les choix que vous avez ou n'avez pas fait.";
+
 		}
 	}
 }

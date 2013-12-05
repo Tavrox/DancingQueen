@@ -217,8 +217,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .640521765, y: -1, z: -20.0010643}
-  m_LocalScale: {x: 20.442873, y: 20.442873, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400006
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 00BlackOverlay
-  _position: {x: .640521765, y: -1}
-  _size: {x: 20.442873, y: 20.442873}
+  _position: {x: 0, y: 0}
+  _size: {x: 0, y: 0}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -384,7 +384,7 @@ MonoBehaviour:
   protoType: 
   baseName: 00BlackOverlay
   oSize: {x: .208333343, y: .208333343}
-  imageSize: {x: 20.442873, y: 20.442873}
+  imageSize: {x: 0, y: 0}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: 1
+  _alpha: 0
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 9
@@ -417,7 +417,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -443,7 +443,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -467,7 +467,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -491,7 +491,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -515,7 +515,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -539,7 +539,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -563,7 +563,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -587,7 +587,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -611,7 +611,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f505de64f46ec944090099c9537d1bc3, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 18
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2

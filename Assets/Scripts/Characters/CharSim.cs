@@ -70,7 +70,7 @@ public class CharSim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (this.sympathy_score > 100 && this.voteForPlayer != true)
+		if (sympathy_score >= 100)
 		{
 			voteForPlayer = true;
 		}
@@ -158,6 +158,8 @@ public class CharSim : MonoBehaviour {
 	public void playWhispers(string characID, string charName)
 	{
 		int rand = Random.Range(minRandomVarWhispers,maxRandomVarWhispers);
+		float randDelay = Random.Range(randomDelayMin,randomDelayMax);
+		string charStr = "0" + characID + "_" + charName;
 		string transfRand;
 		if (rand < 10)
 		{
@@ -167,10 +169,11 @@ public class CharSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("0" + characID + "_" + charName);
+		PlaySoundResult psr = MasterAudio.PlaySound(charStr, 1f, 1f, randDelay, charStr + "_" + transfRand );
+//		print ("Playing group : "  + charStr);
+//		print ("Playing delay : "  + randDelay);
+		print ("Playing sound variation : "  + charStr + "_" + transfRand);
 	}
-
-
 
 	public string getCharFrame(CharSim.charList charac)
 	{

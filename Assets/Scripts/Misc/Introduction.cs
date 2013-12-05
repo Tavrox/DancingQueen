@@ -36,6 +36,7 @@ public class Introduction : MonoBehaviour {
 		}
 		else
 		{
+			DialogUI.exists = false;
 			Destroy(gameObject);
 		}
 	}

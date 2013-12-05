@@ -76,12 +76,12 @@ public class DialogDisplayer : MonoBehaviour {
 		XmlDocument xmlDoc = new XmlDocument();
 		xmlDoc.LoadXml(textAsset.text);
 			
-			//Point to the book nodes and process them
-			dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
-		//}
+		//Point to the book nodes and process them
+		dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
+
 		getDialogContent();
 
-		InvokeRepeating("playWhispers", UnityEngine.Random.Range(currentChar.randomDelayMin,currentChar.randomDelayMax) , currentChar.frequencyWhispers);
+		InvokeRepeating("playWhispers",0f, currentChar.frequencyWhispers);
 		startDialog("");//StartCoroutine( Wait(delayStart) );
 
 		
@@ -97,8 +97,7 @@ public class DialogDisplayer : MonoBehaviour {
 		if(talking == true)
 		{
 			if(playerSpeaking == true) {
-				
-				_Player.GetComponent<PlayerSim>().playWhispers();
+
 				_BgDialogPNJ.renderer.enabled = false;
 				_BgDialogPlayer.renderer.enabled = true;
 			}
@@ -141,6 +140,7 @@ public class DialogDisplayer : MonoBehaviour {
 					if(!playerSpeaking) {
 						if(!talking) {
 							InstantiateAnswers();
+							MasterAudio.FadeOutAllOfSound("004_Kara", 2f);
 							finishedTalking = false;
 							answersInitiated = true;
 						}
@@ -1169,6 +1169,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				PlayerSim _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
 				_player.numberDrugs -= 1;
+				go = getCharacGO("Boys");
+				go.GetComponent<Boys>().met = true;
 				lvManager.triggerDialogGuys = true;
 				DialogUI.destroyDialog();
 				break;
@@ -1178,7 +1180,8 @@ public class DialogDisplayer : MonoBehaviour {
 				go = getCharacGO("Bob");
 				go.GetComponent<Bob>().unlocked = false;
 				go.GetComponent<Bob>().dialDisabled = true;
-				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
+				go.GetComponent<Bob>().met = true;
+				go.GetComponent<Bob>().convinced = false;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1187,7 +1190,8 @@ public class DialogDisplayer : MonoBehaviour {
 				go = getCharacGO("Bob");
 				go.GetComponent<Bob>().unlocked = true;
 				go.GetComponent<Bob>().dialDisabled = true;
-				GameObject.Find("Level Manager").GetComponent<LevelManager>().calculateWin();
+				go.GetComponent<Bob>().met = true;
+				go.GetComponent<Bob>().convinced = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1289,7 +1293,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				displayText += talkLines[currentLine][i];
 				talkTextGUI.text = displayText;
-				yield return new WaitForSeconds((float) (1f/ textScrollSpeed)); //Waiting textScrollSpeed between each update
+				yield return new WaitForSeconds((float) (1f/ textScrollSpeed * Time.deltaTime)); //Waiting textScrollSpeed between each update
 			}
 
 		}
@@ -1317,6 +1321,7 @@ public class DialogDisplayer : MonoBehaviour {
 	
 	private void playWhispers()
 	{
+		/*
 		if (finishedTalking != true || answer1 != null)
 		{
 			if (textIsScrolling)
@@ -1324,11 +1329,20 @@ public class DialogDisplayer : MonoBehaviour {
 				currentChar.playWhispers(fullDialog[1], returnCharacName(fullDialog[1]).ToString());
 			}
 		}
-		if(playerSpeaking == true) 
-		{
-			_Player.GetComponent<PlayerSim>().playWhispers();
+		*/
+		if(talking == true && coroutineRunning != true)
+		{	
+			if (playerSpeaking == true) 
+			{
+				_Player.GetComponent<PlayerSim>().playWhispers();
+				print ("Player whisper");
+			}
+			else
+			{
+				currentChar.playWhispers(fullDialog[1], returnCharacName(fullDialog[1]).ToString());
+				print ("Other char whisper");
+			}
 		}
-
 	}
 
 	public void setCharacter(CharSim _chosenChar)

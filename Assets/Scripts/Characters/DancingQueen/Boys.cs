@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Boys : CharSim 
 {
+	public bool disapprovedStephane = false;
+	public bool met = false;
+
 	public void TriggerDialog ()
 	{
 		if (DialogUI.exists != true)

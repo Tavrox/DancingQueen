@@ -37,7 +37,6 @@ public class PlayerSim : MonoBehaviour {
 			{
 				drugN1.renderer.enabled = false;
 				drugN1.renderer.enabled = false;
-				Debug.Log("0Drug");
 				break;
 			}
 				
@@ -45,14 +44,12 @@ public class PlayerSim : MonoBehaviour {
 			{
 				drugN1.renderer.enabled = true;
 				drugN2.renderer.enabled = false;
-				Debug.Log("1Drug");
 				break;
 			}
 			case 2 :
 			{	
 				drugN1.renderer.enabled = true;
 				drugN2.renderer.enabled = true;
-				Debug.Log("2Drug");
 				break;
 			}
 				
@@ -60,7 +57,6 @@ public class PlayerSim : MonoBehaviour {
 			{
 				drugN1.renderer.enabled = false;
 				drugN2.renderer.enabled = false;
-				print ("Default case drugs");
 				break;
 			}
 			}
@@ -95,7 +91,9 @@ public class PlayerSim : MonoBehaviour {
 	public void playWhispers()
 	{
 		int rand = Random.Range(minRandomVarWhispers,maxRandomVarWhispers);
+		float randDelay = Random.Range(randomDelayMin,randomDelayMax);
 		string transfRand;
+		string charStr = "0" + characterID + "_" + "Kara";
 		if (rand < 10)
 		{
 			transfRand = "0" + rand.ToString();
@@ -104,7 +102,10 @@ public class PlayerSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound("0" + characterID + "_" + "Kara");
+		PlaySoundResult psr = MasterAudio.PlaySound(charStr, 1f, 1f, 0, charStr + "_" + transfRand );
+//		print ("Playing group : "  + charStr);
+//		print ("Playing delay : "  + randDelay);
+		print ("Playing sound variation : "  + charStr + "_" + transfRand);
 	}
 	private void fadeToBlack()
 	{

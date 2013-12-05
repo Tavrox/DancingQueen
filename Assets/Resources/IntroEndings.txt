@@ -46,14 +46,14 @@ ____
 
       Composé de ...
 
-Bastien Nanceau - Programmeur / Graphiste
+Bastien Nanceau - Game Developer / Graphic artist
 Paul Lagarrigue - Level designer / Sound designer
-Thomas Goffinet - Game designer / Graphiste
-Yannick Elahee - Programmeur / Game designer
+Thomas Goffinet - Game designer / Graphic artist
+Yannick Elahee - Game Developer / Game designer
 
-          Avec l'aide de 
-Julien Commenrenc - Traducteur FR/EN
-Stéphane Damo - Compositeur
+          And 
+Julien Commerenc - Translater FR/EN
+Stéphane Damo - Composer
 
 // 
 Il est vingt heures.

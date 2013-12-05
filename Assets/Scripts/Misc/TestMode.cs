@@ -120,7 +120,7 @@ public class TestMode : MonoBehaviour {
 		_LM.updateTimerEvery = 1.8f;
 		_LM.canGoToVIP = false;
 		_LM.setMusic(LevelManager.MusicList.Groovy, LevelManager.levelList.Bar);
-		MasterAudio.PlaylistMasterVolume = 1f;
+		MasterAudio.PlaylistMasterVolume = 0.4f;
 		_Alex.voteForPlayer = false;
 		_Alex.casseCouilleS1 = false;
 		_Alex.casseCouilleS2 = false;

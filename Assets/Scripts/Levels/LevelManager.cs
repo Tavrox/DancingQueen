@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour {
 	public int Hours = 20;
 	public int Minutes = 0;
 	public bool eventHappening = false;
+	public int numberVotes = 0;
 	private string musicStyle;
 
 	private string backBarFrame;
@@ -119,7 +120,7 @@ public class LevelManager : MonoBehaviour {
 		}
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
 		checkTimer();
-		checkClaireState();
+//		checkVotes();
 		checkDialogs();
 		checkEvents();
 	}
@@ -146,9 +147,50 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
-	private void checkClaireState()
+	public int getVotes()
 	{
-
+		if (_Paul.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Alex.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Vanessa.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Boris.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Bob.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Bastien.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Thomas.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Yannick.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Stephane.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		if (_Chloe.GetComponent<CharSim>().voteForPlayer == true)
+		{
+			numberVotes += 1;
+		}
+		numberVotes += _Player.GetComponent<PlayerSim>().votesAdded;
+		return numberVotes;
 	}
 	private void checkEvents()
 	{
@@ -838,7 +880,6 @@ public class LevelManager : MonoBehaviour {
 	public bool calculateWin()
 	{
 		setCharacGO("");
-		int numberVotes = 0;
 		bool res = false;
 		if (_Paul.GetComponent<CharSim>().voteForPlayer == true)
 		{
@@ -890,8 +931,6 @@ public class LevelManager : MonoBehaviour {
 		{
 			Debug.Log("Loose");
 		}
-		Debug.Log("PPL voted you : " + numberVotes);
-		Debug.Log("PPL need : " + stepVotesForWin);
 		return res;
 	}
 }
