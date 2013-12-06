@@ -17,7 +17,7 @@ public class Cursor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = new Vector3(OT.view.mouseWorldPosition.x, OT.view.mouseWorldPosition.y, -1f);
+		transform.position = new Vector3(OT.view.mouseWorldPosition.x, OT.view.mouseWorldPosition.y, -50f);
 		
 //		checkHover();
 	}

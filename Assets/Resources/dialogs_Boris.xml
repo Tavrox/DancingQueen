@@ -179,7 +179,7 @@ T’es bête ou quoi ? Tu devrais le savoir !</fr>
       <en Choice_en="">Well... It can turn every good experience into a bad one ! Are you 
 stupid ? You should know that !</en>
    </dialog>
-   <dialog fullID="18013" ID_Dialog="18013" ID_Answer="" ID_NextDialog="" ID_Character="18" Sympathy_value="" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="180012">
+   <dialog fullID="18013" ID_Dialog="18013" ID_Answer="" ID_NextDialog="" ID_Character="18" Sympathy_value="" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="180012">
       <fr Choice_fr="">C’est le mec qui attend patiemment aux toilettes 
 de vendre sa saloperie. Je hais ce dealer.</fr>
       <en Choice_en="">His the idiot waiting in the bathroom to sell his shit. I hate this 

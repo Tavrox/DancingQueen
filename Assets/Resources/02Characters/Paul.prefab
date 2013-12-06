@@ -179,6 +179,11 @@ MonoBehaviour:
   randomDelayMax: .25999999
   frequencyWhispers: .550000012
   PlayerKnowsIsDealer: 0
+  missionEncours: 0
+  missionDone: 0
+  missionFailed: 0
+  resetAfterMission: 0
+  amountMissionRaph: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

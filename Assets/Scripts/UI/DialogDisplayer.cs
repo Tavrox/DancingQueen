@@ -969,8 +969,13 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
-
-
+			case ("closeDialogCoupleBroken") :
+			{
+				go = getCharacGO("Raphael");
+				go.GetComponent<Raphael>().coupleClaire = false;
+				killAtferDisplay = true;
+				break;
+			}
 			case ("closeDialoghasTalkedThomas") :
 			{
 				go = getCharacGO("Thomas");
@@ -993,6 +998,7 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("changeMusicElectro") :
 			{
 				lvManager.setMusic(LevelManager.MusicList.Electro, LevelManager.levelList.Dancefloor);
+				print ("music changed to electro");
 				killAtferDisplay = true;
 				break;
 			}
@@ -1121,12 +1127,26 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
 				break;
 			}
-			case ("closeDialogPlayerKnowsPaulDealer") :
+			case ("closeDialogMissionManon") :
 			{
 				go = getCharacGO("Paul");
 				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
 				go = getCharacGO("Manon");
 				go.GetComponent<Manon>().missionEncours = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogKnowsDealer") :
+			{
+				go = getCharacGO("Paul");
+				go.GetComponent<Paul>().PlayerKnowsIsDealer = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogDisableManon") :
+			{
+				go = getCharacGO("Manon");
+				go.GetComponent<Manon>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1206,6 +1226,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded += 2;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1220,6 +1242,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded += 1;
+				go = getCharacGO("Boris");
+				go.GetComponent<Boris>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1234,6 +1258,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded -= 3;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1241,6 +1267,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded += 1;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}

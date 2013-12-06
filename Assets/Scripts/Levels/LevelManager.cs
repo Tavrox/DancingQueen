@@ -212,15 +212,19 @@ public class LevelManager : MonoBehaviour {
 		PlayerSim compPlayer 	= _Player.GetComponent<PlayerSim>();
 
 		// PAUL EVENTS
-		// TRIGGER MISSION DECLARATION
-		if (compPaul.sympathy_score > compPaul.amountMissionRaph && compRaphael.coupleClaire == false )
+		// TRIGGER MISSION 
+		if (compPaul.sympathy_score >= compPaul.amountMissionRaph && compPaul.missionEncours != true)
 		{
 			compPaul.dialToTrigger = "9021";
 		}
 		// TRIGGER MISSION 
-		if (compPaul.missionEncours == true && compPaul.missionDone != true)
+		if (compPaul.sympathy_score >= compPaul.amountMissionRaph && compPaul.missionEncours == true)
 		{
 			compPaul.dialToTrigger = "9025";
+		}
+		if (compRaphael.coupleClaire == false )
+		{
+			compPaul.dialToTrigger = "9024";
 		}
 		// RESET AFTER MISSION
 		if (compPaul.resetAfterMission == true)
@@ -802,8 +806,11 @@ public class LevelManager : MonoBehaviour {
 				musicToPlay = "SlowVIP";
 			}
 		}
-		Debug.Log("Playing music :" + musicToPlay);
+		musicLvl = music;
+		MasterAudio.ChangePlaylistByName(music.ToString());
 		MasterAudio.TriggerPlaylistClip(musicToPlay);
+		Debug.Log("Playlist settled " + music.ToString());
+		Debug.Log("Clip played " + musicToPlay);
 		
 	}
 	private void fadeToBlack()

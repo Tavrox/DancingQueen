@@ -69,12 +69,15 @@ intéressant sont pris.</fr>
          <en Choice_en="Flattering">Cool ! Lucky you.</en>
       </answer>
    </dialog>
-   <dialog fullID="13007" ID_Dialog="13007" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="130014">
+   <dialog fullID="13007" ID_Dialog="13007" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="closeDialogCoupleBroken" BanAnswer="130014">
       <fr Choice_fr="">Dayum, Dayum, Dayum Mhh, Mmhh !! 
-Oh my goodness, oh my dayum. You know
-the difference between a weak kiss, and a 
-kiss that has strength ?</fr>
-      <en Choice_en="">Dayum, Dayum, Dayum mhhh, mhhh !! Oh my goodness, oh my dayum. You know the difference between a weak kiss, and a kiss that has strength ?</en>
+Oh my goodness, oh my dayum.
+You wanna know the difference between a weak kiss,
+and a kiss that has strength ?</fr>
+      <en Choice_en="">Dayum, Dayum, Dayum mhhh, mhhh !!
+Oh my goodness, oh my dayum.
+You wanna know the difference between a weak kiss,
+and a kiss that has strength ?</en>
    </dialog>
    <dialog fullID="13008" ID_Dialog="13008" ID_Answer="" ID_NextDialog="" ID_Character="13" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Paff le Raphaël hhahahaha?

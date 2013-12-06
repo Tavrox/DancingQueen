@@ -30,24 +30,27 @@ la ville avec cette petite fête.</fr>
       <en Choice_en="">So, you told me you just arrived in this town, 
 and you don't know anybody. We are celebrating 
 today the bi-centenial of our city with this 
-little party.</en>
+little party. Maybe you could get integrated if you
+speak with them enough and help them with their issues.</en>
       <answer fullID="60021" ID_Dialog="6002" ID_Answer="1" ID_NextDialog="6004" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Continuer">Oui c’est bien ça, je t’en prie continue.</fr>
-         <en Choice_en="Go on">Yes, that's right. Please go on.</en>
+         <fr Choice_fr="Ok, parler et rendre service."> Ok donc il faut juste
+que je leur parle et leur rende service.</fr>
+         <en Choice_en="Ok, speak and help them.">I see, then I just need to speak
+and help them, it's simple as that to be their friend.</en>
       </answer>
    </dialog>
    <dialog fullID="6003" ID_Dialog="6003" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Pour faire simple, si tu arrives à sympathiser 
+      <fr Choice_fr="">Oui voilà, si tu arrives à sympathiser 
 avec les gens de la fête, tu pourras être élue 
-reine du ville, pour faciliter ton intégration! 
-Il suffit de leur parler et de leur rendre service. Si tu arrives à
-percevoir leur personnalité, tu te lieras d'amitié rapidement avec eux.
+reine du ville. Si tu arrives à percevoir leur personnalité,
+tu te lieras d'amitié plus rapidement avec eux.
+Par contre, fais le avant minuit, l'heure du vote.
 </fr>
-      <en Choice_en="">Simply put, if you manage to sympathize with 
+      <en Choice_en="">Yes that's it, if you manage to sympathize with 
 people at the party, you will get a chance to be 
-elected queen of the city, to make your integration easier. 
-All you got to do is talk to them and help them out. If you understand how
-they think, you'll be friend with them fast.</en>
+elected queen of the city. All you got to do is talk to them and help them out.
+If you understand how they think, you'll be friend with them fast.
+But do it before midnight, hour of the vote.</en>
       <answer fullID="60031" ID_Dialog="6003" ID_Answer="1" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
          <fr Choice_fr="Terminer">D’accord, je vois. Je vais aller leur parler alors, à
  plus tard !</fr>
@@ -190,7 +193,7 @@ trop grand pour moi.</fr>
 way too big for me.</en>
       </answer>
       <answer fullID="60102" ID_Dialog="6010" ID_Answer="2" ID_NextDialog="6016" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
-         <fr Choice_fr="Un petit village">Un petit village de campagne, on s’y ennuyait
+         <fr Choice_fr="Une petite ville">Une petite ville de campagne, on s’y ennuyait
 comme des rats morts.</fr>
          <en Choice_en="Small town">A small country town, I was bored 
 out of my mind.</en>

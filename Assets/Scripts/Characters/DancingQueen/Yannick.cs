@@ -10,21 +10,6 @@ public class Yannick : CharSim
 //		StartCoroutine( triggerTuto(4f) );
 	}
 
-	void Update () 
-	{
-
-	}
-
-	public void GiveBeer()
-	{
-		
-	}
-	
-	private void launchTuto()
-	{
-
-	}
-
 	IEnumerator triggerTuto(float wait)
 	{
 		yield return new WaitForSeconds(wait);

@@ -239,8 +239,7 @@ toujours tout seul.</fr>
 gonna be alone !</en>
       </answer>
       <answer fullID="80202" ID_Dialog="8020" ID_Answer="2" ID_NextDialog="8026" ID_Character="08" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Sceptique">Il n’y a vraiment personne qui t’intéresse
-vraiment ?</fr>
+         <fr Choice_fr="Sceptique">Il n’y a vraiment personne qui t’intéresse ?</fr>
          <en Choice_en="Skeptical">There's really no one who interests you ?</en>
       </answer>
       <answer fullID="80203" ID_Dialog="8020" ID_Answer="3" ID_NextDialog="8026" ID_Character="08" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">

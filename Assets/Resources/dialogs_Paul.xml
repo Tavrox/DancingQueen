@@ -4,9 +4,11 @@
       <fr Choice_fr="">Bienvenue dans mon antre jeune demoiselle.</fr>
       <en Choice_en="">Welcome to my lair, young lady...</en>
       <answer fullID="90011" ID_Dialog="9001" ID_Answer="1" ID_NextDialog="9002" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Parler de :">J’aimerais en savoir plus sur les gens de la 
+         <fr Choice_fr="Parler des gens
+de la soirée">J’aimerais en savoir plus sur les gens de la 
 soirée.</fr>
-         <en Choice_en="Talk about">I'd like to know more about the persons who are here 
+         <en Choice_en="Talk about the people
+in the party">I'd like to know more about the persons who are here 
 tonight.</en>
       </answer>
       <answer fullID="90012" ID_Dialog="9001" ID_Answer="2" ID_NextDialog="9004" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="90012">
@@ -27,24 +29,24 @@ socialy speaking ?</en>
          <en Choice_en="Revelation">What's up, friend ?</en>
       </answer>
       <answer fullID="90125" ID_Dialog="9012" ID_Answer="5" ID_NextDialog="9013" ID_Character="09" Sympathy_value="" Condition="MissionManonEnCours" Action="" BanAnswer="90015">
-         <fr Choice_fr="Manon">Dis moi, Manon est à côté, elle m’a dit que
+         <fr Choice_fr="La mission de Manon">Dis moi, Manon est à côté, elle m’a dit que
 t’avais un truc pour elle. Mais elle est pas 
 trop en état de se déplacer j’ai l’impression...</fr>
-         <en Choice_en="Manon">Say, Manon is out there, she told me you've got 
+         <en Choice_en="Manon's quest">Say, Manon is out there, she told me you've got 
 something for her, but she's not really able to move, 
 right now...</en>
       </answer>
       <answer fullID="90126" ID_Dialog="9012" ID_Answer="6" ID_NextDialog="9014" ID_Character="09" Sympathy_value="" Condition="PlayerKnowsPaulDealer" Action="" BanAnswer="90126">
-         <fr Choice_fr="Drogues">T’as quoi à proposer mec ?</fr>
-         <en Choice_en="Drugs">What have you got, man ?</en>
+         <fr Choice_fr="T'as du matos ?">T’as quoi à proposer mec ?</fr>
+         <en Choice_en="Do you have drugs ?">What have you got, man ?</en>
       </answer>
    </dialog>
    <dialog fullID="9002" ID_Dialog="9002" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, de qui ?</fr>
       <en Choice_en="">Yes ? Who ?</en>
       <answer fullID="90021" ID_Dialog="9002" ID_Answer="1" ID_NextDialog="9015" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="L’âne">Des infos sur l’âne</fr>
-         <en Choice_en="The donkey">I'd like infos on the donkey.</en>
+         <fr Choice_fr="L’âne">Des infos sur l’âne, celui qui est sur le trombinoscope.</fr>
+         <en Choice_en="The donkey">I'd like infos on the donkey, I saw him in the picture list.</en>
       </answer>
       <answer fullID="90022" ID_Dialog="9002" ID_Answer="2" ID_NextDialog="9016" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Le taureau">Des infos sur le taureau</fr>
@@ -150,8 +152,6 @@ Mister Philosopher !</en>
          <en Choice_en="Mean">Yeah, right... You didn't get a single word I said, kiddo...</en>
       </answer>
    </dialog>
-   
-   
    <dialog fullID="9007" ID_Dialog="9007" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">D’après moi, non ce n’est pas forcément
 nécessaire. Ensuite, tout dépend de  ce que 
@@ -255,7 +255,7 @@ just a girl who believes in love between human beings !</en>
    </dialog>
    <dialog fullID="9011" ID_Dialog="9011" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Maintenant que je sais que tu as bien 
-assimilé les codes sociaux du city, 
+assimilé les codes sociaux de la ville, 
 je peux te révéler qui je suis vraiment. 
 Comme tu l’avais peut être déjà deviné,
 je peux te fournir n’importe quelle substance, 
@@ -265,19 +265,19 @@ codes of our little town, I believe I can reveal my true
 identity to you... As you may have already guessed, 
 I'm the guy who can supply any substance you need 
 to get high to the Moon itself, if you can afford it, of course...</en>
-      <answer fullID="90111" ID_Dialog="9011" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="0" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="90014">
+      <answer fullID="90111" ID_Dialog="9011" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="0" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="90014">
          <fr Choice_fr="Amusée">Huhu, bien sûr que je le savais. C’est évident !
 Mais c’était marrant de faire semblant !</fr>
          <en Choice_en="Amused">Come on, of course I knew ! It's ovious ! It was fun 
 pretending, though.</en>
       </answer>
-      <answer fullID="90112" ID_Dialog="9011" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="90014">
+      <answer fullID="90112" ID_Dialog="9011" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="90014">
          <fr Choice_fr="Surprise négative">Oh merde ! Si j’avais su !! J’aurais peut être 
 pas discuté aussi longtemps avec toi !</fr>
          <en Choice_en="Negatively surprised">Oh shit ! Had I known that, I wouldn't have spent so 
 much time talking to you !</en>
       </answer>
-      <answer fullID="90113" ID_Dialog="9011" ID_Answer="3" ID_NextDialog="0" ID_Character="09" Sympathy_value="10" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="90014">
+      <answer fullID="90113" ID_Dialog="9011" ID_Answer="3" ID_NextDialog="0" ID_Character="09" Sympathy_value="10" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="90014">
          <fr Choice_fr="Surprise positive">Yeah, la classe ! Ça m’intéresse !! Mhh, 
 je me disais mais porquoi ce mec ne quitte 
 jamais les toilettes… Je comprends mieux 
@@ -325,9 +325,11 @@ de quoi payer !</fr>
    </dialog>
    <dialog fullID="9015" ID_Dialog="9015" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Ah, Stéphane ? Il est assez réservé, il fait 
-parti du groupe de mec là !</fr>
+parti du groupe de mec là, c'est un pote à Boris. Tu peux ptêtre
+demander à Boris de t'intégrer auprès d'eux...</fr>
       <en Choice_en="">Stéphane ? He tends to keep to himself, he's part of 
-that group of guys, over there.</en>
+that group of guys, over there. He's a friend of Boris, maybe you
+can ask him to be introduced to them.</en>
    </dialog>
    <dialog fullID="9016" ID_Dialog="9016" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Erf, tu as croisé Boris ? C’est un sportif, il fait 
@@ -340,10 +342,12 @@ Anti-drugs, anti-alcohol... Your basic spoilsport.</en>
    <dialog fullID="9017" ID_Dialog="9017" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Mhh, Charlie… Si tu sais comment le prendre 
 il peut être sympa. Il peut paraître très agressif 
-au premier abord.</fr>
+au premier abord. Rentre dans son jeu de taquinerie et 
+il t'appréciera.</fr>
       <en Choice_en="">Charlie ? If you know how to handle him, he can be 
 pretty cool ! But he can seem pretty agressive at 
-first, I'll give you that.</en>
+first, I'll give you that. Get into his play of
+tease and he'll be friend with you.</en>
    </dialog>
    <dialog fullID="9018" ID_Dialog="9018" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Reviens me voir plus tard la miss ! Je te met
@@ -396,15 +400,16 @@ I'll see what I can do.</en>
       <en Choice_en="">Oh. Well, doesn't matter.</en>
    </dialog>
    <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="missionPaulDone" BanAnswer="">
-      <fr Choice_fr="">Rohh génial !! T’as réussi à libérer Raphaël 
-de l’emprise de Claire. Ils vont surement se 
-remettre à la drogue maintenant ! Tiens pour 
-te remercier, la nouvelle dose, c’est la dernière
+      <fr Choice_fr="">Rohh génial ! 
+Claire t'as vu embrassé Raphaël et a rompu avec lui.
+Ils vont sûrement se remettre à la drogue maintenant !
+Tiens pour te remercier, une dose, c’est la dernière
 celle là, utilise là bien !</fr>
-      <en Choice_en="">Awesome ! You managed to free Raphaël from Claire's 
-evil grip ! Now they'll surely start buying my goods 
-again ! Here, as a thank you, the dose. It's the 
-last one, make good use of it !</en>
+      <en Choice_en="">Awesome !
+Kissing Raphael made Claire break with him.
+Now they'll surely start buying my goods again !
+Here, as a thank you, a dose of drug.
+It's the last one, make good use of it !</en>
    </dialog>
    <dialog fullID="9025" ID_Dialog="9025" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="9021">
       <fr Choice_fr="">Alors, comment ça s'est passé ?

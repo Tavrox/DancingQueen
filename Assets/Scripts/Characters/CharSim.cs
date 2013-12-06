@@ -47,6 +47,7 @@ public class CharSim : MonoBehaviour {
 	public bool tutoMode = false;
 	public bool dialDisabled = false;
 	private List<string> banList;
+	private bool isSpeaking;
 	
 	public string whisperSound;
 	public int minRandomVarWhispers, maxRandomVarWhispers;
@@ -149,11 +150,6 @@ public class CharSim : MonoBehaviour {
 //			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
 		}
 	}
-	
-	public charList getEnumChar()
-	{
-		return charList.Vanessa;
-	}
 		
 	public void playWhispers(string characID, string charName)
 	{
@@ -169,7 +165,18 @@ public class CharSim : MonoBehaviour {
 		{
 			transfRand = rand.ToString();
 		}
-		PlaySoundResult psr = MasterAudio.PlaySound(charStr, 1f, 1f, randDelay, charStr + "_" + transfRand );
+		PlaySoundResult psr = null;
+		if (isSpeaking == false)
+		{
+			psr = MasterAudio.PlaySound(charStr, 1f, 1f, randDelay, charStr + "_" + transfRand );
+		}
+		if (psr != null)
+		{
+			if (psr.SoundPlayed == true)
+			{
+				isSpeaking = true;
+			}
+		}
 //		print ("Playing group : "  + charStr);
 //		print ("Playing delay : "  + randDelay);
 		print ("Playing sound variation : "  + charStr + "_" + transfRand);

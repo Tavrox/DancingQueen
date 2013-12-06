@@ -44,11 +44,15 @@ Nerds are not really the kind people want to be friends with !</en>
       </answer>
    </dialog>
    <dialog fullID="12003" ID_Dialog="12003" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Hahaha, moi par contre je suis une fille 
-‘’bizarre’’ ‘’bizarre’’, j’avoue ne pas toujours 
-être très cohérente ...</fr>
-      <en Choice_en="">Hahaha, well I am a weird girl. I confess, I don't always make 
-much sense...</en>
+      <fr Choice_fr=""> Ahah et bien mes goûts sont un peu zarb.
+J'adore les visual novels comme Analogue ou Don't Take It Personnally Babe
+mais aussi les jeux de stratégie Hardcore style Starcraft 2... Je suppose
+que tout ça n'est pas très cohérent... des goûts étranges...
+	  </fr>
+      <en Choice_en="">Hahaha, well I am a weird girl. I love
+Visual novels like Analogue or Don't take it personnally Babe
+but also hardcore strategy game like Starcraft 2...I confess, 
+I don't always make much sense...</en>
       <answer fullID="120031" ID_Dialog="12003" ID_Answer="1" ID_NextDialog="12007" ID_Character="12" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Curieuse">Comment ça t’as un exemple ?</fr>
          <en Choice_en="Curious">What do you mean ? Give me an example.</en>

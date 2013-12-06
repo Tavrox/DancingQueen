@@ -173,15 +173,15 @@ en état là !</fr>
 He's in the bathroom, he's supposed to give me 
 a little something for the party. Can you get 
 it for me ? I'm not really in shape, there...</en>
-      <answer fullID="20141" ID_Dialog="2014" ID_Answer="1" ID_NextDialog="0" ID_Character="02" Sympathy_value="20" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="">
+      <answer fullID="20141" ID_Dialog="2014" ID_Answer="1" ID_NextDialog="0" ID_Character="02" Sympathy_value="20" Condition="basic" Action="closeDialogMissionManon" BanAnswer="">
          <fr Choice_fr="Accepter">Bien sûr, je reviens vers toi dès que je l’ai.</fr>
          <en Choice_en="Accept">Sure, I'll get back to you as soon as I can.</en>
       </answer>
-      <answer fullID="20142" ID_Dialog="2014" ID_Answer="2" ID_NextDialog="0" ID_Character="02" Sympathy_value="-10" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="">
+      <answer fullID="20142" ID_Dialog="2014" ID_Answer="2" ID_NextDialog="0" ID_Character="02" Sympathy_value="-10" Condition="basic" Action="closeDialogMissionManon" BanAnswer="">
          <fr Choice_fr="Refuser poliment">Non désolé, je n’ai pas très envie là.</fr>
          <en Choice_en="Politely decline">Sorry, don't really feel like it right now...</en>
       </answer>
-      <answer fullID="20143" ID_Dialog="2014" ID_Answer="3" ID_NextDialog="0" ID_Character="02" Sympathy_value="-10" Condition="basic" Action="closeDialogPlayerKnowsPaulDealer" BanAnswer="">
+      <answer fullID="20143" ID_Dialog="2014" ID_Answer="3" ID_NextDialog="0" ID_Character="02" Sympathy_value="-10" Condition="basic" Action="closeDialogDisableManon" BanAnswer="">
          <fr Choice_fr="Refuser méchamment">Tu m’as pris pour ta boniche ou quoi ?
 Pas question.</fr>
          <en Choice_en="Meanly decline">Who am I, your bitch ? Forget it !</en>

@@ -24,9 +24,6 @@ public class IngameUI : MonoBehaviour {
 	
 	void Start () 
 	{
-		GameEventManager.GameStart += GameStart;
-		GameEventManager.GameOver += GameOver;
-		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.GameDialog += GameDialog;
 		_Player = GameObject.Find("PlayerData").GetComponent<PlayerSim>();
@@ -81,22 +78,6 @@ public class IngameUI : MonoBehaviour {
 				break;
 			}
 		}
-	}
-	private void checkExistingMenu()
-	{
-		
-	}
-	private void GameStart () 
-	{
-		
-	}
-	private void GameOver () 
-	{
-		
-	}
-	private void GamePause()
-	{
-		
 	}
 	private void GameUnpause()
 	{

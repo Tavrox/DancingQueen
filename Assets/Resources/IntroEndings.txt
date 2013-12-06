@@ -44,6 +44,9 @@ ____
 
 // INTRODUCTION
 
+Choose your language
+Choisissez votre langue.
+
       Composé de ...
 
 Bastien Nanceau - Game Developer / Graphic artist
