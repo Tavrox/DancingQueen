@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour {
 	private GameObject[] wpDoors;
 	private OTSprite black;
 	private bool stopTimer = false;
+	private bool tutoActivated = false;
 
 	public enum MusicList
 	{
@@ -123,6 +124,7 @@ public class LevelManager : MonoBehaviour {
 //		checkVotes();
 		checkDialogs();
 		checkEvents();
+		checkTuto();
 	}
 
 	void updateTimer()
@@ -145,6 +147,28 @@ public class LevelManager : MonoBehaviour {
 			Hours = 0;
 			Minutes = 0;
 		}
+	}
+
+	private void checkTuto()
+	{
+		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == false)
+		{
+			// Door bar Locked
+			if (GameObject.Find("Introduction") == null && tutoActivated == false)
+			{
+				GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+				dialEvent.GetComponent<DialogEvent>().setupEvent(_Yannick.GetComponent<Yannick>(),"6001");
+				tutoActivated = true;
+			}
+
+		}
+		else
+		{
+			GameObject.Find("DoorBarToDance(Clone)").GetComponent<LevelDoor>().locked = false;
+			_Chloe.GetComponent<Chloe>().dialDisabled = false;
+			_Vanessa.GetComponent<Vanessa>().dialDisabled = false;
+		}
+
 	}
 
 	public int getVotes()

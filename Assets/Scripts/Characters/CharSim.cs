@@ -179,7 +179,7 @@ public class CharSim : MonoBehaviour {
 		}
 //		print ("Playing group : "  + charStr);
 //		print ("Playing delay : "  + randDelay);
-		print ("Playing sound variation : "  + charStr + "_" + transfRand);
+//		print ("Playing sound variation : "  + charStr + "_" + transfRand);
 	}
 
 	public string getCharFrame(CharSim.charList charac)

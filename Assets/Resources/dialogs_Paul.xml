@@ -364,8 +364,9 @@ for you !</en>
       <en Choice_en="">You don't know what you're missing. Too bad !</en>
    </dialog>
    <dialog fullID="9021" ID_Dialog="9021" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">DIs moi, pourrais-tu m'aider ?</fr>
-      <en Choice_en="">Say, can you help me out ?</en>
+      <fr Choice_fr="">Dis moi, j'ai un problème sur une affaire de deals, tu pourrais m'aider ?</fr>
+      <en Choice_en="">Say, I've got a problem with a problem with my drug businesses,
+can you help me ?</en>
       <answer fullID="90211" ID_Dialog="9021" ID_Answer="1" ID_NextDialog="9022" ID_Character="09" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Ecouter sa demande ">Dis-moi tout.</fr>
          <en Choice_en="Listen to his request">Tell me first and I'll see what I can do.</en>

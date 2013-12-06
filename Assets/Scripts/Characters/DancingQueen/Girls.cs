@@ -4,6 +4,8 @@ using System.Collections;
 public class Girls : CharSim 
 {
 
+	public bool met = false;
+
 	public void TriggerDialogVanessa()
 	{
 		if (DialogUI.exists != true)

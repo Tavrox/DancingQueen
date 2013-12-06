@@ -353,6 +353,49 @@ public class DialogDisplayer : MonoBehaviour {
 		if (answer4 == null) setAnswer(ref answer4, "Answer4",ref instance4,ref answer4TextGUI,3);
 		if (answer5 == null) setAnswer(ref answer5, "Answer5",ref instance5,ref answer5TextGUI,4);
 		if (answer6 == null) setAnswer(ref answer6, "Answer6",ref instance6,ref answer6TextGUI,5);
+
+		if (answer1.enabled == false && answer2.enabled == false && answer3.enabled == false
+		    && answer2.enabled == false && answer5.enabled == false && answer6.enabled == false)
+		{
+			if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
+			{
+				
+//				prefabSprite = Resources.Load("03UI/Answer1") as GameObject;
+//				prefabSprite = Instantiate(prefabSprite) as GameObject;
+//				answer1 = prefabSprite.GetComponent<Answer>();
+				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+				answer1.setNextDialog("0");
+				answer1.setSympathyValue(0);
+				answer1.setAction("closeDialog");
+				answer1.setChoiceFR("Rien à dire");
+				answer1.setAnswerLineFR("Désolé, je n'ai rien de spécial à dire.");
+				answer1.GetComponentInChildren<OTSprite>().renderer.enabled = true;
+				answer1.collider.enabled = true;
+				answer1.enabled = true;
+			}
+			else if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
+			{
+//				prefabSprite = Resources.Load("03UI/Answer1") as GameObject;
+//				prefabSprite = Instantiate(prefabSprite) as GameObject;
+//				answer1 = prefabSprite.GetComponent<Answer>();
+				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+				answer1.setNextDialog("0");
+				print (answer1.ID_nextDialog);
+				answer1.setSympathyValue(0);
+				answer1.setAction("closeDialog");
+				answer1.setChoiceEN("Nothing to say");
+				answer1.setAnswerLineEN("Sorry, I've got nothing special to say.");
+				answer1.GetComponentInChildren<OTSprite>().renderer.enabled = true;
+				answer1.collider.enabled = true;
+				answer1.enabled = true;
+			}
+//			print (answer1.answer);
+//			print (answer1.answerLine_en);
+//			print (answer1.answerLine_fr);
+//			print (answer1.choice_en);
+//			print (answer1.choice_fr);
+
+		}
 		textInserted = false;
 	}
 	
@@ -549,6 +592,32 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
 				if (charac.sympathy_score > 50)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
+			}
+			case ("needDrug") :
+			{
+				Manon charac = GameObject.FindGameObjectWithTag("Manon").GetComponent<Manon>();
+				if (charac.sympathy_score > 50)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
+			}
+			case ("metGirls") :
+			{
+				Girls charac = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
+				if (charac.met == false)
 				{
 					return true;
 				}
@@ -1363,12 +1432,12 @@ public class DialogDisplayer : MonoBehaviour {
 			if (playerSpeaking == true) 
 			{
 				_Player.GetComponent<PlayerSim>().playWhispers();
-				print ("Player whisper");
+//				print ("Player whisper");
 			}
 			else
 			{
 				currentChar.playWhispers(fullDialog[1], returnCharacName(fullDialog[1]).ToString());
-				print ("Other char whisper");
+//				print ("Other char whisper");
 			}
 		}
 	}

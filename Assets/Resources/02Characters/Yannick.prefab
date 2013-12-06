@@ -174,10 +174,10 @@ MonoBehaviour:
   dialDisabled: 0
   whisperSound: 
   minRandomVarWhispers: 0
-  maxRandomVarWhispers: 0
+  maxRandomVarWhispers: 13
   randomDelayMin: 0
   randomDelayMax: .5
-  frequencyWhispers: .100000001
+  frequencyWhispers: 1.76999998
   hasSpokenOnceToPlayer: 0
 --- !u!1001 &100100000
 Prefab:

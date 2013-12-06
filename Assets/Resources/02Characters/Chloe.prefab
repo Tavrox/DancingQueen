@@ -165,9 +165,9 @@ MonoBehaviour:
   characterID: 12
   charac: 5
   dialToTrigger: 12001
-  sympathy_score: 100
+  sympathy_score: 0
   triggeredUltimate: 0
-  voteForPlayer: 1
+  voteForPlayer: 0
   banAnswers: 
   colorDialogs: {r: .168627456, g: 0, b: 0, a: 1}
   tutoMode: 0

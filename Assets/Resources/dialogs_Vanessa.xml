@@ -90,7 +90,7 @@ we usually hear. I love it !</en>
 pour que tu l’écoute</fr>
          <en Choice_en="Charlie">Charlie gave me this music for you to listen...</en>
       </answer>
-      <answer fullID="70092" ID_Dialog="7009" ID_Answer="2" ID_NextDialog="7011" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="70092" ID_Dialog="7009" ID_Answer="2" ID_NextDialog="7011" ID_Character="07" Sympathy_value="" Condition="metGirls" Action="" BanAnswer="">
          <fr Choice_fr="La musique">On a les même goûts, j’adore cette musique 
 c’est fou !</fr>
          <en Choice_en="Music">We've got the same likes, I love this song too ! It's crazy !</en>

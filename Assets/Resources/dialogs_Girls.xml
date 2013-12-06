@@ -155,7 +155,7 @@ il y a quelqes gens cool.</fr>
          <en Choice_en="Neutral">Not much fun, it's true, but still, there are some 
 cool people !</en>
       </answer>
-      <answer fullID="10134" ID_Dialog="1013" ID_Answer="4" ID_NextDialog="1016" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="10134" ID_Dialog="1013" ID_Answer="4" ID_NextDialog="1016" ID_Character="16" Sympathy_value="" Condition="needDrug" Action="looseDrug" BanAnswer="">
          <fr Choice_fr="Drogue">Goutez moi ça les filles, je vous garantis que la 
 soirée passera beaucoup mieux !!</fr>
          <en Choice_en="Drug">Have a taste of that, girls, I garantee the night's 
@@ -225,7 +225,7 @@ You guys are hopeless...</en>
    </dialog>
    <dialog fullID="1020" ID_Dialog="1020" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Whaaa les filles, vous ressentez ça aussi ?</fr>
-      <en Choice_en="" />
+      <en Choice_en="">Wow girls, do you feel this... ? </en>
       <answer fullID="10201" ID_Dialog="1020" ID_Answer="1" ID_NextDialog="1023" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Affirmative">Oh oui, c'est cool hein ?</fr>
          <en Choice_en="Affirmative">Oh yeah...it's cool, isn't it ?</en>

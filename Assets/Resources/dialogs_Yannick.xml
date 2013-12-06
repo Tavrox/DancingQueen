@@ -23,11 +23,13 @@ in. Talk to you later !</en>
       </answer>
    </dialog>
    <dialog fullID="6002" ID_Dialog="6002" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Alors, tu m’avais dit être arrivée depuis peu 
+      <fr Choice_fr="">Je suis le barman de la soirée.
+Alors, tu m’avais dit être arrivée depuis peu 
 dans cette ville et donc tu ne connais personne. 
 Aujourd’hui, nous célébrons le bi-centenaire de 
 la ville avec cette petite fête.</fr>
-      <en Choice_en="">So, you told me you just arrived in this town, 
+      <en Choice_en="">I'm the bartender of the party.
+So, you told me you just arrived in this town, 
 and you don't know anybody. We are celebrating 
 today the bi-centenial of our city with this 
 little party. Maybe you could get integrated if you
@@ -47,8 +49,8 @@ tu te lieras d'amitié plus rapidement avec eux.
 Par contre, fais le avant minuit, l'heure du vote.
 </fr>
       <en Choice_en="">Yes that's it, if you manage to sympathize with 
-people at the party, you will get a chance to be 
-elected queen of the city. All you got to do is talk to them and help them out.
+people at the party, you will get a chance to be elected queen of the city.
+All you got to do is talk to them and help them out.
 If you understand how they think, you'll be friend with them fast.
 But do it before midnight, hour of the vote.</en>
       <answer fullID="60031" ID_Dialog="6003" ID_Answer="1" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">

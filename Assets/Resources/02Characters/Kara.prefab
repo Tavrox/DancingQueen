@@ -124,7 +124,7 @@ MonoBehaviour:
   maxRandomVarWhispers: 16
   randomDelayMin: 0
   randomDelayMax: .5
-  frequencyWhispers: 1.25
+  frequencyWhispers: .939999998
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
