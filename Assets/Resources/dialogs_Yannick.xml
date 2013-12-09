@@ -238,7 +238,8 @@ d’information.</fr>
          <en Choice_en="Agressive">Yeah, well keep your nose out of my 
 personal life !</en>
       </answer>
-      <answer fullID="6012" ID_Dialog="6012" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   </dialog>
+      <dialog fullID="6012" ID_Dialog="6012" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="">Ah ça c’est Vanessa. Elle passe son temps
 à se plaindre, c’est embêtant... Une vraie 
 blasée de la vie. Elle traîne souvent avec 
@@ -247,8 +248,8 @@ le même groupe de filles.</fr>
 complaining, it's annoying... She's so 
 depressed ! She often hangs out with the 
 same group of girls.</en>
-      </answer>
-      <answer fullID="6013" ID_Dialog="6013" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      </dialog>
+      <dialog fullID="6013" ID_Dialog="6013" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="">Chloé ? C’est une vrai passionnée, une geekette. 
 Elle aime parler de tout ce qui touche de prêt 
 ou de loin aux jeux vidéo, à la science fiction. 
@@ -257,8 +258,7 @@ Il me semble qu’elle fait aussi partie d’un groupe.</fr>
 nerd ! She loves everything that's connected to 
 video games, sci-fi, that kind of stuff. She also 
 hangs out with a group.</en>
-      </answer>
-   </dialog>
+      </dialog>
    <dialog fullID="6014" ID_Dialog="6014" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">De 16h à 2h du matin.</fr>
       <en Choice_en="">From 4 pm to 2 am.</en>

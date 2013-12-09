@@ -7,6 +7,7 @@ public class Bastien : CharSim
 	public bool hasSpokenOncePlayer = false;
 	public bool acceptedMission = false;
 	public bool succeedMission = false;
+	public bool knowMusic = false;
 
 	void OnMouseDown()
 	{

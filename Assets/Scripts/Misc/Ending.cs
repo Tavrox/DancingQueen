@@ -236,7 +236,7 @@ public class Ending : MonoBehaviour {
 		// ENG LANGUAGE //
 		else
 		{
-			if (nbVotes > _LM.stepVotesForWin)
+			if (nbVotes > _LM.stepVotesForWin )
 			{
 				_txtExplanation.text = 
 						" You've been elected Dancing Queen tonight.\n"
@@ -311,10 +311,10 @@ public class Ending : MonoBehaviour {
 
 			if (_Paul.missionDone == true)
 			{
-				_txtThomas.text = "You encouraged Thomas to drug a girl to make her break uVous avez incité Thomas à droguer une fille pour sortir avec elle.";
+				_txtThomas.text = "You encouraged Thomas to drug a girl to date her.";
 			}
 			
-			_txtChoices.text = "There are the choiced you made or didn't make.";
+			_txtChoices.text = "There are the choices you made or didn't make.";
 		}
 	}
 }

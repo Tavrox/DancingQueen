@@ -35,6 +35,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private LevelManager  lvManager;
 	private GameObject _Player, _BgDialogPlayer, _BgDialogPNJ;
 	private GUIText _NextDialog;
+	private bool answersAreEmpty;
 
 	//[HideInInspector] public Player player; //The player to lock
 	
@@ -93,7 +94,6 @@ public class DialogDisplayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-
 		if(talking == true)
 		{
 			if(playerSpeaking == true) {
@@ -201,7 +201,7 @@ public class DialogDisplayer : MonoBehaviour {
 			}
 			if (answer1 != null && answer1.triggered == true) 
 			{
-				displayPlayerAnswer(answer1,0);  
+				displayPlayerAnswer(answer1,0); 
 				checkAction(answer1.action);
 				DestroyAnswers();
 			}
@@ -288,6 +288,8 @@ public class DialogDisplayer : MonoBehaviour {
 				{
 					talkLines[0]=fullDialog[6];
 				}
+
+
 				break;
 			}
 			else
@@ -357,44 +359,37 @@ public class DialogDisplayer : MonoBehaviour {
 		if (answer1.enabled == false && answer2.enabled == false && answer3.enabled == false
 		    && answer2.enabled == false && answer5.enabled == false && answer6.enabled == false)
 		{
+			answersAreEmpty = true;
 			if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.fr)
 			{
-				
-//				prefabSprite = Resources.Load("03UI/Answer1") as GameObject;
-//				prefabSprite = Instantiate(prefabSprite) as GameObject;
-//				answer1 = prefabSprite.GetComponent<Answer>();
+				answer1.GetComponentInChildren<OTSprite>().renderer.enabled = true;
+				answer1.collider.enabled = true;
+				answer1.enabled = true;
 				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
 				answer1.setNextDialog("0");
 				answer1.setSympathyValue(0);
 				answer1.setAction("closeDialog");
 				answer1.setChoiceFR("Rien à dire");
-				answer1.setAnswerLineFR("Désolé, je n'ai rien de spécial à dire.");
-				answer1.GetComponentInChildren<OTSprite>().renderer.enabled = true;
-				answer1.collider.enabled = true;
-				answer1.enabled = true;
+				arrayAnswers[0,8] = "Désolé, je n'ai rien de spécial à dire.";
+				arrayAnswers[0,6] = "Rien à dire";
 			}
 			else if (_Player.GetComponent<PlayerSim>().langChosen == PlayerSim.langList.en)
 			{
-//				prefabSprite = Resources.Load("03UI/Answer1") as GameObject;
-//				prefabSprite = Instantiate(prefabSprite) as GameObject;
-//				answer1 = prefabSprite.GetComponent<Answer>();
-				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
-				answer1.setNextDialog("0");
-				print (answer1.ID_nextDialog);
-				answer1.setSympathyValue(0);
-				answer1.setAction("closeDialog");
-				answer1.setChoiceEN("Nothing to say");
-				answer1.setAnswerLineEN("Sorry, I've got nothing special to say.");
 				answer1.GetComponentInChildren<OTSprite>().renderer.enabled = true;
 				answer1.collider.enabled = true;
 				answer1.enabled = true;
+				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+				answer1.setNextDialog("0");
+				answer1.setSympathyValue(0);
+				answer1.setAction("closeDialog");
+				answer1.setChoiceEN("Nothing to say");
+				arrayAnswers[0,7] = "Nothing to say.";
+				arrayAnswers[0,9] = "Sorry, I've got nothing to say.";
 			}
-//			print (answer1.answer);
-//			print (answer1.answerLine_en);
-//			print (answer1.answerLine_fr);
-//			print (answer1.choice_en);
-//			print (answer1.choice_fr);
-
+		}
+		else
+		{
+			answersAreEmpty = false;
 		}
 		textInserted = false;
 	}
@@ -614,6 +609,21 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				break;
 			}
+			case ("KnowsBastienMusic") :
+			{
+				Bastien charac = GameObject.FindGameObjectWithTag("Bastien").GetComponent<Bastien>();
+				if (charac.knowMusic == true)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
+			}
+
+
 			case ("metGirls") :
 			{
 				Girls charac = GameObject.FindGameObjectWithTag("Girls").GetComponent<Girls>();
@@ -1162,8 +1172,11 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().hasHeardAboutClaire = true;
+				go.GetComponent<Thomas>().voteForPlayer = true;
 				go = getCharacGO("Paul");
 				go.GetComponent<Paul>().missionDone = true;
+				go = getCharacGO("Claire");
+				go.GetComponent<Claire>().voteForPlayer = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1265,7 +1278,17 @@ public class DialogDisplayer : MonoBehaviour {
 				lvManager.triggerDialogChloe = true;
 				go = getCharacGO("Girls");
 				go.GetComponent<Girls>().met = true;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
 				DialogUI.destroyDialog();
+				break;
+			}
+			case ("knowsMusicBastien") :
+			{
+				go = getCharacGO("Bastien");
+				go.GetComponent<Bastien>().knowMusic = true;
 				break;
 			}
 			case ("closeDialogTriggerGroupMeuf") :
@@ -1273,6 +1296,10 @@ public class DialogDisplayer : MonoBehaviour {
 				lvManager.triggerDialogVanessaGroup = true;
 				go = getCharacGO("Girls");
 				go.GetComponent<Girls>().met = true;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
 				DialogUI.destroyDialog();
 				break;
 			}
@@ -1303,6 +1330,8 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Bob>().dialDisabled = true;
 				go.GetComponent<Bob>().met = true;
 				go.GetComponent<Bob>().convinced = true;
+				PlayerSim _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
+				_player.votesAdded += 3;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1319,13 +1348,31 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<PlayerSim>().votesAdded += 2;
 				go = getCharacGO("Vanessa");
 				go.GetComponent<Vanessa>().dialDisabled = true;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
-			case ("closeDialogAndWin3votes") :
+			case ("closeDialogDrugGirls") :
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded += 3;
+				go.GetComponent<PlayerSim>().numberDrugs -= 1;
+				go = getCharacGO("Vanessa");
+				go.GetComponent<Vanessa>().dialDisabled = true;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
+				killAtferDisplay = true;
+				break;
+			}
+
+
+			case ("closeDialogAndWin3votes") :
+			{
+				go = getCharacGO("Player");
+				go.GetComponent<PlayerSim>().votesAdded += 2;
+				go = getCharacGO("Boris");
+				go.GetComponent<Boris>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1335,6 +1382,7 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<PlayerSim>().votesAdded += 1;
 				go = getCharacGO("Boris");
 				go.GetComponent<Boris>().dialDisabled = true;
+				go.GetComponent<Boris>().sympathy_score = 0;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1348,9 +1396,13 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("closeDialogAndloose3votes") :
 			{
 				go = getCharacGO("Player");
-				go.GetComponent<PlayerSim>().votesAdded -= 3;
+				go.GetComponent<PlayerSim>().votesAdded -= 0;
 				go = getCharacGO("Vanessa");
 				go.GetComponent<Vanessa>().dialDisabled = true;
+				go.GetComponent<Vanessa>().sympathy_score = 0;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
+				go.GetComponent<Chloe>().sympathy_score = 0;
 				killAtferDisplay = true;
 				break;
 			}
@@ -1360,13 +1412,16 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<PlayerSim>().votesAdded += 1;
 				go = getCharacGO("Vanessa");
 				go.GetComponent<Vanessa>().dialDisabled = true;
+				go = getCharacGO("Chloe");
+				go.GetComponent<Chloe>().dialDisabled = true;
 				killAtferDisplay = true;
 				break;
 			}
 			case ("closeDialogAndlooseAll") :
 			{
-				go = getCharacGO("Player");
-				go.GetComponent<PlayerSim>().votesAdded -= 4;
+				go = getCharacGO("Boris");
+				go.GetComponent<Boris>().dialDisabled = true;
+				go.GetComponent<Boris>().sympathy_score = 0;
 				killAtferDisplay = true;
 				break;
 			}

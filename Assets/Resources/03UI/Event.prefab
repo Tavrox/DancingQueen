@@ -246,7 +246,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 3
+  _frameIndex: 4
   _frameName: Event
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -310,7 +310,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 19
+  _frameIndex: 18
   _frameName: overlay-dialog
   _spriteContainer: {fileID: 0}
   _containerName: ui
@@ -335,7 +335,7 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190142
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1001 &100100000

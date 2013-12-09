@@ -269,7 +269,7 @@ public class LevelManager : MonoBehaviour {
 			compThomas.dialToTrigger = "8010";
 		}
 		if (compThomas.isBattleDance == true && compThomas.hasHeardAboutClaire == false 
-		    && compRaphael.coupleClaire == false && compPlayer.numberDrugs > 0)
+		    && compRaphael.coupleClaire == false && compPlayer.numberDrugs > 0 && compThomas.sympathy_score > 50)
 		{
 			compThomas.dialToTrigger = "8029";
 		}

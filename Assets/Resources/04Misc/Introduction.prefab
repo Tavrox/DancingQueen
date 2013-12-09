@@ -249,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .296434402, y: 3.2387352, z: -34.9967918}
-  m_LocalScale: {x: 7.99999237, y: 5, z: 1}
+  m_LocalScale: {x: 7.99999189, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
 --- !u!4 &400008
@@ -305,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -35}
-  m_LocalScale: {x: 16.5999947, y: 12.5, z: 1}
+  m_LocalScale: {x: 16.5999928, y: 12.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
 --- !u!4 &400018
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: GameTitle
   _position: {x: 0, y: 0}
-  _size: {x: 16.5999947, y: 12.5}
+  _size: {x: 16.5999928, y: 12.5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
   protoType: 
   baseName: GameTitle
   oSize: {x: 16.6666679, y: 12.5}
-  imageSize: {x: 16.5999947, y: 12.5}
+  imageSize: {x: 16.5999928, y: 12.5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Logo4Edges
   _position: {x: .296434402, y: 3.2387352}
-  _size: {x: 7.99999237, y: 5}
+  _size: {x: 7.99999189, y: 5}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -724,7 +724,7 @@ MonoBehaviour:
   protoType: 
   baseName: Logo4Edges
   oSize: {x: 8.20833397, y: 4.85416698}
-  imageSize: {x: 7.99999237, y: 5}
+  imageSize: {x: 7.99999189, y: 5}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
