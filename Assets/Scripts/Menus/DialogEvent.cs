@@ -23,11 +23,13 @@ public class DialogEvent : MonoBehaviour {
 		_overlay = GameObject.Find("Event(Clone)/evOverlay/EvOvSprite").GetComponent<OTSprite>();
 		_bubble = GameObject.Find("Event(Clone)/Bubble").GetComponent<OTSprite>();
 		_text = GameObject.Find("Event(Clone)/EventNotifier").GetComponent<GUIText>();
+		_LevMan = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		_bubble.alpha = 0f;
 		_text.color = Color.clear;
 
 		IngameUI.destroyIngameUI();
 		DialogUI.exists = true;
+		_LevMan.eventHappening = true;
 
 		_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSim>();
 		if (_Player.langChosen == PlayerSim.langList.en && _text.text != null && _Player != null)
@@ -59,6 +61,7 @@ public class DialogEvent : MonoBehaviour {
 
 	public void destroyEvent()
 	{
+		_LevMan.eventHappening = false;
 		Destroy (gameObject);
 	}
 

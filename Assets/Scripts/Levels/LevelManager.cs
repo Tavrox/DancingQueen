@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour {
 	private GameObject[] wpChars;
 	private GameObject[] wpDoors;
 	private OTSprite black;
-	private bool stopTimer = false;
+	public bool stopTimer = true;
 	private bool tutoActivated = false;
 
 	public enum MusicList
@@ -120,10 +120,11 @@ public class LevelManager : MonoBehaviour {
 			unhideChar("Vanessa");
 		}
 		Timer.text = Hours.ToString() + ":" + MinutesTransfo;
-		checkTimer();
-//		checkVotes();
 		checkDialogs();
-		checkEvents();
+		if (eventHappening != true)
+		{
+			checkEvents();
+		}
 		checkTuto();
 	}
 
@@ -142,33 +143,33 @@ public class LevelManager : MonoBehaviour {
 				Timer.text = "";
 			}
 		}
-		else
-		{
-			Hours = 0;
-			Minutes = 0;
-		}
 	}
 
 	private void checkTuto()
 	{
-		if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == false)
+		if (currentLvl == levelList.Bar)
 		{
-			// Door bar Locked
-			if (GameObject.Find("Introduction") == null && tutoActivated == false)
+			if (_Yannick.GetComponent<Yannick>().hasSpokenOnceToPlayer == false)
 			{
-				GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
-				dialEvent.GetComponent<DialogEvent>().setupEvent(_Yannick.GetComponent<Yannick>(),"6001");
-				tutoActivated = true;
+				// Door bar Locked
+				if (GameObject.Find("Introduction") == null && tutoActivated == false)
+				{
+					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+					dialEvent.GetComponent<DialogEvent>().setupEvent(_Yannick.GetComponent<Yannick>(),"6001");
+					tutoActivated = true;
+				}
+
 			}
-
+			else
+			{ 
+				if (GameObject.Find("DoorBarToDance(Clone)") != null)
+				{
+					GameObject.Find("DoorBarToDance(Clone)").GetComponent<LevelDoor>().locked = false;
+				}
+				_Chloe.GetComponent<Chloe>().dialDisabled = false;
+				_Vanessa.GetComponent<Vanessa>().dialDisabled = false;
+			}
 		}
-		else
-		{
-			GameObject.Find("DoorBarToDance(Clone)").GetComponent<LevelDoor>().locked = false;
-			_Chloe.GetComponent<Chloe>().dialDisabled = false;
-			_Vanessa.GetComponent<Vanessa>().dialDisabled = false;
-		}
-
 	}
 
 	public int getVotes()
@@ -311,10 +312,6 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-	}
-
-	void checkTimer()
-	{
 		Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
 		if (Hours == 21)
 		{
@@ -322,24 +319,24 @@ public class LevelManager : MonoBehaviour {
 			{
 				if (GO.casseCouilleS1 != true)
 				{
-//					IngameUI.destroyIngameUI();
-//					DialogUI.createDialog(GO, "11001" );
+					//					IngameUI.destroyIngameUI();
+					//					DialogUI.createDialog(GO, "11001" );
 					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
 					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11001");
 					GO.casseCouilleS1 = true;
 				}
-
+				
 			}
 		}
-
+		
 		if (Hours == 22)
 		{
 			if (DialogUI.exists != true)
 			{
 				if (GO.casseCouilleS2 == false && GO.gotPlayerInVIP != true && GO.casseCouilleS1 == true)
 				{
-//					IngameUI.destroyIngameUI();
-//					DialogUI.createDialog(GO, "11006");
+					//					IngameUI.destroyIngameUI();
+					//					DialogUI.createDialog(GO, "11006");
 					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
 					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11006");
 					GO.casseCouilleS2 = true;
@@ -347,15 +344,15 @@ public class LevelManager : MonoBehaviour {
 				
 			}
 		}
-
+		
 		if (Hours == 23)
 		{
 			if (DialogUI.exists != true)
 			{
 				if (GO.casseCouilleS3 == false && GO.gotPlayerInVIP == false  && GO.casseCouilleS2 == true)
 				{
-//					IngameUI.destroyIngameUI();
-//					DialogUI.createDialog(GO, "11011");
+					//					IngameUI.destroyIngameUI();
+					//					DialogUI.createDialog(GO, "11011");
 					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
 					dialEvent.GetComponent<DialogEvent>().setupEvent(GO,"11011");
 					GO.casseCouilleS3 = true;
@@ -363,13 +360,14 @@ public class LevelManager : MonoBehaviour {
 				
 			}
 		}
-
+		
 		if (Hours == 24 && gameEnded != true)
 		{
 			gameEnded = true;
 			GameObject EndingEvent = Instantiate(Resources.Load("04Misc/Ending")) as GameObject;
 			Ending _end = EndingEvent.GetComponent<Ending>();
 		}
+
 
 	}
 

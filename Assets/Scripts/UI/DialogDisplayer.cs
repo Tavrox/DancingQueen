@@ -64,7 +64,7 @@ public class DialogDisplayer : MonoBehaviour {
 		//WWW www = new WWW(url);
 		TextAsset textAsset = getCharacXML(currentChar.charac);
 		//Resources.Load("dialogs_Yannick") as TextAsset;
-		//print (textAsset);
+
 		//Load the data and yield (wait) till it's ready before we continue executing the rest of this method.
 		//yield return www;
 		
@@ -918,6 +918,24 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Raphael>().hasTalkedRaphael = true;
 				break;
 			}
+			case ("facedHomophobia") :
+			{
+				go = getCharacGO("Girls");
+				go.GetComponent<Girls>().facedHomophobia = true;
+				break;
+			}
+			case ("disapprovedHomophobia") :
+			{
+				go = getCharacGO("Girls");
+				go.GetComponent<Girls>().approvedHomophobia = false;
+				break;
+			}
+			case ("approvedHomophobia") :
+			{
+				go = getCharacGO("Girls");
+				go.GetComponent<Girls>().approvedHomophobia = true;
+				break;
+			}
 			case ("closeDialogVIP") :
 			{
 				go = GameObject.Find("DoorDanceToVIP(Clone)");
@@ -1245,12 +1263,16 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("triggerGroupGirls") :
 			{
 				lvManager.triggerDialogChloe = true;
+				go = getCharacGO("Girls");
+				go.GetComponent<Girls>().met = true;
 				DialogUI.destroyDialog();
 				break;
 			}
 			case ("closeDialogTriggerGroupMeuf") :
 			{
 				lvManager.triggerDialogVanessaGroup = true;
+				go = getCharacGO("Girls");
+				go.GetComponent<Girls>().met = true;
 				DialogUI.destroyDialog();
 				break;
 			}

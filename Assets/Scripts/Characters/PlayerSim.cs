@@ -105,7 +105,7 @@ public class PlayerSim : MonoBehaviour {
 		PlaySoundResult psr = MasterAudio.PlaySound(charStr, 1f, 1f, 0, charStr + "_" + transfRand );
 //		print ("Playing group : "  + charStr);
 //		print ("Playing delay : "  + randDelay);
-		print ("Playing sound variation : "  + charStr + "_" + transfRand);
+//		print ("Playing sound variation : "  + charStr + "_" + transfRand);
 	}
 	private void fadeToBlack()
 	{

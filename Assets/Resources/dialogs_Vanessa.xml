@@ -21,19 +21,19 @@ toute seule … Sympa non ?</fr>
       <en Choice_en="">No, I came with friends, but they are bored as a group, 
 and I am bored by myself... Sweet, huh ?</en>
       <answer fullID="70021" ID_Dialog="7002" ID_Answer="1" ID_NextDialog="7004" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Blasée">Maintenant on se fait chier à deux, 
+         <fr Choice_fr="Les soirées c'est blasant">Maintenant on se fait chier à deux, 
 vraiment une soirée de pourrie</fr>
-         <en Choice_en="Jaded">Yeah, and now that's two of us... Really a crappy party !</en>
+         <en Choice_en="Parties are so boring">Yeah, and now that's two of us... Really a crappy party !</en>
       </answer>
       <answer fullID="70022" ID_Dialog="7002" ID_Answer="2" ID_NextDialog="7005" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Dynamique">Présente les moi, peut être qu’on pourra faire 
+         <fr Choice_fr="Répondre avec entrain">Présente les moi, peut être qu’on pourra faire 
 quelque chose contre l’ennui !</fr>
-         <en Choice_en="Dynamic">Introduce me to them, maybe we can all counter boredom 
+         <en Choice_en="Answer with dynamism">Introduce me to them, maybe we can all counter boredom 
 together !</en>
       </answer>
       <answer fullID="70023" ID_Dialog="7002" ID_Answer="3" ID_NextDialog="7006" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Curieuse">Elle sont où tes amies ?</fr>
-         <en Choice_en="Curious">Where are your friends ?</en>
+         <fr Choice_fr="Elles sont où ?">Elle sont où tes amies ?</fr>
+         <en Choice_en="Where are they ?">Where are your friends ?</en>
       </answer>
    </dialog>
    <dialog fullID="7003" ID_Dialog="7003" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

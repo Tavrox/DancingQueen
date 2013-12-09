@@ -60,24 +60,24 @@ sin ! I don't even understand how that can happen !</en>
          <en Choice_en="Involve Chloe">Chloe ? Do you have something to say to this ?</en>
       </answer>
    </dialog>
-   <dialog fullID="1005" ID_Dialog="1005" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+   <dialog fullID="1005" ID_Dialog="1005" ID_Answer="" ID_NextDialog="" ID_Character="16" Sympathy_value="" Condition="basic" Action="facedHomophobia" BanAnswer="">
       <fr Choice_fr="">Ouais c’est trop ça ! En plus, il est homo, c’est pas 
 naturel.</fr>
       <en Choice_en="">Yeah, exactly ! Besides, his gay... That's so wrong !</en>
-      <answer fullID="10051" ID_Dialog="1005" ID_Answer="1" ID_NextDialog="1006" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="10051" ID_Dialog="1005" ID_Answer="1" ID_NextDialog="1006" ID_Character="16" Sympathy_value="" Condition="basic" Action="disapprovedHomophobia" BanAnswer="">
          <fr Choice_fr="Désapprouver l’homophobie">Qu’est ce que ça peut te faire qu’il soit homosexuel ? 
 De quel droit tu juges les gens sale catin ?</fr>
          <en Choice_en="Disapprove homophobia">So what ? It doesn't matter, he does whatever he 
 wants ! It's not a sin !</en>
       </answer>
-      <answer fullID="10052" ID_Dialog="1005" ID_Answer="2" ID_NextDialog="1007" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="10052" ID_Dialog="1005" ID_Answer="2" ID_NextDialog="1007" ID_Character="16" Sympathy_value="" Condition="basic" Action="approvedHomophobia" BanAnswer="">
          <fr Choice_fr="Approuver l'homophobie">Aimer les personnes du même sexe, c’est vraiment 
 un péché, je comprend pas comment ça peut arriver.</fr>
          <en Choice_en="Approve homophobia">Liking people of your own sex... It's wrong, it's a 
 sin ! I don't even understand how that can happen !</en>
       </answer>
-      <answer fullID="10053" ID_Dialog="1005" ID_Answer="3" ID_NextDialog="1008" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Impliquer ?Chloé">Chloé, tu n’as pas quelque chose à répondre à ça ?</fr>
+      <answer fullID="10053" ID_Dialog="1005" ID_Answer="3" ID_NextDialog="1008" ID_Character="16" Sympathy_value="" Condition="basic" Action="disapprovedHomophobia" BanAnswer="">
+         <fr Choice_fr="Impliquer Chloé">Chloé, tu n’as pas quelque chose à répondre à ça ?</fr>
          <en Choice_en="Involve Chloe">Chloe ? Don't you have something to say to this ?</en>
       </answer>
    </dialog>

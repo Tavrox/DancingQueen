@@ -97,9 +97,9 @@ new friend ! Look at yourself ! Kara, tell him
 he's ridiculous, he should be ashamed of 
 himself !</en>
       <answer fullID="30091" ID_Dialog="3009" ID_Answer="1" ID_NextDialog="3010" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Affirmative">C'est vrai, t'es complètement ridicule 
+         <fr Choice_fr="Approuver le">C'est vrai, t'es complètement ridicule 
 Stéphane, pourqui t'as fait ça ?</fr>
-         <en Choice_en="Affirmative">That's right, you're completely ridiculous, 
+         <en Choice_en="Agree with him">That's right, you're completely ridiculous, 
 Stéphane, why would you do something like this ?</en>
       </answer>
       <answer fullID="30092" ID_Dialog="3009" ID_Answer="2" ID_NextDialog="3011" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -127,8 +127,8 @@ shit you are ! I don't ever want to see you
 among us again ! Just go away before I 
 get really mad !</en>
       <answer fullID="30101" ID_Dialog="3010" ID_Answer="1" ID_NextDialog="3012" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Continuer">Au revoir Stéphane.</fr>
-         <en Choice_en="Continue">Good bye Stephane.</en>
+         <fr Choice_fr="Au revoir Stéphane">Au revoir Stéphane.</fr>
+         <en Choice_en="Good bye Stéphane">Good bye Stephane.</en>
       </answer>
    </dialog>
    <dialog fullID="3011" ID_Dialog="3011" ID_Answer="" ID_NextDialog="" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -148,7 +148,7 @@ honte Stéphane :</fr>
       <en Choice_en="">Totally ! You should be ashamed, Stéphane !</en>
       <answer fullID="30121" ID_Dialog="3012" ID_Answer="1" ID_NextDialog="3014" ID_Character="23" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Acquiescer">Complètement...c'est un comportement immature.</fr>
-         <en Choice_en="Yes">Completely...childish behaviour.</en>
+         <en Choice_en="Agree">Completely...childish behaviour.</en>
       </answer>
    </dialog>
    <dialog fullID="3013" ID_Dialog="3013" ID_Answer="" ID_NextDialog="" ID_Character="23" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

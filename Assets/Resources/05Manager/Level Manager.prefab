@@ -47,13 +47,15 @@ MonoBehaviour:
   triggerDialogVanessaMusic: 0
   triggerDialogClaireSlow: 0
   triggerDialogChloe: 0
+  stopTimer: 1
   musicLvl: 1
   currentLvl: 0
   stepVotesForWin: 8
-  updateTimerEvery: 1.79999995
+  updateTimerEvery: 6
   Hours: 23
-  Minutes: 55
+  Minutes: 58
   eventHappening: 0
+  numberVotes: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -128,13 +128,17 @@ See you later !</en>
       <fr Choice_fr="">Alors, comment se passe ta soirée ?</fr>
       <en Choice_en="">So, how's your night going ?</en>
       <answer fullID="60071" ID_Dialog="6007" ID_Answer="1" ID_NextDialog="6008" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Parler de :">Je voudrais en savoir plus sur quelqu’un.</fr>
-         <en Choice_en="Talk about">I'd like to know more about someone.</en>
+         <fr Choice_fr="Parler d'une personne
+de la soirée">Je voudrais en savoir plus sur quelqu’un.</fr>
+         <en Choice_en="Talk about someone
+in the party">I'd like to know more about someone.</en>
       </answer>
       <answer fullID="60072" ID_Dialog="6007" ID_Answer="2" ID_NextDialog="6009" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="60072">
-         <fr Choice_fr="Barman">Dis m’en plus sur toi. Qu’est ce que ça fait 
+         <fr Choice_fr="Tu aimes ton métier
+de Barman ?">Dis m’en plus sur toi. Qu’est ce que ça fait 
 d’être Barman.</fr>
-         <en Choice_en="Bartender">Tell me more about you. What's it like 
+         <en Choice_en="Do you like
+being a bartender ?">Tell me more about you. What's it like 
 to be a bartender ?</en>
       </answer>
       <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
@@ -156,33 +160,36 @@ right ?</en>
       <answer fullID="60081" ID_Dialog="6008" ID_Answer="1" ID_NextDialog="6012" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Vanessa, La Vache">La vache m’intrigue, peux-tu m’en dire plus 
 sur elle ?</fr>
-         <en Choice_en="Vanessa the cow">I'm intrigued by the cow, can you tell me 
+         <en Choice_en="Vanessa, the cow">I'm intrigued by the cow, can you tell me 
 more about her ?</en>
       </answer>
       <answer fullID="60082" ID_Dialog="6008" ID_Answer="2" ID_NextDialog="6013" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Chloé, La Souris">La souris Chloé.</fr>
-         <en Choice_en="Chloe the mouse">Chloe, the mouse.</en>
+         <fr Choice_fr="Chloé, La Souris">La souris Chloé, elle m'a l'air repliée sur elle-même...</fr>
+         <en Choice_en="Chloe the mouse">Chloe, the mouse, she looks really shy.</en>
       </answer>
    </dialog>
    <dialog fullID="6009" ID_Dialog="6009" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Les horaires sont décalés donc c’est fatiguant. 
-Mais on s’y fait, ça va.</fr>
+Mais on s’y fait, ça va. Au final, le plus dur c'est de ne pas pouvoir
+rarement sortir le soir.</fr>
       <en Choice_en="">Working hours are shifting, so it can be tiring. 
-But one gets used to it.</en>
+But one gets used to it. The only hard things is not being able
+to get out at night, because there's work to do.</en>
       <answer fullID="60091" ID_Dialog="6009" ID_Answer="1" ID_NextDialog="6014" ID_Character="06" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Les horaires">Tu fais quoi comme horaire du coup ?</fr>
          <en Choice_en="Working hours">What are your working hours ?</en>
       </answer>
       <answer fullID="60092" ID_Dialog="6009" ID_Answer="2" ID_NextDialog="0" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="60072">
-         <fr Choice_fr="Changer de sujet">Ouais, ça doit être fatiguant… Je voulais parler
-d’autre chose.</fr>
-         <en Choice_en="Change subject">Yeah, that's gotta be tiring... I'd like to 
-talk about something else.</en>
+         <fr Choice_fr="Se désinteresser de la
+conversation"> Ouais, ça doit être fatiguant… Bon... je crois que je vais y aller.</fr>
+         <en Choice_en="Change subject"> Yeah, that's gotta be tiring... Well...
+See you later.</en>
       </answer>
       <answer fullID="60093" ID_Dialog="6009" ID_Answer="3" ID_NextDialog="6015" ID_Character="06" Sympathy_value="-20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Agressive">Vous travaillez que le soir, ça doit pas être si dur
-que ça.</fr>
-         <en Choice_en="Agressive">You only work nights, how hard can it be !</en>
+que ça. Vous pouvez profiter de la journée pour faire ce que vous voulez !</fr>
+         <en Choice_en="Agressive">You only work nights, how hard can it be !
+You are free to do whatever you want during daytime.</en>
       </answer>
    </dialog>
    <dialog fullID="6010" ID_Dialog="6010" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -201,9 +208,9 @@ comme des rats morts.</fr>
 out of my mind.</en>
       </answer>
       <answer fullID="60103" ID_Dialog="6010" ID_Answer="3" ID_NextDialog="6016" ID_Character="06" Sympathy_value="0" Condition="basic" Action="" BanAnswer="60073">
-         <fr Choice_fr="SDF">Je n’ai jamais eu de chez moi. Des services
+         <fr Choice_fr="J'étais SDF...">Je n’ai jamais eu de chez moi. Des services
 sociaux m’ont permis d’avoir un toit et un travail.</fr>
-         <en Choice_en="Hobo">Never really had a home. Social services 
+         <en Choice_en="I was a hobo...">Never really had a home. Social services 
 gave me a place to stay and a job.</en>
       </answer>
    </dialog>

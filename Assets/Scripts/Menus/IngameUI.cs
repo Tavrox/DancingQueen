@@ -31,22 +31,13 @@ public class IngameUI : MonoBehaviour {
 		
 		exists = true;
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-
-	}
-	private void OnMouseOver()
-	{
-	}
-	
 	private void OnMouseDown()
 	{
 		switch (action)
 		{
 			case (ListAction.DisplayTrombi) :
 			{
+				Debug.Log ("Trigger Trombinoscope");
 				MenuUI.destroyMenu();
 				prefabSprite = Resources.Load("03UI/Trombi");
 				Instantiate(prefabSprite);

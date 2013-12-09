@@ -32,15 +32,17 @@ bizarre !</fr>
 girl, watch out !</en>
       </answer>
       <answer fullID="120022" ID_Dialog="12002" ID_Answer="2" ID_NextDialog="12003" ID_Character="12" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Curieuse">Ah oui ? Tu joues à quoi ?</fr>
-         <en Choice_en="Curious">Really ? What do you play ?</en>
+         <fr Choice_fr="A quoi tu joues ?">Ah oui ? Tu joues à quoi ?</fr>
+         <en Choice_en="What do you play ?">Really ? What do you play ?</en>
       </answer>
       <answer fullID="120023" ID_Dialog="12002" ID_Answer="3" ID_NextDialog="12004" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Morale">Tu m’étonnes que c’est dur de s’intégrer si tu
+         <fr Choice_fr="Faire la morale">Tu m’étonnes que c’est dur de s’intégrer si tu
 joues au jeux vidéo. Tu sais les geekettes 
-c’est pas un profil qui plait !</fr>
-         <en Choice_en="Moral">I'll bet it's hard to fit in if you stare at a sreen all day long ! 
-Nerds are not really the kind people want to be friends with !</en>
+c’est pas un profil qui plait ! Tu devrais te conforter
+un peu plus aux codes sociaux.</fr>
+         <en Choice_en="Preach at her">I'll bet it's hard to fit in if you stare
+at a sreen all day long !  Nerds are not really the kind people
+want to be friends with, maybe you should do more girly things.</en>
       </answer>
    </dialog>
    <dialog fullID="12003" ID_Dialog="12003" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -58,9 +60,9 @@ I don't always make much sense...</en>
          <en Choice_en="Curious">What do you mean ? Give me an example.</en>
       </answer>
       <answer fullID="120032" ID_Dialog="12003" ID_Answer="2" ID_NextDialog="12008" ID_Character="12" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Gentille">Bizarre, moi j’aime les gens différents c’est 
+         <fr Choice_fr="Être différent est une qualité">Bizarre, moi j’aime les gens différents c’est 
 souvent ceux qui sont bourrés de charme.</fr>
-         <en Choice_en="Kind">I like different people, often they're the most charming and 
+         <en Choice_en="Being different is a quality">I like different people, often they're the most charming and 
 interesting.</en>
       </answer>
       <answer fullID="120033" ID_Dialog="12003" ID_Answer="3" ID_NextDialog="12009" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
@@ -165,14 +167,15 @@ trop l’intention de trop m’en rapprocher</fr>
 to him.</en>
       </answer>
       <answer fullID="120122" ID_Dialog="12012" ID_Answer="2" ID_NextDialog="12014" ID_Character="12" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Choquée">Non !! C’est pas vrai ? J’aurais vraiment pas cru !
+         <fr Choice_fr="C'est choquant !">Non !! C’est pas vrai ? J’aurais vraiment pas cru !
 Quelle horreur !</fr>
-         <en Choice_en="Shocked">No way ! I really wouldn't have thought that ! Disgusting !</en>
+         <en Choice_en="It's shocking !">No way ! I really wouldn't have thought that ! Disgusting !</en>
       </answer>
       <answer fullID="120123" ID_Dialog="12012" ID_Answer="3" ID_NextDialog="12015" ID_Character="12" Sympathy_value="-20" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Offusquée">Et alors, en quoi ça te regarde ? En quoi ça te 
+         <fr Choice_fr="Et alors, ça te dérange ?">Et alors, en quoi ça te regarde ? En quoi ça te 
 dérange ?</fr>
-         <en Choice_en="Offended">So, it's not your business, is it ? What's bothering you ?</en>
+         <en Choice_en="And so,
+does it bother you ? ">So, it's not your business, is it ? What's bothering you ?</en>
       </answer>
    </dialog>
    <dialog fullID="12013" ID_Dialog="12013" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -185,8 +188,8 @@ friends, if we get the chance !</en>
          <en Choice_en="Jaded">Sure, why not...</en>
       </answer>
       <answer fullID="120132" ID_Dialog="12013" ID_Answer="2" ID_NextDialog="0" ID_Character="12" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="12012">
-         <fr Choice_fr="Opportuniste">Oui bien sûr quand tu veux !</fr>
-         <en Choice_en="Opportunist">Sure, I'd like that !</en>
+         <fr Choice_fr="J'en serais très heureuse">Oui bien sûr quand tu veux !</fr>
+         <en Choice_en="I'd be like that">Sure, I'd like that, it's cool from you.</en>
       </answer>
       <answer fullID="120133" ID_Dialog="12013" ID_Answer="3" ID_NextDialog="0" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="12012">
          <fr Choice_fr="Méchante">Super ! Il me tarde, un groupe d’attardées, 
@@ -218,17 +221,20 @@ plaisantais moi !</fr>
       <fr Choice_fr="">Bah, c’est simplement que je trouve ça anormal ! 
 C’est pas croyable, c’est tellement contre-nature !</fr>
       <en Choice_en="">Well, I just think it's not normal, that's all. It's just so wrong !</en>
-      fullID="120151" ID_Dialog="12015" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer=""
+      <answer fullID="120151" ID_Dialog="12015" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="Blasée">Bah... si tu le dis.</fr>
       <en Choice_en="Jaded">Right... If you say so...</en>
-      fullID="120152" ID_Dialog="12015" ID_Answer="2" ID_NextDialog="0" ID_Character="12" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer=""
+	  </answer>
+      <answer fullID="120152" ID_Dialog="12015" ID_Answer="2" ID_NextDialog="0" ID_Character="12" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="Hypocrite">Oui t'as sûrement raison au final</fr>
-      <en Choice_en="Hypocritical">Yeah, you're probably right, after all...</en>
-      fullID="120153" ID_Dialog="12015" ID_Answer="3" ID_NextDialog="0" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer=""
+	  <en Choice_en="Hypocritical">Yeah, you're probably right, after all...</en>
+      </answer>
+	  <answer fullID="120153" ID_Dialog="12015" ID_Answer="3" ID_NextDialog="0" ID_Character="12" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="Agressive">Allez laisse tomber... je te laisse dans ton ignorance
-de décérébrée ! Ptain les homophobes ça me dégoute !</fr>
+de décérébrée ! Ptain les homophobes ça me dégoûte !</fr>
       <en Choice_en="Agressive">That's enough ! I don't have to listen to your mindless 
 ignorance ! It's people like you who make me sick !</en>
+		</answer>
    </dialog>
    <dialog fullID="12016" ID_Dialog="12016" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="Sympathy_value_Chloe50" Action="" BanAnswer="">
       <fr Choice_fr="">Hey ! Ca va ?</fr>
@@ -276,8 +282,6 @@ Je suis pas ce genre de monstre ! Reste loin de moi !</fr>
       <en Choice_en="">Hey, what the hell ! Who d'you think I am ! I'm not a freak ! 
 Stay away from me !</en>
    </dialog>
-   
-   
    <dialog fullID="12020" ID_Dialog="12020" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="12016">
       <fr Choice_fr="">Euh quoi... ? 
 * Se laisse embrasser par Kara sans la repousser *
@@ -294,23 +298,6 @@ I'd like us to be friends, just don't ruin it.</en>
          <en Choice_en="Follow her"> Okay, let's go see them.</en>
     </answer>
    </dialog>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    <dialog fullID="12021" ID_Dialog="12021" ID_Answer="" ID_NextDialog="120212" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Oui, je vois ce que tu veux dire… Parfois j’aimerais
 pouvoir être nouvelle, pouvoir me refaire peau neuve !</fr>

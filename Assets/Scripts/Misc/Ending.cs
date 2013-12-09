@@ -180,10 +180,18 @@ public class Ending : MonoBehaviour {
 				_txtGroupBoys.text = "Vous n'avez pas rencontré le groupe d'amis de Boris." ;
 			}
 
-
-			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez approuvé leur homophobie.";
-			_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.";
-			_txtGroupGirls.text = "Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.";
+			if (_Girls.facedHomophobia == true && _Girls.approvedHomophobia == true)
+			{
+				_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez approuvé leur homophobie.";
+			}
+			if (_Girls.facedHomophobia == true && _Girls.approvedHomophobia == false)
+			{
+				_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.";
+			}
+			if (_Girls.met == true)
+			{
+				_txtGroupGirls.text = "Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.";
+			}
 
 			if (_Bob.met == true && _Bob.convinced == true)
 			{
@@ -224,11 +232,89 @@ public class Ending : MonoBehaviour {
 			}
 				
 			_txtChoices.text = "Ce sont les choix que vous avez ou n'avez pas fait.";
-
 		}
+		// ENG LANGUAGE //
 		else
 		{
+			if (nbVotes > _LM.stepVotesForWin)
+			{
+				_txtExplanation.text = 
+						" You've been elected Dancing Queen tonight.\n"
+						+ "You're on the podium and everyone looks at you.\n"
+						+ "Did these looks guide your choices ? ";
+			}
+			else
+			{
+				_txtExplanation.text =
+						" The evening ends and you haven't been elected Dancing Queen.\n" 
+						+ "But does it matter ? It's only a contest after all. \n"
+						+ "Are the looks of the other that important to you ?";
+			}
+			
+			_txtNumberVotes.text = nbVotes + " people on 15 have voted for you.";
+			
+			if (_Boys.disapprovedStephane == true)
+			{
+				_txtGroupBoys.text = "You met the friends group of Boris and you approved the reject of Stephane." ;
+			}
+			if (_Boys.disapprovedStephane == false && _Boys.met == true)
+			{
+				_txtGroupBoys.text = "You met the friends group of Boris and you disapproved the reject of Stephane.";
+			}
+			if (_Boys.met == false)
+			{
+				_txtGroupBoys.text = "You didn't met the friends group of Boris." ;
+			}
+			
+			if (_Girls.facedHomophobia == true && _Girls.approvedHomophobia == true)
+			{
+				_txtGroupGirls.text = "You met the friends group of Chloe and Vanessa and disapproved their homophobia.";
+			}
+			if (_Girls.facedHomophobia == true && _Girls.approvedHomophobia == false)
+			{
+				_txtGroupGirls.text = "You met the friends group of Chloe and Vanessa and disapproved their homophobia.";
+			}
+			if (_Girls.met == true)
+			{
+				_txtGroupGirls.text = "You didn't met the friends group of Chloe and Vanessa.";
+			}
+			
+			if (_Bob.met == true && _Bob.convinced == true)
+			{
+				_txtCorrupted.text = "You met Bob, the mayor of the town, and have convinced him to scam the votes.";
+			}
+			if (_Bob.met == true && _Bob.convinced == false)
+			{
+				_txtCorrupted.text = "You met Bob, the mayor of the town, but wasn't convinced by your behaviour.";
+			}
+			else if (_Bob.met == false && _Bob.convinced == false)
+			{
+				_txtCorrupted.text = "You didn't met Bob, the mayor of the town.";
+			}
+			if (_Bastien.succeedMission == true)
+			{
+				_txtBastien.text = "You helped Bastien get closer to Thomas.";
+			}
+			if (_Bastien.refusedMission == true)
+			{
+				_txtBastien.text = "You refused to help Bastien to get closer to Thomas.";
+			}
 
+			if (_Raphael.coupleClaire == false)
+			{
+				_txtRaphael.text = "You made Claire and Raphael break up";
+			}
+			else if (_Raphael.coupleClaire == true)
+			{
+				_txtRaphael.text = "Claire and Raphael are still a couple.";
+			}
+
+			if (_Paul.missionDone == true)
+			{
+				_txtThomas.text = "You encouraged Thomas to drug a girl to make her break uVous avez incité Thomas à droguer une fille pour sortir avec elle.";
+			}
+			
+			_txtChoices.text = "There are the choiced you made or didn't make.";
 		}
 	}
 }

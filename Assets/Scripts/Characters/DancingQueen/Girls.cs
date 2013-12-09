@@ -5,6 +5,8 @@ public class Girls : CharSim
 {
 
 	public bool met = false;
+	public bool facedHomophobia = false;
+	public bool approvedHomophobia = false;
 
 	public void TriggerDialogVanessa()
 	{

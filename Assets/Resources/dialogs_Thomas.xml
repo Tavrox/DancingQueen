@@ -356,7 +356,7 @@ gens avec de la drogue...</fr>
 advantage of someone...</en>
       </answer>
    </dialog>
-   <dialog fullID="8032" ID_Dialog="8032" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogHeardThomasSucceed" BanAnswer="8029">
+   <dialog fullID="8032" ID_Dialog="8032" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogHeardThomas" BanAnswer="8029">
       <fr Choice_fr="">Mais … t’es une salope ! Vas-y barre toi.</fr>
       <en Choice_en="">You... You're such a bitch ! Get outta here !</en>
    </dialog>

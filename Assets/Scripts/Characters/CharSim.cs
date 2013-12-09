@@ -147,7 +147,8 @@ public class CharSim : MonoBehaviour {
 		{
 			DialogUI.createDialog(this);
 			IngameUI.destroyIngameUI();
-//			MasterAudio.PlaySound("010_Bastien_00","0" + characterID + "_" + charac.ToString() + "_click" );
+			string characStr = characterID + "_" + charac.ToString();
+			MasterAudio.PlaySound(characStr, 1f, 1f, 0f ,characStr + "_click" );
 		}
 	}
 		
@@ -177,9 +178,6 @@ public class CharSim : MonoBehaviour {
 				isSpeaking = true;
 			}
 		}
-//		print ("Playing group : "  + charStr);
-//		print ("Playing delay : "  + randDelay);
-//		print ("Playing sound variation : "  + charStr + "_" + transfRand);
 	}
 
 	public string getCharFrame(CharSim.charList charac)
