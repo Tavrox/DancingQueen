@@ -239,7 +239,7 @@ You guys are hopeless...</en>
       <fr Choice_fr="">Oui, trop nulle.</fr>
       <en Choice_en="">Yeah, it sucks...</en>
    </dialog>
-   <dialog fullID="1023" ID_Dialog="1023" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="closeDialogAndWin2votes" BanAnswer="">
+   <dialog fullID="1023" ID_Dialog="1023" ID_Answer="" ID_NextDialog="" ID_Character="07" Sympathy_value="" Condition="basic" Action="closeDialogDrugGirls" BanAnswer="">
       <fr Choice_fr="">C’est de la bonne...</fr>
       <en Choice_en="">That's good shit...</en>
    </dialog>
