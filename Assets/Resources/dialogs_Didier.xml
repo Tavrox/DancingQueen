@@ -80,7 +80,7 @@ Claire...</en>
       <en Choice_en="">So, I'm gonna play ''Monkey Style'', ''I Wanna Be 
 your Monkey'', My Huge Banana''... Huhu, kidding. 
 Only home-made stuff !</en>
-      <answer fullID="250071" ID_Dialog="25007" ID_Answer="1" ID_NextDialog="0" ID_Character="25" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250071" ID_Dialog="25007" ID_Answer="1" ID_NextDialog="0" ID_Character="25" Sympathy_value="20" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Flatteuse">J’ai hâte de les écouter !</fr>
          <en Choice_en="Flattering">Can't wait to hear them !</en>
       </answer>
@@ -89,7 +89,7 @@ Only home-made stuff !</en>
  musique ?</fr>
          <en Choice_en="Clash">Are you as clever in music as you are in humour ?</en>
       </answer>
-      <answer fullID="250073" ID_Dialog="25007" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="250073" ID_Dialog="25007" ID_Answer="3" ID_NextDialog="0" ID_Character="25" Sympathy_value="10" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Blasée">On va voir ce que ça donne, ça a l’air un
  peu naze.</fr>
          <en Choice_en="Jaded">All right, sounds pretty lame, but let's check it out...</en>

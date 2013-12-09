@@ -19,7 +19,7 @@ public t’as suivi ?</fr>
          <en Choice_en="Single">Are you here alone with your jokes, or did you bring your 
 audience with you ?</en>
       </answer>
-      <answer fullID="130014" ID_Dialog="13001" ID_Answer="4" ID_NextDialog="13007" ID_Character="13" Sympathy_value="20" Condition="RaphaelSympathy50" Action="kissRaphael" BanAnswer="130014">
+      <answer fullID="130014" ID_Dialog="13001" ID_Answer="4" ID_NextDialog="13007" ID_Character="13" Sympathy_value="50" Condition="RaphaelSympathy50" Action="kissRaphael" BanAnswer="130014">
          <fr Choice_fr="Embrasser">*Smack*</fr>
          <en Choice_en="Kiss">*Kiss*</en>
       </answer>

@@ -4,19 +4,19 @@
       <fr Choice_fr="">Si c’est pour de la drogue, boire un verre ou faire
 crack crack, passe ton chemin !</fr>
       <en Choice_en="">If you're here for drugs, alcohol, or quick sex, walk away !</en>
-      <answer fullID="180011" ID_Dialog="18001" ID_Answer="1" ID_NextDialog="18002" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180011">
+      <answer fullID="180011" ID_Dialog="18001" ID_Answer="1" ID_NextDialog="18002" ID_Character="18" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="180011">
          <fr Choice_fr="Quelle agressivité !">Tu es agressif avec tout le monde comme ça ?</fr>
          <en Choice_en="Agressivity">Geez ! Are you always that agressive ?</en>
       </answer>
-      <answer fullID="180012" ID_Dialog="18001" ID_Answer="2" ID_NextDialog="18007" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180012">
+      <answer fullID="180012" ID_Dialog="18001" ID_Answer="2" ID_NextDialog="18007" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="180012">
          <fr Choice_fr="La drogue">Tu as un problème avec la drogue ?</fr>
          <en Choice_en="Drugs">You've got a problem with drugs ?</en>
       </answer>
-      <answer fullID="180013" ID_Dialog="18001" ID_Answer="3" ID_NextDialog="18015" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="180013">
+      <answer fullID="180013" ID_Dialog="18001" ID_Answer="3" ID_NextDialog="18015" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="180013">
          <fr Choice_fr="L’alcool">L’alcool en soirée, c’est contre tes principes ?</fr>
          <en Choice_en="Alcohol">Drinking in a party, that's against your principles ?</en>
       </answer>
-      <answer fullID="180014" ID_Dialog="18001" ID_Answer="4" ID_NextDialog="18023" ID_Character="18" Sympathy_value="" Condition="BorisSympathy75" Action="" BanAnswer="180014">
+      <answer fullID="180014" ID_Dialog="18001" ID_Answer="4" ID_NextDialog="18023" ID_Character="18" Sympathy_value="50" Condition="BorisSympathy75" Action="" BanAnswer="180014">
          <fr Choice_fr="Donner drogue">Voilà une drogue que j’ai récupéré auprès du dealer...</fr>
          <en Choice_en="Give drugs">Here some dope I managed to get from the dealer...</en>
       </answer>
@@ -27,17 +27,17 @@ C’est juste qu’il y a tellement peu de
 gens réglos dans cette soirée.</fr>
       <en Choice_en="">Me, agressive ? Not at all ! But there are few decent people 
 here tonight.</en>
-      <answer fullID="180021" ID_Dialog="18002" ID_Answer="1" ID_NextDialog="18003" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180021" ID_Dialog="18002" ID_Answer="1" ID_NextDialog="18003" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Curieuse">T’es venu seul ? Y’a personne que t’aimes dans 
 cette soirée ?</fr>
          <en Choice_en="Curious">Are you there alone ? Is there nobody you like tonight ?</en>
       </answer>
-      <answer fullID="180022" ID_Dialog="18002" ID_Answer="2" ID_NextDialog="18004" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180022" ID_Dialog="18002" ID_Answer="2" ID_NextDialog="18004" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Admirative">Whaa c’est tellement rare de trouver quelqu’un 
 d’authentique !</fr>
          <en Choice_en="Admiring">Waw... It's so rare to find someone authentic !</en>
       </answer>
-      <answer fullID="180023" ID_Dialog="18002" ID_Answer="3" ID_NextDialog="18005" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180023" ID_Dialog="18002" ID_Answer="3" ID_NextDialog="18005" ID_Character="18" Sympathy_value="-15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Agressive">En même temps, tu t’es vu toi, tu juge tout le 
 monde sans les connaître pas étonnant que 
 t’aime personne… pauvre type.</fr>
@@ -53,19 +53,19 @@ sent pas bien.</fr>
       <en Choice_en="">Alone ? I've got a group of friends waiting for me. If I'm 
 standing here, it's because I'm waiting for a guy who's 
 sick in there.</en>
-      <answer fullID="180031" ID_Dialog="18003" ID_Answer="1" ID_NextDialog="18006" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180031" ID_Dialog="18003" ID_Answer="1" ID_NextDialog="18006" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Intéressée">Ha, ça te dirait qu’on rejoigne tes potes ? 
 Ton ami pourra nous retrouver plus tard ?</fr>
          <en Choice_en="Interested">Wanna go out there and join your buddies ? Maybe your friend 
 can join us later ?</en>
       </answer>
-      <answer fullID="180032" ID_Dialog="18003" ID_Answer="2" ID_NextDialog="18005" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180032" ID_Dialog="18003" ID_Answer="2" ID_NextDialog="18005" ID_Character="18" Sympathy_value="-15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Méchante">T’es sûr qu’ils t’attendent ?
 Peut être qu’ils sont bien content d’être sans toi !</fr>
          <en Choice_en="Mean">Are you sure they're waiting for you ? I think they're happy you're 
 stuck in there !</en>
       </answer>
-      <answer fullID="180033" ID_Dialog="18003" ID_Answer="3" ID_NextDialog="18004" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180033" ID_Dialog="18003" ID_Answer="3" ID_NextDialog="18004" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Admirative">Whaa c’est tellement rare de trouver quelqu’un 
 d’authentique !!</fr>
          <en Choice_en="Admiring">Waw... It's so rare to find someone genuine !</en>
@@ -76,16 +76,16 @@ d’authentique !!</fr>
 quelqu’un de droit, je te présenterais à mon groupe.</fr>
       <en Choice_en="">I may have misjudged you. If you me prove you have an upright 
 mind, I'll introduce you to my group.</en>
-      <answer fullID="180041" ID_Dialog="18004" ID_Answer="1" ID_NextDialog="18005" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180041" ID_Dialog="18004" ID_Answer="1" ID_NextDialog="18005" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Embrasser">* Smack *</fr>
          <en Choice_en="Kiss">*Kiss*</en>
       </answer>
-      <answer fullID="180042" ID_Dialog="18004" ID_Answer="2" ID_NextDialog="0" ID_Character="18" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+      <answer fullID="180042" ID_Dialog="18004" ID_Answer="2" ID_NextDialog="0" ID_Character="18" Sympathy_value="20" Condition="basic" Action="closeDialog" BanAnswer="">
          <fr Choice_fr="Intéressée">Je vais faire mon enquête et te prouver ma bonne
 volonté.</fr>
          <en Choice_en="Interested">I'll investigate, as proof of my good will.</en>
       </answer>
-      <answer fullID="180043" ID_Dialog="18004" ID_Answer="3" ID_NextDialog="18005" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180043" ID_Dialog="18004" ID_Answer="3" ID_NextDialog="18005" ID_Character="18" Sympathy_value="-5" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Pas intéressée">C’est tout ? T’as rien d’autre à offrir ?</fr>
          <en Choice_en="Not interested">That's it ? That's all you've got to offer ?</en>
       </answer>
@@ -111,17 +111,17 @@ Je continue ou ça te suffit ?</fr>
       <en Choice_en="">Do I have a problem with drugs ? Of course I do ! 
 Drugs make you soft ! Is that enough, or you want me to 
 elaborate ?</en>
-      <answer fullID="180071" ID_Dialog="18007" ID_Answer="1" ID_NextDialog="18008" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180071" ID_Dialog="18007" ID_Answer="1" ID_NextDialog="18008" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Curieuse">Quoi d’autre ?</fr>
          <en Choice_en="Curious">What else ?</en>
       </answer>
-      <answer fullID="180072" ID_Dialog="18007" ID_Answer="2" ID_NextDialog="18010" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180072" ID_Dialog="18007" ID_Answer="2" ID_NextDialog="18010" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="D’accord">Tout à fait d’accord, et ça te prive de ton libre 
 arbitre … heureux de pas être la seule à penser ça.</fr>
          <en Choice_en="Agree">Absolutely true, and it takes away your free-will... Glad I'm not 
 the only one thinking that.</en>
       </answer>
-      <answer fullID="180073" ID_Dialog="18007" ID_Answer="3" ID_NextDialog="18009" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180073" ID_Dialog="18007" ID_Answer="3" ID_NextDialog="18009" ID_Character="18" Sympathy_value=""-30 Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Drogue cool">La drogue, ça peut rendre service et dynamiser
 une soirée !</fr>
          <en Choice_en="Drugs are cool">Dope can be a cool way to boost a party !</en>
@@ -135,12 +135,12 @@ enough ?</en>
          <fr Choice_fr="Curieuse">Quoi d’autre ?</fr>
          <en Choice_en="Curious">What else ?</en>
       </answer>
-      <answer fullID="180082" ID_Dialog="18008" ID_Answer="2" ID_NextDialog="18009" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180082" ID_Dialog="18008" ID_Answer="2" ID_NextDialog="18009" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Drogue cool">La drogue, ça peut rendre service et dynamiser 
 une soirée !</fr>
          <en Choice_en="Drugs are cool">Drugs can be cool, they can boost a party !</en>
       </answer>
-      <answer fullID="180083" ID_Dialog="18008" ID_Answer="3" ID_NextDialog="18010" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180083" ID_Dialog="18008" ID_Answer="3" ID_NextDialog="18010" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="D’accord">Tout à fait d’accord, et ça te prive de ton libre 
 arbitre … heureux de pas être la seule à penser ça.</fr>
          <en Choice_en="Agree">Absolutely true, and it takes away your free-will... Glad I'm not 
@@ -159,15 +159,15 @@ J’aimerais bien voir la tête de Paul après ça !</fr>
       <en Choice_en="">If I get my hands on some of that shit, you can bet I'll 
 destroy it right away ! We'll see the look on Paul's face 
 after that !</en>
-      <answer fullID="180101" ID_Dialog="18010" ID_Answer="1" ID_NextDialog="18013" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Curieuse">Qui c’est ce paul que tu détestes tant ?</fr>
+      <answer fullID="180101" ID_Dialog="18010" ID_Answer="1" ID_NextDialog="18013" ID_Character="18" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+         <fr Choice_fr="Curieuse">Qui 	est ce paul que tu détestes tant ?</fr>
          <en Choice_en="Curious">Who's this Paul you hate so much ?</en>
       </answer>
-      <answer fullID="180102" ID_Dialog="18010" ID_Answer="2" ID_NextDialog="18009" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180102" ID_Dialog="18010" ID_Answer="2" ID_NextDialog="18009" ID_Character="18" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Négative">Fais pas ça, et si jamais c’était cool de se droguer ?</fr>
          <en Choice_en="Negative">Don't do that, what if you're mistaken, and it's cool to get high ?</en>
       </answer>
-      <answer fullID="180103" ID_Dialog="18010" ID_Answer="3" ID_NextDialog="0" ID_Character="18" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="180012">
+      <answer fullID="180103" ID_Dialog="18010" ID_Answer="3" ID_NextDialog="0" ID_Character="18" Sympathy_value="25" Condition="basic" Action="closeDialog" BanAnswer="180012">
          <fr Choice_fr="D’accord">Tu as raison, ça évitera à une autre victime de 
 tomber dans ce piège !</fr>
          <en Choice_en="Agree">You're right, it'll avoid another victim getting caught in that trap !</en>
@@ -195,18 +195,18 @@ talking to me, will you ?</en>
 mais ses effets sont aussi dévastateurs !</fr>
       <en Choice_en="">I know it's not illegal, unlike drugs, but the effects can be 
 just as devastating !</en>
-      <answer fullID="180151" ID_Dialog="18015" ID_Answer="1" ID_NextDialog="18016" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180151" ID_Dialog="18015" ID_Answer="1" ID_NextDialog="18016" ID_Character="18" Sympathy_value="5" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Curieuse">Quels genre d’effets ?</fr>
          <en Choice_en="Curious">What kind of effects ?</en>
       </answer>
-      <answer fullID="180152" ID_Dialog="18015" ID_Answer="2" ID_NextDialog="18017" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180152" ID_Dialog="18015" ID_Answer="2" ID_NextDialog="18017" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="D’accord">Tout à fait d’accord, mon ex il buvait régulièrement
 et était incapable de faire quoi que ce soit de ses
 journées, je te dis pas la honte ...</fr>
          <en Choice_en="Agree">Yeah, I know what you mean, my ex used to drink way too much 
 and he couldn't do anything all day long... What a disgrace !</en>
       </answer>
-      <answer fullID="180153" ID_Dialog="18015" ID_Answer="3" ID_NextDialog="18018" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180153" ID_Dialog="18015" ID_Answer="3" ID_NextDialog="18018" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Négative">Ho ça va hein ! Si on peut plus s’amuser ! Ça fait de
 mal à personne. Faut pas être si coincé, essaie tu verras !</fr>
          <en Choice_en="Negative">Oh, give me a break ! We're allowed to have a little fun, aren't we ?
@@ -222,17 +222,17 @@ la proportion du bide d’un buveur ! Et puis la paresse
       <en Choice_en="">What kind of effect ! Hahahaha ! Wait, you weren't joking ? 
 Okay then : laziness, general stupidity, not to mention the 
 size of a regular drinker's belly... And laziness too !</en>
-      <answer fullID="180161" ID_Dialog="18016" ID_Answer="1" ID_NextDialog="18019" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180161" ID_Dialog="18016" ID_Answer="1" ID_NextDialog="18019" ID_Character="18" Sympathy_value="-15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Prendre ses distances">Si tu le dis ...</fr>
          <en Choice_en="Take some distance">If you say so...</en>
       </answer>
-      <answer fullID="180162" ID_Dialog="18016" ID_Answer="2" ID_NextDialog="18020" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180162" ID_Dialog="18016" ID_Answer="2" ID_NextDialog="18020" ID_Character="18" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="D’accord">C’est vrai que les poivrots accoudés au bar ont pas l’air
 de briller par leurs intelligence ...</fr>
          <en Choice_en="Agree">True, those boozers sprawling on the bar's counter don't exactly 
 strike me as rocket scientists...</en>
       </answer>
-      <answer fullID="180163" ID_Dialog="18016" ID_Answer="3" ID_NextDialog="18018" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180163" ID_Dialog="18016" ID_Answer="3" ID_NextDialog="18018" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Négative">Ho ça va hein ! Si on peut plus s’amuser ! Ça fait de mal 
 à personne. Faut pas être si coincé, essaye tu verras !</fr>
          <en Choice_en="Negative">Oh, give me a break ! We're allowed to have a little fun, aren't we ? 
@@ -249,16 +249,16 @@ Heu … on est en forme quoi !</fr>
 with ! My buddies and myself, we've got the proper
  straight-edge attitude, no drugs, no booze, no se... 
 Well... We're in excellent shape !</en>
-      <answer fullID="180171" ID_Dialog="18017" ID_Answer="1" ID_NextDialog="18019" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180171" ID_Dialog="18017" ID_Answer="1" ID_NextDialog="18019" ID_Character="18" Sympathy_value="-15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Prendre ses distances">Si tu le dis ...</fr>
          <en Choice_en="Take some distance">If you say so...</en>
       </answer>
-      <answer fullID="180172" ID_Dialog="18017" ID_Answer="2" ID_NextDialog="18021" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180172" ID_Dialog="18017" ID_Answer="2" ID_NextDialog="18021" ID_Character="18" Sympathy_value="30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Admirative">Haa si seulement il y avait plus d’hommes 
 comme vous les gars !</fr>
          <en Choice_en="Admiring">Ah, I wish there were more people like you guys...</en>
       </answer>
-      <answer fullID="180173" ID_Dialog="18017" ID_Answer="3" ID_NextDialog="18022" ID_Character="18" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180173" ID_Dialog="18017" ID_Answer="3" ID_NextDialog="18022" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Négative">Oulaaa … Mais vous vous amusez jamais …
 Une vraie bande de ringards sans avenir !</fr>
          <en Choice_en="Negative">Hmm... Have you guys heard about a little thing called ''fun'' ? 
@@ -294,11 +294,11 @@ Viens on va les voir, je vais te présenter à eux.</fr>
       <en Choice_en="">What ? You're actually giving it to me so I can throw it 
 away ? Well done ! You really are worthy of becoming part 
 of my group ! Come on with me, I'll introduce you !</en>
-      <answer fullID="180231" ID_Dialog="18023" ID_Answer="1" ID_NextDialog="0" ID_Character="18" Sympathy_value="" Condition="basic" Action="dialogGroupGuys" BanAnswer="180014">
+      <answer fullID="180231" ID_Dialog="18023" ID_Answer="1" ID_NextDialog="0" ID_Character="18" Sympathy_value="50" Condition="basic" Action="dialogGroupGuys" BanAnswer="180014">
          <fr Choice_fr="Accepter">Volontiers je te suis.</fr>
          <en Choice_en="Accept">Sure, let's go !</en>
       </answer>
-      <answer fullID="180232" ID_Dialog="18023" ID_Answer="2" ID_NextDialog="0" ID_Character="18" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="180014">
+      <answer fullID="180232" ID_Dialog="18023" ID_Answer="2" ID_NextDialog="0" ID_Character="18" Sympathy_value="-130" Condition="basic" Action="closeDialog" BanAnswer="180014">
          <fr Choice_fr="Refuser">Moi qui pensais t’en donner pour te décoincer !
 Ça semble raté, en plus tu m’a flingué ma dose connard !</fr>
          <en Choice_en="Refuse">Are you crazy ? I had in mind to give you some to loosen your 

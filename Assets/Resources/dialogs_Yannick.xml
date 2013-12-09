@@ -5,17 +5,17 @@
 qui t’ai donné l’invitation pour cette soirée.</fr>
       <en Choice_en="">Hey you ! D'you remember me ? I'm the one who gave 
 you the invitation for this party.</en>
-      <answer fullID="60011" ID_Dialog="6001" ID_Answer="1" ID_NextDialog="6002" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60011" ID_Dialog="6001" ID_Answer="1" ID_NextDialog="6002" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Long rappel">Euh non pas vraiment. Qui es-tu ? Qu’est ce que je
 fais là ?</fr>
          <en Choice_en="Long reminder">Errr, no, not really... Who are you ? What am I 
 doing here ?</en>
       </answer>
-      <answer fullID="60012" ID_Dialog="6001" ID_Answer="2" ID_NextDialog="6003" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60012" ID_Dialog="6001" ID_Answer="2" ID_NextDialog="6003" ID_Character="06" Sympathy_value="15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Court rappel">Vite fait. Tu peux me faire un récapitulatif ?</fr>
          <en Choice_en="Short reminder">Sort of. Can you sum it up for me ?</en>
       </answer>
-      <answer fullID="60013" ID_Dialog="6001" ID_Answer="3" ID_NextDialog="0" ID_Character="06" Sympathy_value="" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
+      <answer fullID="60013" ID_Dialog="6001" ID_Answer="3" ID_NextDialog="0" ID_Character="06" Sympathy_value="10" Condition="basic" Action="closeDialogYannickSpoken" BanAnswer="6001">
          <fr Choice_fr="Pas de rappel">Oui je me souviens, t’inquiète pas. Je te laisse, je 
 vais m’intégrer dans la soirée.</fr>
          <en Choice_en="No reminder">Yes, I remember, don't worry. I'm gonna try and blend 
@@ -141,7 +141,7 @@ d’être Barman.</fr>
 being a bartender ?">Tell me more about you. What's it like 
 to be a bartender ?</en>
       </answer>
-      <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
+      <answer fullID="60073" ID_Dialog="6007" ID_Answer="3" ID_NextDialog="6010" ID_Character="06" Sympathy_value="10" Condition="basic" Action="" BanAnswer="60073">
          <fr Choice_fr="Parler de soi">Cette ville est plus sympa que mon ancien 
 chez moi.</fr>
          <en Choice_en="Talk about you">This city is nicer than the town 
@@ -175,7 +175,7 @@ rarement sortir le soir.</fr>
       <en Choice_en="">Working hours are shifting, so it can be tiring. 
 But one gets used to it. The only hard things is not being able
 to get out at night, because there's work to do.</en>
-      <answer fullID="60091" ID_Dialog="6009" ID_Answer="1" ID_NextDialog="6014" ID_Character="06" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60091" ID_Dialog="6009" ID_Answer="1" ID_NextDialog="6014" ID_Character="06" Sympathy_value="25" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Les horaires">Tu fais quoi comme horaire du coup ?</fr>
          <en Choice_en="Working hours">What are your working hours ?</en>
       </answer>
@@ -201,13 +201,13 @@ trop grand pour moi.</fr>
          <en Choice_en="Big town">Paris. It was really oppressive, 
 way too big for me.</en>
       </answer>
-      <answer fullID="60102" ID_Dialog="6010" ID_Answer="2" ID_NextDialog="6016" ID_Character="06" Sympathy_value="-10" Condition="basic" Action="" BanAnswer="60073">
+      <answer fullID="60102" ID_Dialog="6010" ID_Answer="2" ID_NextDialog="6016" ID_Character="06" Sympathy_value="0" Condition="basic" Action="" BanAnswer="60073">
          <fr Choice_fr="Une petite ville">Une petite ville de campagne, on s’y ennuyait
 comme des rats morts.</fr>
          <en Choice_en="Small town">A small country town, I was bored 
 out of my mind.</en>
       </answer>
-      <answer fullID="60103" ID_Dialog="6010" ID_Answer="3" ID_NextDialog="6016" ID_Character="06" Sympathy_value="0" Condition="basic" Action="" BanAnswer="60073">
+      <answer fullID="60103" ID_Dialog="6010" ID_Answer="3" ID_NextDialog="6016" ID_Character="06" Sympathy_value="20" Condition="basic" Action="" BanAnswer="60073">
          <fr Choice_fr="J'étais SDF...">Je n’ai jamais eu de chez moi. Des services
 sociaux m’ont permis d’avoir un toit et un travail.</fr>
          <en Choice_en="I was a hobo...">Never really had a home. Social services 
@@ -291,7 +291,7 @@ their behaviour.</en>
 utile.</fr>
          <en Choice_en="Teasing">Haha, a psychological spy. That's gonna be handy !</en>
       </answer>
-      <answer fullID="60172" ID_Dialog="6017" ID_Answer="2" ID_NextDialog="6021" ID_Character="06" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="60172" ID_Dialog="6017" ID_Answer="2" ID_NextDialog="6021" ID_Character="06" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Gentille">Avec toutes ces informations et ton esprit 
 analytique tu dois en soulager des cœurs.</fr>
          <en Choice_en="Kind">With all this intel and your analytic mind, 

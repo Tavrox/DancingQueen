@@ -36,14 +36,14 @@ sur cette soirée ?</fr>
 suffit de les laisser s’occuper de leurs problèmes.</fr>
       <en Choice_en="">Oh... You know, people are always nice, you just 
 gotta let them take care of themselves.</en>
-      <answer fullID="20021" ID_Dialog="2002" ID_Answer="1" ID_NextDialog="2005" ID_Character="02" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20021" ID_Dialog="2002" ID_Answer="1" ID_NextDialog="2005" ID_Character="02" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="D'accord">Oui t’as raison, chacun sa merde et tout le 
 monde se porte mieux.</fr>
          <en Choice_en="Agree">Yeah, you're right, if everyone minded their 
 own business, the world would 
 be a better place !</en>
       </answer>
-      <answer fullID="20022" ID_Dialog="2002" ID_Answer="2" ID_NextDialog="2007" ID_Character="02" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20022" ID_Dialog="2002" ID_Answer="2" ID_NextDialog="2007" ID_Character="02" Sympathy_value="25" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Pragmatique">Dis pas ça, faut savoir s’intéresser aux autres. 
 Si tu les aides, ils t’aideront en retour.</fr>
          <en Choice_en="Pragmatic">Don't say that, you have to take an interest in 
@@ -74,7 +74,7 @@ tu verras !</fr>
          <en Choice_en="Rehab">Drink some water and get some rest, you'll feel 
 better, you'll see !</en>
       </answer>
-      <answer fullID="20033" ID_Dialog="2003" ID_Answer="3" ID_NextDialog="2010" ID_Character="02" Sympathy_value="20" Condition="basic" Action="" BanAnswer="20033">
+      <answer fullID="20033" ID_Dialog="2003" ID_Answer="3" ID_NextDialog="2010" ID_Character="02" Sympathy_value="30" Condition="basic" Action="" BanAnswer="20033">
          <fr Choice_fr="Drogue">On pourrait se droguer ensemble !</fr>
          <en Choice_en="Drugs">We could get high some more together !</en>
       </answer>
@@ -86,7 +86,7 @@ better, you'll see !</en>
    <dialog fullID="2005" ID_Dialog="2005" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ouais, je suis pas fan des emmerdeurs ...</fr>
       <en Choice_en="">Yeah, I'm not a big fan of pains in the ass...</en>
-      <answer fullID="20051" ID_Dialog="2005" ID_Answer="1" ID_NextDialog="2011" ID_Character="02" Sympathy_value="20" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20051" ID_Dialog="2005" ID_Answer="1" ID_NextDialog="2011" ID_Character="02" Sympathy_value="30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Pragmatique">Comme tout le monde en fait, tout le monde 
 devrait se débarrasser des gens qui nous 
 cassent les couilles.</fr>
@@ -99,7 +99,7 @@ faut les brûler.</fr>
          <en Choice_en="Hateful">Yeah, bunch of assholes, we should just 
 burn them all !</en>
       </answer>
-      <answer fullID="20053" ID_Dialog="2005" ID_Answer="3" ID_NextDialog="2013" ID_Character="02" Sympathy_value="0" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="20053" ID_Dialog="2005" ID_Answer="3" ID_NextDialog="2013" ID_Character="02" Sympathy_value="15" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Morale">Si ils t’ennuient, c’est peut-être pour t’aider, tu 
 sais ?</fr>
          <en Choice_en="Moralist">If they bother you, maybe it's to 
@@ -173,7 +173,7 @@ en état là !</fr>
 He's in the bathroom, he's supposed to give me 
 a little something for the party. Can you get 
 it for me ? I'm not really in shape, there...</en>
-      <answer fullID="20141" ID_Dialog="2014" ID_Answer="1" ID_NextDialog="0" ID_Character="02" Sympathy_value="20" Condition="basic" Action="closeDialogMissionManon" BanAnswer="">
+      <answer fullID="20141" ID_Dialog="2014" ID_Answer="1" ID_NextDialog="0" ID_Character="02" Sympathy_value="10" Condition="basic" Action="closeDialogMissionManon" BanAnswer="">
          <fr Choice_fr="Accepter">Bien sûr, je reviens vers toi dès que je l’ai.</fr>
          <en Choice_en="Accept">Sure, I'll get back to you as soon as I can.</en>
       </answer>
