@@ -5,6 +5,7 @@ public class DialogEvent : MonoBehaviour {
 
 	private LevelManager _LevMan;
 	private PlayerSim _Player;
+	public Color _col;
 
 	private CharSim charToTrigger;
 	private string idDialog;
@@ -42,7 +43,7 @@ public class DialogEvent : MonoBehaviour {
 		}
 		
 		OTTween bubbleOut = new OTTween(_bubble, 1f).Tween("alpha", 1f);
-		OTTween textOut = new OTTween(_text, 1f).Tween("color", Color.white);
+		OTTween textOut = new OTTween(_text, 1f).Tween("color", _col);
 	}
 
 	public void setupEvent(CharSim _char, string _dialTrigger)

@@ -83,7 +83,7 @@ je reviens quand j'ai fini.</fr>
          <en Choice_en="No informations yet">I don't have anything yet,
 I'll come back when it's done.</en>
       </answer>
-      <answer fullID="100142" ID_Dialog="10014" ID_Answer="2" ID_NextDialog="10013" ID_Character="10" Sympathy_value="75" Condition="knowsThomasPreferences" Action="" BanAnswer="">
+      <answer fullID="100142" ID_Dialog="10014" ID_Answer="2" ID_NextDialog="10013" ID_Character="10" Sympathy_value="75" Condition="knowsThomasPreferences" Action="giveThomasInfo" BanAnswer="">
          <fr Choice_fr="Donner l'info">Il aime les gens qu’ont pas froid aux yeux 
 et qui assument leur sexualité. Ah aussi pense 
 à jouer du regard… il kiffe ça le coquin.</fr>

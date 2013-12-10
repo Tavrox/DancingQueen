@@ -277,6 +277,12 @@ public class LevelManager : MonoBehaviour {
 			compThomas.dialToTrigger = "8029";
 		}
 
+		//BASTIEN
+		if (compBastien.saidThomasPref == true)
+		{
+			compBastien.dialToTrigger = "10016";
+		}
+
 		Claire Claire = GameObject.FindGameObjectWithTag("Claire").GetComponent<Claire>();
 		Raphael Raph = GameObject.FindGameObjectWithTag("Raphael").GetComponent<Raphael>();
 		Didier Didi = GameObject.FindGameObjectWithTag("Didier").GetComponent<Didier>();

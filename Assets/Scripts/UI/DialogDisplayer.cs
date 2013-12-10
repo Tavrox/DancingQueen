@@ -366,6 +366,7 @@ public class DialogDisplayer : MonoBehaviour {
 				answer1.collider.enabled = true;
 				answer1.enabled = true;
 				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+				answer1TextGUI.enabled = true;
 				answer1.setNextDialog("0");
 				answer1.setSympathyValue(0);
 				answer1.setAction("closeDialog");
@@ -379,6 +380,7 @@ public class DialogDisplayer : MonoBehaviour {
 				answer1.collider.enabled = true;
 				answer1.enabled = true;
 				answer1TextGUI = answer1.GetComponent<Answer>().GetComponentInChildren<GUIText>();
+				answer1TextGUI.enabled = true;
 				answer1.setNextDialog("0");
 				answer1.setSympathyValue(0);
 				answer1.setAction("closeDialog");
@@ -955,6 +957,12 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("giveThomasInfo") :
+			{
+				go = getCharacGO("Bastien");
+				go.GetComponent<Bastien>().saidThomasPref = true;
+				break;
+			}
 			case ("closeDialogCanPutElectro") :
 			{
 				go = getCharacGO("Didier");
@@ -1035,6 +1043,14 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Bastien");
 				go.GetComponent<Bastien>().refusedMission = true; 
+				go.GetComponent<Bastien>().dialDisabled = true; 
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogknowsMusicBastienDisable") :
+			{
+				go = getCharacGO("Bastien");
+				go.GetComponent<Bastien>().knowMusic = true; 
 				go.GetComponent<Bastien>().dialDisabled = true; 
 				killAtferDisplay = true;
 				break;

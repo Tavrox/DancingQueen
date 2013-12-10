@@ -248,7 +248,7 @@ Peut être qu’il peut te présenter à son père.</fr>
 the mayor's son. He's father has a lot of 
 influence... Maybe he can introduce you ?</en>
    </dialog>
-   <dialog fullID="2019" ID_Dialog="2019" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManon BanAnswer="">
+   <dialog fullID="2019" ID_Dialog="2019" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManon" BanAnswer="">
       <fr Choice_fr="">Je me souviens plus de ce que je voulais dire ...</fr>
       <en Choice_en="">I don't remember what I wanted to say...</en>
    </dialog>

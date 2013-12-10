@@ -8,6 +8,7 @@ public class Bastien : CharSim
 	public bool acceptedMission = false;
 	public bool succeedMission = false;
 	public bool knowMusic = false;
+	public bool saidThomasPref = false;
 
 	void OnMouseDown()
 	{
