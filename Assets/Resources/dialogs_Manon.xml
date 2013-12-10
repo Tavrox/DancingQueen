@@ -5,30 +5,25 @@
 défoncée haha !</fr>
       <en Choice_en="">Hi you ! I've never seen you before... 
 I'm so wasted ! Haha !</en>
-      <answer fullID="20011" ID_Dialog="2001" ID_Answer="1" ID_NextDialog="2002" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20011">
+      <answer fullID="20011" ID_Dialog="2001" ID_Answer="1" ID_NextDialog="2002" ID_Character="02" Sympathy_value="10" Condition="basic" Action="" BanAnswer="20011">
          <fr Choice_fr="Nouvelle">Oui je suis nouvelle, tu te plais ici ? Les gens 
 sont sympa ?</fr>
          <en Choice_en="New girl">Yes, I'm new... Do you like it here ? Are 
 people nice ?</en>
       </answer>
-      <answer fullID="20012" ID_Dialog="2001" ID_Answer="2" ID_NextDialog="2003" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20012">
+      <answer fullID="20012" ID_Dialog="2001" ID_Answer="2" ID_NextDialog="2003" ID_Character="02" Sympathy_value="10" Condition="basic" Action="" BanAnswer="20012">
          <fr Choice_fr="Défoncée">T’as pas l’air au top, ça va ?</fr>
          <en Choice_en="High">You don't seem too peachy, are you ok ?</en>
       </answer>
-      <answer fullID="20013" ID_Dialog="2001" ID_Answer="3" ID_NextDialog="2004" ID_Character="02" Sympathy_value="10" Condition="HasDrug" Action="looseDrugManon" BanAnswer="20013">
-         <fr Choice_fr="Drogue">Hé ! On m’a donné de la bonne, tu veux 
+      <answer fullID="20013" ID_Dialog="2001" ID_Answer="3" ID_NextDialog="2004" ID_Character="02" Sympathy_value="60" Condition="HasDrug" Action="looseDrugManon" BanAnswer="20013">
+         <fr Choice_fr="Donner drogue">Hé ! On m’a donné de la bonne, tu veux 
 goûter ?</fr>
-         <en Choice_en="Drugs">Hey ! I was given some of the good stuff. 
+         <en Choice_en="Give drugs">Hey ! I was given some of the good stuff. 
 Want a taste ?</en>
       </answer>
 	  <answer fullID="20014" ID_Dialog="2001" ID_Answer="4" ID_NextDialog="2014" ID_Character="02" Sympathy_value="10" Condition="ManonSympathy50" Action="" BanAnswer="20014">
          <fr Choice_fr="Service">Tu peux me rendre un service ?</fr>
          <en Choice_en="Something to do">Can you do something for me ?</en>
-      </answer>
-      <answer fullID="20015" ID_Dialog="2001" ID_Answer="5" ID_NextDialog="2015" ID_Character="02" Sympathy_value="" Condition="ManonSympathy100" Action="" BanAnswer="20015">
-         <fr Choice_fr="Infos">Alors, y’a des choses en particulier à savoir
-sur cette soirée ?</fr>
-         <en Choice_en="Infos">So, anything in particular to know about tonight ?</en>
       </answer>
    </dialog>
    <dialog fullID="2002" ID_Dialog="2002" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
@@ -212,7 +207,7 @@ le concours de miss ?</fr>
       <en Choice_en="">Heard the city mayor fakes the contest 
 elections every year. Knowing that, would 
 you be interested in winning the Miss contest ?</en>
-      <answer fullID="20161" ID_Dialog="2016" ID_Answer="1" ID_NextDialog="2018" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20013">
+      <answer fullID="20161" ID_Dialog="2016" ID_Answer="1" ID_NextDialog="2024" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20013">
          <fr Choice_fr="Oui">Ça me branche grave !</fr>
          <en Choice_en="Yes">Yeah, I'd dig that !</en>
       </answer>
@@ -244,7 +239,7 @@ gangster.</fr>
       <en Choice_en="Mob">I'm always up for a good gangster story !</en>
 	  </answer>
    </dialog>
-   <dialog fullID="2018" ID_Dialog="2018" ID_Answer="" ID_NextDialog="0" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManon" BanAnswer="">
+   <dialog fullID="2018" ID_Dialog="2018" ID_Answer="" ID_NextDialog="0" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManonAlexS3" BanAnswer="">
       <fr Choice_fr="">Alex, il a beau avoir une gueule de rat, 
 c’est le fils du maire. Son père a une grosse 
 influence ...
@@ -253,7 +248,7 @@ Peut être qu’il peut te présenter à son père.</fr>
 the mayor's son. He's father has a lot of 
 influence... Maybe he can introduce you ?</en>
    </dialog>
-   <dialog fullID="2019" ID_Dialog="2019" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="2019" ID_Dialog="2019" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManon BanAnswer="">
       <fr Choice_fr="">Je me souviens plus de ce que je voulais dire ...</fr>
       <en Choice_en="">I don't remember what I wanted to say...</en>
    </dialog>
@@ -265,7 +260,7 @@ le concours de miss ?</fr>
       <en Choice_en="">Heard the city mayor fakes the contest 
 elections every year. Knowing that, would 
 you be interested in winning the Miss contest ?</en>
-      <answer fullID="20201" ID_Dialog="2020" ID_Answer="1" ID_NextDialog="2024" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogUnlockDernierDialogueAlex" BanAnswer="">
+      <answer fullID="20201" ID_Dialog="2020" ID_Answer="1" ID_NextDialog="2018" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogUnlockDernierDialogueAlex" BanAnswer="">
          <fr Choice_fr="Oui">Ça me branche grave !</fr>
          <en Choice_en="Yes">Yeah, I'd dig that !</en>
       </answer>
@@ -280,7 +275,7 @@ to have a good time.</en>
          <en Choice_en="Jaded">Go ahead...</en>
       </answer>
    </dialog>
-   <dialog fullID="2024" ID_Dialog="2024" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManonAlexS3" BanAnswer="">
+   <dialog fullID="2024" ID_Dialog="2024" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Alex, il a beau avoir une gueule de rat, 
 c’est le fils du maire. Son père a une grosse 
 influence ...

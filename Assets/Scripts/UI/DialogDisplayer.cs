@@ -1013,6 +1013,7 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = getCharacGO("Thomas");
 				go.GetComponent<Thomas>().saidLikedClaire = true;
+				killAtferDisplay = true;
 				break;
 			}
 			case ("missionBastienEncours") :
@@ -1444,11 +1445,27 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
+			case ("closeDialogDisableRaphael") :
+			{
+				go = getCharacGO("Raphael");
+				go.GetComponent<Raphael>().dialDisabled = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogDisableThomas") :
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().dialDisabled = true;
+				killAtferDisplay = true;
+				break;
+			}
+
+
+
 			case ("unlockThomasPechoClaire") :
 			{
 				go = getCharacGO("Player");
 				go.GetComponent<PlayerSim>().votesAdded += 1;
-				killAtferDisplay = true;
 				break;
 			}
 		}
