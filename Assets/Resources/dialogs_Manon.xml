@@ -212,7 +212,7 @@ le concours de miss ?</fr>
       <en Choice_en="">Heard the city mayor fakes the contest 
 elections every year. Knowing that, would 
 you be interested in winning the Miss contest ?</en>
-      <answer fullID="20161" ID_Dialog="2016" ID_Answer="1" ID_NextDialog="2018" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="20013">
+      <answer fullID="20161" ID_Dialog="2016" ID_Answer="1" ID_NextDialog="2018" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="20013">
          <fr Choice_fr="Oui">Ça me branche grave !</fr>
          <en Choice_en="Yes">Yeah, I'd dig that !</en>
       </answer>
@@ -244,7 +244,7 @@ gangster.</fr>
       <en Choice_en="Mob">I'm always up for a good gangster story !</en>
 	  </answer>
    </dialog>
-   <dialog fullID="2018" ID_Dialog="2018" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="2018" ID_Dialog="2018" ID_Answer="" ID_NextDialog="0" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManon" BanAnswer="">
       <fr Choice_fr="">Alex, il a beau avoir une gueule de rat, 
 c’est le fils du maire. Son père a une grosse 
 influence ...
@@ -280,7 +280,7 @@ to have a good time.</en>
          <en Choice_en="Jaded">Go ahead...</en>
       </answer>
    </dialog>
-   <dialog fullID="2024" ID_Dialog="2024" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="2024" ID_Dialog="2024" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManonAlexS3" BanAnswer="">
       <fr Choice_fr="">Alex, il a beau avoir une gueule de rat, 
 c’est le fils du maire. Son père a une grosse 
 influence ...
@@ -301,7 +301,7 @@ influence... Maybe he can introduce you ?</en>
          <en Choice_en="Gossip">A good gossip's always fun to hear !</en>
       </answer>
    </dialog>
-   <dialog fullID="2027" ID_Dialog="2027" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="2027" ID_Dialog="2027" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialogDisableManonAlexS3" BanAnswer="">
       <fr Choice_fr="">Avant je prenais souvent de la coke avec 
 Claire, et à cette époque là elle fricotait
 avec plein de mecs. Ça serait marrant de

@@ -741,10 +741,10 @@ public class DialogDisplayer : MonoBehaviour {
 				}
 				break;
 			}
-			case ("PaulSympathy50") :
+			case ("PaulSympathy50DoesntDealer") :
 			{
 				Paul charac = GameObject.FindGameObjectWithTag("Paul").GetComponent<Paul>();
-				if (charac.sympathy_score > 50)
+				if (charac.sympathy_score > 50 && charac.PlayerKnowsIsDealer != true)
 				{
 					return true;
 				}
@@ -950,6 +950,8 @@ public class DialogDisplayer : MonoBehaviour {
 			{
 				go = GameObject.Find("DoorDanceToVIP(Clone)");
 				go.GetComponent<LevelDoor>().locked = true;
+				go = getCharacGO("Alex");
+				go.GetComponent<Alex>().doneWithPlayer = true;
 				killAtferDisplay = true;
 				break;
 			}
@@ -996,6 +998,23 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<Chloe>().dialDisabled = true;
 				break;
 			}
+			case ("closeDialogDisableManonAlexS3") :
+			{
+				go = getCharacGO("Manon");
+				go.GetComponent<Manon>().dialDisabled = true;
+				go.GetComponent<Manon>().gaveInfoClaire = true;
+				go = getCharacGO("Alex");
+				go.GetComponent<Alex>().casseCouilleS1 = true;
+				go.GetComponent<Alex>().casseCouilleS2 = true;
+				killAtferDisplay = true;
+				break;
+			}
+			case ("closeDialogKnowsClaire") :
+			{
+				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().saidLikedClaire = true;
+				break;
+			}
 			case ("missionBastienEncours") :
 			{
 				killAtferDisplay = true;
@@ -1028,7 +1047,6 @@ public class DialogDisplayer : MonoBehaviour {
 				killAtferDisplay = true;
 				break;
 			}
-
 			case ("closeDialogDisablePaul") :
 			{
 				go = getCharacGO("Paul");
@@ -1039,7 +1057,8 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("closeDialogGetAlex") :
 			{
 				go = getCharacGO("Alex");
-				go.GetComponent<Alex>().voteForPlayer = true; 
+				go.GetComponent<Alex>().voteForPlayer = true;
+				go.GetComponent<Alex>().doneWithPlayer = true;
 				killAtferDisplay = true;
 				break;
 			}

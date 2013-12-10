@@ -5,4 +5,5 @@ public class Manon : CharSim
 {
 	public bool missionEncours = false;
 	public bool missionDone = false;
+	public bool gaveInfoClaire = false;
 }

@@ -127,6 +127,7 @@ MonoBehaviour:
   frequencyWhispers: .829999983
   missionEncours: 0
   missionDone: 0
+  gaveInfoClaire: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

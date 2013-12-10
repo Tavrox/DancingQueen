@@ -24,7 +24,7 @@ réussite sociale ?</fr>
          <en Choice_en="Hypocrisy">In your opinion, is hypocrisy necessary to succeed, 
 socialy speaking ?</en>
       </answer>
-      <answer fullID="90014" ID_Dialog="9001" ID_Answer="4" ID_NextDialog="9011" ID_Character="09" Sympathy_value="" Condition="PaulSympathy50" Action="" BanAnswer="90014">
+      <answer fullID="90014" ID_Dialog="9001" ID_Answer="4" ID_NextDialog="9011" ID_Character="09" Sympathy_value="" Condition="PaulSympathy50DoesntDealer" Action="" BanAnswer="90014">
          <fr Choice_fr="Révélation">Quoi de neuf l’ami ?</fr>
          <en Choice_en="Revelation">What's up, friend ?</en>
       </answer>
@@ -268,7 +268,7 @@ to get high to the Moon itself, if you can afford it, of course...</en>
       <answer fullID="90111" ID_Dialog="9011" ID_Answer="1" ID_NextDialog="0" ID_Character="09" Sympathy_value="0" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="90014">
          <fr Choice_fr="Amusée">Huhu, bien sûr que je le savais. C’est évident !
 Mais c’était marrant de faire semblant !</fr>
-         <en Choice_en="Amused">Come on, of course I knew ! It's ovious ! It was fun 
+         <en Choice_en="Amused">Come on, of course I knew ! It's obvious ! It was fun 
 pretending, though.</en>
       </answer>
       <answer fullID="90112" ID_Dialog="9011" ID_Answer="2" ID_NextDialog="0" ID_Character="09" Sympathy_value="-10" Condition="basic" Action="closeDialogKnowsDealer" BanAnswer="90014">
@@ -400,7 +400,7 @@ I'll see what I can do.</en>
       <fr Choice_fr="">Ah mince... Ok, tant pis.</fr>
       <en Choice_en="">Oh. Well, doesn't matter.</en>
    </dialog>
-   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="basic" Action="missionPaulDone" BanAnswer="">
+   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="50" Condition="basic" Action="missionPaulDone" BanAnswer="">
       <fr Choice_fr="">Rohh génial ! 
 Claire t'as vu embrassé Raphaël et a rompu avec lui.
 Ils vont sûrement se remettre à la drogue maintenant !
@@ -417,13 +417,7 @@ It's the last one, make good use of it !</en>
 Raphaël et Claire ont rompus ? </fr>
       <en Choice_en="">So what are the news ?
 Raphael and Claire have splitted up ?</en>
-		<answer fullID="90251" ID_Dialog="9025" ID_Answer="1" ID_NextDialog="9024" ID_Character="09" Sympathy_value="" Condition="basic" Action="coupleBroken" BanAnswer="90251">
-         <fr Choice_fr="Un plan réussi"> Voilà qui est fait comme tu le voulais...
-c'était un jeu d'enfant ! Par ici la récompense !</fr>
-         <en Choice_en="A real success">Yeah, it's done as you wanted... 
-maybe you can give me my reward now ?</en>
-       </answer>
-	   <answer fullID="90252" ID_Dialog="9025" ID_Answer="2" ID_NextDialog="9023" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
+	   <answer fullID="90251" ID_Dialog="9025" ID_Answer="1" ID_NextDialog="9023" ID_Character="09" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="On en est encore loin">J'ai encore besoin de temps pour y arriver.</fr>
          <en Choice_en="Still far from it">No, I still need time to do it.</en>
        </answer>

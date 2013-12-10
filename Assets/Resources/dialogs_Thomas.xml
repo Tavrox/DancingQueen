@@ -288,7 +288,7 @@ toi.</fr>
          <en Choice_en="Kiss">*Kiss*</en>
       </answer>
    </dialog>
-   <dialog fullID="8026" ID_Dialog="8026" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="80104">
+   <dialog fullID="8026" ID_Dialog="8026" ID_Answer="" ID_NextDialog="" ID_Character="08" Sympathy_value="" Condition="basic" Action="closeDialogKnowsClaire" BanAnswer="80104">
       <fr Choice_fr="">Il y a bien Claire, la copine de Raphaël. 
 Je suis tombée sous son charme, mais elle ne
 m’est pas vraiment accessible...</fr>

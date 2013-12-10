@@ -166,8 +166,8 @@ public class LevelManager : MonoBehaviour {
 				{
 					GameObject.Find("DoorBarToDance(Clone)").GetComponent<LevelDoor>().locked = false;
 				}
-				_Chloe.GetComponent<Chloe>().dialDisabled = false;
-				_Vanessa.GetComponent<Vanessa>().dialDisabled = false;
+//				_Chloe.GetComponent<Chloe>().dialDisabled = false;
+//				_Vanessa.GetComponent<Vanessa>().dialDisabled = false;
 			}
 		}
 	}
@@ -238,7 +238,8 @@ public class LevelManager : MonoBehaviour {
 
 		// PAUL EVENTS
 		// TRIGGER MISSION 
-		if (compPaul.sympathy_score >= compPaul.amountMissionRaph && compPaul.missionEncours != true)
+		if (compPaul.sympathy_score >= compPaul.amountMissionRaph && compPaul.missionEncours != true
+		    && compPaul.PlayerKnowsIsDealer == true)
 		{
 			compPaul.dialToTrigger = "9021";
 		}
@@ -249,6 +250,7 @@ public class LevelManager : MonoBehaviour {
 		}
 		if (compRaphael.coupleClaire == false )
 		{
+			compPaul.PlayerKnowsIsDealer = true;
 			compPaul.dialToTrigger = "9024";
 		}
 		// RESET AFTER MISSION
@@ -269,7 +271,8 @@ public class LevelManager : MonoBehaviour {
 			compThomas.dialToTrigger = "8010";
 		}
 		if (compThomas.isBattleDance == true && compThomas.hasHeardAboutClaire == false 
-		    && compRaphael.coupleClaire == false && compPlayer.numberDrugs > 0 && compThomas.sympathy_score > 50)
+		    && compRaphael.coupleClaire == false && compPlayer.numberDrugs > 0 && compThomas.sympathy_score > 50
+		    && compManon.gaveInfoClaire == true && compThomas.saidLikedClaire == true )
 		{
 			compThomas.dialToTrigger = "8029";
 		}
@@ -376,6 +379,7 @@ public class LevelManager : MonoBehaviour {
 		Debug.Log ("ChangeRoom");
 		currentLvl = lv;
 		setWaypoints();
+		GameObject.Find("Cursor").GetComponent<Cursor>().GetComponentInChildren<OTSprite>().frameName="cursor_default";
 		_Player = GameObject.Find("PlayerData");
 		_Player.GetComponent<PlayerSim>().reloadCharacs();
 		setCharacGO("");
@@ -557,10 +561,16 @@ public class LevelManager : MonoBehaviour {
 		{
 			GameObject doorPrefab = Resources.Load("06Levels/DoorDanceToVIP") as GameObject;
 			Instantiate(doorPrefab);
+			Alex GO = GameObject.FindGameObjectWithTag("Alex").GetComponent<Alex>();
+			if (GO.doneWithPlayer == true)
+			{
+				doorPrefab.GetComponent<LevelDoor>().locked = true;
+			}
 			doorPrefab = Resources.Load("06Levels/DoorDanceToWC") as GameObject;
 			Instantiate(doorPrefab);
 			doorPrefab = Resources.Load("06Levels/DoorDanceToBar") as GameObject;
 			Instantiate(doorPrefab);
+
 		}
 		if (currentLvl == LevelManager.levelList.Toilets)
 		{
@@ -724,8 +734,9 @@ public class LevelManager : MonoBehaviour {
 				if ( _Alex.GetComponent<Alex>().gotPlayerInVIP == true)
 			    {
 					Debug.Log("Isolate player");
-					IngameUI.destroyIngameUI();
-					DialogUI.createDialog(_Alex.GetComponent<Alex>());
+					GameObject dialEvent = Instantiate(Resources.Load("03UI/Event")) as GameObject;
+					dialEvent.GetComponent<DialogEvent>().setupEvent(_Alex.GetComponent<Alex>(),"11014");
+					
 				}
 				break;
 			}

@@ -126,6 +126,8 @@ MonoBehaviour:
   randomDelayMax: .200000003
   frequencyWhispers: .400000006
   unlocked: 0
+  convinced: 0
+  met: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

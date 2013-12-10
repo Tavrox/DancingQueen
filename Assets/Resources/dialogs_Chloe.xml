@@ -257,11 +257,11 @@ in girls...*Kiss*</en>
    <dialog fullID="12017" ID_Dialog="12017" ID_Answer="" ID_NextDialog="" ID_Character="12" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
 		  <fr Choice_fr="">Oui bien sûr, on continuera de parler là bas ! *Transition*</fr>
 		  <en Choice_en="">Sure, we can keep talking there ! *Transition*</en>
-	  <answer fullID="120171" ID_Dialog="12017" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="-20" Condition="metGirls" Action="closeDialog" BanAnswer="12016">
+	  <answer fullID="120171" ID_Dialog="12017" ID_Answer="1" ID_NextDialog="0" ID_Character="12" Sympathy_value="-20" Condition="basic" Action="closeDialog" BanAnswer="12016">
 		  <fr Choice_fr="[Dans les toilettes] Lâcher les amarres">J'ai l'arrière-train qui siffle: les paras sont en route.</fr>
 		  <en Choice_en="[In the toilets] Go take a crap">I've gotta honk out a dirt snake.</en>
 	  </answer>
-	<answer fullID="120172" ID_Dialog="12017" ID_Answer="2" ID_NextDialog="12020" ID_Character="12" Sympathy_value="100" Condition="basic" Action="" BanAnswer="">
+	<answer fullID="120172" ID_Dialog="12017" ID_Answer="2" ID_NextDialog="12020" ID_Character="12" Sympathy_value="100" Condition="metGirls" Action="" BanAnswer="">
       <fr Choice_fr="[Dans les toilettes] Embrasser">Ca me démange depuis quelques temps... 
 J'aime beaucoup ton style...*Se rapprocher*
 Ne dis, rien, laisse moi juste... *Embrasser*

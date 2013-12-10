@@ -177,7 +177,7 @@ MonoBehaviour:
   maxRandomVarWhispers: 13
   randomDelayMin: 0
   randomDelayMax: .5
-  frequencyWhispers: .980000019
+  frequencyWhispers: 1.76999998
   hasSpokenOnceToPlayer: 0
 --- !u!1001 &100100000
 Prefab:

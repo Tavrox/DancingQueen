@@ -125,7 +125,8 @@ It's not easy when you don't know anybody...</en>
 	</dialog>
 	<dialog fullID="11009" ID_Dialog="11009" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
 		<fr Choice_fr="">Ouais je m’en doute, si tu veux on peut aller en parler au calme dans la salle VIP</fr>
-		<en Choice_en="">Yeah, figures... Want to go talk about somewhere more quiet ? Like the VIP room ?</en>
+		<en Choice_en="">Yeah, figures... Want to go talk about somewhere more quiet ?
+Like the VIP room ?</en>
 		<answer fullID="110091" ID_Dialog="11009" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerGoVIP" BanAnswer="">
 			<fr Choice_fr="Accepter">Si ça peut te faire plaisir, allons-y.</fr>
 			<en Choice_en="Accept">If it'll make you happy, why not ?</en>
@@ -176,7 +177,7 @@ He's waiting for you in the VIP room, I told him about you.</en>
 			<en Choice_en="Agree">Okay, let's go. I'm curious to hear what he has to say.</en>
 		</answer>
 		<answer fullID="110122" ID_Dialog="11012" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialogVIP" BanAnswer="">
-			<fr Choice_fr="S’en aller ">Non c’est bon, ça ira. Je m’en vais.</fr>
+			<fr Choice_fr="S’en aller">Non c’est bon, ça ira. Je m’en vais.</fr>
 			<en Choice_en="Leave">Thanks, but no thanks. I'm out !</en>
 		</answer>
 	</dialog>
@@ -242,7 +243,7 @@ You know, I like you, and we still haven't done anything together...</en>
 			<en Choice_en="Refuse">Right... And that's as it should be ! I'm not interested in you. Beat it !</en>
 		</answer>
 		<answer fullID="110183" ID_Dialog="11018" ID_Answer="3" ID_NextDialog="11020" ID_Character="11" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
-			<fr Choice_fr="L’Embrasser">* Smack *</fr>
+			<fr Choice_fr="L’embrasser">* Smack *</fr>
 			<en Choice_en="Kiss">*Kiss*</en>
 		</answer>
 	</dialog>
