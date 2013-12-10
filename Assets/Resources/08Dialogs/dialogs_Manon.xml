@@ -192,16 +192,17 @@ une bonne soirée.</fr>
       </answer>
    </dialog>
    <dialog fullID="2017" ID_Dialog="2017" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-      <fr Choice_fr="">Avant je prenais souvent de la coke avec 
+	  <fr Choice_fr="">Avant je prenais souvent de la coke avec 
 Claire, et à cette époque là elle fricotait
 avec plein de mecs. Ça serait marrant de
 lui faire prendre de la drogue qu’elle nous 
 refasse son show hahaha.</fr>
       <en Choice_en="">I used to do a lot of cocaine with Claire, and at that time, she used to get it on with a lot of guys. It would be fun to get her high again, so she would do her show for us again ! Hahaha !</en>
-      fullID="20171" ID_Dialog="2017" ID_Answer="1" ID_NextDialog="2020" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer=""
+	  <answer fullID="20171" ID_Dialog="2017" ID_Answer="1" ID_NextDialog="2020" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="Mafia">J’ai toujours voulu entendre des histoires de 
 gangster.</fr>
       <en Choice_en="Mob">I'm always up for a good gangster story !</en>
+	  </answer>
    </dialog>
    <dialog fullID="2018" ID_Dialog="2018" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
       <fr Choice_fr="">Alex, il a beau avoir une gueule de rat, 

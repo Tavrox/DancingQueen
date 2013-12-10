@@ -390,7 +390,7 @@ since he's been with Claire he doesn't buy anymore.</en>
 tu rates...</fr>
       <en Choice_en="">Your loss ! You don't know what you're missing !</en>
    </dialog>
-   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="" Condition="NoRaphaelClairecoupleSympathy75" Action="getDrug" BanAnswer="">
+   <dialog fullID="9024" ID_Dialog="9024" ID_Answer="" ID_NextDialog="" ID_Character="09" Sympathy_value="50" Condition="NoRaphaelClairecoupleSympathy75" Action="getDrug" BanAnswer="">
       <fr Choice_fr="">Rohh génial !! T’as réussi à libérer Raphaël 
 de l’emprise de Claire. Ils vont surement se 
 remettre à la drogue maintenant ! Tiens pour 
