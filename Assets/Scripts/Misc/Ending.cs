@@ -167,13 +167,14 @@ public class Ending : MonoBehaviour {
 
 			_txtNumberVotes.text = nbVotes + " personnes sur 15 ont voté pour vous.";
 
-			if (_Boys.disapprovedStephane == true)
-			{
-				_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane." ;
-			}
+			
 			if (_Boys.disapprovedStephane == false && _Boys.met == true)
 			{
 				_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez désapprouvé le rejet de Stéphane. ";
+			}
+			if (_Boys.disapprovedStephane == true && _Boys.met == true)
+			{
+				_txtGroupBoys.text = "Vous avez rencontré le groupe d'amis de Boris et vous avez approuvé le rejet de Stéphane." ;
 			}
 			if (_Boys.met == false)
 			{
@@ -188,7 +189,7 @@ public class Ending : MonoBehaviour {
 			{
 				_txtGroupGirls.text = "Vous avez rencontré le groupe d'amis de Chloé et Vanessa et vous avez avez desapprouvé leur homophobie.";
 			}
-			if (_Girls.met == true)
+			if (_Girls.met == false)
 			{
 				_txtGroupGirls.text = "Vous n'avez pas rencontré le groupe d'amis de Chloé et Vanessa.";
 			}
@@ -226,7 +227,7 @@ public class Ending : MonoBehaviour {
 			}
 
 
-			if (_Paul.missionDone == true)
+			if (_Paul.missionDone == true && _Thomas.missionClaireThomasDone == true)
 			{
 				_txtThomas.text = "Vous avez incité Thomas à droguer une fille pour sortir avec elle.";
 			}

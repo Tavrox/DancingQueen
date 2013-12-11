@@ -1413,6 +1413,8 @@ public class DialogDisplayer : MonoBehaviour {
 				go.GetComponent<PlayerSim>().votesAdded += 2;
 				go = getCharacGO("Boris");
 				go.GetComponent<Boris>().dialDisabled = true;
+				go = getCharacGO("Boys");
+				go.GetComponent<Boys>().disapprovedStephane = true;
 				killAtferDisplay = true;
 				break;
 			}

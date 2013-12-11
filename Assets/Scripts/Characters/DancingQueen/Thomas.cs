@@ -9,5 +9,6 @@ public class Thomas : CharSim
 	[SerializeField] public bool knowThomasPreferences = true;
 	public bool hasHeardAboutClaire = false;
 	public bool saidLikedClaire = false;
+	public bool missionClaireThomasDone = false;
 
 }
