@@ -256,7 +256,7 @@ public class Ending : MonoBehaviour {
 
 
 			//BOYS
-			if (_Boys.disapprovedStephane == true)
+			if (_Boys.disapprovedStephane == true && _Boys.met == true)
 			{
 				_txtGroupBoys.text = "You met the friends group of Boris and you approved the reject of Stephane." ;
 			}
@@ -278,7 +278,7 @@ public class Ending : MonoBehaviour {
 			{
 				_txtGroupGirls.text = "You met the friends group of Chloe and Vanessa and disapproved their homophobia.";
 			}
-			if (_Girls.met == true)
+			if (_Girls.met == false)
 			{
 				_txtGroupGirls.text = "You didn't met the friends group of Chloe and Vanessa.";
 			}
@@ -318,7 +318,7 @@ public class Ending : MonoBehaviour {
 			}
 
 			// PAUL
-			if (_Paul.missionDone == true)
+			if (_Paul.missionDone == true && _Thomas.missionClaireThomasDone == true)
 			{
 				_txtThomas.text = "You encouraged Thomas to drug a girl to date her.";
 			}

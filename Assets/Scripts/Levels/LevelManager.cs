@@ -308,7 +308,7 @@ public class LevelManager : MonoBehaviour {
 				Claire.talkedAboutKissing = true;
 			}
 		}
-		if (Didi.hasPutSlow == true && Claire.talkedAboutSlow == false && compRaphael.coupleClaire != true)
+		if (Didi.hasPutSlow == true && Claire.talkedAboutSlow == false && compRaphael.coupleClaire == true)
 		{
 			if (DialogUI.exists != true)
 			{
