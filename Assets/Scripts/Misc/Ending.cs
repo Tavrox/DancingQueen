@@ -253,7 +253,9 @@ public class Ending : MonoBehaviour {
 			}
 			
 			_txtNumberVotes.text = nbVotes + " people on 15 have voted for you.";
-			
+
+
+			//BOYS
 			if (_Boys.disapprovedStephane == true)
 			{
 				_txtGroupBoys.text = "You met the friends group of Boris and you approved the reject of Stephane." ;
@@ -266,7 +268,8 @@ public class Ending : MonoBehaviour {
 			{
 				_txtGroupBoys.text = "You didn't met the friends group of Boris." ;
 			}
-			
+
+			// GIRLS
 			if (_Girls.facedHomophobia == true && _Girls.approvedHomophobia == true)
 			{
 				_txtGroupGirls.text = "You met the friends group of Chloe and Vanessa and disapproved their homophobia.";
@@ -279,7 +282,8 @@ public class Ending : MonoBehaviour {
 			{
 				_txtGroupGirls.text = "You didn't met the friends group of Chloe and Vanessa.";
 			}
-			
+
+			// BOB
 			if (_Bob.met == true && _Bob.convinced == true)
 			{
 				_txtCorrupted.text = "You met Bob, the mayor of the town, and have convinced him to scam the votes.";
@@ -292,6 +296,8 @@ public class Ending : MonoBehaviour {
 			{
 				_txtCorrupted.text = "You didn't met Bob, the mayor of the town.";
 			}
+
+			// BASTIEN
 			if (_Bastien.succeedMission == true)
 			{
 				_txtBastien.text = "You helped Bastien get closer to Thomas.";
@@ -301,6 +307,7 @@ public class Ending : MonoBehaviour {
 				_txtBastien.text = "You refused to help Bastien to get closer to Thomas.";
 			}
 
+			// RAPHAEL
 			if (_Raphael.coupleClaire == false)
 			{
 				_txtRaphael.text = "You made Claire and Raphael break up";
@@ -310,6 +317,7 @@ public class Ending : MonoBehaviour {
 				_txtRaphael.text = "Claire and Raphael are still a couple.";
 			}
 
+			// PAUL
 			if (_Paul.missionDone == true)
 			{
 				_txtThomas.text = "You encouraged Thomas to drug a girl to date her.";

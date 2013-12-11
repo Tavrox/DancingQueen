@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .989999831, y: 1.94999969, z: 1}
+  m_LocalScale: {x: .989999771, y: 1.94999957, z: 1}
   m_Children: []
   m_Father: {fileID: 400030}
 --- !u!4 &400020
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: closeSprite
   _position: {x: 0, y: 0}
-  _size: {x: .989999831, y: 1.94999969}
+  _size: {x: .989999771, y: 1.94999957}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   protoType: 
   baseName: closeSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: .989999831, y: 1.94999969}
+  imageSize: {x: .989999771, y: 1.94999957}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1290,6 +1290,7 @@ MonoBehaviour:
   answer5: {fileID: 0}
   answer6: {fileID: 0}
   delayStart: 1
+  colDial: {r: .243137255, g: 0, b: 0, a: 1}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1

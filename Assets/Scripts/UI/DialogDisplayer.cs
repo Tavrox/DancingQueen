@@ -22,6 +22,7 @@ public class DialogDisplayer : MonoBehaviour {
 	private int startLine, i;
 	private string displayText; //The text displayed
 	private Dialog dialToDisplay;
+	public Color colDial;
 
 	/**ADD**/
 //	private XmlDocument xmlDoc;
@@ -54,10 +55,12 @@ public class DialogDisplayer : MonoBehaviour {
 		CharDialID = currentChar.dialToTrigger;
 		lvManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
 		_Player = GameObject.Find("PlayerData");
+
 		_BgDialogPNJ = GameObject.Find("overlaySprite-2");
 		_BgDialogPlayer = GameObject.Find("overlaySprite");
 		_BgDialogPNJ.renderer.enabled = false;
 		_BgDialogPlayer.renderer.enabled = false;
+
 		_NextDialog = GameObject.Find("DialogNext>").GetComponent<GUIText>();
 
 		/**ADD**/
@@ -77,7 +80,7 @@ public class DialogDisplayer : MonoBehaviour {
 			
 		//Create a new XML document out of the loaded data
 		XmlDocument xmlDoc = new XmlDocument();
-			xmlDoc.LoadXml(www.text);
+		xmlDoc.LoadXml(www.text);
 			
 		//Point to the book nodes and process them
 		dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
@@ -87,13 +90,21 @@ public class DialogDisplayer : MonoBehaviour {
 		InvokeRepeating("playWhispers",0f, currentChar.frequencyWhispers);
 		startDialog("");//StartCoroutine( Wait(delayStart) );
 
-		
+			
+		GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
 		OTSprite otherFace = GameObject.Find("otherFaceSpriteDialog").GetComponent<OTSprite>();
+
 		otherFace.frameName = currentChar.getCharFrame(currentChar.charac);
+		otherFace.alpha = 0.1f;
+		speaker.color = Color.clear;
+//		otherFace.enabled = true;
+		OTTween twFace = new OTTween(otherFace, 1f).Tween("alpha",1f);
+		OTTween twSpeak = new OTTween(speaker, 1f).Tween("color", colDial);
+
+
 		}
 		else print("Error while loading XML File");
 	}
-
 	
 	// Update is called once per frame
 	void Update ()
@@ -281,6 +292,7 @@ public class DialogDisplayer : MonoBehaviour {
 
 				GUIText speaking = GameObject.Find("00_OtherSpeaker").GetComponent<GUIText>();
 				string pickCharacter = returnCharacName(fullDialog[1]).ToString();
+
 				speaking.text = pickCharacter;
 				speaking.color = getCharColor(returnCharacName(fullDialog[1]).ToString());
 
@@ -1211,6 +1223,7 @@ public class DialogDisplayer : MonoBehaviour {
 			case ("closeDialogHeardThomasSucceed") :
 			{
 				go = getCharacGO("Thomas");
+				go.GetComponent<Thomas>().missionClaireThomasDone = true;
 				go.GetComponent<Thomas>().hasHeardAboutClaire = true;
 				go.GetComponent<Thomas>().voteForPlayer = true;
 				go = getCharacGO("Paul");
