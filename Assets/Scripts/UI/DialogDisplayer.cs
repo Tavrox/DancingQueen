@@ -36,10 +36,12 @@ public class DialogDisplayer : MonoBehaviour {
 	private GameObject _Player, _BgDialogPlayer, _BgDialogPNJ;
 	private GUIText _NextDialog;
 	private bool answersAreEmpty;
+	private string url;
+	private WWW www;
 
 	//[HideInInspector] public Player player; //The player to lock
 	
-	void Start() {
+	IEnumerator Start() {
 	
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -61,21 +63,21 @@ public class DialogDisplayer : MonoBehaviour {
 		/**ADD**/
 		// string url = "http://paultondeur.com/files/2010/UnityExternalJSONXML/books.xml";
 		// string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
-		//string url = getCharacXML(currentChar.charac);
-		//WWW www = new WWW(url);
-		TextAsset textAsset = getCharacXML(currentChar.charac);
+		url = getCharacXML(currentChar.charac);
+		www = new WWW(url);
+		//TextAsset textAsset = getCharacXML(currentChar.charac);
 		//Resources.Load("dialogs_Yannick") as TextAsset;
 
 		//Load the data and yield (wait) till it's ready before we continue executing the rest of this method.
-		//yield return www;
+		yield return www;
 		
-		//if (www.error == null)
-		//{
+		if (www.error == null)
+		{
 			//Sucessfully loaded the XML
 			
 		//Create a new XML document out of the loaded data
 		XmlDocument xmlDoc = new XmlDocument();
-		xmlDoc.LoadXml(textAsset.text);
+			xmlDoc.LoadXml(www.text);
 			
 		//Point to the book nodes and process them
 		dialogNodes = xmlDoc.SelectNodes("dialogs/dialog");
@@ -88,6 +90,8 @@ public class DialogDisplayer : MonoBehaviour {
 		
 		OTSprite otherFace = GameObject.Find("otherFaceSpriteDialog").GetComponent<OTSprite>();
 		otherFace.frameName = currentChar.getCharFrame(currentChar.charac);
+		}
+		else print("Error while loading XML File");
 	}
 
 	
@@ -1576,16 +1580,15 @@ public class DialogDisplayer : MonoBehaviour {
 		currentChar = _chosenChar;
 	}
 
-	private TextAsset getCharacXML(CharSim.charList currentChar)
+	private string getCharacXML(CharSim.charList currentChar)
 	{
 		//string res = "";
-		return Resources.Load("dialogs_"+currentChar.ToString()) as TextAsset;
+		//return Resources.Load("dialogs_"+currentChar.ToString()) as TextAsset;
 		// string url = "file:///"+Application.dataPath+"/"+"Dialogs/dialogs.xml";
 		//res = "file:///" + Application.dataPath+ "/Dialogs/dialogs_"+currentChar.ToString() +".xml";
 //		res = "http://4edges-games.com/images/stories/webExport/DancingQueen/Dialogs/dialogs_"+currentChar.ToString() +".xml";
-		//return res;
+		return "http://4edges-games.com/images/stories/games/dancingQueen/dialogs/dialogs_"+currentChar.ToString() +".xml";
 	}
-
 	private GameObject getCharacGO(String charac)
 	{
 		GameObject res;	

@@ -355,6 +355,19 @@
                 <key>sourceSize</key>
                 <string>{261,337}</string>
             </dict>
+            <key>empty</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1311,1148},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>

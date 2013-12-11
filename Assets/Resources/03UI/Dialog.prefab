@@ -430,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.99999952, y: 10, z: 1}
+  m_LocalScale: {x: 1.53256714, y: 1.48367953, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
 --- !u!4 &400010
@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .99000001, y: 1.95000005, z: 1}
+  m_LocalScale: {x: .989999831, y: 1.94999969, z: 1}
   m_Children: []
   m_Father: {fileID: 400030}
 --- !u!4 &400020
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: otherFaceSpriteDialog
   _position: {x: 0, y: 0}
-  _size: {x: 7.99999952, y: 10}
+  _size: {x: 1.53256714, y: 1.48367953}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -966,8 +966,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: otherFaceSpriteDialog
-  oSize: {x: 5.4375, y: 7.02083349}
-  imageSize: {x: 7.99999952, y: 10}
+  oSize: {x: 1.04166675, y: 1.04166675}
+  imageSize: {x: 1.53256714, y: 1.48367953}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -979,8 +979,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 10
-  _frameName: chloe_body
+  _frameIndex: 27
+  _frameName: empty
   _spriteContainer: {fileID: 0}
   _containerName: characterPortrait
   _newSprite: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: closeSprite
   _position: {x: 0, y: 0}
-  _size: {x: .99000001, y: 1.95000005}
+  _size: {x: .989999831, y: 1.94999969}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   protoType: 
   baseName: closeSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: .909999907, y: 1.42999995}
+  imageSize: {x: .989999831, y: 1.94999969}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1450,7 +1450,7 @@ GUIText:
   m_GameObject: {fileID: 100038}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Raphael
+  m_Text: 
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
