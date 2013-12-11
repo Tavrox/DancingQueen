@@ -4,8 +4,8 @@
       <fr Choice_fr="">Salut !</fr>
       <en Choice_en="">Hi !</en>
       <answer fullID="250011" ID_Dialog="25001" ID_Answer="1" ID_NextDialog="25002" ID_Character="25" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Parler de :">J’aimerais en savoir plus sur les gens de la soirée.</fr>
-         <en Choice_en="Talk about">I'd like to know more about someone.</en>
+         <fr Choice_fr="Parles des gens de la soirée.">J’aimerais en savoir plus sur les gens de la soirée.</fr>
+         <en Choice_en="Talk about the people in the party.">I'd like to know more about someone.</en>
       </answer>
       <answer fullID="250012" ID_Dialog="25001" ID_Answer="2" ID_NextDialog="25007" ID_Character="25" Sympathy_value="10" Condition="basic" Action="" BanAnswer="250012">
          <fr Choice_fr="Musique">C’est quoi le programme musical de la soirée ?</fr>

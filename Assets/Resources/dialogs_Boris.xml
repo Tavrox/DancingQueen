@@ -121,7 +121,7 @@ arbitre … heureux de pas être la seule à penser ça.</fr>
          <en Choice_en="Agree">Absolutely true, and it takes away your free-will... Glad I'm not 
 the only one thinking that.</en>
       </answer>
-      <answer fullID="180073" ID_Dialog="18007" ID_Answer="3" ID_NextDialog="18009" ID_Character="18" Sympathy_value=""-30 Condition="basic" Action="" BanAnswer="">
+      <answer fullID="180073" ID_Dialog="18007" ID_Answer="3" ID_NextDialog="18009" ID_Character="18" Sympathy_value="-30" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Drogue cool">La drogue, ça peut rendre service et dynamiser
 une soirée !</fr>
          <en Choice_en="Drugs are cool">Dope can be a cool way to boost a party !</en>

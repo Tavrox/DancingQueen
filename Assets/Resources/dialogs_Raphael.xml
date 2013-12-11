@@ -84,7 +84,7 @@ and a kiss that has strength ?</en>
 Qu’est-ce qui est noir et qui sent mauvais ?</fr>
       <en Choice_en="">And you know why the Raphaël didn't cross the road ? 
 Hahahahaha ! And what's black and smells bad ?</en>
-      <answer fullID="130081" ID_Dialog="13008" ID_Answer="1" ID_NextDialog="13008" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="130081" ID_Dialog="13008" ID_Answer="1" ID_NextDialog="13011" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Réponse">Mon ex</fr>
          <en Choice_en="Answer">My ex.</en>
       </answer>
@@ -105,7 +105,7 @@ already sucked to begin with !</en>
       <fr Choice_fr="">Hahahahahha,
 Qu’est-ce qui est noir et qui sent mauvais ?</fr>
       <en Choice_en="">Hahahahahahaha ! What's black and smells bad ?</en>
-      <answer fullID="130091" ID_Dialog="13009" ID_Answer="1" ID_NextDialog="13008" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
+      <answer fullID="130091" ID_Dialog="13009" ID_Answer="1" ID_NextDialog="13011" ID_Character="13" Sympathy_value="10" Condition="basic" Action="" BanAnswer="">
          <fr Choice_fr="Réponse">Mon ex</fr>
          <en Choice_en="Answer">My ex.</en>
       </answer>

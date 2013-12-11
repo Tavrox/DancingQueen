@@ -144,7 +144,7 @@ Pretty lame, huh ?</en>
          <en Choice_en="Jaded">So lame, it's just plain boring !</en>
       </answer>
       <answer fullID="10132" ID_Dialog="1013" ID_Answer="2" ID_NextDialog="1015" ID_Character="16" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Dynamique">Oh, je pense qu'il y a du potention si jamais on veut 
+         <fr Choice_fr="Dynamique">Oh, je pense qu'il y a du potentiel si jamais on veut 
 se marrer, il suffit de se bouger et de profiter.</fr>
          <en Choice_en="Dynamic">Oh, I reckon it's got potential. We've just got to move 
 our asses and find something to do !</en>

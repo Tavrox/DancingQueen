@@ -95,7 +95,7 @@ faut les brûler.</fr>
 burn them all !</en>
       </answer>
       <answer fullID="20053" ID_Dialog="2005" ID_Answer="3" ID_NextDialog="2013" ID_Character="02" Sympathy_value="15" Condition="basic" Action="" BanAnswer="">
-         <fr Choice_fr="Morale">Si ils t’ennuient, c’est peut-être pour t’aider, tu 
+         <fr Choice_fr="Faire la morale">Si ils t’ennuient, c’est peut-être pour t’aider, tu 
 sais ?</fr>
          <en Choice_en="Moralist">If they bother you, maybe it's to 
 help you...?</en>
@@ -184,9 +184,10 @@ Pas question.</fr>
    </dialog>
    <dialog fullID="2015" ID_Dialog="2015" ID_Answer="" ID_NextDialog="" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Ahh yes, elle est vraiment bonne cette dope …
-Des choses à savoir tu dis ? Tu veux du gossip 
+Pour te remercier je peux te donner
+quelques infos. Tu veux du gossip 
 ou des affaire de mafia, les deux peut être ?</fr>
-      <en Choice_en="">Sista, that's good shit... Things to know, you say ? 
+      <en Choice_en="">Sista, that's good shit... To thank you I can give you some informations. 
 As in gossips, or as in mafia business ? 
 Or maybe both ?</en>
       <answer fullID="20151" ID_Dialog="2015" ID_Answer="1" ID_NextDialog="2016" ID_Character="02" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

@@ -18,14 +18,14 @@
 		</answer>
 	</dialog>
 	<dialog fullID="11002" ID_Dialog="11002" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
-		<fr Choice_fr="">J’ai un coin perso tranquille où personne ne nous verr&quot;éçé&quot;àa… Tu viens ?</fr>
+		<fr Choice_fr="">J’ai un coin perso tranquille où personne ne nous verra. Tu viens ?</fr>
 		<en Choice_en="">I know a quiet little place, where no one will see us... Wanna come ?</en>
 		<answer fullID="110021" ID_Dialog="11002" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerGoVIP" BanAnswer="">
 			<fr Choice_fr="Accepter">Ben écoute, qu’est-ce qu’on attend hein ?</fr>
 			<en Choice_en="Accept">What are we waiting for ?</en>
 		</answer>
 		<answer fullID="110022" ID_Dialog="11002" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="0" Condition="basic" Action="closeDialog" BanAnswer="">
-			<fr Choice_fr="Refuser">Jcrois que ça va pas le faire connard.</fr>
+			<fr Choice_fr="Refuser">J'crois que ça va pas le faire connard.</fr>
 			<en Choice_en="Refuse">Yeah, I don't think so, assface.</en>
 		</answer>
 		<answer fullID="110023" ID_Dialog="11002" ID_Answer="3" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
@@ -143,12 +143,12 @@ Like the VIP room ?</en>
 Wanna check it out ?</en>
 		<answer fullID="110101" ID_Dialog="11010" ID_Answer="1" ID_NextDialog="0" ID_Character="11" Sympathy_value="10" Condition="basic" Action="playerGoVIP" BanAnswer="">
 			<fr Choice_fr="Accepter">Si ça peut te faire plaisir, allons-y.</fr>
-			<en Choice_en="">If it'll make you happy, why not ?</en>
+			<en Choice_en="Accept">If it'll make you happy, why not ?</en>
 		</answer>
 		<answer fullID="110102" ID_Dialog="11010" ID_Answer="2" ID_NextDialog="0" ID_Character="11" Sympathy_value="-10" Condition="basic" Action="closeDialog" BanAnswer="">
 			<fr Choice_fr="S’en aller">C’est bon, j’aurais du m’en douter je me tire
 espèce de branleur</fr>
-			<en Choice_en="">I should have known... I'm outta here, you stupid jerk !</en>
+			<en Choice_en="Get out">I should have known... I'm outta here, you stupid jerk !</en>
 		</answer>
 	</dialog>
 	<dialog fullID="11011" ID_Dialog="11011" ID_Answer="" ID_NextDialog="" ID_Character="11" Sympathy_value="" Condition="basic" Action="" BanAnswer="">

@@ -70,7 +70,7 @@ sale homophobe de merde. Casse-toi !</fr>
       <en Choice_en="">Okay, I'm done wasting my time with you, you homophobic
 bitch ! Fuck off !</en>
    </dialog>
-   <dialog fullID="10011" ID_Dialog="10011" ID_Answer="" ID_NextDialog="" ID_Character="10" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="">
+   <dialog fullID="10011" ID_Dialog="10011" ID_Answer="" ID_NextDialog="" ID_Character="10" Sympathy_value="" Condition="basic" Action="closeDialog" BanAnswer="100161">
       <fr Choice_fr="">Ah trop cool ! Moi je kiffe l'éléctro, c'est de la bombe.</fr>
       <en Choice_en=""> Oh that's cool from him ! Well, I love House music, it's so good ! </en>
    </dialog>
@@ -127,11 +127,11 @@ of her friends...</en>
    <dialog fullID="10016" ID_Dialog="10016" ID_Answer="" ID_NextDialog="" ID_Character="10" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
 		<fr Choice_fr="">Hey ! Comment ça va ?</fr>
       <en Choice_en="">What's up ?</en>
-      <answer fullID="100161" ID_Dialog="10016" ID_Answer="1" ID_NextDialog="10011" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="closeDialogknowsMusicBastien" BanAnswer="">
+      <answer fullID="100161" ID_Dialog="10016" ID_Answer="1" ID_NextDialog="10011" ID_Character="10" Sympathy_value="25" Condition="missionDidierEncours" Action="closeDialogknowsMusicBastien" BanAnswer="100161">
          <fr Choice_fr="Sa musique préférée">Didier voudrait savoir quel est ton 
 		genre de musique préférée, pour en mettre un disque !</fr>
          <en Choice_en="His favorite music">Didier wants to know what is your favorite
-		I'll come back when it's done.</en>
+	I'll come back when it's done.</en>
       </answer>
 	</dialog>
 </dialogs>

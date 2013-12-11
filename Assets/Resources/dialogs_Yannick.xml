@@ -171,7 +171,7 @@ more about her ?</en>
    <dialog fullID="6009" ID_Dialog="6009" ID_Answer="" ID_NextDialog="" ID_Character="06" Sympathy_value="" Condition="basic" Action="" BanAnswer="">
       <fr Choice_fr="">Les horaires sont décalés donc c’est fatiguant. 
 Mais on s’y fait, ça va. Au final, le plus dur c'est de ne pas pouvoir
-rarement sortir le soir.</fr>
+sortir le soir.</fr>
       <en Choice_en="">Working hours are shifting, so it can be tiring. 
 But one gets used to it. The only hard things is not being able
 to get out at night, because there's work to do.</en>
